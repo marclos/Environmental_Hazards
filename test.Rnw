@@ -1,0 +1,44 @@
+%\documentclass{tufte-handout}
+\documentclass{article}
+
+\author{Marc Los Huertos}
+\title{Does racism cause environmental hazards?}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\maketitle
+
+\section{Introduction}
+
+\section{Driving Question}
+
+Does racism cause environmental hazard?
+
+\section{Public Product}
+
+Each student will create a map the evaluates how environmental hazards are spatially distributed and evaluate factors that cause this exposure risks.
+
+
+\section{Learning Outcomes}
+
+Students will be able to: 
+
+\begin{itemize}
+  \item Collect and analyze metal concentrations from soil.
+  \item Map environmental hazards
+  \item Analyze spatial data using demographics and hazards
+
+\end{itemize}
+
+\section{Stages of Project}
+
+\section{Refine Driving Question}
+
+\section{Identify Resources Needed}
+
+\section{Collect and Analyze Date}
+
+\section{Create Public Product}
+
+
+
+\end{document}
