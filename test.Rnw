@@ -1,5 +1,6 @@
 %\documentclass{tufte-handout}
 \documentclass{article}
+\usepackage{hyperref}
 
 \author{Marc Los Huertos}
 \title{Does racism cause environmental hazards?}
@@ -34,6 +35,24 @@ Students will be able to:
 \section{Refine Driving Question}
 
 \section{Identify Resources Needed}
+
+\subsection{Toxic Release Inventory Program}
+
+The US EPA runs a program called the \href{https://www.epa.gov/toxics-release-inventory-tri-program}{Toxic Release Inventory}. The program relies on emitters of toxic pollutants to report their releases on an annual?? basis. 
+
+\subsection{TRI Chemicals}
+
+The TRI Program requires emitters to report on the following types of chemicals:
+
+\begin{itemize}
+  \item Cancer or other chronic human health effects;
+  \item Significant adverse acute human health effects; and
+  \item Significant adverse environmental effects.
+\end{itemize}
+
+The \href{https://www.epa.gov/sites/production/files/2015-11/tri_chemical_list_for_ry15_11_5_2015_1.xlsx}{current TRI toxic chemical list} contains 594 individually-listed chemicals and 31 chemical categories (including four categories containing 68 specifically-listed chemicals). 
+
+
 
 \section{Collect and Analyze Date}
 
