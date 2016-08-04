@@ -1,139 +1,146 @@
-TRI On-site and Off-site Reported Disposed of or Otherwise Released (in pounds), for  All industries, for  All chemicals, Los Angeles County, California, 2014
+1,"1,1,2-TRICHLOROETHANE",6.612,.,6.612
+2,"1,2,4-TRIMETHYLBENZENE","14,482.70","2,409.63","16,892.32"
+3,"1,2-BUTYLENE OXIDE",10,.,10
+4,"1,3-BUTADIENE",993.98,.,993.98
+5,"1,3-PHENYLENEDIAMINE",0.19,.,0.19
+6,"2,4-D ISOPROPYL ESTER",.,.,.
+7,"2,4-DIMETHYLPHENOL",26,95,121
+8,2-MERCAPTOBENZOTHIAZOLE,.,.,.
+9,"4,4'-ISOPROPYLIDENEDIPHENOL",4.5,"56,988.00","56,992.50"
+10,"4,4'-METHYLENEDIANILINE",0,.,0
+11,ACETONITRILE,933.86,"37,210.00","38,143.86"
+12,ACRYLAMIDE,0,.,0
+13,ACRYLIC ACID,1,.,1
+14,ACRYLONITRILE,8.06,.,8.06
+15,ALUMINUM (FUME OR DUST),172,.,172
+16,AMMONIA,"1,151,012.07",710,"1,151,722.07"
+17,ANTHRACENE,1.57,.,1.57
+18,ANTIMONY,2.43,22.22,24.65
+19,ANTIMONY COMPOUNDS,5.46,"337,281.09","337,286.55"
+20,ARSENIC,3.5021,"1,391.54","1,395.04"
+21,ARSENIC COMPOUNDS,6.89,"235,077.10","235,083.99"
+22,ASBESTOS (FRIABLE),0,"31,000.00","31,000.00"
+23,BARIUM,0,24.12,24.12
+24,BARIUM COMPOUNDS,0,"11,183.10","11,183.10"
+25,BENZENE,"15,126.58",697.587676,"15,824.16"
+26,"BENZO(G,H,I)PERYLENE",21.08408,99.602,120.68608
+27,BENZYL CHLORIDE,.,.,.
+28,BERYLLIUM,0.001,0,0.001
+29,BIPHENYL,1.79,.,1.79
+30,BUTYL ACRYLATE,871,250,"1,121.00"
+31,C.I. FOOD RED 15,.,.,.
+32,CADMIUM,0.001,0,0.001
+33,CADMIUM COMPOUNDS,0.04,250,250.04
+34,CARBON DISULFIDE,"6,288.40",19,"6,307.40"
+35,CARBONYL SULFIDE,"21,321.50",.,"21,321.50"
+36,CERTAIN GLYCOL ETHERS,"167,543.25","2,266.00","169,809.25"
+37,CHLORINE,25.4323,.,25.4323
+38,CHLOROACETIC ACID,0,.,0
+39,CHLOROFORM,127.9,.,127.9
+40,CHLOROMETHANE,.,.,.
+41,CHROMIUM,711.894513,"60,705.97","61,417.87"
+42,CHROMIUM COMPOUNDS(EXCEPT CHROMITE ORE MINED IN THE TRANSVAAL REGION),427.479473,"97,790.81","98,218.29"
+43,COBALT,24.08029,530.4,554.48029
+44,COBALT COMPOUNDS,35,"1,022.00","1,057.00"
+45,COPPER,"6,372.65","34,303.29","40,675.94"
+46,COPPER COMPOUNDS,509.15,"110,732.25","111,241.40"
+47,CRESOL (MIXED ISOMERS),256.81,40,296.81
+48,CUMENE,"1,592.15",7,"1,599.15"
+49,CUMENE HYDROPEROXIDE,6.098,.,6.098
+50,CYANIDE COMPOUNDS,290,"25,380.00","25,670.00"
+51,CYCLOHEXANE,"11,142.01","1,103.00","12,245.01"
+52,DI(2-ETHYLHEXYL) PHTHALATE,960,"3,089.00","4,049.00"
+53,DIAMINOTOLUENE (MIXED ISOMERS),0.12,.,0.12
+54,DIBUTYL PHTHALATE,0,.,0
+55,DICHLOROMETHANE,"2,457.44","1,670.00","4,127.44"
+56,DICHLORVOS,.,.,.
+57,DICYCLOPENTADIENE,260,.,260
+58,DIETHANOLAMINE,"3,163.97","4,700.00","7,863.97"
+59,DIISOCYANATES,33.86,"6,600.00","6,633.86"
+60,DIMETHYL PHTHALATE,"13,079.00",.,"13,079.00"
+61,DIMETHYLAMINE,322,.,322
+62,DIOXIN AND DIOXIN-LIKE COMPOUNDS,0.0065869,0.1260166,0.1326036
+63,DIPHENYLAMINE,0,.,0
+64,EPICHLOROHYDRIN,.,.,.
+65,ETHYL ACRYLATE,48,.,48
+66,ETHYLBENZENE,"13,479.82","2,391.19","15,871.02"
+67,ETHYLENE,"9,717.60",.,"9,717.60"
+68,ETHYLENE GLYCOL,"5,737.57","1,079.64","6,817.21"
+69,ETHYLENE OXIDE,240.00844,.,240.00844
+70,FORMALDEHYDE,899.97,.,899.97
+71,FORMIC ACID,89.24,.,89.24
+72,HYDRAZINE,0.99,.,0.99
+73,HYDROCHLORIC ACID (1995 AND AFTER ACID AEROSOLS ONLY),"40,217.17",.,"40,217.17"
+74,HYDROGEN CYANIDE,"319,801.00",.,"319,801.00"
+75,HYDROGEN FLUORIDE,138.6,"18,200.00","18,338.60"
+76,HYDROGEN SULFIDE,"80,364.15",0,"80,364.15"
+77,HYDROQUINONE,.,.,.
+78,ISOPRENE,29,.,29
+79,LEAD,"11,114.96","18,058.34","29,173.29"
+80,LEAD COMPOUNDS,707.18554,"864,158.61","864,865.79"
+81,LITHIUM CARBONATE,.,.,.
+82,MALEIC ANHYDRIDE,550,.,550
+83,MANGANESE,14.28942,848.6,862.88942
+84,MANGANESE COMPOUNDS,"46,506.00","2,100.00","48,606.00"
+85,MERCURY,6.51611,60.75415,67.27026
+86,MERCURY COMPOUNDS,196.00863,157.8823,353.89093
+87,METHAM SODIUM,0,.,0
+88,METHANOL,"142,762.23","36,364.74","179,126.97"
+89,METHYL ISOBUTYL KETONE,754.248,250,"1,004.25"
+90,METHYL METHACRYLATE,"3,956.00",.,"3,956.00"
+91,MOLYBDENUM TRIOXIDE,76.05,"3,542.29","3,618.34"
+92,"N,N-DIMETHYLANILINE",.,.,.
+93,"N,N-DIMETHYLFORMAMIDE",580.47,548,"1,128.47"
+94,N-BUTYL ALCOHOL,"35,599.77",.,"35,599.77"
+95,N-HEXANE,"40,292.78","2,136.00","42,428.78"
+96,N-METHYL-2-PYRROLIDONE,467.78,659,"1,126.78"
+97,NALED,.,.,.
+98,NAPHTHALENE,"4,704.70","1,038.57","5,743.27"
+99,NICKEL,762.7725,"20,847.84","21,610.61"
+100,NICKEL COMPOUNDS,"1,347.55","68,593.76","69,941.31"
+101,NITRATE COMPOUNDS,"943,121.75","83,862.11","1,026,983.86"
+102,NITRIC ACID,"21,557.67","97,117.65","118,675.32"
+103,O-XYLENE,31.36,.,31.36
+104,P-XYLENE,8,.,8
+105,PERACETIC ACID,"3,008.00",908,"3,916.00"
+106,PERMETHRIN,.,.,.
+107,PHENANTHRENE,93.146,91,184.146
+108,PHENOL,"10,608.01",139,"10,747.01"
+109,PHTHALIC ANHYDRIDE,428,.,428
+110,POLYCYCLIC AROMATIC COMPOUNDS,794.2685,"1,040.70","1,834.97"
+111,POTASSIUM N-METHYLDITHIOCARBAMATE,0,.,0
+112,PROPYLENE,"70,669.94",0,"70,669.94"
+113,PROPYLENE OXIDE,6.12,.,6.12
+114,PROPYLENEIMINE,.,.,.
+115,SEC-BUTYL ALCOHOL,54.1388,.,54.1388
+116,SELENIUM,0.00356,0,0.00356
+117,SILVER,1,42,43
+118,SODIUM DIMETHYLDITHIOCARBAMATE,0,.,0
+119,SODIUM NITRITE,4.48,.,4.48
+120,STYRENE,"161,287.20",60,"161,347.20"
+121,SULFURIC ACID (1994 AND AFTER ACID AEROSOLS ONLY),"46,446.80",.,"46,446.80"
+122,TETRABROMOBISPHENOL A,0,.,0
+123,TETRACHLOROETHYLENE,399.13,2,401.13
+124,THIRAM,2.592636,.,2.592636
+125,TOLUENE,"114,395.11","10,710.24","125,105.34"
+126,TOLUENE DIISOCYANATE (MIXED ISOMERS),423,.,423
+127,TRICHLOROETHYLENE,250,.,250
+128,TRIETHYLAMINE,250,.,250
+129,VANADIUM COMPOUNDS,180.8,"15,026.00","15,206.80"
+130,VINYL ACETATE,"1,938.00",750,"2,688.00"
+131,XYLENE (MIXED ISOMERS),"42,427.54","8,305.82","50,733.36"
+132,ZINC COMPOUNDS,"17,980.46","859,959.19","877,939.65"
+ ,Total,"3,618,170.46","3,183,696.75","6,801,867.21"
+"TRI On-site and Off-site Reported Disposed of or Otherwise Released (in grams), for "" All industries,"" for "" Dioxin and Dioxin-like compounds, ""Los Angeles County, ""California, ""2014",,,,
 Row #,Chemical,Total On-site,Total Off-site,Total On- and 
 ,,Disposal or,Disposal or,Off-site
 ,,Other Releases,Other Releases,Disposal or
 ,,,,Other Releases
-1,1,1,2-TRICHLOROETHANE,               6.6120000,.,               6.6120000
-2,1,2,4-TRIMETHYLBENZENE,          14,482.6980000,           2,409.6260000,          16,892.3240000
-3,1,2-BUTYLENE OXIDE,              10.0000000,.,              10.0000000
-4,1,3-BUTADIENE,             993.9800000,.,             993.9800000
-5,1,3-PHENYLENEDIAMINE,                .1900000,.,                .1900000
-6,2,4-D ISOPROPYL ESTER,.,.,.
-7,2,4-DIMETHYLPHENOL,              26.0000000,              95.0000000,             121.0000000
-8,2-MERCAPTOBENZOTHIAZOLE,.,.,.
-9,4,4'-ISOPROPYLIDENEDIPHENOL,               4.5000000,          56,988.0000000,          56,992.5000000
-10,4,4'-METHYLENEDIANILINE,                .0000000,.,                .0000000
-11,ACETONITRILE,             933.8600000,          37,210.0000000,          38,143.8600000
-12,ACRYLAMIDE,                .0000000,.,                .0000000
-13,ACRYLIC ACID,               1.0000000,.,               1.0000000
-14,ACRYLONITRILE,               8.0600000,.,               8.0600000
-15,ALUMINUM (FUME OR DUST),             172.0000000,.,             172.0000000
-16,AMMONIA,       1,151,012.0700000,             710.0000000,       1,151,722.0700000
-17,ANTHRACENE,               1.5700000,.,               1.5700000
-18,ANTIMONY,               2.4300000,              22.2200000,              24.6500000
-19,ANTIMONY COMPOUNDS,               5.4600000,         337,281.0890000,         337,286.5490000
-20,ARSENIC,               3.5021000,           1,391.5400000,           1,395.0421000
-21,ARSENIC COMPOUNDS,               6.8900000,         235,077.1000000,         235,083.9900000
-22,ASBESTOS (FRIABLE),                .0000000,          31,000.0000000,          31,000.0000000
-23,BARIUM,                .0000000,              24.1200000,              24.1200000
-24,BARIUM COMPOUNDS,                .0000000,          11,183.1000000,          11,183.1000000
-25,BENZENE,          15,126.5750000,             697.5876760,          15,824.1626760
-26,BENZO(G,H,I)PERYLENE,              21.0840800,              99.6020000,             120.6860800
-27,BENZYL CHLORIDE,.,.,.
-28,BERYLLIUM,                .0010000,                .0000000,                .0010000
-29,BIPHENYL,               1.7900000,.,               1.7900000
-30,BUTYL ACRYLATE,             871.0000000,             250.0000000,           1,121.0000000
-31,C.I. FOOD RED 15,.,.,.
-32,CADMIUM,                .0010000,                .0000000,                .0010000
-33,CADMIUM COMPOUNDS,                .0400000,             250.0000000,             250.0400000
-34,CARBON DISULFIDE,           6,288.4000000,              19.0000000,           6,307.4000000
-35,CARBONYL SULFIDE,          21,321.5000000,.,          21,321.5000000
-36,CERTAIN GLYCOL ETHERS,         167,543.2500000,           2,266.0000000,         169,809.2500000
-37,CHLORINE,              25.4323000,.,              25.4323000
-38,CHLOROACETIC ACID,                .0000000,.,                .0000000
-39,CHLOROFORM,             127.9000000,.,             127.9000000
-40,CHLOROMETHANE,.,.,.
-41,CHROMIUM,             711.8945130,          60,705.9740000,          61,417.8685130
-42,CHROMIUM COMPOUNDS(EXCEPT CHROMITE ORE MINED IN THE TRANSVAAL REGION),             427.4794730,          97,790.8100000,          98,218.2894730
-43,COBALT,              24.0802900,             530.4000000,             554.4802900
-44,COBALT COMPOUNDS,              35.0000000,           1,022.0000000,           1,057.0000000
-45,COPPER,           6,372.6532800,          34,303.2897000,          40,675.9429800
-46,COPPER COMPOUNDS,             509.1500000,         110,732.2500000,         111,241.4000000
-47,CRESOL (MIXED ISOMERS),             256.8100000,              40.0000000,             296.8100000
-48,CUMENE,           1,592.1500000,               7.0000000,           1,599.1500000
-49,CUMENE HYDROPEROXIDE,               6.0980000,.,               6.0980000
-50,CYANIDE COMPOUNDS,             290.0000000,          25,380.0000000,          25,670.0000000
-51,CYCLOHEXANE,          11,142.0050000,           1,103.0000000,          12,245.0050000
-52,DI(2-ETHYLHEXYL) PHTHALATE,             960.0000000,           3,089.0000000,           4,049.0000000
-53,DIAMINOTOLUENE (MIXED ISOMERS),                .1200000,.,                .1200000
-54,DIBUTYL PHTHALATE,                .0000000,.,                .0000000
-55,DICHLOROMETHANE,           2,457.4400000,           1,670.0000000,           4,127.4400000
-56,DICHLORVOS,.,.,.
-57,DICYCLOPENTADIENE,             260.0000000,.,             260.0000000
-58,DIETHANOLAMINE,           3,163.9700039,           4,700.0000000,           7,863.9700039
-59,DIISOCYANATES,              33.8600000,           6,600.0000000,           6,633.8600000
-60,DIMETHYL PHTHALATE,          13,079.0000000,.,          13,079.0000000
-61,DIMETHYLAMINE,             322.0000000,.,             322.0000000
-62,DIOXIN AND DIOXIN-LIKE COMPOUNDS,                .0065869,                .1260166,                .1326036
-63,DIPHENYLAMINE,                .0000000,.,                .0000000
-64,EPICHLOROHYDRIN,.,.,.
-65,ETHYL ACRYLATE,              48.0000000,.,              48.0000000
-66,ETHYLBENZENE,          13,479.8240000,           2,391.1930000,          15,871.0170000
-67,ETHYLENE,           9,717.6000000,.,           9,717.6000000
-68,ETHYLENE GLYCOL,           5,737.5683877,           1,079.6400000,           6,817.2083877
-69,ETHYLENE OXIDE,             240.0084400,.,             240.0084400
-70,FORMALDEHYDE,             899.9700000,.,             899.9700000
-71,FORMIC ACID,              89.2400000,.,              89.2400000
-72,HYDRAZINE,                .9900000,.,                .9900000
-73,HYDROCHLORIC ACID (1995 AND AFTER ACID AEROSOLS ONLY),          40,217.1700000,.,          40,217.1700000
-74,HYDROGEN CYANIDE,         319,801.0000000,.,         319,801.0000000
-75,HYDROGEN FLUORIDE,             138.6000000,          18,200.0000000,          18,338.6000000
-76,HYDROGEN SULFIDE,          80,364.1500000,                .0000000,          80,364.1500000
-77,HYDROQUINONE,.,.,.
-78,ISOPRENE,              29.0000000,.,              29.0000000
-79,LEAD,          11,114.9579346,          18,058.3361000,          29,173.2940346
-80,LEAD COMPOUNDS,             707.1855400,         864,158.6051000,         864,865.7906400
-81,LITHIUM CARBONATE,.,.,.
-82,MALEIC ANHYDRIDE,             550.0000000,.,             550.0000000
-83,MANGANESE,              14.2894200,             848.6000000,             862.8894200
-84,MANGANESE COMPOUNDS,          46,506.0000000,           2,100.0000000,          48,606.0000000
-85,MERCURY,               6.5161100,              60.7541500,              67.2702600
-86,MERCURY COMPOUNDS,             196.0086300,             157.8823000,             353.8909300
-87,METHAM SODIUM,                .0000000,.,                .0000000
-88,METHANOL,         142,762.2284000,          36,364.7400000,         179,126.9684000
-89,METHYL ISOBUTYL KETONE,             754.2480000,             250.0000000,           1,004.2480000
-90,METHYL METHACRYLATE,           3,956.0000000,.,           3,956.0000000
-91,MOLYBDENUM TRIOXIDE,              76.0500000,           3,542.2900000,           3,618.3400000
-92,N,N-DIMETHYLANILINE,.,.,.
-93,N,N-DIMETHYLFORMAMIDE,             580.4700000,             548.0000000,           1,128.4700000
-94,N-BUTYL ALCOHOL,          35,599.7720000,.,          35,599.7720000
-95,N-HEXANE,          40,292.7800000,           2,136.0000000,          42,428.7800000
-96,N-METHYL-2-PYRROLIDONE,             467.7800000,             659.0000000,           1,126.7800000
-97,NALED,.,.,.
-98,NAPHTHALENE,           4,704.7040000,           1,038.5650000,           5,743.2690000
-99,NICKEL,             762.7725000,          20,847.8380000,          21,610.6105000
-100,NICKEL COMPOUNDS,           1,347.5490000,          68,593.7610000,          69,941.3100000
-101,NITRATE COMPOUNDS,         943,121.7500000,          83,862.1100000,       1,026,983.8600000
-102,NITRIC ACID,          21,557.6696000,          97,117.6500000,         118,675.3196000
-103,O-XYLENE,              31.3600000,.,              31.3600000
-104,P-XYLENE,               8.0000000,.,               8.0000000
-105,PERACETIC ACID,           3,008.0000000,             908.0000000,           3,916.0000000
-106,PERMETHRIN,.,.,.
-107,PHENANTHRENE,              93.1460000,              91.0000000,             184.1460000
-108,PHENOL,          10,608.0140000,             139.0000000,          10,747.0140000
-109,PHTHALIC ANHYDRIDE,             428.0000000,.,             428.0000000
-110,POLYCYCLIC AROMATIC COMPOUNDS,             794.2685000,           1,040.7000000,           1,834.9685000
-111,POTASSIUM N-METHYLDITHIOCARBAMATE,                .0000000,.,                .0000000
-112,PROPYLENE,          70,669.9400000,                .0000000,          70,669.9400000
-113,PROPYLENE OXIDE,               6.1200000,.,               6.1200000
-114,PROPYLENEIMINE,.,.,.
-115,SEC-BUTYL ALCOHOL,              54.1388000,.,              54.1388000
-116,SELENIUM,                .0035600,                .0000000,                .0035600
-117,SILVER,               1.0000000,              42.0000000,              43.0000000
-118,SODIUM DIMETHYLDITHIOCARBAMATE,                .0000000,.,                .0000000
-119,SODIUM NITRITE,               4.4800000,.,               4.4800000
-120,STYRENE,         161,287.1982000,              60.0000000,         161,347.1982000
-121,SULFURIC ACID (1994 AND AFTER ACID AEROSOLS ONLY),          46,446.8000000,.,          46,446.8000000
-122,TETRABROMOBISPHENOL A,                .0000000,.,                .0000000
-123,TETRACHLOROETHYLENE,             399.1300000,               2.0000000,             401.1300000
-124,THIRAM,               2.5926360,.,               2.5926360
-125,TOLUENE,         114,395.1050000,          10,710.2360000,         125,105.3410000
-126,TOLUENE DIISOCYANATE (MIXED ISOMERS),             423.0000000,.,             423.0000000
-127,TRICHLOROETHYLENE,             250.0000000,.,             250.0000000
-128,TRIETHYLAMINE,             250.0000000,.,             250.0000000
-129,VANADIUM COMPOUNDS,             180.8000000,          15,026.0000000,          15,206.8000000
-130,VINYL ACETATE,           1,938.0000000,             750.0000000,           2,688.0000000
-131,XYLENE (MIXED ISOMERS),          42,427.5380000,           8,305.8240000,          50,733.3620000
-132,ZINC COMPOUNDS,          17,980.4595000,         859,959.1921000,         877,939.6516000
- ,Total,       3,618,170.4587851,       3,183,696.7511426,       6,801,867.2099278
-
+1,DIOXIN AND DIOXIN-LIKE COMPOUNDS,2.9872689,57.1504,60.1376689
+"Reporting year (RY) 2014 is the most recent TRI data available. Facilities reporting to TRI were required to submit RY 2014 data to EPA by July 1, 2015. TRI Explorer is using an updated data set (released to the public in March 2016). This dataset includes revisions for the years 1988 to 2014 processed by EPA, after the National Analysis Dataset was released. Revisions submitted to EPA after this time are not reflected in TRI Explorer reports.",,,,
+"Users of TRI information should be aware that TRI data reflect releases and other waste management activities of chemicals, not whether (or to what degree) the public has been exposed to those chemicals. Release estimates alone are not sufficient to determine exposure or to calculate potential adverse effects on human health and the environment. TRI data, in conjunction with other information, can be used as a starting point in evaluating exposures that may result from releases and other waste management activities which involve toxic chemicals. The determination of potential risk depends upon many factors, including the toxicity of the chemical, the fate of the chemical, and the amount and duration of human or other exposure to the chemical after it is released.",,,,
+"For purposes of analysis, data reported as Range Code A is calculated using a value of 5 pounds, Range Code B is calculated using a value of 250 pounds and Range Code C is calculated using a value of 750 pounds.",,,,
+"A decimal point, or . denotes the following: 
+if a decimal point is reported across an entire row, the facility submitted a Form A (i.e., the facility certified that its total annual reportable amount is less than 500 pounds, and does not manufacture, process, or otherwise use more than 1 million pounds); or 
+if a decimal point is reported in a single column, the facility left that particular cell blank in its Form R submission (a zero in a cell denotes either that the facility reported 0 or NA in its Form R submission).",,,,
+"<u>How to cite TRI Explorer.</u>    Following APA Style, 6th edition, an appropriate citation to TRI Explorer is:<br/>United States Environmental Protection Agency. (2016). <i>TRI Explorer</i> (2014 Dataset (released March 2016)) [Internet database]. Retrieved from <a href=https://www.epa.gov/triexplorer>https://www.epa.gov/triexplorer</a>, (August   01, 2016).",,,,
