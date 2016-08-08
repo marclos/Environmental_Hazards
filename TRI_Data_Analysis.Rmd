@@ -30,6 +30,8 @@ TRI14LA <-  TRI14CA %>% filter(COUNTY == "LOS ANGELES")
 ## Map Sites
 
 ```{r maplocations, echo=TRUE}
-plot(TRI14LA$Latitude, TRI14LA$Longitude)
+plot(TRI14LA$LATITUDE, TRI14LA$LONGITUDE)
 ```
+
+## Group by Chemical Type 
 
