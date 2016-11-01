@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introduction
 
-## What are tests of association?
+- What are tests of association?
 
 ## Chi square tests
 
@@ -27,20 +27,12 @@ Sp = 3; Oc = 1; Nv = 4; De = 3
 
 Bdays = c(Ja, Fe, Mr, Ap, My, Jn, Jl, Ag, Sp, Oc, Nv, De); Bdays
 ```
-## Histogram 
-
-```{r}
-hist(Bdays, xlim=c(0,5))
-```
-
 ## Histogram
-Okay, now we'll make a histogram.
+Okay, now we'll make a histogram. NOTE: the 'las=1' rotates the labels on the y-axis by 90 degrees, to make it easier to read.
 
 ```{r, echo=T}
-hist(Bdays, las=1)
-
+hist(Bdays, las=1, xlim=c(0,5))
 ```
-NOTE: the 'las=1' rotates the labels on the y-axis by 90 degrees, to make it easier to read.
 
 ## Expectations
 
@@ -63,18 +55,19 @@ Let's convert the frequency to probabilities
 ```{r}
 Bdays_sum = sum(Bdays)
 Bdays_prob = Bdays/Bdays_sum; Bdays_prob
+
+# And the sum?
+
+sum(Bdays_prob)
 ```
 
 ## Let's compare the frequency and the expected:
-
+This is a lame graph -- completely uniformative. The one:one line is not even close...what's going on?
 ```{r}
 
 plot(Bdays_expected, Bdays_prob)
 abline(0, 1, col="blue", lwd=2)
 ```
-
-This is a lame graph -- completely uniformative.
-
 
 ## Chi Square
 
@@ -82,23 +75,27 @@ This is a lame graph -- completely uniformative.
 chisq.test(Bdays_prob, p= Bdays_expected, rescale.p = TRUE)
 ```
 
-## hist
+## Poisson Distribution
 Let's try the Poisson Distribution, since this is count data!
 ```{r}
 hist(Bdays, las=1, prob=T, xlim=c(0,7))
 ```
 
-## Let's calculate the mean:
+## Calculate the mean and spread:
 
-```{r, label = icky}
+```{r, label = icky, echo=T}
 xbar = mean(Bdays)
 sd = sd(Bdays)
 ```
 
-## Hist
-```{r}
+## Using the Poisson Distribution
+```{r, echo=T}
 x=seq(0,12,1); x
 fy = dpois(x, xbar); fy
+```
+
+## Histogram of Count Data
+```{r, echo=F}
 hist(Bdays, prob=T, xlim=c(0,8), las=1)
 lines(x, fy, col="red")
 ```
@@ -111,12 +108,14 @@ observed = c(4,2,2,3,1)
 observed[6:13] = 0; observed
 ```
 
+## Observed versus Expected
 ```{r}
 plot(expected, observed, las=1)
 abline(0,1)
 
 ```
-We could try to run a bestfit line and do a regression, such as:
+
+## Regression of the Observed versus Predicted
 
 ```{r, label=test}
 summary(lm(observed~expected))
@@ -132,7 +131,7 @@ Lots of problems with this approach!
 - contegorical versus continuous
 - observed values are truncated.
 
-## aaaa
+## Evaluating the Predicted Distribution versus Observed Distribution
 ```{r}
 observed[6:13] = 0
 plot(0:13, pchisq(0:13, 4), ty="b")
@@ -140,19 +139,18 @@ lines(0:13, dchisq(0:13, 4), ty="l", col="blue")
 chi2 = sum((observed - expected)^2/expected); #chi2
 
 abline(v=chi2, col="red")
-pchisq(chi2, 4, lower.tail=F)
-Critical = qchisq(.05, 4, lower.tail=F); Critical
+# pchisq(chi2, 4, lower.tail=F)
+Critical = qchisq(.05, 4, lower.tail=F) # Critical
 abline(v=Critical, col="purple", lwd=2)
+text(11,.2, "Critical Value (alpha = 0.05)")
 ```
 
-## sss
-```{r}
-
-
-chisq.test(observed, p=expected, rescale.p = TRUE)
-```
+## Chi-Squared Revisited
 
 why is this a one-tailed test?
+```{r}
+chisq.test(observed, p=expected, rescale.p = TRUE)
+```
 
 ## More Poisson
 
