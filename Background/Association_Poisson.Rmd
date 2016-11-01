@@ -1,0 +1,165 @@
+---
+title: "Poisson Distribution"
+author: "Marc Los Huertos"
+date: "11/1/2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+## What are tests of association?
+
+## Chi square tests
+
+The Chi-squared test is used to evaluate categorical count data -- often these are call contingency tests.
+
+### Are Birthdays Randomly Distributed?
+
+Below are the data we collected:
+```{r bdays}
+Ja = 3; Fe = 2; Mr = 0; Ap = 1
+My = 0; Jn = 0; Jl = 0; Ag = 2
+Sp = 3; Oc = 1; Nv = 4; De = 3
+
+Bdays = c(Ja, Fe, Mr, Ap, My, Jn, Jl, Ag, Sp, Oc, Nv, De); Bdays
+```
+## Histogram 
+
+```{r}
+hist(Bdays, xlim=c(0,5))
+```
+
+## Histogram
+Okay, now we'll make a histogram.
+
+```{r, echo=T}
+hist(Bdays, las=1)
+
+```
+NOTE: the 'las=1' rotates the labels on the y-axis by 90 degrees, to make it easier to read.
+
+## Expectations
+
+What might be the expectation if the dates were randomly distributed? Each month would have an equal probabliity of 1/12.
+
+```{r}
+Bdays_expected = rep(1/12, 12); Bdays_expected
+```
+
+What is the sum of these expected probabilities?  Hopefully it is 1! Let's check.
+
+```{r}
+sum(Bdays_expected)
+```
+
+## Frequencies
+
+Let's convert the frequency to probabilities
+
+```{r}
+Bdays_sum = sum(Bdays)
+Bdays_prob = Bdays/Bdays_sum; Bdays_prob
+```
+
+## Let's compare the frequency and the expected:
+
+```{r}
+
+plot(Bdays_expected, Bdays_prob)
+abline(0, 1, col="blue", lwd=2)
+```
+
+This is a lame graph -- completely uniformative.
+
+
+## Chi Square
+
+```{r, echo=FALSE}
+chisq.test(Bdays_prob, p= Bdays_expected, rescale.p = TRUE)
+```
+
+## hist
+Let's try the Poisson Distribution, since this is count data!
+```{r}
+hist(Bdays, las=1, prob=T, xlim=c(0,7))
+```
+
+## Let's calculate the mean:
+
+```{r, label = icky}
+xbar = mean(Bdays)
+sd = sd(Bdays)
+```
+
+## Hist
+```{r}
+x=seq(0,12,1); x
+fy = dpois(x, xbar); fy
+hist(Bdays, prob=T, xlim=c(0,8), las=1)
+lines(x, fy, col="red")
+```
+
+## Expected 
+```{r}
+expected = c(fy*12); expected
+expected
+observed = c(4,2,2,3,1)
+observed[6:13] = 0; observed
+```
+
+```{r}
+plot(expected, observed, las=1)
+abline(0,1)
+
+```
+We could try to run a bestfit line and do a regression, such as:
+
+```{r, label=test}
+summary(lm(observed~expected))
+plot(expected, observed, las=1)
+abline(0,1)
+abline(coef(lm(observed~expected)))
+```
+
+## New Slide
+
+Lots of problems with this approach!
+
+- contegorical versus continuous
+- observed values are truncated.
+
+## aaaa
+```{r}
+observed[6:13] = 0
+plot(0:13, pchisq(0:13, 4), ty="b")
+lines(0:13, dchisq(0:13, 4), ty="l", col="blue")
+chi2 = sum((observed - expected)^2/expected); #chi2
+
+abline(v=chi2, col="red")
+pchisq(chi2, 4, lower.tail=F)
+Critical = qchisq(.05, 4, lower.tail=F); Critical
+abline(v=Critical, col="purple", lwd=2)
+```
+
+## sss
+```{r}
+
+
+chisq.test(observed, p=expected, rescale.p = TRUE)
+```
+
+why is this a one-tailed test?
+
+## More Poisson
+
+Toms River -- not done yet!
+
+```{r, label=test2}
+observed = 230; expected = 215.5; ratio = observed/expected; ratio
+observed*(1-(1/(9*observed))-(1.96/(3*sqrt(observed))))^3/expected
+(observed+1)*(1-(1/(9*(observed+1)))+(1.96/(3*sqrt(observed+1))))^3/expected
+```
