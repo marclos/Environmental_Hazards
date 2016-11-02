@@ -11,8 +11,41 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## TRI Data
 
-I have downloaded the data using, <https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-2014
-> and selecting 2014 data. 
+## Numerous Ways to Get Data
+
+Suggestions: 
+
+1. Collect Data from TRI Explorer
+
+## Using TRI Explorer
+
+1. Check out the fact sheet: 
+
+<https://iaspub.epa.gov/triexplorer/tri_factsheet_search.searchfactsheet>
+
+We might check out [Aniline in the USA](https://iaspub.epa.gov/triexplorer/chemical.html?pYear=2015&pLoc=000062533&pParent=TRI&pDataSet=TRIQ1)
+
+Or select a [region (5Cs are in Region 9](https://iaspub.epa.gov/triexplorer/region.html?pYear=2015&pLoc=9&pParent=TRI&pDataSet=TRIQ1))
+
+
+2. Evaluate Release Reports
+
+- [Chemicals](https://iaspub.epa.gov/triexplorer/tri_release.chemical)
+- [Facilities including Long and Lat.](https://iaspub.epa.gov/triexplorer/tri_getcounties.getcounties?report=tri_release.facility&scriptname=facility&state=06&c_year=2015&c_industry=ALL&c_chemical=_ALL_&c_chemlist=&c_coreyear=&c_indlist=&c_usrState=&c_fips=00000&c_tabrpt=1&c_zip=&c_chk0=false&c_chk1=false&c_chk2=false&c_chk3=false&c_chk4=true&c_chk5=false&c_chk6=false&c_chk7=true&c_chk8=false&c_chk9=false&c_chk10=)
+ 
+ 
+## Downloaded Facility Data
+
+```{r}
+LA2015 <- read.csv("/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/fac_release2015_2.csv"); head(LA2015)
+
+with(LA2015, plot(Longitude, Latitude))
+```
+
+
+##
+
+I have downloaded data using, <https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-2014> and selecting 2014 data. 
 
 ### Importing the data
 
