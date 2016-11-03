@@ -34,7 +34,7 @@ Or select a [region (5Cs are in Region 9](https://iaspub.epa.gov/triexplorer/reg
 - [Chemicals](https://iaspub.epa.gov/triexplorer/tri_release.chemical)
 - [Facilities including Long and Lat.](https://iaspub.epa.gov/triexplorer/tri_getcounties.getcounties?report=tri_release.facility&scriptname=facility&state=06&c_year=2015&c_industry=ALL&c_chemical=_ALL_&c_chemlist=&c_coreyear=&c_indlist=&c_usrState=&c_fips=00000&c_tabrpt=1&c_zip=&c_chk0=false&c_chk1=false&c_chk2=false&c_chk3=false&c_chk4=true&c_chk5=false&c_chk6=false&c_chk7=true&c_chk8=false&c_chk9=false&c_chk10=)
 
-Below is a screen shot but I forgot to check on the longitude and latitude, so be sure to add these categories.
+Below is a screen shot but I forgot to check on the longitude and latitude, so be sure to add these categories. I also suggest you check all of the buttons on where this stuff is going.
 
 ![screen](/home/CAMPUS/mwl04747/github/Environmental_Hazards/Graphics/TRI_Facilities.png)
  
