@@ -13,13 +13,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Numerous Ways to Get Data
 
-Suggestions: 
+### Suggestions: 
 
 1. Collect Data from TRI Explorer
 
-## Using TRI Explorer
+### Using TRI Explorer
 
-1. Check out the fact sheet: 
+1. Read detailed "Factors to Consider"
+
+2. Check out the fact sheet: 
 
 <https://iaspub.epa.gov/triexplorer/tri_factsheet_search.searchfactsheet>
 
@@ -27,23 +29,29 @@ We might check out [Aniline in the USA](https://iaspub.epa.gov/triexplorer/chemi
 
 Or select a [region (5Cs are in Region 9](https://iaspub.epa.gov/triexplorer/region.html?pYear=2015&pLoc=9&pParent=TRI&pDataSet=TRIQ1))
 
-
 2. Evaluate Release Reports
 
 - [Chemicals](https://iaspub.epa.gov/triexplorer/tri_release.chemical)
 - [Facilities including Long and Lat.](https://iaspub.epa.gov/triexplorer/tri_getcounties.getcounties?report=tri_release.facility&scriptname=facility&state=06&c_year=2015&c_industry=ALL&c_chemical=_ALL_&c_chemlist=&c_coreyear=&c_indlist=&c_usrState=&c_fips=00000&c_tabrpt=1&c_zip=&c_chk0=false&c_chk1=false&c_chk2=false&c_chk3=false&c_chk4=true&c_chk5=false&c_chk6=false&c_chk7=true&c_chk8=false&c_chk9=false&c_chk10=)
- 
- 
-## Downloaded Facility Data
 
+Below is a screen shot but I forgot to check on the longitude and latitude, so be sure to add these categories. I also suggest you check all of the buttons on where this stuff is going.
+
+![screen](/home/CAMPUS/mwl04747/github/Environmental_Hazards/Graphics/TRI_Facilities.png)
+ 
+ 
+### Downloaded Facility Data
+
+- Data has some problems. First, there are multiple entries per site. As R make some guesses about how to read the data, this creates several problems.
 ```{r}
-LA2015 <- read.csv("/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/fac_release2015_2.csv"); head(LA2015)
+LA2015 <- read.csv("/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/fac_release2015_2.csv"); 
 
-with(LA2015, plot(Longitude, Latitude))
+str(LA2015)
+
+#with(LA2015, plot(Longitude, Latitude))
 ```
 
 
-##
+## Facility Data
 
 I have downloaded data using, <https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-2014> and selecting 2014 data. 
 
@@ -51,8 +59,15 @@ I have downloaded data using, <https://www.epa.gov/toxics-release-inventory-tri-
 
 ```{r cars}
 TRI14CAsource <- "/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/TRI_2014_CA.csv"
-TRI14CA <- read.csv(TRI14CAsource); head(TRI14CA)
+TRI14CA <- read.csv(TRI14CAsource); str(TRI14CA)
 ```
+
+Let's evaluate the variable names and see what we have:
+
+```{r names}
+names(TRI14CA)
+```
+
 
 ## Filter for LA County
 ```{r filterLA}
