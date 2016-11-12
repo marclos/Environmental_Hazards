@@ -112,7 +112,7 @@ import <- read.csv(file)
 str(import)
 ```
 
-Not the releases are integers, yes!
+Now the releases are integers, yes!
 
 ## Analyzing Data
 
@@ -171,7 +171,7 @@ Let's first look a bit at the data. For example, what are the counties in Califo
 
 ```{r countyfips}
 data(countyfips)
-countyfips[countyfips$statename=="california",]
+head(countyfips[countyfips$statename=="california",])
 ```
 
 Since, my site is in Orange county, I'm going to start there!
@@ -199,9 +199,24 @@ coord<-coordinates(c2)
 text(coord[c(1,4),],california.counties$countyname[california.counties$countyname%in%county.n],cex=2)
 ```
 
+## Demographics
 
-# Alternative Approach Importing the data
+I found the tract nearest the facility to be 743 via google, and that it is 85% Latino!
 
+I am working on how to get the R GIS data to cooperate to create a map, but for now, this is a great start.
+
+
+data("california.tract10")
+
+names(california.tract10)
+orange.county <- county(name = "orange", state = "ca", level = "tract")
+
+data(california.tract10)
+demographics(dem = c("pop2000", "white", "black"), "CA", level = "msa", msaname = "Los Angeles")
+
+head(demographics(dem=c("P0010001"), state="ca",level="tract"))
+
+# Alternative Approach Importing the data (Use at your own Risk!)
 
 - Data has some problems. First, there are multiple entries per site. As R make some guesses about how to read the data, this creates several problems.
 ```{r}
