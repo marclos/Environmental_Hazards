@@ -26,7 +26,7 @@ I have a few suggestions below, but if you find a better way, please share them 
 I suggest we use the [TRI Explorer[(https://iaspub.epa.gov/triexplorer/tri_release.chemical interface). 
 
 
-#### Using TRI Explorer
+### Using TRI Explorer
 
 1. Check out fact sheet page: 
 
@@ -65,22 +65,139 @@ To download all the data, navigate to the bottom of the page, and notice a tiny 
 
 5. Preprocessing Data
 
-To read this into R, we have to pre-process the data abit. For example, the first two rows need to be removed or R won't create the headers correctly.
+To read this into R, we have to pre-process the data abit. For example, the first two rows need to be removed or R won't create the headers correctly. NOTE: I found that I had to fix another issue in some files, you can see what I had to do below and check your file now, or follow along and hope that you don't have the same problem I had.
 
 Once you have done this, upload the csv file into R, using the "upload" button" in R (The "Upload" button is located on the "Files" table in the lower right window of Rstudio. I suggest you nativgate to your own directory and then upload, so you know exactly where you have saved it. 
 
 ### Importing the Facility Data into R
 
+There are three steps to download data into R:
 
+1. Identify the path and file name (We can use 'file.choose()')
+2. Read the file into R ('read.csv()').
+3. Create an object (dataframe) in R to be analyzed ( '<-').
+
+Here's an example:
+
+first, I use file.choose() to find my file and copy the path/file name into the clipboard.
+
+> file.choose()
+
+[1] "/home/CAMPUS/mwl04747/github/Environmental_Hazards/GALLADE CHEMICAL INC.csv"
+
+We can then create a short cut to the long file name and then read the file into a data frame, called import.
+
+```{r importing}
+file = "/home/CAMPUS/mwl04747/github/Environmental_Hazards/GALLADE CHEMICAL INC.csv"
+import <- read.csv(file)
+```
+
+I always check the data to see that the file was read correctly, by looking at the structure ('str()') and first six observations or header ('head()'). 
+```{r checking}
+str(import)
+head(import)
+```
+
+In this case, R did not import the file correctly. The amounts of releases have been imported as factors, thus not continuous variables. Bummer... so, now I need to sort out what went wrong. 
+
+As I looked at "import" I noticed some entries that were just '.'. R didn't know how to import these (their not numbers!), so it defaulted to make all the variables as text strings, which are then seen as factors in the dataframe. 
+
+So, in excel, I did a search and replace to find all the '.' (be sure to select matching for entire cells) and then replaced with 'NA', which R understands as missing data. I guess you could also put in zero, which would be more accurate, but I didn't think of that until now.
+
+Now, I re-read the new, uploaded csv file. 
+
+```{r}
+file = "/home/CAMPUS/mwl04747/github/Environmental_Hazards/GALLADE CHEMICAL INC (1).csv"
+import <- read.csv(file)
+str(import)
+```
+
+Not the releases are integers, yes!
 
 ## Analyzing Data
+
+As we begin the analysis program, I often have to refer back to the file to remember the names of the variables, which in this case are hard to remember. I can also elect to change the names to make them simpilar, which I will do in an updated version if it's useful. 
+
+```{r }
+names(import)
+
+```
+
+
+### Creating a Time Series
+
+So, making plots is easy in R. In this case, I'll see what fugitive air releases have changed with time. 
+
+```{r }
+plot(Fugitive.Air  ~ Year, data=import)
+
+```
+
+Obviously, something interesting has happend here. I had low numbers and then a break and now really high numbers. But this graph is showing all the chemicals, so now I need to subset the data for various chemicals.
+
+### Subsetting Data
+
+First, I need a list of chemicals so I can sort through each of them. I know the variable name is 'Chemical', but how can I create a vector of the unique types, let's use the function 'unique()', where we specifie the dataframe and the variable name:
+
+```{r listingchemicals}
+unique(import$Chemical)
+```
+
+Notice they are all upper case and in some cases quite long, thus easy to mispell. I like to copy and paste each name so I can create a figure without too much consternation based on my typing ability.
+
+First, let's see how to subset a dataframe, using the function 'subset()'
+```{r subsetting}
+xylene <- subset(import, Chemical=="XYLENE (MIXED ISOMERS)")
+```
+NOTE: The double '==' is a bizarre syntax!
+
+Now, we can plot xylene,
+
+```{r }
+plot(Fugitive.Air  ~ Year, data=xylene)
+
+```
+
+Super uneven releases, this might be worth investigating. But for now, let's turn to the census data for the area around the facility.
 
 ## Combining with Census Data
 
 ```{r}
 library(UScensus2010)
+library(UScensus2010tract)
 ```
 
+Let's first look a bit at the data. For example, what are the counties in California that might be available?
+
+```{r countyfips}
+data(countyfips)
+countyfips[countyfips$statename=="california",]
+```
+
+Since, my site is in Orange county, I'm going to start there!
+
+```{r countyplot}
+#countyfips[countyfips$statename=="california",]
+
+### The county fips code is the last three characters
+county.f<-"001" # Not sure what this is for!
+county.n<-c("orange county", "los angeles county")
+
+## Pull out these counties
+c1<-county(fips=county.f,state="ca",level="tract")
+c2<-county(name=county.n,state="ca",level="tract")
+```
+
+
+##Plot counties
+```{r}
+california.counties<-countyfips[countyfips$statename=="california",]
+col<-cbind(c("red","blue"),c("059","037"))
+plot(c2,col=col[match(c2$county,col[,2]),1],border="gray")
+title("Los Angeles and Orange counties, CA 2010")
+coord<-coordinates(c2)
+text(coord[c(1,4),],california.counties$countyname[california.counties$countyname%in%county.n],cex=2)
+```
 
 
 # Alternative Approach Importing the data
