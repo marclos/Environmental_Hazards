@@ -11,35 +11,80 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## TRI Data
 
+What is TRI? According to the EPA, "TRI is a resource for learning about toxic chemical releases and pollution prevention activities reported by industrial and federal facilities. TRI data support informed decision-making by communities, government agencies, companies, and others." 
+
+Before doing too much on TRI, you will find reading this is very helpful ["Factors to Consider"](https://www.epa.gov/toxics-release-inventory-tri-program/factors-consider-when-using-toxics-release-inventory-data), which you can find in English or Spanish. 
+
 ## Numerous Ways to Get Data
 
-### Suggestions: 
+The TRI database is in a structured query database or SQL, which means data tables are linked by key words. Unfortunately, SQL has complex syntax and learning it is well beyond the scope of this course. So, we have to use the TRI interface, which allows users to obtain data from the database. Unfortunately, there are several ways to get the data and each of the methods have their own challenges. 
 
-1. Collect Data from TRI Explorer
+I have a few suggestions below, but if you find a better way, please share them with us, using this document.
 
-### Using TRI Explorer
+### Suggestions: TRI Explorer
 
-1. Read detailed "Factors to Consider"
+I suggest we use the [TRI Explorer[(https://iaspub.epa.gov/triexplorer/tri_release.chemical interface). 
 
-2. Check out the fact sheet: 
+
+#### Using TRI Explorer
+
+1. Check out fact sheet page: 
 
 <https://iaspub.epa.gov/triexplorer/tri_factsheet_search.searchfactsheet>
 
-We might check out [Aniline in the USA](https://iaspub.epa.gov/triexplorer/chemical.html?pYear=2015&pLoc=000062533&pParent=TRI&pDataSet=TRIQ1)
+This page gives you a sampling of what has been reported. I suggest you check out a range of zip codes or even some particular chemicals.
 
-Or select a [region (5Cs are in Region 9](https://iaspub.epa.gov/triexplorer/region.html?pYear=2015&pLoc=9&pParent=TRI&pDataSet=TRIQ1))
+For example, we might check out [Aniline in the USA](https://iaspub.epa.gov/triexplorer/chemical.html?pYear=2015&pLoc=000062533&pParent=TRI&pDataSet=TRIQ1). Aniline, of course, is famous because of it's role as a dye and use at the Toms River Chemical Company, Cinnicinati Chemical Company, and even Basal, Switzerland. 
+
+Another approach is to evaluate various sites in a region. EPA has devided the country (and territories) into regions. We happend to be in Region 9. Thus, we might select facilities [region 9](https://iaspub.epa.gov/triexplorer/region.html?pYear=2015&pLoc=9&pParent=TRI&pDataSet=TRIQ1)), where the 5Cs are located. 
 
 2. Evaluate Release Reports
 
-- [Chemicals](https://iaspub.epa.gov/triexplorer/tri_release.chemical)
-- [Facilities including Long and Lat.](https://iaspub.epa.gov/triexplorer/tri_getcounties.getcounties?report=tri_release.facility&scriptname=facility&state=06&c_year=2015&c_industry=ALL&c_chemical=_ALL_&c_chemlist=&c_coreyear=&c_indlist=&c_usrState=&c_fips=00000&c_tabrpt=1&c_zip=&c_chk0=false&c_chk1=false&c_chk2=false&c_chk3=false&c_chk4=true&c_chk5=false&c_chk6=false&c_chk7=true&c_chk8=false&c_chk9=false&c_chk10=)
+Before you select a Facility, it might be useful to determine if the toxics released pose a potential risk. 
 
-Below is a screen shot but I forgot to check on the longitude and latitude, so be sure to add these categories. I also suggest you check all of the buttons on where this stuff is going.
+-We might evaluate what [chemicals](https://iaspub.epa.gov/triexplorer/tri_release.chemical) might be released. This is useful if you have a specific interest in a chemical that you think is a particular risk. 
+
+
+-Alternatively, we might explore [facilities](https://iaspub.epa.gov/triexplorer/tri_getcounties.getcounties?report=tri_release.facility&scriptname=facility&state=06&c_year=2015&c_industry=ALL&c_chemical=_ALL_&c_chemlist=&c_coreyear=&c_indlist=&c_usrState=&c_fips=00000&c_tabrpt=1&c_zip=&c_chk0=false&c_chk1=false&c_chk2=false&c_chk3=false&c_chk4=true&c_chk5=false&c_chk6=false&c_chk7=true&c_chk8=false&c_chk9=false&c_chk10=) that might be releasing chemicals. This might be preferrable because we can narrow our search to areas or communities that might be particularly vulnerable. 
+
+Below is a screen shot of this facilities interface. If you decide to make use of this site, be sure to include the longitude and latitude, so we can map the site later on in the project.
 
 ![screen](/home/CAMPUS/mwl04747/github/Environmental_Hazards/Graphics/TRI_Facilities.png)
  
- 
-### Downloaded Facility Data
+3. Selecting a Facility
+
+Begin by looking over all the data for a county or zip code. Evaluate the chemicals released by using a search engine to determine a site may be a signficiant risk. Of course, you'll need to decided which release type is most compelling to you. Most students focus on "Fugitive Air" releases. But stake maybe more important. 
+
+I found a facility (Gallade Chemical Inc) in Orange County that had a wide range of chemicals released as "Fugitative Air". 
+
+4. Download the Facilities records. 
+
+Following my [selection](https://iaspub.epa.gov/triexplorer/release_fac_profile?TRI=92707GLLDC1230E&TRILIB=TRIQ1&FLD=&FLD=LNGLAT&FLD=AIRLBY&FLD=E1&FLD=E2&FLD=E3&FLD=E4&FLD=E5&FLD=E52&FLD=E53&FLD=E54&FLD=E51&FLD=TSFDSP&FLD=TSFDSP&FLD=m10&FLD=m41&FLD=m62&FLD=potwmetl&FLD=m71&FLD=m72&FLD=m73&FLD=m79&FLD=m90&FLD=m94&FLD=m99&FLD=RELLBY&FLD=on&OFFDISPD=&OTHDISPD=&ONDISPD=&OTHOFFD=&YEAR=1990), I double check to see if this the site I am really interested. 
+
+To download all the data, navigate to the bottom of the page, and notice a tiny button that says "Download all data", which will create a csv file. Save this file in some locations on your computer that you can find again!
+
+5. Preprocessing Data
+
+To read this into R, we have to pre-process the data abit. For example, the first two rows need to be removed or R won't create the headers correctly.
+
+Once you have done this, upload the csv file into R, using the "upload" button" in R (The "Upload" button is located on the "Files" table in the lower right window of Rstudio. I suggest you nativgate to your own directory and then upload, so you know exactly where you have saved it. 
+
+### Importing the Facility Data into R
+
+
+
+## Analyzing Data
+
+## Combining with Census Data
+
+```{r}
+library(UScensus2010)
+```
+
+
+
+# Alternative Approach Importing the data
+
 
 - Data has some problems. First, there are multiple entries per site. As R make some guesses about how to read the data, this creates several problems.
 ```{r}
@@ -54,9 +99,6 @@ str(LA2015)
 ## Facility Data
 
 I have downloaded data using, <https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-2014> and selecting 2014 data. 
-
-### Importing the data
-
 ```{r cars}
 TRI14CAsource <- "/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/TRI_2014_CA.csv"
 TRI14CA <- read.csv(TRI14CAsource); str(TRI14CA)
