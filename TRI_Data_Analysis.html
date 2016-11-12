@@ -372,7 +372,11 @@ str(import)</code></pre>
 ##  $ Quantity.released.on..and.off.site           : int  0 0 0 0 0 0 0 0 0 0 ...
 ##  $ Total.production.related.waste.managed       : int  0 0 0 0 0 0 0 0 0 0 ...
 ##  $ Non.production.related.waste.managed         : int  0 0 0 0 0 0 0 0 0 0 ...</code></pre>
-<p>Now the releases are integers, yes!</p>
+<p>remote: error: GH001: Large files detected. You may want to try Git Large File Storage - <a href="https://git-lfs.github.com" class="uri">https://git-lfs.github.com</a>.<br />
+remote: error: Trace: 6373cd166ffb1f7ddfe7dea66685e0a1<br />
+remote: error: See <a href="http://git.io/iEPt8g" class="uri">http://git.io/iEPt8g</a> for more information.<br />
+remote: error: File packages/UScensus2010tract_1.00.tar.gz is 181.65 MB; this exceeds GitHub’s file size limit of 100.00 MB</p>
+<p>git filter-branch –index-filter ‘git rm -r –cached –ignore-unmatch packages/UScensus2010tract_1.00.tar.gz’ HEAD Now the releases are integers, yes!</p>
 </div>
 </div>
 <div id="analyzing-data" class="section level2">
@@ -487,7 +491,10 @@ str(import)</code></pre>
 ## 
 ## For citation information, type citation(&quot;UScensus2010tract&quot;).</code></pre>
 <p>Let’s first look a bit at the data. For example, what are the counties in California that might be available?</p>
+<p>First, we need to learn something about how the federal government sorts out county and state codes. They do this using FIPS. The FIPS county code is a five-digit Federal Information Processing Standard (FIPS) code (FIPS 6-4) which uniquely identifies counties and county equivalents in the United States, certain U.S. possessions, and certain freely associated states. The first two digits are the FIPS state code and the last three are the county code within the state or possession.</p>
+<p>we can query the county codes for California with the following:</p>
 <pre class="r"><code>data(countyfips)
+# Just doing the first six with the 'head()' function
 head(countyfips[countyfips$statename==&quot;california&quot;,])</code></pre>
 <pre><code>##      fips       countyname  statename acronym
 ## 185 06001   alameda county california      ca
@@ -496,16 +503,18 @@ head(countyfips[countyfips$statename==&quot;california&quot;,])</code></pre>
 ## 188 06007     butte county california      ca
 ## 189 06009 calaveras county california      ca
 ## 190 06011    colusa county california      ca</code></pre>
-<p>Since, my site is in Orange county, I’m going to start there!</p>
+<p>Since, my site is in Orange county, I’m going to start there, which has a FIPS code of 06059.</p>
+<p>The address of the facility is 1230 E SAINT GERTRUDE PL, SANTA ANA, CALIFORNIA 92707</p>
 <pre class="r"><code>#countyfips[countyfips$statename==&quot;california&quot;,]
 
 ### The county fips code is the last three characters
-county.f&lt;-&quot;001&quot; # Not sure what this is for!
+county.f&lt;-&quot;002&quot; # Not sure what this is for!
 county.n&lt;-c(&quot;orange county&quot;, &quot;los angeles county&quot;)
 
 ## Pull out these counties
-c1&lt;-county(fips=county.f,state=&quot;ca&quot;,level=&quot;tract&quot;)
-c2&lt;-county(name=county.n,state=&quot;ca&quot;,level=&quot;tract&quot;)</code></pre>
+c1&lt;-county(fips=county.f,state=&quot;ca&quot;,level=&quot;tract&quot;)</code></pre>
+<pre><code>## Not a valid county FIPS!</code></pre>
+<pre class="r"><code>c2&lt;-county(name=county.n,state=&quot;ca&quot;,level=&quot;tract&quot;)</code></pre>
 </div>
 <div id="plot-counties" class="section level2">
 <h2>Plot counties</h2>
