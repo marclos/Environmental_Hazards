@@ -157,18 +157,30 @@ xylene <- subset(import, Chemical=="XYLENE (MIXED ISOMERS)")
 ```
 NOTE: The double '==' is a bizarre syntax!
 
-Now, we can plot xylene,
+Now, we can plot xylene, and make it look better...
 
 ```{r }
-plot(Fugitive.Air  ~ Year, data=xylene)
+plot(Fugitive.Air  ~ Year, data=xylene, las=1, pch=19, ylab="Fugitive Air Emissions (lbs)", xlim=c(1985, 2014))
 
 ```
 
 Super uneven releases, this might be worth investigating. But for now, let's turn to the census data for the area around the facility.
 
+### Creating a loop to get all the chemicals
+```{r loop, fig=TRUE}
+chemicals <- unique(import$Chemical)
+
+for (i in 1:length(chemicals)){
+temp <- subset(import, Chemical==import$Chemical[i])
+
+plot(Fugitive.Air  ~ Year, data=temp, las=1, pch=19, ylab="Fugitive Air Emissions (lbs)", xlim=c(1985, 2014), main=paste(import$Chemical[i]))
+}
+```
+
+
 ## Combining with Census Data
 
-[hierarchy](http://www2.census.gov/geo/pdfs/reference/geodiagram.pdf)
+The census data are organized in a [hierarchy](http://www2.census.gov/geo/pdfs/reference/geodiagram.pdf). This should be a place that you recognize the problems of analyzing spatial data: what is the appropriate scale, what do you gain and loss when you aggregate spatial scales?
 
 ```{r}
 library(UScensus2010)
