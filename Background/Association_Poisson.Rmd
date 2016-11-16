@@ -19,7 +19,7 @@ The Chi-squared test is used to evaluate categorical count data -- often these a
 
 ### Are Birthdays Randomly Distributed?
 
-Below are the data we collected:
+Below are the data collected (from EA30F15):
 ```{r bdays}
 Ja = 3; Fe = 2; Mr = 0; Ap = 1
 My = 0; Jn = 0; Jl = 0; Ag = 2
