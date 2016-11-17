@@ -89,3 +89,14 @@ plot(Treated.off.site~Year,data=import)
 
 plot(Treated.off.site~Year,data=import[import$Chemical=="LEAD.COMPOUNDS",])
 
+names(import)
+
+plot(Total.on.site.release~Year,data=import)
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="METHANOL",])
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",])
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="METHYL TERT-BUTYL ETHER",])
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="XYLENE (MIXED ISOMERS)",])
