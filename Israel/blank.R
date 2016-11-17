@@ -100,3 +100,6 @@ plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",])
 plot(Total.on.site.release~Year,data=import[import$Chemical=="METHYL TERT-BUTYL ETHER",])
 
 plot(Total.on.site.release~Year,data=import[import$Chemical=="XYLENE (MIXED ISOMERS)",])
+
+plot(Total.on.site.release~Year=="2010-2015",data=import)
+
