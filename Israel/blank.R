@@ -51,7 +51,11 @@ if a decimal point is reported across an entire row, the facility submitted a Fo
 if a decimal point is reported in a single column, the facility left that particular cell blank in its Form R submission (a zero in a cell denotes either that the facility reported 0 or NA in its Form R submission)."					
 <u>How to cite TRI Explorer.</u>    Following APA Style, 6th edition, an appropriate citation to TRI Explorer is:<br/>United States Environmental Protection Agency. (2016). <i>TRI Explorer</i> (2015 National Analysis dataset (released October 2016)) [Internet database]. Retrieved from <a href=https://www.epa.gov/triexplorer>https://www.epa.gov/triexplorer</a>, (November 02, 2016).					
 
-
+Toluene
+Methanol
+Methyl Tert-Butyl-Ether
+Xylene (Mixed Isomers)
+(N-Hexane)
 
 ################################################################
 -----DSFSAFSADFASDF---------------------------
