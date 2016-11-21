@@ -101,5 +101,9 @@ plot(Total.on.site.release~Year,data=import[import$Chemical=="METHYL TERT-BUTYL 
 
 plot(Total.on.site.release~Year,data=import[import$Chemical=="XYLENE (MIXED ISOMERS)",])
 
-plot(Total.on.site.release~Year=="2010-2015",data=import)
+plot(Total.on.site.release~Year,data=import[import$Year>2009,])
 
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="TOLUENE",],
+ylab="Total on-site release (lbs)",las=1,pch=19,ylim=c(0,800))
+
+points(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="METHYL TERT-BUTYL ETHER",], pch=16)
