@@ -107,3 +107,30 @@ plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical==
 ylab="Total on-site release (lbs)",las=1,pch=19,ylim=c(0,800))
 
 points(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="METHYL TERT-BUTYL ETHER",], pch=16)
+
+file.choose()
+
+file="/home/CAMPUS/lmh12014/github/Environmental_Hazards/Israel/TESORO DATA.csv"
+
+read.csv(file)
+
+import=read.csv(file)
+
+names(import)
+
+str(import)
+
+plot(Total.on.site.release~Year,data=import,ylab="Total on-site release, lbs (All Chemicals)",las=1,pch=19)
+
+plot(Total.on.site.release~Year,data=import,ylab="Total on-site release, lbs (All Chemicals)",las=1,pch=19)
+
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="BENZENE",],ylab="Total on-site release BENZENE (lbs)",las=1,pch=19,)
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="BENZENE",],ylab="On-site benzene releases (lb)",las=1,pch=19,ylim=c(0,550))
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="ETHYLBENZENE",],ylab="On-site ethylbenzene releases (lb)",las=1,pch=19,ylim=c(0,700))
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases (lb)",las=1,pch=19,ylim=c(0,125))
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",],ylab="On-site toluene releases (lb)",las=1,pch=19,ylim=c(0,1400))
+
