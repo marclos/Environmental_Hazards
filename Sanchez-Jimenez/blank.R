@@ -27,4 +27,8 @@ plot(Land.Disposal ~ Year, data=Toluene, las=1, pch=19, ylab="Land Disposal (lbs
 plot(Total.on.site.release ~ Year, data=Toluene, las=1, pch=19, ylab="Fugitive Air Emissions (lbs)", xlim=c(1985, 2014))
 plot(Off.site.release ~ Year, data=Toluene, las=1, pch=19, ylab="Fugitive Air Emissions (lbs)", xlim=c(1985, 2014))
 
+<<<<<<< HEAD
 #last one has problems, but no need?
+=======
+#
+>>>>>>> cce061252130c2283a21a6390d80f54bd5f63f79
