@@ -134,3 +134,51 @@ plot(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",],yla
 
 plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",],ylab="On-site toluene releases (lb)",las=1,pch=19,ylim=c(0,1400))
 
+plot(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases (lb)",las=1,pch=19,ylim=c(0,125))
+lines(Total.on.site.release~Year, fitted(fit), col="blue")
+
+fit <- lm(Total.on.site.release~Year, data=import)
+
+example("pch")
+
+data=rnorm(le4)
+hist(data)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="BENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="BENZENE",],ylab="On-site benzene releases (lb)",las=1,pch=19,ylim=c(0,550))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="ETHYLBENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="ETHYLBENZENE",],ylab="On-site ethylbenzene releases (lb)",las=1,pch=19,ylim=c(0,700))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases (lb)",las=1,pch=19,ylim=c(0,125))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",],ylab="On-site toluene releases (lb)",las=1,pch=19,ylim=c(0,1400))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="BENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="BENZENE",],ylab="On-site benzene releases since 2010 (lb)",las=1,pch=19,ylim=c(100,250))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="ETHYLBENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="ETHYLBENZENE",],ylab="On-site ethylbenzene releases since 2010 (lb)",las=1,pch=19,ylim=c(25,175))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="NAPHTHALENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases since 2010 (lb)",las=1,pch=19,ylim=c(10,40))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="TOLUENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="TOLUENE",],ylab="On-site toluene releases since 2010 (lb)",las=1,pch=19,ylim=c(200,750))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2011,])
+plot(Total.on.site.release~Year,data=import[import$Year>2011,],ylab="Total on-site release, lbs (All Chemicals)",las=1,pch=19,ylim=c(0,800))
+abline(fit)
+
+
+
