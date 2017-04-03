@@ -1,9 +1,10 @@
 \documentclass{article}
 \usepackage{natbib}
+%\usepackage{hyperref}
 \bibliographystyle{plainnat}
-\setcitestyle{open={(},close={)}}
+%\setcitestyle{open={(},close={)}}
 
-\renewcommand\bibname{Literature Cited}
+%\renewcommand\bibname{Literature Cited}
 
 
 \author{Author}
@@ -11,7 +12,7 @@
 
 
 \begin{document}
-\maketitle
+%\maketitle
 
 \section{Abstract}
 
@@ -25,7 +26,9 @@
 
 \cite{lanphear1998contribution} evaluted XXX in soils...
 
-There have been many reveiws \citep{tidball1976lead}.
+%There have been many reveiws \citep{tidball1976lead}.
+
+%Here's a list of them: \cite{zimdahl1977behavior, barltrop1975absorption, wang2006transfer}.
 
 \subsection{Objectives}
 
@@ -53,18 +56,21 @@ R code blocks in Sweave/LaTeX is a bit different:
 fakedata = data.frame(Location = c(rep("A", 3), rep("B", 3), rep("C", 3)), Pb = rlnorm(9, 3, 1))
 @
 
-\begin{figure}
-<<boxplot, fig=TRUE>>=
-plot(Pb ~ Location, data=fakedata)
-@
-\end{figure}
-
-
 <<results='asis'>>=
 library(xtable)
 xtable(fakedata)
 @
 
+We should always describe the figure before the figures appears in the text. Sometimes, floating figures don't copperate (Figure \ref{fig.boxplot}).
+
+
+\begin{figure}
+<<boxplot, fig=TRUE>>=
+plot(Pb ~ Location, data=fakedata, las=1, cex=2, col='grey')
+@
+\caption{Figure Caption...}
+\label{fig.boxplot}
+\end{figure}
 <<>>=
 fakedata.aov = aov(Pb ~ Location, data=fakedata)
 summary(fakedata.aov)

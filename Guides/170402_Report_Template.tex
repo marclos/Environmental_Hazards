@@ -50,17 +50,18 @@
 
 \usepackage{alltt}
 \usepackage{natbib}
+%\usepackage{hyperref}
 \bibliographystyle{plainnat}
-\setcitestyle{open={(},close={)}}
+%\setcitestyle{open={(},close={)}}
 
-\renewcommand\bibname{Literature Cited}
+%\renewcommand\bibname{Literature Cited}
 
 
 \author{Author}
 \title{Title of Report}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
-\maketitle
+%\maketitle
 
 \section{Abstract}
 
@@ -74,7 +75,9 @@
 
 \cite{lanphear1998contribution} evaluted XXX in soils...
 
-There have been many reveiws \citep{tidball1976lead}.
+%There have been many reveiws \citep{tidball1976lead}.
+
+%Here's a list of them: \cite{zimdahl1977behavior, barltrop1975absorption, wang2006transfer}.
 
 \subsection{Objectives}
 
@@ -107,46 +110,49 @@ R code blocks in Sweave/LaTeX is a bit different:
 \end{kframe}
 \end{knitrout}
 
-\begin{figure}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{plot}\hlstd{(Pb} \hlopt{~} \hlstd{Location,} \hlkwc{data}\hlstd{=fakedata)}
-\end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/boxplot-1} 
-
-\end{knitrout}
-\end{figure}
-
-
 \begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hlstd{(xtable)}
 \hlkwd{xtable}\hlstd{(fakedata)}
 \end{alltt}
 \end{kframe}% latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Sun Apr  2 19:24:03 2017
+% Sun Apr  2 19:45:20 2017
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlr}
   \hline
  & Location & Pb \\ 
   \hline
-1 & A & 54.47 \\ 
-  2 & A & 10.60 \\ 
-  3 & A & 32.84 \\ 
-  4 & B & 24.22 \\ 
-  5 & B & 22.28 \\ 
-  6 & B & 22.98 \\ 
-  7 & C & 1.51 \\ 
-  8 & C & 21.19 \\ 
-  9 & C & 45.51 \\ 
+1 & A & 49.40 \\ 
+  2 & A & 16.69 \\ 
+  3 & A & 45.50 \\ 
+  4 & B & 100.97 \\ 
+  5 & B & 139.96 \\ 
+  6 & B & 28.67 \\ 
+  7 & C & 36.02 \\ 
+  8 & C & 13.84 \\ 
+  9 & C & 20.86 \\ 
    \hline
 \end{tabular}
 \end{table}
 
 
+We should always describe the figure before the figures appears in the text. Sometimes, floating figures don't copperate (Figure \ref{fig.boxplot}).
+
+
+\begin{figure}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(Pb} \hlopt{~} \hlstd{Location,} \hlkwc{data}\hlstd{=fakedata,} \hlkwc{las}\hlstd{=}\hlnum{1}\hlstd{,} \hlkwc{cex}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{col}\hlstd{=}\hlstr{'grey'}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/boxplot-1} 
+
+\end{knitrout}
+\caption{Figure Caption...}
+\label{fig.boxplot}
+\end{figure}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -155,8 +161,8 @@ R code blocks in Sweave/LaTeX is a bit different:
 \end{alltt}
 \begin{verbatim}
 ##             Df Sum Sq Mean Sq F value Pr(>F)
-## Location     2  187.9    93.9   0.291  0.757
-## Residuals    6 1935.8   322.6
+## Location     2   7354    3677   3.033  0.123
+## Residuals    6   7274    1212
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
