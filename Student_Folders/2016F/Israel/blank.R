@@ -51,7 +51,11 @@ if a decimal point is reported across an entire row, the facility submitted a Fo
 if a decimal point is reported in a single column, the facility left that particular cell blank in its Form R submission (a zero in a cell denotes either that the facility reported 0 or NA in its Form R submission)."					
 <u>How to cite TRI Explorer.</u>    Following APA Style, 6th edition, an appropriate citation to TRI Explorer is:<br/>United States Environmental Protection Agency. (2016). <i>TRI Explorer</i> (2015 National Analysis dataset (released October 2016)) [Internet database]. Retrieved from <a href=https://www.epa.gov/triexplorer>https://www.epa.gov/triexplorer</a>, (November 02, 2016).					
 
-
+Toluene
+Methanol
+Methyl Tert-Butyl-Ether
+Xylene (Mixed Isomers)
+(N-Hexane)
 
 ################################################################
 -----DSFSAFSADFASDF---------------------------
@@ -84,4 +88,97 @@ plot(Treated.off.site~Year,data=import[import$Chemical=="LEAD.COMPOUNDS",])
 plot(Treated.off.site~Year,data=import)
 
 plot(Treated.off.site~Year,data=import[import$Chemical=="LEAD.COMPOUNDS",])
+
+names(import)
+
+plot(Total.on.site.release~Year,data=import)
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="METHANOL",])
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",])
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="METHYL TERT-BUTYL ETHER",])
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="XYLENE (MIXED ISOMERS)",])
+
+plot(Total.on.site.release~Year,data=import[import$Year>2009,])
+
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="TOLUENE",],
+ylab="Total on-site release (lbs)",las=1,pch=19,ylim=c(0,800))
+
+points(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="METHYL TERT-BUTYL ETHER",], pch=16)
+
+file.choose()
+
+file="/home/CAMPUS/lmh12014/github/Environmental_Hazards/Israel/TESORO DATA.csv"
+
+read.csv(file)
+
+import=read.csv(file)
+
+names(import)
+
+str(import)
+
+plot(Total.on.site.release~Year,data=import,ylab="Total on-site release, lbs (All Chemicals)",las=1,pch=19)
+
+plot(Total.on.site.release~Year,data=import,ylab="Total on-site release, lbs (All Chemicals)",las=1,pch=19)
+
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="BENZENE",],ylab="Total on-site release BENZENE (lbs)",las=1,pch=19,)
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="BENZENE",],ylab="On-site benzene releases (lb)",las=1,pch=19,ylim=c(0,550))
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="ETHYLBENZENE",],ylab="On-site ethylbenzene releases (lb)",las=1,pch=19,ylim=c(0,700))
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases (lb)",las=1,pch=19,ylim=c(0,125))
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",],ylab="On-site toluene releases (lb)",las=1,pch=19,ylim=c(0,1400))
+
+plot(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases (lb)",las=1,pch=19,ylim=c(0,125))
+lines(Total.on.site.release~Year, fitted(fit), col="blue")
+
+fit <- lm(Total.on.site.release~Year, data=import)
+
+example("pch")
+
+data=rnorm(le4)
+hist(data)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="BENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="BENZENE",],ylab="On-site benzene releases (lb)",las=1,pch=19,ylim=c(0,550))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="ETHYLBENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="ETHYLBENZENE",],ylab="On-site ethylbenzene releases (lb)",las=1,pch=19,ylim=c(0,700))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases (lb)",las=1,pch=19,ylim=c(0,125))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",])
+plot(Total.on.site.release~Year,data=import[import$Chemical=="TOLUENE",],ylab="On-site toluene releases (lb)",las=1,pch=19,ylim=c(0,1400))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="BENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="BENZENE",],ylab="On-site benzene releases since 2010 (lb)",las=1,pch=19,ylim=c(100,250))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="ETHYLBENZENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="ETHYLBENZENE",],ylab="On-site ethylbenzene releases since 2010 (lb)",las=1,pch=19,ylim=c(25,175))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="NAPHTHALENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="NAPHTHALENE",],ylab="On-site naphthalene releases since 2010 (lb)",las=1,pch=19,ylim=c(10,40))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="TOLUENE",])
+plot(Total.on.site.release~Year,data=import[import$Year>2009 & import$Chemical=="TOLUENE",],ylab="On-site toluene releases since 2010 (lb)",las=1,pch=19,ylim=c(200,750))
+abline(fit)
+
+fit=lm(Total.on.site.release~Year,data=import[import$Year>2011,])
+plot(Total.on.site.release~Year,data=import[import$Year>2011,],ylab="Total on-site release, lbs (All Chemicals)",las=1,pch=19,ylim=c(0,800))
+abline(fit)
+
+
 
