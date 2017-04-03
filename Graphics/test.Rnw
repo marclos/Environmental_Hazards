@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\setcitestyle{authoryear, open={(},close={)}}
+
+
+\begin{document}
+
+\section{Introduction}
+
+As we can see in \cite{Apparicio2008} and \citep{tidball1976lead}.
+
+
+
+\bibliography{test}
+
+\end{document}
+

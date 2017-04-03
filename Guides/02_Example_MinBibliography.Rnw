@@ -1,0 +1,25 @@
+\documentclass[11pt]{article}  
+
+%\usepackage[backend=bibtex]{biblatex}
+% \addbibresource{}     # not sure if this is needed
+
+\usepackage[plain]{biblatex}
+\bibliography{jabbibref}
+
+\begin{document}
+
+<<bibbackground, echo=FALSE, include=FALSE>>=
+#setwd("~/R/knitr docs/")
+Sys.setenv(TEXINPUTS=getwd(),
+           BIBINPUTS=getwd(),
+           BSTINPUTS=getwd())
+@
+
+
+
+Here is one citation \cite{GreentargetEngagement2012} and here is a second \cite{CitiprivateBank}.
+
+Now do full References show below?
+
+\printbibliography   
+\end{document}
