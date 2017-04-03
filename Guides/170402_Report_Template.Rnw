@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\setcitestyle{open={(},close={)}}
+
+\renewcommand\bibname{Literature Cited}
+
+
+\author{Author}
+\title{Title of Report}
+
+
+\begin{document}
+\maketitle
+
+\section{Abstract}
+
+
+
+\section{Introduction}
+
+\subsection{Problem Statement}
+
+\subsection{Background}
+
+\cite{lanphear1998contribution} evaluted XXX in soils...
+
+There have been many reveiws \citep{tidball1976lead}.
+
+\subsection{Objectives}
+
+
+
+\section{Methods}
+
+\subsection{Site Description}
+
+\subsection{Materials and Methods}
+
+\subsection{Procedures}
+
+\subsection{Statistical Analysis}
+
+
+
+
+
+\section{Results}
+
+R code blocks in Sweave/LaTeX is a bit different:
+
+<<tidy=TRUE>>=
+fakedata = data.frame(Location = c(rep("A", 3), rep("B", 3), rep("C", 3)), Pb = rlnorm(9, 3, 1))
+@
+
+\begin{figure}
+<<boxplot, fig=TRUE>>=
+plot(Pb ~ Location, data=fakedata)
+@
+\end{figure}
+
+
+<<results='asis'>>=
+library(xtable)
+xtable(fakedata)
+@
+
+<<>>=
+fakedata.aov = aov(Pb ~ Location, data=fakedata)
+summary(fakedata.aov)
+@
+\section{Discussion}
+
+\section{Conclusion}
+
+\bibliography{Report}
+
+\end{document}
+

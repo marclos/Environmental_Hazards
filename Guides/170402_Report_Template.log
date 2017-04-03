@@ -1,8 +1,8 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  2 APR 2017 18:45
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  2 APR 2017 19:24
 entering extended mode
  %&-line parsing enabled.
-**test.tex
-(./test.tex
+**170402_Report_Template.tex
+(./170402_Report_Template.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
@@ -146,45 +146,75 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
-)) (./test.aux)
-\openout1 = `test.aux'.
+)) (./170402_Report_Template.aux)
+\openout1 = `170402_Report_Template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 62.
 
 (/usr/share/texmf/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 56.
- (./test.bbl) [1
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 63.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 63.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 63.
+Package color Info: Redefining color shadecolor on input line 102.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 104.
 
-{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./test.aux) ) 
+Overfull \hbox (122.24593pt too wide) in paragraph at lines 104--104
+[][]\OT1/cmtt/m/n/10 fakedata[] []=[] []data.frame[][]([][]Location[] []=[] []c
+[][]([][]rep[][]([][]"A"[][],[] []3[][]),[] []rep[][]([][]"B"[][],[] []3[][]),[
+] []rep[][]([][]"C"[][],[] []3[][])),[] []Pb[] []=[] []rlnorm[][]([][]9[][],[][
+] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 112.
+<figure/boxplot-1.pdf, id=1, 505.89pt x 505.89pt>
+File: figure/boxplot-1.pdf Graphic file (type pdf)
+ <use figure/boxplot-1.pdf>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 132.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 132.
+Package color Info: Redefining color shadecolor on input line 151.
+
+[1
+
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./figure/boxplot-1.p
+df>] (./170402_Report_Template.bbl) [3] (./170402_Report_Template.aux) ) 
 Here is how much of TeX's memory you used:
- 1380 strings out of 256214
- 17927 string characters out of 1917000
- 65293 words of memory out of 1500000
- 4694 multiletter control sequences out of 10000+200000
- 4591 words of font info for 17 fonts, out of 1200000 for 2000
+ 1414 strings out of 256214
+ 18564 string characters out of 1917000
+ 68291 words of memory out of 1500000
+ 4716 multiletter control sequences out of 10000+200000
+ 8101 words of font info for 29 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 25i,5n,20p,247b,142s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/shar
-e/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky
-/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb>
-Output written on test.pdf (1 page, 25516 bytes).
+ 25i,8n,20p,391b,297s stack positions out of 5000i,500n,6000p,200000b,15000s
+</usr/s
+hare/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/blue
+sky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/c
+m/cmti10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
+Output written on 170402_Report_Template.pdf (3 pages, 55769 bytes).
 PDF statistics:
- 18 PDF objects out of 1000 (max. 8388607)
+ 42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
