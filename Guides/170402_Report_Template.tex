@@ -50,18 +50,18 @@
 
 \usepackage{alltt}
 \usepackage{natbib}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 \bibliographystyle{plainnat}
-%\setcitestyle{open={(},close={)}}
+\setcitestyle{open={(},close={)}}
 
-%\renewcommand\bibname{Literature Cited}
+\renewcommand\bibname{Literature Cited}
 
 
 \author{Author}
 \title{Title of Report}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
-%\maketitle
+\maketitle
 
 \section{Abstract}
 
@@ -73,11 +73,11 @@
 
 \subsection{Background}
 
-\cite{lanphear1998contribution} evaluted XXX in soils...
+\cite{lanphear1998contribution} evaluated Pb in soils...
 
-%There have been many reveiws \citep{tidball1976lead}.
+There have been many reveiws \citep{tidball1976lead}.
 
-%Here's a list of them: \cite{zimdahl1977behavior, barltrop1975absorption, wang2006transfer}.
+Here's a list of them: \cite{zimdahl1977behavior, barltrop1975absorption, wang2006transfer}.
 
 \subsection{Objectives}
 
@@ -116,22 +116,22 @@ R code blocks in Sweave/LaTeX is a bit different:
 \hlkwd{xtable}\hlstd{(fakedata)}
 \end{alltt}
 \end{kframe}% latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Sun Apr  2 19:45:20 2017
+% Mon Apr  3 13:46:49 2017
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlr}
   \hline
  & Location & Pb \\ 
   \hline
-1 & A & 49.40 \\ 
-  2 & A & 16.69 \\ 
-  3 & A & 45.50 \\ 
-  4 & B & 100.97 \\ 
-  5 & B & 139.96 \\ 
-  6 & B & 28.67 \\ 
-  7 & C & 36.02 \\ 
-  8 & C & 13.84 \\ 
-  9 & C & 20.86 \\ 
+1 & A & 56.65 \\ 
+  2 & A & 6.06 \\ 
+  3 & A & 16.02 \\ 
+  4 & B & 22.19 \\ 
+  5 & B & 11.48 \\ 
+  6 & B & 19.93 \\ 
+  7 & C & 63.24 \\ 
+  8 & C & 17.34 \\ 
+  9 & C & 18.20 \\ 
    \hline
 \end{tabular}
 \end{table}
@@ -161,13 +161,14 @@ We should always describe the figure before the figures appears in the text. Som
 \end{alltt}
 \begin{verbatim}
 ##             Df Sum Sq Mean Sq F value Pr(>F)
-## Location     2   7354    3677   3.033  0.123
-## Residuals    6   7274    1212
+## Location     2  341.5   170.8   0.356  0.714
+## Residuals    6 2879.0   479.8
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 \section{Discussion}
 
+This is the context and interpreations section that relies on some articles, e.g. \cite{struzynska2005role}.
 \section{Conclusion}
 
 \bibliography{Report}

@@ -1,10 +1,10 @@
 \documentclass{article}
 \usepackage{natbib}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 \bibliographystyle{plainnat}
-%\setcitestyle{open={(},close={)}}
+\setcitestyle{open={(},close={)}}
 
-%\renewcommand\bibname{Literature Cited}
+\renewcommand\bibname{Literature Cited}
 
 
 \author{Author}
@@ -12,7 +12,7 @@
 
 
 \begin{document}
-%\maketitle
+\maketitle
 
 \section{Abstract}
 
@@ -24,11 +24,11 @@
 
 \subsection{Background}
 
-\cite{lanphear1998contribution} evaluted XXX in soils...
+\cite{lanphear1998contribution} evaluated Pb in soils...
 
-%There have been many reveiws \citep{tidball1976lead}.
+There have been many reveiws \citep{tidball1976lead}.
 
-%Here's a list of them: \cite{zimdahl1977behavior, barltrop1975absorption, wang2006transfer}.
+Here's a list of them: \cite{zimdahl1977behavior, barltrop1975absorption, wang2006transfer}.
 
 \subsection{Objectives}
 
@@ -77,6 +77,7 @@ summary(fakedata.aov)
 @
 \section{Discussion}
 
+This is the context and interpreations section that relies on some articles, e.g. \cite{struzynska2005role}.
 \section{Conclusion}
 
 \bibliography{Report}
