@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{natbib}
+%\usepackage{hyperref}
+\usepackage{bibentry}
+
+\bibliographystyle{plainnat}
+\setcitestyle{open={(},close={)}}
+
+\author{Author}
+\title{Title of Report}
+
+
+\begin{document}
+\maketitle
+\nobibliography{Pb_literature}
+
+\section{Abstract}
+
+
+
+\section{Instructions}
+
+Write a concise annotation that summarizes the central theme and scope of the book or article. Include one or more sentences that (a) evaluate the authority or background of the author, (b) comment on the intended audience, (c) compare or contrast this work with another you have cited, or (d) explain how this work illuminates your bibliography topic.
+\bigskip
+Example: 
+
+\bibentry{barltrop1975absorption} . Summarizes important infomormation about Pb. This paper follows the works that span x years starting with early \ldots and noting recent information that includes \ldots
+
+\section{Industrial Sources (Khalil)}
+
+\section{Use in Industry (except gasoline) (Caudia)}
+
+\section{''Ethyl'' gas and airplane fuels (Viraj)}
+
+\section{Atmospheric transport and deposition}
+
+\section{Aquatic transport (Olivia)}
+
+\section{Sinks (Katie)}\section{Food web dynamics (Mireya)}
+
+\section{Toxicity (non-human) (Kelli)}
+
+\section{Human health effects (physiological, toxicity) Thea}
+
+\section{Public health effects (crime, IQ, etc) Marissa}
+
+
+\section{Conclusion}
+
+
+\end{document}
+
