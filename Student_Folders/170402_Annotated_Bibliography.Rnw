@@ -6,8 +6,8 @@
 \bibliographystyle{plainnat}
 \setcitestyle{open={(},close={)}}
 
-\author{Author}
-\title{Title of Report}
+\author{EA30 -- Spring 2017}
+\title{Annotated Bibliography}
 
 
 \begin{document}
