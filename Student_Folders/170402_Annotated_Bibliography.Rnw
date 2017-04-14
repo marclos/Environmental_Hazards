@@ -72,6 +72,17 @@ To help the readers, you might create subsection and even subsubsections, using 
 \section{``Ethyl'' gas and airplane fuels (Viraj)}
 
 \section{Atmospheric transport and deposition}
+\begin{itemize}
+  \item \bibentry{cohan2010potential}
+  \item \bibentry{blais1996using}
+  \item \bibentry{cortizas2002atmospheric}
+\end{itemize}
+
+
+
+
+
+
 
 \section{Aquatic transport (Olivia)}
 
