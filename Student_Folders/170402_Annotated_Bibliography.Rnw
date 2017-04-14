@@ -28,6 +28,15 @@ Please complete the annotated bibliography by the 17th of April.
 
 There are numerous electronic sources to evaluate and obtain academic sources of information. Usually, we consider peer reviewed articles to have the highest quality scholarship. As a rule of thumb, this is a good start, but there is also a great deal of variation between sources, even journal titles can vary in quality. Thus, it's best to evaluate a range of sources and appreciate the subtle differences in quality and prestige.
 
+First, you should search CUC databases using key words, such as Pb and lead. I admit the lead is tricky, because it's not a useful term due it a double meaning. I suggest heavy metals or trace metals with the other key words, i.e. fate and transport, toxicity, etc, depending on the topic you selected.
+
+Below are links to some useful databases:
+
+\begin{itemize}
+  \item \href{http://apps.webofknowledge.com.ccl.idm.oclc.org/}{Web of Science}
+  \item \href{http://www.jstor.org.ccl.idm.oclc.org/}{JStore}
+  \item \href{https://scholar-google-com.ccl.idm.oclc.org/}{Google Scholar}
+\end{itemize}
 
 
 \subsection{Writing an Annotated Bibliography}
@@ -36,7 +45,11 @@ After adding your citation to the Pb\_literature.bib, using the BibTeX format, c
 
 \subsection{Implementing in \LaTeX}
 
-Below might be an example of what we are trying to accomplish using our Rstudio resources. The \LaTeX command for the citation is \verb!\bibentry{key}!, where key is identifies the citation based on the BibTeX citation entry. 
+\LaTeX is a software program used for desktop publishing. With an eye for detail, the program was developed to give the author a great deal of control. In contrast, Microsoft Word is designed to have lots of options, but these seem to get in the way of controlling the outcome. 
+
+\LaTeX is an open source program and relies on specific formatting commands that begin with a backslash. For example to start a new section heading, we use \verb!\section{section name}! and \verb!\subsection{subsection name}! to create a subsection heading.
+
+Below might be an example of what we are trying to accomplish using our Rstudio resources. The \LaTeX command for the citation is \verb!\bibentry{key}!, where key is identifies the citation based on the BibTeX citation entry as shown below: 
 
 \bigskip
 \noindent \bibentry{barltrop1975absorption} . Summarizes important infomormation about Pb. This paper follows the works that span x years starting with early \ldots and noting recent information that includes \ldots
@@ -59,9 +72,9 @@ To help the readers, you might create subsection and even subsubsections, using 
 
 \section{Toxicity (non-human) (Kelli)}
 
-\section{Human health effects (physiological, toxicity) Thea}
+\section{Human health effects (physiological, toxicity) (Thea)}
 
-\section{Public health effects (crime, IQ, etc) Marissa}
+\section{Public health effects (crime, IQ, etc) (Marissa)}
 
 
 
