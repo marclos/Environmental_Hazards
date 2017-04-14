@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  13 APR 2017 21:41
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  13 APR 2017 21:46
 entering extended mode
  %&-line parsing enabled.
 **170402_Annotated_Bibliography.tex
@@ -259,14 +259,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (19.38612pt too wide) in paragraph at lines 106--107
+Overfull \hbox (19.38612pt too wide) in paragraph at lines 109--110
 \OT1/cmr/m/n/10 ing []\OT1/cmtt/m/n/10 \subsection{subsection name} \OT1/cmr/m/
 n/10 and []\OT1/cmtt/m/n/10 \subsubsection{subsubsection name}\OT1/cmr/m/n/10 .
  
  []
 
 
-Overfull \hbox (10.32967pt too wide) in paragraph at lines 126--126
+Overfull \hbox (10.32967pt too wide) in paragraph at lines 129--129
 []\OT1/cmr/bx/n/14.4 Public health ef-fects (crime, IQ, etc) (Marissa) 
  []
 
@@ -287,9 +287,9 @@ ype1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb>
 /share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/blu
 esky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/shar
 e/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
-Output written on 170402_Annotated_Bibliography.pdf (3 pages, 82798 bytes).
+Output written on 170402_Annotated_Bibliography.pdf (3 pages, 83316 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
+ 151 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 131072)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
