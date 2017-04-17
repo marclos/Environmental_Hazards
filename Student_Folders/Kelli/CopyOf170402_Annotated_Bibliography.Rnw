@@ -111,7 +111,7 @@ The American Oil and Gas Historical Society offers official history of energy fu
 \bibentry{sharma2005lead}. 
 
 Pallavi Sharma is a biochemistry and molecular biology faculty member at the Central University of Jharkhand. She holds both a Master's and PhD in biochemistry, and she has published 28 articles relating to heavy metal toxicity in plants. The article cited in particular was published in 2005, and has been cited by 887 articles since then. 
-
+This article discusses 
 
 
 \section{Human health effects (physiological, toxicity) (Thea)}
