@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 \begin{thebibliography}{6}
+=======
+\begin{thebibliography}{5}
+>>>>>>> 6527a24f10198b3fc9ee291ed8d1d45075874461
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,12 +20,13 @@ D~Barltrop, I~Thornton, CD~Strehlow, and JS~Webb.
 \newblock \emph{Postgraduate medical journal}, 51\penalty0 (601):\penalty0
   801--804, 1975.
 
-\bibitem[Blais(1996)]{blais1996using}
-Jules~M Blais.
-\newblock Using isotopic tracers in lake sediments to assess atmospheric
-  transport of lead in eastern canada.
-\newblock \emph{Water, Air, \& Soil Pollution}, 92\penalty0 (3):\penalty0
-  329--342, 1996.
+\bibitem[Carlson et~al.(1975)Carlson, Bazzaz, and Rolfe]{carlson1975effect}
+Roger~W Carlson, FA~Bazzaz, and GL~Rolfe.
+\newblock The effect of heavy metals on plants: Ii. net photosynthesis and
+  transpiration of whole corn and sunflower plants treated with pb, cd, ni, and
+  tl.
+\newblock \emph{Environmental Research}, 10\penalty0 (1):\penalty0 113--120,
+  1975.
 
 \bibitem[Cohan(2010)]{cohan2010potential}
 Alexander Cohan.
@@ -39,9 +44,18 @@ A~Mart{\i}nez Cortizas, E~Garc{\i}a-Rodeja, X~Pontevedra Pombal, JC~N{\'o}voa
 \newblock \emph{Science of the Total Environment}, 292\penalty0 (1):\penalty0
   33--44, 2002.
 
+<<<<<<< HEAD
 \bibitem[L.~Galzigna and Viola(1973)]{galzigna1998biochemical}
 G.~Manani L.~Galzigna, M. V.~Ferraro and A.~Viola.
 \newblock Biochemical basis for the toxic effects of triethyl lead.
 \newblock \emph{British Journal of Industrial Medicine}, 1973.
+=======
+\bibitem[Juberg and Kwon(1997)]{blais1996using}
+Cindy F.~Kleiman Juberg, Daland~R. and Simona~C. Kwon.
+\newblock Position paper of the american council on science and health: lead
+  and human health.
+\newblock \emph{Ecotoxicology and environmental safety}, 38.3\penalty0
+  (3):\penalty0 162--180, 1997.
+>>>>>>> 6527a24f10198b3fc9ee291ed8d1d45075874461
 
 \end{thebibliography}
