@@ -1,4 +1,8 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  13 APR 2017 23:04
+<<<<<<< HEAD
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  17 APR 2017 14:24
+=======
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  17 APR 2017 14:32
+>>>>>>> 6527a24f10198b3fc9ee291ed8d1d45075874461
 entering extended mode
  %&-line parsing enabled.
 **170402_Annotated_Bibliography.tex
@@ -234,8 +238,6 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 LaTeX Info: Redefining \ref on input line 62.
 LaTeX Info: Redefining \pageref on input line 62.
-
-(./170402_Annotated_Bibliography.out) (./170402_Annotated_Bibliography.out)
 \@outlinefile=\write3
 \openout3 = `170402_Annotated_Bibliography.out'.
 
@@ -265,31 +267,110 @@ n/10 and []\OT1/cmtt/m/n/10 \subsubsection{subsubsection name}\OT1/cmr/m/n/10 .
  
  []
 
+<<<<<<< HEAD
 
-Overfull \hbox (10.32967pt too wide) in paragraph at lines 144--144
+Package natbib Warning: Citation `galzigna1998biochemical' undefined on input l
+ine 125.
+
+
+Package natbib Warning: Citation `american2016ethyl' undefined on input line 13
+1.
+
+! Misplaced alignment tab character &.
+<argument> American Oil &
+                          Gas Historical Society
+l.131 \noindent \bibentry{american2016ethyl}
+                                             .
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+[3]
+Overfull \hbox (10.32967pt too wide) in paragraph at lines 160--160
 []\OT1/cmr/bx/n/14.4 Public health ef-fects (crime, IQ, etc) (Marissa) 
  []
 
-[3] [4] (./170402_Annotated_Bibliography.aux) ) 
+
+Package natbib Warning: There were undefined citations.
+
+[4] [5] (./170402_Annotated_Bibliography.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) ) 
 Here is how much of TeX's memory you used:
- 3317 strings out of 256214
- 46469 string characters out of 1917000
+ 3303 strings out of 256214
+ 46282 string characters out of 1917000
+ 101087 words of memory out of 1500000
+ 6544 multiletter control sequences out of 10000+200000
+ 9053 words of font info for 32 fonts, out of 1200000 for 2000
+ 645 hyphenation exceptions out of 8191
+ 25i,6n,36p,1846b,335s stack positions out of 5000i,500n,6000p,200000b,15000s
+ </home/CAMPUS/vpsc2015/.texlive2007/texmf-var/fonts/pk/ljfour/jknappen/ec/t
+crm1000.600pk></usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/t
+exmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm
+/cmbx8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf
+/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr1
+7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts
+/type1/bluesky/cm/cmti10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt10.pf
+b>
+Output written on 170402_Annotated_Bibliography.pdf (5 pages, 92384 bytes).
+PDF statistics:
+ 121 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 131072)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+[3]
+Overfull \hbox (10.32967pt too wide) in paragraph at lines 147--147
+[]\OT1/cmr/bx/n/14.4 Public health ef-fects (crime, IQ, etc) (Marissa) 
+ []
+
+[4] (./170402_Annotated_Bibliography.aux) ) 
+Here is how much of TeX's memory you used:
+ 3318 strings out of 256214
+ 46489 string characters out of 1917000
  100087 words of memory out of 1500000
- 6557 multiletter control sequences out of 10000+200000
+ 6558 multiletter control sequences out of 10000+200000
  9053 words of font info for 32 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  25i,6n,36p,669b,335s stack positions out of 5000i,500n,6000p,200000b,15000s
- </home/CAMPUS/mwl04747/.texlive
-2007/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf/fon
-ts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.
-pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/
-type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb><
-/usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1
-/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/
-share/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
-Output written on 170402_Annotated_Bibliography.pdf (4 pages, 91510 bytes).
+ </home/CAMPUS/mwl04747/.texlive2007
+/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb>
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/type
+1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr
+/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/blu
+esky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/shar
+e/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
+Output written on 170402_Annotated_Bibliography.pdf (4 pages, 91178 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  26 named destinations out of 1000 (max. 131072)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 6527a24f10198b3fc9ee291ed8d1d45075874461
 
