@@ -12,7 +12,7 @@
 
 \begin{document}
 \maketitle
-\nobibliography{Pb_literature_MLH}
+\nobibliography{Pb_literature}
 
 \section{Abstract}
 
@@ -56,7 +56,7 @@ However, we also need to add the citation to the *.bib file, in this case the fi
 \subsection{Annotated Example}
 
 \bigskip
-\noindent \bibentry{barltrop1975absorption} . Summarizes important infomormation about Pb. This paper reviews work that span x years starting with early \ldots and noting recent information that includes \ldots. \cite{barltrop1975absorption} first describe xyz and how these issues have been largely \ldots.
+\noindent %\bibentry{barltrop1975absorption} . Summarizes important infomormation about Pb. This paper reviews work that span x years starting with early \ldots and noting recent information that includes \ldots. \cite{barltrop1975absorption} first describe xyz and how these issues have been largely \ldots.
 
 \bigskip
 

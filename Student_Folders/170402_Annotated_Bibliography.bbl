@@ -12,13 +12,6 @@ D~Barltrop, I~Thornton, CD~Strehlow, and JS~Webb.
 \newblock \emph{Postgraduate medical journal}, 51\penalty0 (601):\penalty0
   801--804, 1975.
 
-\bibitem[Blais(1996)]{blais1996using}
-Jules~M Blais.
-\newblock Using isotopic tracers in lake sediments to assess atmospheric
-  transport of lead in eastern canada.
-\newblock \emph{Water, Air, \& Soil Pollution}, 92\penalty0 (3):\penalty0
-  329--342, 1996.
-
 \bibitem[Carlson et~al.(1975)Carlson, Bazzaz, and Rolfe]{carlson1975effect}
 Roger~W Carlson, FA~Bazzaz, and GL~Rolfe.
 \newblock The effect of heavy metals on plants: Ii. net photosynthesis and
@@ -42,5 +35,12 @@ A~Mart{\i}nez Cortizas, E~Garc{\i}a-Rodeja, X~Pontevedra Pombal, JC~N{\'o}voa
   as archive.
 \newblock \emph{Science of the Total Environment}, 292\penalty0 (1):\penalty0
   33--44, 2002.
+
+\bibitem[Juberg and Kwon(1997)]{blais1996using}
+Cindy F.~Kleiman Juberg, Daland~R. and Simona~C. Kwon.
+\newblock Position paper of the american council on science and health: lead
+  and human health.
+\newblock \emph{Ecotoxicology and environmental safety}, 38.3\penalty0
+  (3):\penalty0 162--180, 1997.
 
 \end{thebibliography}
