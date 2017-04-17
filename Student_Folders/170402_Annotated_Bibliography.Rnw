@@ -90,7 +90,7 @@ To help the readers, you might create subsection and even subsubsections, using 
 
 \section{Toxicity (non-human) (Kelli)}
 
-\bibentry{carlson1975effect}. 
+\bibentry{tangahu2011review}. 
 
 
 \section{Human health effects (physiological, toxicity) (Thea)}
