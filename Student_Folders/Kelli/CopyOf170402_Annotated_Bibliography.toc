@@ -12,5 +12,5 @@
 \contentsline {section}{\numberline {8}Sinks (Katie)}{4}{section.8}
 \contentsline {section}{\numberline {9}Food web dynamics (Mireya)}{4}{section.9}
 \contentsline {section}{\numberline {10}Toxicity (non-human) (Kelli)}{4}{section.10}
-\contentsline {section}{\numberline {11}Human health effects (physiological, toxicity) (Thea)}{4}{section.11}
-\contentsline {section}{\numberline {12}Public health effects (crime, IQ, etc) (Marissa)}{4}{section.12}
+\contentsline {section}{\numberline {11}Human health effects (physiological, toxicity) (Thea)}{5}{section.11}
+\contentsline {section}{\numberline {12}Public health effects (crime, IQ, etc) (Marissa)}{5}{section.12}
