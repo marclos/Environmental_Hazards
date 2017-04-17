@@ -86,7 +86,9 @@ To help the readers, you might create subsection and even subsubsections, using 
 
 \section{Aquatic transport (Olivia)}
 
-\section{Sinks (Katie)}\section{Food web dynamics (Mireya)}
+\section{Sinks (Katie)}
+
+\section{Food web dynamics (Mireya)}
 
 \section{Toxicity (non-human) (Kelli)}
 
