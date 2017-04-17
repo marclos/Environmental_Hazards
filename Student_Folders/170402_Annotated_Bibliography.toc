@@ -1,9 +1,9 @@
 \contentsline {section}{\numberline {1}Abstract}{1}{section.1}
 \contentsline {section}{\numberline {2}Instructions}{1}{section.2}
-\contentsline {subsection}{\numberline {2.1}Searching for Academic Sources}{2}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Writing an Annotated Bibliography}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.1}Searching for Academic Sources}{1}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Writing an Annotated Bibliography}{1}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Implementing in \LaTeX }{2}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Annotated Example}{3}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Annotated Example}{2}{subsection.2.4}
 \contentsline {section}{\numberline {3}Industrial Sources (Khalil)}{3}{section.3}
 \contentsline {section}{\numberline {4}Use in Industry (except gasoline) (Caudia)}{3}{section.4}
 \contentsline {section}{\numberline {5}``Ethyl'' gas and airplane fuels (Viraj)}{3}{section.5}
@@ -21,6 +21,11 @@
 \contentsline {section}{\numberline {8}Sinks (Katie)}{3}{section.8}
 \contentsline {section}{\numberline {9}Food web dynamics (Mireya)}{3}{section.9}
 \contentsline {section}{\numberline {10}Toxicity (non-human) (Kelli)}{3}{section.10}
+<<<<<<< HEAD
+\contentsline {section}{\numberline {11}Human health effects (physiological, toxicity) (Thea)}{3}{section.11}
+\contentsline {section}{\numberline {12}Public health effects (crime, IQ, etc) (Marissa)}{3}{section.12}
+=======
 \contentsline {section}{\numberline {11}Human health effects (physiological, toxicity) (Thea)}{4}{section.11}
 \contentsline {section}{\numberline {12}Public health effects (crime, IQ, etc) (Marissa)}{4}{section.12}
 >>>>>>> 6527a24f10198b3fc9ee291ed8d1d45075874461
+>>>>>>> 298efad529c7c16bb24c54bccbdd1d5d341cfc24
