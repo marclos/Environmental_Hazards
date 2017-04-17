@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -18,6 +18,14 @@ Jules~M Blais.
   transport of lead in eastern canada.
 \newblock \emph{Water, Air, \& Soil Pollution}, 92\penalty0 (3):\penalty0
   329--342, 1996.
+
+\bibitem[Carlson et~al.(1975)Carlson, Bazzaz, and Rolfe]{carlson1975effect}
+Roger~W Carlson, FA~Bazzaz, and GL~Rolfe.
+\newblock The effect of heavy metals on plants: Ii. net photosynthesis and
+  transpiration of whole corn and sunflower plants treated with pb, cd, ni, and
+  tl.
+\newblock \emph{Environmental Research}, 10\penalty0 (1):\penalty0 113--120,
+  1975.
 
 \bibitem[Cohan(2010)]{cohan2010potential}
 Alexander Cohan.

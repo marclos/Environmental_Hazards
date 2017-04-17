@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  17 APR 2017 14:27
+=======
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  17 APR 2017 13:46
+>>>>>>> 73c10bec5949b69b687afebcc884c87a93ef0985
 entering extended mode
  %&-line parsing enabled.
 **170402_Annotated_Bibliography.tex
@@ -265,31 +269,31 @@ n/10 and []\OT1/cmtt/m/n/10 \subsubsection{subsubsection name}\OT1/cmr/m/n/10 .
  
  []
 
-
-Overfull \hbox (10.32967pt too wide) in paragraph at lines 144--144
+[3]
+Overfull \hbox (10.32967pt too wide) in paragraph at lines 146--146
 []\OT1/cmr/bx/n/14.4 Public health ef-fects (crime, IQ, etc) (Marissa) 
  []
 
-[3] [4] (./170402_Annotated_Bibliography.aux) ) 
+[4] (./170402_Annotated_Bibliography.aux) ) 
 Here is how much of TeX's memory you used:
- 3317 strings out of 256214
- 46469 string characters out of 1917000
+ 3320 strings out of 256214
+ 46532 string characters out of 1917000
  100087 words of memory out of 1500000
- 6557 multiletter control sequences out of 10000+200000
+ 6559 multiletter control sequences out of 10000+200000
  9053 words of font info for 32 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  25i,6n,36p,669b,335s stack positions out of 5000i,500n,6000p,200000b,15000s
- </home/CAMPUS/mwl04747/.texlive
-2007/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf/fon
-ts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.
-pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/
-type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb><
-/usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1
-/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/
-share/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
-Output written on 170402_Annotated_Bibliography.pdf (4 pages, 91510 bytes).
+ </home/CAMPUS/kak22013/.texlive2007
+/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb>
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/type
+1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr
+/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/blu
+esky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/shar
+e/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
+Output written on 170402_Annotated_Bibliography.pdf (4 pages, 92494 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 131072)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 131072)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
