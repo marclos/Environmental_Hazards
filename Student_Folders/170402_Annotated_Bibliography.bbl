@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -34,5 +34,14 @@ A~Mart{\i}nez Cortizas, E~Garc{\i}a-Rodeja, X~Pontevedra Pombal, JC~N{\'o}voa
   as archive.
 \newblock \emph{Science of the Total Environment}, 292\penalty0 (1):\penalty0
   33--44, 2002.
+
+\bibitem[Kishor et~al.(2005)Kishor, Sangam, Amrutha, Laxmi, Naidu, Rao, Rao,
+  Reddy, Theriappan, and Sreenivasulu]{kishor2005regulation}
+PB~Kavi Kishor, S~Sangam, RN~Amrutha, P~Sri Laxmi, KR~Naidu, KRSS Rao, Sreenath
+  Rao, KJ~Reddy, P~Theriappan, and N~Sreenivasulu.
+\newblock Regulation of proline biosynthesis, degradation, uptake and transport
+  in higher plants: its implications in plant growth and abiotic stress
+  tolerance.
+\newblock \emph{Curr Sci}, 88\penalty0 (3):\penalty0 424--438, 2005.
 
 \end{thebibliography}

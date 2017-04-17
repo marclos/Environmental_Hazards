@@ -90,6 +90,8 @@ To help the readers, you might create subsection and even subsubsections, using 
 
 \section{Toxicity (non-human) (Kelli)}
 
+\bibentry{kishor2005regulation}. euifhiwefhuihfuwhih 
+
 \section{Human health effects (physiological, toxicity) (Thea)}
 
 \section{Public health effects (crime, IQ, etc) (Marissa)}
