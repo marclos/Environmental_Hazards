@@ -91,7 +91,7 @@ This toxicological profile created by the Agency for Toxic Substances \& Disease
 
 \medskip
 
-This article, featured in the peer-reviewed scientific journal, Atmospheric Environment, discusses the long-range transport of lead particulates to the Norwegian Arctic. The intended audience for this journal is scientists whose work is related to atmospheric science. The article also notes that there is a seasonal trend in lead concentrations. For instance, lead concentrations are higher in the spring and the summer. The lead accumulating in the Norwegian Arctic during the summer is a result of North American industrial emissions. 
+This article, featured in the peer-reviewed scientific journal, Atmospheric Environment, discusses the long-range transport of lead particulates to the Norwegian Arctic. The intended audience for this journal are scientists whose work is related to atmospheric science. The article also notes that there is a seasonal trend in lead concentrations. For instance, lead concentrations are higher in the spring and the summer. The lead accumulating in the Norwegian Arctic during the summer is a result of North American industrial emissions. 
 \medskip
 
 \noindent \bibentry{amodio2014atmospheric}.
@@ -122,7 +122,7 @@ This book compiles the findings of various researchers on the topic of lead in t
 
 \medskip
 
-This dissertation published by the University of California, Santa Cruz examines the effects of a reduction in lead emissions on lead reservoirs located in the San Francisco Bay. The author’s research has shown that the phase-out of leaded gas two decades ago has had little effect on dissolved lead levels in surface waters. According to the author, unlike most environments, the reduction in lead concentrations in the San Francisco Bay has been very slow due to the complex aquatic environment.
+This dissertation published by the University of California, Santa Cruz examines how a reduction in lead emissions has affected lead reservoirs located in the San Francisco Bay. The author’s research has shown that the phase-out of leaded gas two decades ago has had little effect on dissolved lead levels in surface waters. According to the author, unlike most environments, the reduction in lead concentrations in the San Francisco Bay has been very slow due to the complex aquatic environment.
 
 \medskip
 
@@ -146,7 +146,7 @@ This report, created and published by the United Nations Environment Programme, 
 
 \medskip
 
-This article, published in the international journal, Biogeochemistry, details the transport and mobility of lead in watersheds. The study concludes that deposited lead is retained well in organic soils and lake sediments. However, lead concentrations have decreased since 1989-1991, given the decrease in emissions. This coincides with the findings of many other studies done on the change in lead concentrations over time. 
+This article, published in the international journal, Biogeochemistry, details the transport and mobility of lead in watersheds. The study concludes that deposited lead is retained well in organic soils and lake sediments. However, lead concentrations have decreased since 1989-1991, given the decrease in lead emissions. This coincides with the findings of many other studies done on the changes in lead concentrations over time. 
 
 \medskip
 
@@ -154,7 +154,7 @@ This article, published in the international journal, Biogeochemistry, details t
 
 \medskip
 
-This article, featured in the 2012 International Conference on Biomedical Engineering and Biotechnology, discusses how temperature, salinity, and pH affect lead’s adsorption on sediment. The author backs up the case study’s findings by referencing the findings of past studies. Both temperature and salinity are positively correlated with lead adsorption. As pH increased from 1 to 4, lead adsorption increased. But, as pH increased from 4 to 7, lead adsorption decreased. The results of other studies vary with this result, but on average for other studies, maximum adsorption takes place at a pH of 6. 
+This article, featured in the 2012 International Conference on Biomedical Engineering and Biotechnology, was primarily made to inform researchers in the fields of biomedical engineering and biotechnology. The article discusses how temperature, salinity, and pH affect lead’s adsorption on sediment. The author backs up the case study’s findings by referencing the findings of various past studies. Both temperature and salinity are positively correlated with lead adsorption. As pH increased from 1 to 4, lead adsorption increased. But, as pH increased from 4 to 7, lead adsorption decreased. The results of other studies vary with this result, but on average for other studies, maximum adsorption takes place at a pH of 6. 
 
 \medskip
 
