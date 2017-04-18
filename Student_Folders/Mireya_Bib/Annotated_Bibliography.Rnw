@@ -92,6 +92,8 @@ To help the readers, you might create subsection and even subsubsections, using 
 \bibentry{cardwell_cd_2013}.
 INSERT TEXT
 
+\bibentry{alexander_bioaccumulation_1999}.
+Published in the Encyclopedia of Earth Science, this paper provides essential definitions for bioaccumulation, bioconcentration, and biomagnification. The paper is written for a scientific journal and employs a lot of biological terminology that may be inaccessible to some. The paper explains that heavy metals, such as lead, tend to bioaccumulate and then biomagnify because they pass through the lipid bilayer and cannot be easily dispelled by the body. 
 
 
 \section{Toxicity (non-human) (Kelli)}

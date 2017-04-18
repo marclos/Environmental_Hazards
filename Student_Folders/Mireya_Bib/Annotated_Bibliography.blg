@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: Annotated_Bibliography.aux
+The style file: plainnat.bst
+Database file #1: Pb_literature.bib
+Warning--I didn't find a database entry for "barltrop1975absorption"
+Warning--I didn't find a database entry for "cohan2010potential"
+Warning--I didn't find a database entry for "blais1996using"
+Warning--I didn't find a database entry for "cortizas2002atmospheric"
+You've used 2 entries,
+            2774 wiz_defined-function locations,
+            619 strings with 5556 characters,
+and the built_in function-call counts, 1119 in all, are:
+= -- 114
+> -- 49
+< -- 2
++ -- 17
+- -- 15
+* -- 82
+:= -- 177
+add.period$ -- 12
+call.type$ -- 2
+change.case$ -- 9
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 50
+empty$ -- 89
+format.name$ -- 17
+if$ -- 240
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 2
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 0
+skip$ -- 37
+stack$ -- 0
+substring$ -- 53
+swap$ -- 9
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 22
+warning$ -- 0
+while$ -- 11
+width$ -- 0
+write$ -- 45
+(There were 4 warnings)
