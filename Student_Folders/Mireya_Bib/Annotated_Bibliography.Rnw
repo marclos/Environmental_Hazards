@@ -108,8 +108,6 @@ Chapter 9 in the book is title Heavy Metals and has a subsection on lead. The bo
 \bibentry{islam_assessing_2007}.
 Published in the Journal of Zhejiang University, this study evaluates the concentration of lead in agricultural crops. The study identifies multiple factors that may affect bioavailability of heavy metals in crops, such as fertilizer and crop rotation, while also highlighting the influence of root microbes on heavy metal uptake. The paper will be a useful in analyzing how lead enters human food systems and how agricultural practices can improve to prevent lead uptake. 
 
-\bibentry{}
-
 \bibentry{alexander_bioaccumulation_1999}.
 Published in the Encyclopedia of Earth Science, this paper provides essential definitions for bioaccumulation, bioconcentration, and biomagnification. The paper is written for a scientific journal and employs a lot of biological terminology that may be inaccessible to some. The paper explains that heavy metals, such as lead, tend to bioaccumulate and then biomagnify because they pass through the lipid bilayer and cannot be easily dispelled by the body. 
 

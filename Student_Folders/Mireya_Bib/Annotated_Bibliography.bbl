@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,5 +14,67 @@ David~E. Alexander.
 \newblock URL
   \url{http://link.springer.com/referenceworkentry/10.1007/1-4020-4494-1_31}.
 \newblock DOI: 10.1007/1-4020-4494-1\_31.
+
+\bibitem[Cardwell et~al.(2013)Cardwell, Deforest, Brix, and
+  Adams]{cardwell_cd_2013}
+Rick~D. Cardwell, David~K. Deforest, Kevin~V. Brix, and William~J. Adams.
+\newblock Do {Cd}, {Cu}, {Ni}, {Pb}, and {Zn} biomagnify in aquatic ecosystems?
+\newblock \emph{Reviews of Environmental Contamination and Toxicology},
+  226:\penalty0 101--122, 2013.
+\newblock ISSN 0179-5953.
+\newblock \doi{10.1007/978-1-4614-6898-1_4}.
+
+\bibitem[Chen et~al.(2000)Chen, Stemberger, Klaue, Blum, Pickhardt, and
+  Folt]{chen_accumulation_2000}
+Celia~Y. Chen, Richard~S. Stemberger, Bjorn Klaue, Joel~D. Blum, Paul~C.
+  Pickhardt, and Carol~L. Folt.
+\newblock Accumulation of heavy metals in food web components across a gradient
+  of lakes.
+\newblock \emph{Limnology and Oceanography}, 45\penalty0 (7):\penalty0
+  1525--1536, November 2000.
+\newblock ISSN 1939-5590.
+\newblock \doi{10.4319/lo.2000.45.7.1525}.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com/doi/10.4319/lo.2000.45.7.1525/abstract}.
+
+\bibitem[D'Mello(2003)]{dmello_food_2003}
+J.P.F. D'Mello.
+\newblock \emph{Food {Safety} : {Contaminants} and {Toxins}}.
+\newblock CAB International, Cambridge, GB, 2003.
+\newblock ISBN 978-0-85199-751-3.
+\newblock URL
+  \url{http://site.ebrary.com/lib/alltitles/docDetail.action?docID=10060533}.
+
+\bibitem[Islam et~al.(2007)Islam, Yang, He, and Mahmood]{islam_assessing_2007}
+Ejaz~ul Islam, Xiao-e Yang, Zhen-li He, and Qaisar Mahmood.
+\newblock Assessing potential dietary toxicity of heavy metals in selected
+  vegetables and food crops.
+\newblock \emph{Journal of Zhejiang University SCIENCE B}, 8\penalty0
+  (1):\penalty0 1--13, January 2007.
+\newblock ISSN 1673-1581, 1862-1783.
+\newblock \doi{10.1631/jzus.2007.B0001}.
+\newblock URL \url{https://link.springer.com/article/10.1631/jzus.2007.B0001}.
+
+\bibitem[Laskowski(1991)]{laskowski_are_1991}
+Ryszard Laskowski.
+\newblock Are the {Top} {Carnivores} {Endangered} by {Heavy} {Metal}
+  {Biomagnification}?
+\newblock \emph{Oikos}, 60\penalty0 (3):\penalty0 387--390, 1991.
+\newblock ISSN 0030-1299.
+\newblock \doi{10.2307/3545083}.
+\newblock URL \url{http://www.jstor.org/stable/3545083}.
+
+\bibitem[Pinto et~al.(2003)Pinto, Sigaud-kutner, Leitão, Okamoto, Morse, and
+  Colepicolo]{pinto_heavy_2003}
+Ernani Pinto, Teresa C.~S. Sigaud-kutner, Maria A.~S. Leitão, Oswaldo~K.
+  Okamoto, David Morse, and Pio Colepicolo.
+\newblock Heavy {Metal}–{Induced} {Oxidative} {Stress} in {Algae}1.
+\newblock \emph{Journal of Phycology}, 39\penalty0 (6):\penalty0 1008--1018,
+  December 2003.
+\newblock ISSN 1529-8817.
+\newblock \doi{10.1111/j.0022-3646.2003.02-193.x}.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com/doi/10.1111/j.0022-3646.2003.02-193.x/ab%
+stract}.
 
 \end{thebibliography}
