@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{1}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,14 +14,5 @@ David~E. Alexander.
 \newblock URL
   \url{http://link.springer.com/referenceworkentry/10.1007/1-4020-4494-1_31}.
 \newblock DOI: 10.1007/1-4020-4494-1\_31.
-
-\bibitem[Cardwell et~al.(2013)Cardwell, Deforest, Brix, and
-  Adams]{cardwell_cd_2013}
-Rick~D. Cardwell, David~K. Deforest, Kevin~V. Brix, and William~J. Adams.
-\newblock Do {Cd}, {Cu}, {Ni}, {Pb}, and {Zn} biomagnify in aquatic ecosystems?
-\newblock \emph{Reviews of Environmental Contamination and Toxicology},
-  226:\penalty0 101--122, 2013.
-\newblock ISSN 0179-5953.
-\newblock \doi{10.1007/978-1-4614-6898-1_4}.
 
 \end{thebibliography}
