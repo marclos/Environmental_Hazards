@@ -1,10 +1,31 @@
 \documentclass{article}
-\usepackage{natbib}
+%\usepackage{natbib}
 \usepackage{hyperref}
-\usepackage{bibentry}
 
+
+
+
+\usepackage[sort&compress]{natbib}% for bibliography
+
+\usepackage{bibentry}
 \bibliographystyle{plainnat}
 \setcitestyle{open={(},close={)}}
+\setlength\bibindent{2em}
+
+\makeatletter
+\renewcommand\NAT@bibsetnum[1]{\settowidth\labelwidth{\@biblabel{#1}}%
+   \setlength{\leftmargin}{\bibindent}\addtolength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
+   \setlength{\itemindent}{-\bibindent}%
+   \setlength{\listparindent}{\itemindent}
+\setlength{\itemsep}{\bibsep}\setlength{\parsep}{\z@}%
+   \ifNAT@openbib
+     \addtolength{\leftmargin}{\bibindent}%
+     \setlength{\itemindent}{-\bibindent}%
+     \setlength{\listparindent}{\itemindent}%
+     \setlength{\parsep}{0pt}%
+   \fi
+}
+\makeatother
 
 \author{EA30 -- Spring 2017}
 \title{Annotated Bibliography}
