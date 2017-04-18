@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amodio et~al.(2014)Amodio, Catino, Dambruoso, De~Gennaro, Di~Gilio,
+  Giungato, Laiola, Marzocca, Mazzone, Sardaro, et~al.]{amodio2014atmospheric}
+M~Amodio, S~Catino, PR~Dambruoso, G~De~Gennaro, A~Di~Gilio, P~Giungato,
+  E~Laiola, A~Marzocca, A~Mazzone, A~Sardaro, et~al.
+\newblock Atmospheric deposition: sampling procedures, analytical methods, and
+  main recent findings from the scientific literature.
+\newblock \emph{Advances in Meteorology}, 2014, 2014.
+
+\bibitem[Bazzano et~al.(2016)Bazzano, Cappelletti, Udisti, and
+  Grotti]{bazzano2016long}
+Andrea Bazzano, David Cappelletti, Roberto Udisti, and Marco Grotti.
+\newblock Long-range transport of atmospheric lead reaching ny-{\aa}lesund:
+  inter-annual and seasonal variations of potential source areas.
+\newblock \emph{Atmospheric Environment}, 139:\penalty0 11--19, 2016.
+
+\bibitem[Coulibaly et~al.(2015)Coulibaly, Minami, Abe, Hasei, Sera, Yamamoto,
+  Funasaka, Asakawa, Watanabe, Honda, et~al.]{coulibaly2015seasonal}
+Souleymane Coulibaly, Hiroki Minami, Maho Abe, Tomohiro Hasei, Nobuyuki Sera,
+  Shigekazu Yamamoto, Kunihiro Funasaka, Daichi Asakawa, Masanari Watanabe,
+  Naoko Honda, et~al.
+\newblock Seasonal fluctuations in air pollution in dazaifu, japan, and effect
+  of long-range transport from mainland east asia.
+\newblock \emph{Biological and Pharmaceutical Bulletin}, 38\penalty0
+  (9):\penalty0 1395--1403, 2015.
+
+\bibitem[for Toxic~Substances and Corporation(1990)]{agency1990toxicological}
+Agency for Toxic~Substances and Disease Registry. Syracuse~Research
+  Corporation.
+\newblock \emph{Toxicological profile for lead}.
+\newblock Agency for Toxic Substances and Disease Registry, Syracuse Research
+  Corporation, 1990.
+
+\bibitem[Hutchinson and Meema(1987)]{hutchinson1987lead}
+Thomas~C Hutchinson and KM~Meema.
+\newblock Lead, mercury, cadmium, and arsenic in the environment.
+\newblock 1987.
+
+\bibitem[Steding(2001)]{steding2001three}
+Douglas~John Steding.
+\newblock \emph{Three case studies at the regional and global scales of the
+  cycling and fate of lead and mercury in the environment}.
+\newblock PhD thesis, University of California, Santa Cruz, 2001.
+
+\bibitem[Steinnes and Friedland(2006)]{steinnes2006metal}
+Eiliv Steinnes and Andrew~J Friedland.
+\newblock Metal contamination of natural surface soils from long-range
+  atmospheric transport: existing and missing knowledge.
+\newblock \emph{Environmental Reviews}, 14\penalty0 (3):\penalty0 169--186,
+  2006.
+
+\bibitem[United Nations Environment~Programme()]{UNEP}
+DTIE United Nations Environment~Programme, Chemicals~Branch.
+\newblock Final review of scientific information on lead.
+
+\bibitem[Watmough and Dillon(2007)]{watmough2007lead}
+Shaun~A Watmough and Peter~J Dillon.
+\newblock Lead biogeochemistry in a central ontario forested watershed.
+\newblock \emph{Biogeochemistry}, 84\penalty0 (2):\penalty0 143--159, 2007.
+
+\bibitem[Zhang et~al.(2012)Zhang, Jin, Xu, and Ding]{zhang2012effect}
+Ming Zhang, Chi-Cheng Jin, Li-Heng Xu, and Tao Ding.
+\newblock Effect of temperature, salinity, and ph on the adsorption of lead by
+  sediment of a tidal river in east china.
+\newblock In \emph{Biomedical Engineering and Biotechnology (iCBEB), 2012
+  International Conference on}, pages 1389--1391. IEEE, 2012.
+
+\end{thebibliography}
