@@ -1,0 +1,133 @@
+Ecotoxicology
+========================================================
+author: Marc Los Huertos
+date: April 19, 2017
+autosize: true
+
+What is Ecotoxicology?
+========================================================
+
+For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+What is Human Health?
+========================================================
+
+Two indicators of Human Health
+
+-Life expectancy: How long people are expected to live?
+
+-Infant mortality: How many children die before age of 1 year?
+
+NOTE: Vary greatly between countries
+
+e.g. Developed versus developing countries
+
+***
+
+![New Born](newborn.png)
+
+Health Issues in Developed Countries
+========================================================
++ Premature deaths caused by lifestyle
+
+- Poor diet
+
+- Lack of exercise
+
+- Smoking
+
+***
+
+Obesity is big problem, where we measure "health" using the Body Mass Index: 
+
+BMI = Mass (kg)/Height^2 (m) = 740 * (Mass (lb))/ (Height^2 (in))
+
+
++ < 18.5 is underweight
++ 18.5-24.9 is healthy weight
++ 25-29 is overweight
++ > 30 is obese
+
+
+Example of BMI
+========================================================
+
+
+```r
+BMI = 740 * 180/(5*12+11)^2; round(BMI, 1)
+```
+
+```
+[1] 26.4
+```
+
+BMI Contours
+========================================================
+
+![plot of chunk unnamed-chunk-2](Ecotoxicology-figure/unnamed-chunk-2-1.png)
+
+Regional BMIs
+=======================================================
+![Regional BMIs](BMI_globalmap.png)
+
+Health Issues in Developing Countries
+=======================================================
+- Malnutrition, unsafe water, poor sanitation
+
+- Life Expectancy 
+
+-- Overall is 65 years
+
+-- Very poorest developing countries = 45 years
+
+- Most of these countries have high AIDS epidemics
+
+*** 
+Childhood mortality is high (18% of deaths)
+
+- Diarrheal diseases
+
+- Malnutrition
+
+- Malaria
+
+- AIDS/HIV
+
+Toxicology
+=================================================
++ Toxicology is the study of the effect of toxicants on the human body
+
+- Toxicant- chemical with adverse human health effects
+
+-- Acute toxicity: Adverse effects occur within a short period after exposure to toxin
+
+-- Chronic toxicity: Adverse effects occur some time after exposure, or after prolonged exposure to toxin
+Symptoms often mimic other diseases- hard to assess source
+
+Exposure Studies
+=====================================================
+Most studies look at one chemical, but humans tend to be exposed to chemical mixtures
+Ex: automobile exhaust
+Chemical Mixtures interact by
+
+Additivity
+
+Synergy
+
+Antagonism
+
+These studies are expensive and take a while to complete
+
+=======================================================
+
+
+
+
+EPA
+========================================================
+***
+![EPA](EPA_budget.png)
