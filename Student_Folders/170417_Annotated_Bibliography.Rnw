@@ -1,10 +1,7 @@
 \documentclass{article}
 \usepackage{natbib}
 \usepackage{hyperref}
-\usepackage{bibentry}
 
-\bibliographystyle{plainnat}
-\setcitestyle{open={(},close={)}}
 
 \author{EA30 -- Spring 2017}
 \title{Annotated Bibliography}
