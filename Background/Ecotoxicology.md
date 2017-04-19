@@ -122,7 +122,38 @@ Antagonism
 
 These studies are expensive and take a while to complete
 
+Ecotoxcology
 =======================================================
+
+Dilution Paradigm is not valid
+“Dilution is the solution to pollution”
+Boomerang Paradigm is accepted
+“What you throw away can come back and hurt you”
+Ecotoxicology
+The study of contaminants in the biosphere and their harmful effects on ecosystems
+Helps policy makers determine costs and benefits of industrial and technological “advances”
+And how they often adversely effect ecosystems
+
+Case Study
+===================================================
+Land based nutrient and pollution runoff into ocean is affecting microorganisms
+
+Ex: Red Tide
+Red pigmented poisonous algal blooms
+Toxins kill off fish and make humans sick
+
+Risk Assessment
+===================================================
+Risk- probability that a particular adverse effect will result from some exposure or condition
+We assess risk daily with four steps
+Hazard identification
+Dose response assessment
+Exposure assessment
+Risk characterization
+
+Risk Assessment
+==================================================
+![Risk Assessment](RiskAssessment.png)
 
 
 
@@ -131,3 +162,29 @@ EPA
 ========================================================
 ***
 ![EPA](EPA_budget.png)
+
+Probability of Death
+=========================================================
+![EPA](ProbabilityOfDeath.png)
+
+
+Assessment Challenges
+=========================================================
+Difficult to assess because effect occur at wide range of scales
+Individual plants and animals
+Ecological communities over wide regions
+Human-induced environmental stressors also range greatly
+Good to bad
+Acceptable to unacceptable
+There is a need to quantify risks to the environment
+
+Snake River Ecosystem in Southern Idaho
+=================================================
+* River provides hydroelectric power and water for irrigation
+* Human use causes reduced flow, elevated water temperature and nutrient enrichment
++ Results in decrease in fish, algal blooms
+
+# Ecol. Risk Assessment
+Used to help government and locals set priorities to manage and protect ecosystem
+
+
