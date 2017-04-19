@@ -1,54 +1,4 @@
-\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
-%% maxwidth is the original width if it is less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
-}
-\makeatother
-
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
-\let\hlipl\hlkwb
-
-\usepackage{framed}
-\makeatletter
-\newenvironment{kframe}{%
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
-
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
-
-\usepackage{alltt}
+\documentclass{article}
 \usepackage{natbib}
 \usepackage{hyperref}
 \usepackage{bibentry}
@@ -58,8 +8,10 @@
 
 \author{EA30 -- Spring 2017}
 \title{Annotated Bibliography}
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 \maketitle
 \nobibliography{Pb_literature}
 
@@ -116,19 +68,19 @@ To help the readers, you might create subsection and even subsubsections, using 
 \section{Industrial Sources (Khalil)}
 
 
-\section{Use in Industry (except gasoline) (Caudia)}
+\section{Use in Industry (except gasoline) (Claudia)}
 
 \section{``Ethyl'' gas and airplane fuels (Viraj)}
 
 
 \bigskip
-\noindent \bibentry{galzigna1998biochemical} .
+%\noindent \bibentry{galzigna1998biochemical} .
 
 This study by Galzigna et al. is published in the British Journal of Industrial Medicine. The paper speaks to the negative health effects that result from exposure to tetraethyl lead. The effects of tetraethyl lead are similar to general lead exposure. The primary negative health effect observed was reduced neuromuscular function.
 
 \bigskip
 
-\noindent \bibentry{american2016ethyl} .
+%\noindent \bibentry{american2016ethyl} .
 
 The American Oil and Gas Historical Society offers official history of energy fuels for increasing public knowledge. Tetraethyl Lead was added to gasoline to prevent a common problem in engines before the 1930s called “engine knock.” Engine knock occurs when the air-fuel mixture in a cylinder about the piston prematurely detonates before the piston has risen to the maximum height. This premature detonation occurs because of the gasoline not being able to withstand the pressure. In the ideal internal combustion engine operation, the air-fuel mixture should only combust because of a spark created by the spark plug, not an increase in pressure. A gas’s ability to withstand pressure is defined by its octane rating. Adding tetraethyl lead to gasoline increase the octane rating, makes the fuel more resistant to combusting under pressure, and therefore prevents engine knock. In 1921, General Motors scientists discovered the anti-knock properties of tetraethyl lead. Three years later, the first signs that leaded gasolines contributed to lead poisoning occurred when workers at a gasoline treatment plant fell ill. In 1925, after minimal non-comprehensive studies, the U.S Surgeon General stated that there is “no reason to prohibit the sale of leaded gasoline.” The leaded gasoline industry used many manipulative techniques to hide the fact that lead was present in gasoline. They labelled the higher octane fuel “ethyl” gasoline, to avoid lead in the name. The word lead was never used in any advertisements for the fuel. Ultimately, in the late 1970s lead was phased out of gasoline and in 1986 a total ban was placed on leaded automobile gasoline. The invention of the catalytic converter in 1975, which required unleaded fuel, also accelerated the phasing out of lead from gasoline. 
 
@@ -137,11 +89,11 @@ The American Oil and Gas Historical Society offers official history of energy fu
 
 
 \section{Atmospheric transport and deposition}
-\begin{itemize}
-  \item \bibentry{cohan2010potential}
-  \item \bibentry{blais1996using}
-  \item \bibentry{cortizas2002atmospheric}
-\end{itemize}
+%\begin{itemize}
+  %\item \bibentry{cohan2010potential}
+  %\item \bibentry{blais1996using}
+  %\item \bibentry{cortizas2002atmospheric}
+%\end{itemize}
 
 
 
@@ -149,7 +101,50 @@ The American Oil and Gas Historical Society offers official history of energy fu
 
 
 
-\section{Aquatic transport (Olivia)}
+\section{Lead in water (Olivia)}
+
+
+\noindent \bibentry{bellinger2016lead} .
+
+
+This article was published in the New England Journal of Medicine by Dr. David C. Bellinger, a Professor of Neurology at Harvard Medical School and Professor in the Department of Environment Health at Harvard T.H. Chan School of Public Health. He writes about historical and modern lead exposure, particularly through water distribution systems. He then explains the institutional inequalities surrounding Flint's water contamination and the effects on public health. 
+
+
+\noindent \bibentry{echegoyen2014recent} .
+
+
+This study of northern and central Indian Ocean found high concentrations of Pb in surface waters due to rapid regional industrialization and low concentrations in deep waters. The Antarctic sector of the Indian Ocean shows very low Pb concentrations due to limited anthropogenic emissions, high scavenging rates, and rapid vertical mixing. The article predicts an increasing presence of Pb in the ocean following the continued release of Pb from human activities. The data was collected from 11 stations in the 2009-2010 Japanese GEOTRACES transect through the Indian Ocean. The authors of this study are from either Massachusetts Institute of Technology, The University of Tokyo, and Niigata University. 
+
+
+\noindent \bibentry{gobeil2001atlantic} .
+
+
+This study published by the American Association for the Advancement of Science examines sediment cores collected from the Arctic Ocean and Greenland Sea evidence for evidence of lead. The researchers then used the Pb inventory and its isotopic composition to infer the source of the lead contamination and its pathways related to ocean currents and ice drift. The authors are affilliated with Institut Maurice-Lamontagne, Institute of Ocean Sciences, and Bedford Institute of Oceanography in Canada.
+
+
+\noindent \bibentry{schock1980response} .
+
+
+Michael Schock works with the United States Environmental Protection Agency and has written extensively on lead corrosion and drinking water contamination. His paper presents a revised model showing the response of theoretical lead solubility curves to changes in dissolved inorganic carbonate concentrate and pH of water at 25 degrees Celsius. The author acknowledges that his model cannot be directly applied to accurately predict concentrations of lead in tap water in many situations because of the complex chemical and physical concentration control mechanisms happening in the water distribution system. However, the model improves upon earlier models that did not take into account hydrocerussite and lead carbonate complexes. The revised model had good correlation with experimental data and can therefore be employed with some confidence to measure lead solubility.
+
+
+\noindent \bibentry{stansley1992lead} .
+
+
+This paper reports lead contamination at shooting ranges where shots have been deposited in open water or wetland areas and the impacts on a nearby lake. The authors found a significant concentration of filterable lead in the slightly acidic marsh, which suggests that lead could be mobilized at a lower pH. There were elevated lead levels in a  water sample collected near a public swimming area adjacent to a parking lot, possibly as a result of parking lot runoff. The report found elevated total lead concentrations in surface water in the shot fall zones at six trap and skeet ranges, but found no lead contamination in water, sediments, or fish from a lake adjacent to the range with the greatest amount of shot deposition. However, no measurements of particle size or organic content were performed, both of which have a strong influence on sediment lead concentrations. The sample size of fish studied for uptake of lead was also small. This study was conducted by three researchers from the New Jersey Divsion of Fish, Game and Wildlife. 
+
+
+\noindent \bibentry{windom1985geochemistry} .
+
+
+This study was conducted in order to establish baseline levels of lead in coastal and estuarine waters of the southeastern United States and evaluate the relative importance of inputs from rivers, the atmosphere, and oceanic exchange. It was published in 1985 by a researcher from the Skidaway Institute of Oceanography and a researcher from Tokyo Universit of Fisheries.
+
+
+\noindent \bibentry{wu1997lead} .
+
+
+This article investigates the significant decrease of lead concentrations in the western North Atlantic Ocean over a 16-year period from the 1980s to the 1990s. The authors attribute the rapid decline in the 1980s to the phasing out of leaded gasoline in the United States. They propose the slower decrease in the 1990s is due to emissions from high-temperature industrial activities rather than residual leaded gasoline emissions. They predict minimal decreases in surface water lead concentrations in coming decades, and continued propogation and evolution of lead distribution in deeper waters. The two authors of this paper are both scientists with the Department of Earth, Atmospheric, and Planetary Sciences at the Massachusetts Institute of Technology.
+
 
 \section{Sinks (Katie)}
 
@@ -157,15 +152,12 @@ The American Oil and Gas Historical Society offers official history of energy fu
 
 \section{Toxicity (non-human) (Kelli)}
 
-\bibentry{tangahu2011review}. 
+%\bibentry{carlson1975effect}. 
 
 
 \section{Human health effects (physiological, toxicity) (Thea)}
 
-\bibentry{hammond1977annual}
-
-
-\section{Public health effects (crime, IQ, etc) (Marissa)}
+%\section{Public health effects (crime, IQ, etc) (Marissa)}
 
 
 

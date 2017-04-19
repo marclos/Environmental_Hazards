@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-\begin{thebibliography}{4}
-=======
-<<<<<<< HEAD
-\begin{thebibliography}{6}
-=======
-\begin{thebibliography}{5}
->>>>>>> 6527a24f10198b3fc9ee291ed8d1d45075874461
->>>>>>> 986fc6492a3a23b4a3596cfcfcfdcc8c32be8857
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 \bibitem[ame(2016)]{american2016ethyl}
 Ethyl anti-knock gas.
-\newblock \emph{American Oil & Gas Historical Society}, 2016.
+\newblock \emph{American Oil \& Gas Historical Society}, 2016.
 
 \bibitem[Barltrop et~al.(1975)Barltrop, Thornton, Strehlow, and
   Webb]{barltrop1975absorption}
@@ -27,16 +15,6 @@ D~Barltrop, I~Thornton, CD~Strehlow, and JS~Webb.
 \newblock Absorption of lead from dust and soil.
 \newblock \emph{Postgraduate medical journal}, 51\penalty0 (601):\penalty0
   801--804, 1975.
-
->>>>>>> 298efad529c7c16bb24c54bccbdd1d5d341cfc24
->>>>>>> 986fc6492a3a23b4a3596cfcfcfdcc8c32be8857
-\bibitem[Carlson et~al.(1975)Carlson, Bazzaz, and Rolfe]{carlson1975effect}
-Roger~W Carlson, FA~Bazzaz, and GL~Rolfe.
-\newblock The effect of heavy metals on plants: Ii. net photosynthesis and
-  transpiration of whole corn and sunflower plants treated with pb, cd, ni, and
-  tl.
-\newblock \emph{Environmental Research}, 10\penalty0 (1):\penalty0 113--120,
-  1975.
 
 \bibitem[Cohan(2010)]{cohan2010potential}
 Alexander Cohan.
@@ -54,36 +32,30 @@ A~Mart{\i}nez Cortizas, E~Garc{\i}a-Rodeja, X~Pontevedra Pombal, JC~N{\'o}voa
 \newblock \emph{Science of the Total Environment}, 292\penalty0 (1):\penalty0
   33--44, 2002.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 \bibitem[Hammond(1977)]{hammond1977annual}
 Paul~B Hammond.
 \newblock Exposure of humans to lead.
 \newblock \emph{Annual review of pharmacology and toxicology}, 17.1:\penalty0
   197--214, 1977.
 
-=======
-<<<<<<< HEAD
-\bibitem[L.~Galzigna and Viola(1973)]{galzigna1998biochemical}
-G.~Manani L.~Galzigna, M. V.~Ferraro and A.~Viola.
-\newblock Biochemical basis for the toxic effects of triethyl lead.
-\newblock \emph{British Journal of Industrial Medicine}, 1973.
-=======
->>>>>>> 298efad529c7c16bb24c54bccbdd1d5d341cfc24
->>>>>>> 986fc6492a3a23b4a3596cfcfcfdcc8c32be8857
 \bibitem[Juberg and Kwon(1997)]{blais1996using}
 Cindy F.~Kleiman Juberg, Daland~R. and Simona~C. Kwon.
 \newblock Position paper of the american council on science and health: lead
   and human health.
 \newblock \emph{Ecotoxicology and environmental safety}, 38.3\penalty0
   (3):\penalty0 162--180, 1997.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6527a24f10198b3fc9ee291ed8d1d45075874461
->>>>>>> 298efad529c7c16bb24c54bccbdd1d5d341cfc24
->>>>>>> 986fc6492a3a23b4a3596cfcfcfdcc8c32be8857
+
+\bibitem[L.~Galzigna and Viola(1973)]{galzigna1998biochemical}
+G.~Manani L.~Galzigna, M. V.~Ferraro and A.~Viola.
+\newblock Biochemical basis for the toxic effects of triethyl lead.
+\newblock \emph{British Journal of Industrial Medicine}, 1973.
+
+\bibitem[Tangahu et~al.(2011)Tangahu, Sheikh~Abdullah, Basri, Idris, Anuar, and
+  Mukhlisin]{tangahu2011review}
+Bieby~Voijant Tangahu, Siti~Rozaimah Sheikh~Abdullah, Hassan Basri, Mushrifah
+  Idris, Nurina Anuar, and Muhammad Mukhlisin.
+\newblock A review on heavy metals (as, pb, and hg) uptake by plants through
+  phytoremediation.
+\newblock \emph{International Journal of Chemical Engineering}, 2011, 2011.
 
 \end{thebibliography}
