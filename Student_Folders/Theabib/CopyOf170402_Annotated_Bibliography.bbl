@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -13,10 +13,40 @@ Roger~W Carlson, FA~Bazzaz, and GL~Rolfe.
 \newblock \emph{Environmental Research}, 10\penalty0 (1):\penalty0 113--120,
   1975.
 
+\bibitem[for Toxic~Substances and Exposure(2016)]{agency2016lead}
+Agency for Toxic~Substances and Medicine Exposure.
+\newblock Lead toxicity: What are the physiologic effects of lead exposure?,
+  2016.
+\newblock URL \url{https://www.atsdr.cdc.gov/csem/csem.asp?csem=7&po=10}.
+
+\bibitem[Goyer(1990)]{goyer1990environmental}
+Robert~A Goyer.
+\newblock Lead toxicity: from overt to subclinical to subtle health effects.
+\newblock \emph{Environmental Health Perspectives}, 86\penalty0 (170):\penalty0
+  177--181, 1990.
+
 \bibitem[Hammond(1977)]{hammond1977annual}
 Paul~B Hammond.
 \newblock Exposure of humans to lead.
-\newblock \emph{Annual review of pharmacology and toxicology}, 17.1:\penalty0
-  197--214, 1977.
+\newblock \emph{Annual review of pharmacology and toxicology}, 17\penalty0
+  (1):\penalty0 197--214, 1977.
+
+\bibitem[Juberg and Kwon(1991)]{juberg1997position}
+Cindy F.~Kleiman Juberg, Daland~R. and Simona~C. Kwon.
+\newblock Position paper of the american council on science and health: lead
+  and human health.
+\newblock \emph{Ecotoxicology and environmental safety}, 38\penalty0
+  (3):\penalty0 110--140, 1991.
+
+\bibitem[Needleman and Bellinger(1997)]{needleman1997thehealth}
+Herbert~L. Needleman and David Bellinger.
+\newblock The health effects of low level exposure to lead.
+\newblock \emph{Annual Review of Public Health}, 12\penalty0 (1):\penalty0
+  162--180, 1997.
+
+\bibitem[Organization(2016)]{WHO2016lead}
+World~Health Organization.
+\newblock Lead poisoning and health, 2016.
+\newblock URL \url{http://www.who.int/mediacentre/factsheets/fs379/en/}.
 
 \end{thebibliography}
