@@ -7,11 +7,11 @@ autosize: true
 What is Ecotoxicology?
 ========================================================
 
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+the branch of science that deals with the nature, effects, and interactions of substances that are harmful to the environment.
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Human and Non-human effects
+- Harmful natural and anthropogenic substances
+- Environmental affects -- broad sense.
 
 What is Human Health?
 ========================================================
@@ -42,9 +42,13 @@ Health Issues in Developed Countries
 
 ***
 
-Obesity is big problem, where we measure "health" using the Body Mass Index: 
+Obesity is big problem, where we can measure "health" using the Body Mass Index: 
 
-BMI = Mass (kg)/Height^2 (m) = 740 * (Mass (lb))/ (Height^2 (in))
+$BMI = Mass (kg)/Height^2 (m)$
+
+or 
+
+$BMI = 740 * (Mass (lb))/ (Height^2 (in))$
 
 
 + < 18.5 is underweight
@@ -79,10 +83,6 @@ text(65,165,"Overweight",cex=2,srt=40)
 text(70,150,"Normal",cex=2,srt=35)
 text(75,120,"Underweight",cex=2,srt=18)
 ```
-
-Regional BMIs
-=======================================================
-![Regional BMIs](BMI_globalmap.png)
 
 Health Issues in Developing Countries
 =======================================================
@@ -121,45 +121,69 @@ Symptoms often mimic other diseases- hard to assess source
 Exposure Studies
 =====================================================
 Most studies look at one chemical, but humans tend to be exposed to chemical mixtures
-Ex: automobile exhaust
-Chemical Mixtures interact by
 
-Additivity
+* Ex: automobile exhaust
 
-Synergy
+++ Chemical Mixtures interact by
 
-Antagonism
++ Additivity
+
++ Synergy
+
++ Antagonism
 
 These studies are expensive and take a while to complete
+
+See Example Handout on 2-Way ANOVA
+=======================================================
+
+
+
 
 Ecotoxcology
 =======================================================
 
 Dilution Paradigm is not valid
-“Dilution is the solution to pollution”
-Boomerang Paradigm is accepted
-“What you throw away can come back and hurt you”
-Ecotoxicology
-The study of contaminants in the biosphere and their harmful effects on ecosystems
-Helps policy makers determine costs and benefits of industrial and technological “advances”
-And how they often adversely effect ecosystems
+
+*Dilution is the solution to pollution*
+
++ Boomerang Paradigm is accepted
+
+*What you throw away can come back and hurt you*
+
+* Ecotoxicology
+
+- The study of contaminants in the biosphere and their harmful effects on ecosystems
+
+- Helps policy makers determine costs and benefits of industrial and technological ``advances''
+
+- And how they often adversely effect ecosystems
 
 Case Study
 ===================================================
 Land based nutrient and pollution runoff into ocean is affecting microorganisms
 
-Ex: Red Tide
-Red pigmented poisonous algal blooms
-Toxins kill off fish and make humans sick
++ Ex: Red Tide
+
+- Red pigmented poisonous algal blooms (Dinophyceae) 
+
+- Toxins kill off fish and make humans sick
 
 Risk Assessment
 ===================================================
 Risk- probability that a particular adverse effect will result from some exposure or condition
-We assess risk daily with four steps
-Hazard identification
-Dose response assessment
-Exposure assessment
-Risk characterization
+
++ We assess risk daily with four steps
+
+- Hazard identification
+
+- Dose response assessment
+
+- Exposure assessment
+
+- Risk characterization
+
+
 
 Risk Assessment
 ==================================================
@@ -180,21 +204,28 @@ Probability of Death
 
 Assessment Challenges
 =========================================================
-Difficult to assess because effect occur at wide range of scales
-Individual plants and animals
-Ecological communities over wide regions
-Human-induced environmental stressors also range greatly
-Good to bad
-Acceptable to unacceptable
-There is a need to quantify risks to the environment
++ Difficult to assess because effect occur at wide range of scales
+
+- Individual plants and animals
+
+- Ecological communities over wide regions
+
+- Human-induced environmental stressors also range greatly
+
+* Good to bad
+
+- Acceptable to unacceptable
+
++ There is a need to quantify risks to the environment
 
 Snake River Ecosystem in Southern Idaho
 =================================================
 * River provides hydroelectric power and water for irrigation
 * Human use causes reduced flow, elevated water temperature and nutrient enrichment
-+ Results in decrease in fish, algal blooms
++ Results in decrease in fish, algal blooms (and potentially toxic, Cyanophyta)
 
-# Ecol. Risk Assessment
-Used to help government and locals set priorities to manage and protect ecosystem
+### Ecol. Risk Assessment
+
+* Used to help government and locals set priorities to manage and protect ecosystem
 
 
