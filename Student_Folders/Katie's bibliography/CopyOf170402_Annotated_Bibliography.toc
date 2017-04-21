@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {5}``Ethyl'' gas and airplane fuels (Viraj)}{3}{section.5}
 \contentsline {section}{\numberline {6}Aquatic transport (Olivia)}{3}{section.6}
 \contentsline {section}{\numberline {7}Sinks (Katie)}{3}{section.7}
-\contentsline {section}{\numberline {8}Food web dynamics (Mireya)}{3}{section.8}
-\contentsline {section}{\numberline {9}Toxicity (non-human) (Kelli)}{3}{section.9}
-\contentsline {section}{\numberline {10}Human health effects (physiological, toxicity) (Thea)}{3}{section.10}
-\contentsline {section}{\numberline {11}Public health effects (crime, IQ, etc) (Marisa)}{6}{section.11}
+\contentsline {section}{\numberline {8}Food web dynamics (Mireya)}{6}{section.8}
+\contentsline {section}{\numberline {9}Toxicity (non-human) (Kelli)}{6}{section.9}
+\contentsline {section}{\numberline {10}Human health effects (physiological, toxicity) (Thea)}{6}{section.10}
+\contentsline {section}{\numberline {11}Public health effects (crime, IQ, etc) (Marissa)}{6}{section.11}

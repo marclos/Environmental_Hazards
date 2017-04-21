@@ -1,0 +1,58 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bellinger(2016)]{bellinger2016lead}
+David~C Bellinger.
+\newblock Lead contamination in flint—an abject failure to protect public
+  health.
+\newblock \emph{New England Journal of Medicine}, 374\penalty0 (12):\penalty0
+  1101--1103, 2016.
+
+\bibitem[Echegoyen et~al.(2014)Echegoyen, Boyle, Lee, Gamo, Obata, and
+  Norisuye]{echegoyen2014recent}
+Yolanda Echegoyen, Edward~A Boyle, Jong-Mi Lee, Toshitaka Gamo, Hajime Obata,
+  and Kazuhiro Norisuye.
+\newblock Recent distribution of lead in the indian ocean reflects the impact
+  of regional emissions.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 111\penalty0
+  (43):\penalty0 15328--15331, 2014.
+
+\bibitem[Gobeil et~al.(2001)Gobeil, Macdonald, Smith, and
+  Beaudin]{gobeil2001atlantic}
+Charles Gobeil, Robie~W Macdonald, John~N Smith, and Luc Beaudin.
+\newblock Atlantic water flow pathways revealed by lead contamination in arctic
+  basin sediments.
+\newblock \emph{Science}, 293\penalty0 (5533):\penalty0 1301--1304, 2001.
+
+\bibitem[Schock(1980)]{schock1980response}
+Michael~R Schock.
+\newblock Response of lead solubility to dissolved carbonate in drinking water.
+\newblock \emph{Journal (American Water Works Association)}, pages 695--704,
+  1980.
+
+\bibitem[Stansley et~al.(1992)Stansley, Widjeskog, and
+  Roscoe]{stansley1992lead}
+William Stansley, Lee Widjeskog, and Douglas~E Roscoe.
+\newblock Lead contamination and mobility in surface water at trap and skeet
+  ranges.
+\newblock \emph{Bulletin of Environmental Contamination and Toxicology},
+  49\penalty0 (5):\penalty0 640--647, 1992.
+
+\bibitem[Windom et~al.(1985)Windom, Smith, and Maeda]{windom1985geochemistry}
+Herbert~L Windom, Ralph~G Smith, and Masaru Maeda.
+\newblock The geochemistry of lead in rivers, estuaries and the continental
+  shelf of the southeastern united states.
+\newblock \emph{Marine Chemistry}, 17\penalty0 (1):\penalty0 43--56, 1985.
+
+\bibitem[Wu and Boyle(1997)]{wu1997lead}
+Jingfeng Wu and Edward~A Boyle.
+\newblock Lead in the western north atlantic ocean: completed response to
+  leaded gasoline phaseout.
+\newblock \emph{Geochimica et Cosmochimica Acta}, 61\penalty0 (15):\penalty0
+  3279--3283, 1997.
+
+\end{thebibliography}
