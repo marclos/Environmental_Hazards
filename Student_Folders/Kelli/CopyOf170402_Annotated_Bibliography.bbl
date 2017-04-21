@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -41,5 +41,12 @@ Pallavi Sharma and Rama~Shanker Dubey.
 \newblock Lead toxicity in plants.
 \newblock \emph{Brazilian journal of plant physiology}, 17\penalty0
   (1):\penalty0 35--52, 2005.
+
+\bibitem[Weber et~al.(1997)Weber, Dingel, Panos, and
+  Steinpreis]{weber1997alterations}
+Daniel~N Weber, Wendy~M Dingel, John~J Panos, and Rhea~E Steinpreis.
+\newblock Alterations in neurobehavioral responses in fishes exposed to lead
+  and lead-chelating agents.
+\newblock \emph{American Zoologist}, 37\penalty0 (4):\penalty0 354--362, 1997.
 
 \end{thebibliography}
