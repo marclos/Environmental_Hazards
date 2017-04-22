@@ -131,6 +131,11 @@ Daniel N. Weber is a professor at the University of Wisconsin in Milwaukee, whos
 
 Joanna Burger is a professor at Rutgers University whose research often concerns environmental pollution and behavioral ecology, with special focus on anthropogenic sources of metals and their effects on birds. She has written 84 articles on these topics, with the one cited above cited 81 times since it was published in 1995. While other articles were definitely written with technical scientific terminology, this article is more accessible to a wider audience as it discusses the effects of Pb bioaccumulating in birds. According to Burger, as in fish discussed in Weber's article, Pb in birds also leads to hindered reactions or responses to stimuli. It also leads to developmental defects in clutches and eggs. 
 
+\bigskip
+
+\bibentry{mautino1997lead}.
+
+Michele Mautino is a doctor of veterinary medicine in working at the zoo in Jacksonville, Florida. She once worked as a vet at Disney World and even helped to design their Animal Kingdom zoo hospital. Her research focuses on metal intoxication in zoological medicine. Her article cited above has been cited 18 times since 1997. The article is written for a scientific audience. It explains how lead in mammals is known to disrupt genetic processes as well as neurological functions—an effect similarly discussed in previous articles. 
 
 \section{Human health effects (physiological, toxicity) (Thea)}
 
