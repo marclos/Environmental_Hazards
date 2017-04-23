@@ -104,6 +104,12 @@ The American Oil and Gas Historical Society offers official history of energy fu
 \section{Lead in water (Olivia)}
 
 
+\noindent \bibentry{alleman1999invasion} .
+
+
+This study analyzes stable lead isotopic composition data to reveal the advective transport of industrial lead into deep basic waters through the formation of North Atlantic Deep Water. The authors analyzed sea water samples collected during a suite of cruises in the far North Atlantic, western North Atlantic, North African basins, and equatorial North Atlantic. The samples showed that 206Pb/207Pb ratios of newly formed North Atlantic Deep Water in the far North Atlantic reflect mixing with less radiogenic western European emissions owing to the phasing out of leaded gasoline in the US. The authors predict that in future, stable lead isotopes will continue to uniquely fingerprint geographic sources of lead and associated contaminants, and trace transient fluxes of those contaminants into the abyssal North Atlantic over decadal scales.
+
+
 \noindent \bibentry{bellinger2016lead} .
 
 
@@ -120,6 +126,24 @@ This study of northern and central Indian Ocean found high concentrations of Pb 
 
 
 This study published by the American Association for the Advancement of Science examines sediment cores collected from the Arctic Ocean and Greenland Sea evidence for evidence of lead. The researchers then used the Pb inventory and its isotopic composition to infer the source of the lead contamination and its pathways related to ocean currents and ice drift. The authors are affilliated with Institut Maurice-Lamontagne, Institute of Ocean Sciences, and Bedford Institute of Oceanography in Canada.
+
+
+\noindent \bibentry{hem1973solubility} .
+
+
+This article evaluates the solubility of lead in solutions similar to natural river water to determine the general features of water chemistry, which features favor the solution of lead, and the solubility effectiveness. The data in this article also suggest methods of reducing the lead content of drinking water at water-treatment plants. 
+
+
+\noindent \bibentry{kim2000factors} .
+
+
+This study measured the atmospheric depositional fluxes of 7Be, 210Pb, and stable Pb simultaneously for one year on the upper eastern shore of the Chesapeake Bay in Maryland. The research suggests that a constant Pb flux has been reached since the mandatory use of unleaded gasoline was instituted. This study concludes that precipitation appears to be an important factor controlling the fluxes of 7Be and stable Pb in the upper troposphere. However, 210Pb in the lower troposphere is highly scavenged from the atmosphere from small amounts of precipitation such as snowfall. 
+
+
+\noindent \bibentry{nozaki1976distribution} .
+
+
+This study determines residence times relative to particulate removal or 210Pb and 210Po in surface waters of the Pacific Ocean in order to examine the transportation of trace metals in the ocean column. The authors collected surface water samples with two 2-liter plastic sample bottles enclosed in a net attached to a ship moving at low speed. The study found that the residence times for Po and Pb in the center of the North Pacific gyre are 0.6 years and 1.7 years, respectively. The fact that surface ocean residence time for Pb is about two orders of magnitude smaller than for deep ocean Pb implies that adsorptive quality of particles changes sharply during descent through the water column.
 
 
 \noindent \bibentry{schock1980response} .
@@ -144,6 +168,7 @@ This study was conducted in order to establish baseline levels of lead in coasta
 
 
 This article investigates the significant decrease of lead concentrations in the western North Atlantic Ocean over a 16-year period from the 1980s to the 1990s. The authors attribute the rapid decline in the 1980s to the phasing out of leaded gasoline in the United States. They propose the slower decrease in the 1990s is due to emissions from high-temperature industrial activities rather than residual leaded gasoline emissions. They predict minimal decreases in surface water lead concentrations in coming decades, and continued propogation and evolution of lead distribution in deeper waters. The two authors of this paper are both scientists with the Department of Earth, Atmospheric, and Planetary Sciences at the Massachusetts Institute of Technology.
+
 
 
 \section{Sinks (Katie)}

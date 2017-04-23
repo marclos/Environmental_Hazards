@@ -110,9 +110,32 @@ The American Oil and Gas Historical Society offers official history of energy fu
 
 \bibentry{sharma2005lead}. 
 
-Pallavi Sharma is a biochemistry and molecular biology faculty member at the Central University of Jharkhand. She holds both a Master's and PhD in biochemistry, and she has published 28 articles relating to heavy metal toxicity in plants. The article cited in particular was published in 2005, and has been cited by 887 articles since then. 
-This article discusses 
+Pallavi Sharma is a biochemistry and molecular biology professor at the Central University of Jharkhand. She holds both a Master's and PhD in biochemistry, and she has published 28 articles relating to heavy metal toxicity in plants. The article cited here in particular was published in 2005, and has been cited by 887 articles since then. 
+This article discusses the science of Pb uptake in plants as well as Pb's potential effects on plant growth and health. The article appears to be geared towards academics—but its points are still generally accessible to readers such as college students. 
 
+\bigskip 
+
+\bibentry{fisher1996accumulation}.
+
+Nicholas S. Fisher is a Distinguished Professor at Stony Brook University, specializing in topics such as marine pollution and the biogeochemical cycling of metals in marine environments. He has published over 200 articles on these topics, and the cited here in particular has been cited 159 times since it was published in 1996. The article is written very technically for an audience that has a strong scientific background. This article explained the author's findings that metals such as Pb tend to accumulate in shells of mussels rather than in their soft tissue, as well as the presence of Pb in mussel fecal matter that could contribute to its biogeocycling in the environment.  
+
+\bigskip 
+
+\bibentry{weber1997alterations}.
+
+Daniel N. Weber is a professor at the University of Wisconsin in Milwaukee, whose research is centered around the effects of metal contaminants such as lead on fish behavior. He has written 43 articles on the topic, and the particular article cited above has been cited 58 times since it was published in 1997. The article is extremely scientific and clearly written for a scientific audience. The article discusses the behavioral dysfunction that occurs in fish as a result of constant exposure to Pb, often interfering with their ability to react to stimuli. 
+
+\bigskip 
+
+\bibentry{burger1995risk}.
+
+Joanna Burger is a professor at Rutgers University whose research often concerns environmental pollution and behavioral ecology, with special focus on anthropogenic sources of metals and their effects on birds. She has written 84 articles on these topics, with the one cited above cited 81 times since it was published in 1995. While other articles were definitely written with technical scientific terminology, this article is more accessible to a wider audience as it discusses the effects of Pb bioaccumulating in birds. According to Burger, as in fish discussed in Weber's article, Pb in birds also leads to hindered reactions or responses to stimuli. It also leads to developmental defects in clutches and eggs. 
+
+\bigskip
+
+\bibentry{mautino1997lead}.
+
+Michele Mautino is a doctor of veterinary medicine in working at the zoo in Jacksonville, Florida. She once worked as a vet at Disney World and even helped to design their Animal Kingdom zoo hospital. Her research focuses on metal intoxication in zoological medicine. Her article cited above has been cited 18 times since 1997. The article is written for a scientific audience. It explains how lead in mammals is known to disrupt genetic processes as well as neurological functions—an effect similarly discussed in previous articles. 
 
 \section{Human health effects (physiological, toxicity) (Thea)}
 
