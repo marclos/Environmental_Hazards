@@ -1,0 +1,153 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{bibentry}
+
+\bibliographystyle{plainnat}
+\setcitestyle{open={(},close={)}}
+
+\author{EA30 -- Spring 2017}
+\title{Annotated Bibliography}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\maketitle
+\nobibliography{Pb_literature_Khalil}
+
+\section{Abstract}
+
+
+
+\tableofcontents
+
+\section{Instructions}
+
+Please complete the annotated bibliography by the 17th of April.
+
+\subsection{Searching for Academic Sources}
+
+There are numerous electronic sources to evaluate and obtain academic sources of information. Usually, we consider peer reviewed articles to have the highest quality scholarship. As a rule of thumb, this is a good start, but there is also a great deal of variation between sources, even journal titles can vary in quality. Thus, it's best to evaluate a range of sources and appreciate the subtle differences in quality and prestige.
+
+First, you should search CUC databases using key words, such as Pb and lead. I admit the lead is tricky, because it's not a useful term due it a double meaning. I suggest heavy metals or trace metals with the other key words, i.e. fate and transport, toxicity, etc, depending on the topic you selected.
+
+Below are links to some useful databases:
+
+\begin{itemize}
+  \item \href{http://apps.webofknowledge.com.ccl.idm.oclc.org/}{Web of Science}
+  \item \href{http://www.jstor.org.ccl.idm.oclc.org/}{JStore}
+  \item \href{https://scholar-google-com.ccl.idm.oclc.org/}{Google Scholar}
+\end{itemize}
+
+
+\subsection{Writing an Annotated Bibliography}
+
+After adding your citation to the Pb\_literature.bib, using the BibTeX format, cite your reference using the syntax below. Then, write a concise annotation that summarizes the central theme and scope of the book or article. Include one or more sentences that (a) evaluate the authority or background of the author, (b) comment on the intended audience, (c) compare or contrast this work with another you have cited, or (d) explain how this work illuminates your bibliography topic.
+
+\subsection{Implementing in \LaTeX}
+
+\LaTeX is a software program used for desktop publishing. With an eye for detail, the program was developed to give the author a great deal of control. In contrast, Microsoft Word is designed to have lots of options, but these seem to get in the way of controlling the outcome. 
+
+\LaTeX is an open source program and relies on specific formatting commands that begin with a backslash. For example to start a new section heading, we use \verb!\section{section name}! and \verb!\subsection{subsection name}! to create a subsection heading.
+
+Below might be an example of what we are trying to accomplish using our Rstudio resources. The \LaTeX command for the citation is \verb!\bibentry{key}!, where key is identifies the citation based on the BibTeX citation entry as shown below.
+
+However, we also need to add the citation to the *.bib file, in this case the file is called ``Pb\_literature.bib''. Open the file. You can see each entry within the curly brackets. Also, it starts with the definition of the entry, e.g. article, book, conference proceedings. We can easily add the citation using the databases cited above. All you need to do is search for the citation manager or citation tool and select a citation format ``bibtex''. Copy and paste the bibtex format (try to put it in the correct location, i.e. alphabetic order). Note the ``key'' is the first word after the citation definition. 
+
+\subsection{Annotated Example}
+
+\bigskip
+%\noindent \bibentry{barltrop1975absorption} . Summarizes important infomormation about Pb. This paper reviews work that span x years starting with early \ldots and noting recent information that includes \ldots. \cite{barltrop1975absorption} first describe xyz and how these issues have been largely \ldots.
+
+\bigskip
+
+
+To help the readers, you might create subsection and even subsubsections, using \verb!\subsection{subsection name}! and \verb!\subsubsection{subsubsection name}!. 
+
+
+\section{Industrial Sources (Khalil)}
+
+\bibentry{duzgoren2007sources}. kahlail
+
+\section{Use in Industry (except gasoline) (Caudia)}
+
+\section{``Ethyl'' gas and airplane fuels (Viraj)}
+
+%\section{Atmospheric transport and deposition}
+%\begin{itemize}
+  %\item \bibentry{cohan2010potential}
+  %\item \bibentry{blais1996using}
+  %\item \bibentry{cortizas2002atmospheric}
+%\end{itemize}
+
+
+
+
+
+
+
+\section{Aquatic transport (Olivia)}
+
+\section{Sinks (Katie)}\section{Food web dynamics (Mireya)}
+
+\section{Toxicity (non-human) (Kelli)}
+
+\bibentry{carlson1975effect}. 
+
+
+\section{Human health effects (physiological, toxicity) (Thea)}
+
+\section{Public health effects (crime, IQ, etc) (Marissa)}
+
+
+
+\end{document}
+
