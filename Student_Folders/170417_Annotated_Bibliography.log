@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  17 APR 2017 16:58
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  21 APR 2017 13:07
 entering extended mode
  %&-line parsing enabled.
 **170417_Annotated_Bibliography.tex
@@ -69,11 +69,18 @@ Package: framed 2003/07/21 v 0.8a: framed or shaded text with page breaks
 (/usr/share/texmf/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
+(/usr/share/texmf/tex/latex/natbib/natbib.sty
+Package: natbib 2007/02/05 8.0 (PWD)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 602.
+\c@NAT@ctr=\count88
+)
 (/usr/share/texmf/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2007/02/07 v6.75r Hypertext links for LaTeX
 \@linkdim=\dimen107
-\Hy@linkcounter=\count88
-\Hy@pagecounter=\count89
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
 
 (/usr/share/texmf/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2007/02/07 v6.75r Hyperref: PDFDocEncoding definition (HO)
@@ -98,7 +105,7 @@ Package hyperref Info: Bookmarks ON on input line 2444.
 Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 2599.
-\Fld@menulength=\count90
+\Fld@menulength=\count91
 \Field@Width=\dimen108
 \Fld@charsize=\dimen109
 \Choice@toks=\toks15
@@ -108,21 +115,14 @@ Package hyperref Info: Link nesting OFF on input line 3107.
 Package hyperref Info: Hyper index ON on input line 3110.
 Package hyperref Info: backreferencing OFF on input line 3117.
 Package hyperref Info: Link coloring OFF on input line 3122.
-\Hy@abspage=\count91
-\c@Item=\count92
-\c@Hfootnote=\count93
+\Hy@abspage=\count92
+\c@Item=\count93
+\c@Hfootnote=\count94
 )
 *hyperref using default driver hpdftex*
 (/usr/share/texmf/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
-\Fld@listcount=\count94
-)
-(/usr/share/texmf/tex/latex/natbib/natbib.sty
-Package: natbib 2007/02/05 8.0 (PWD)
-\bibhang=\skip43
-\bibsep=\skip44
-LaTeX Info: Redefining \cite on input line 602.
-\c@NAT@ctr=\count95
+\Fld@listcount=\count95
 )
 (/usr/share/texmf/tex/latex/natbib/bibentry.sty
 Package: bibentry 2000/06/20 1.4 (PWD)
@@ -201,28 +201,28 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 (./170417_Annotated_Bibliography.aux)
 \openout1 = `170417_Annotated_Bibliography.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 63.
 
 (/usr/share/texmf/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 83.
-Package hyperref Info: Link coloring OFF on input line 83.
+LaTeX Font Info:    ... okay on input line 63.
+Package hyperref Info: Link coloring OFF on input line 63.
 
 (/usr/share/texmf/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
@@ -232,19 +232,19 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count96
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \ref on input line 63.
+LaTeX Info: Redefining \pageref on input line 63.
 
 (./170417_Annotated_Bibliography.out) (./170417_Annotated_Bibliography.out)
 \@outlinefile=\write3
 \openout3 = `170417_Annotated_Bibliography.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 85.
+(Font)              <12> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 85.
+(Font)              <8> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 85.
+(Font)              <6> on input line 65.
 
 (./170417_Annotated_Bibliography.bbl) (./170417_Annotated_Bibliography.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -259,10 +259,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (19.38612pt too wide) in paragraph at lines 138--139
-\OT1/cmr/m/n/10 ing []\OT1/cmtt/m/n/10 \subsection{subsection name} \OT1/cmr/m/
-n/10 and []\OT1/cmtt/m/n/10 \subsubsection{subsubsection name}\OT1/cmr/m/n/10 .
- 
+Overfull \hbox (3.83054pt too wide) in paragraph at lines 117--118
+[]\OT1/cmtt/m/n/10 \subsection{subsection name} \OT1/cmr/m/n/10 and []\OT1/cmtt
+/m/n/10 \subsubsection{subsubsection name}\OT1/cmr/m/n/10 . 
  []
 
 Missing character: There is no ‚ in font cmr10!
@@ -287,30 +286,69 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 [3] [4]
-Overfull \hbox (10.32967pt too wide) in paragraph at lines 193--193
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no î in font cmr10!
+ [5] [6]
+Overfull \hbox (2.25053pt too wide) in paragraph at lines 235--236
+[]\OT1/cmr/m/n/10 This ar-ti-cle, pub-lished in 1990, pro-vides its read-ers wi
+th an ob-jec-tive overview
+ []
+
+[7]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+ [8] [9]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Overfull \hbox (10.32967pt too wide) in paragraph at lines 265--265
 []\OT1/cmr/bx/n/14.4 Public health ef-fects (crime, IQ, etc) (Marissa) 
  []
 
-[5] (./170417_Annotated_Bibliography.aux) ) 
+[10] (./170417_Annotated_Bibliography.aux) ) 
 Here is how much of TeX's memory you used:
- 3343 strings out of 256214
- 46897 string characters out of 1917000
- 102585 words of memory out of 1500000
- 6577 multiletter control sequences out of 10000+200000
+ 3378 strings out of 256214
+ 47678 string characters out of 1917000
+ 103087 words of memory out of 1500000
+ 6593 multiletter control sequences out of 10000+200000
  9053 words of font info for 32 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 25i,6n,36p,1846b,335s stack positions out of 5000i,500n,6000p,200000b,15000s
- </home/CAMPUS/mwl04747/.texlive2007
-/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf/fonts/t
-ype1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb>
-</usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/type
-1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr
-/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/blu
-esky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/shar
-e/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
-Output written on 170417_Annotated_Bibliography.pdf (5 pages, 99886 bytes).
+ 25i,6n,36p,2080b,335s stack positions out of 5000i,500n,6000p,200000b,15000s
+ </home/CAMPUS/mwl04747/.texlive200
+7/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf/fonts/
+type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb
+></usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/typ
+e1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></us
+r/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bl
+uesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/sha
+re/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
+Output written on 170417_Annotated_Bibliography.pdf (10 pages, 126029 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 131072)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 131072)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
