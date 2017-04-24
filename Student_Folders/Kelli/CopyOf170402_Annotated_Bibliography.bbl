@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -28,10 +28,25 @@ A~Mart{\i}nez Cortizas, E~Garc{\i}a-Rodeja, X~Pontevedra Pombal, JC~N{\'o}voa
 \newblock \emph{Science of the Total Environment}, 292\penalty0 (1):\penalty0
   33--44, 2002.
 
+\bibitem[Fisher et~al.(1996)Fisher, Teyssi{\'e}, Fowler, and
+  Wang]{fisher1996accumulation}
+Nicholas~S Fisher, Jean-Louis Teyssi{\'e}, Scott~W Fowler, and Wen-Xiong Wang.
+\newblock Accumulation and retention of metals in mussels from food and water:
+  a comparison under field and laboratory conditions.
+\newblock \emph{Environmental science \& technology}, 30\penalty0
+  (11):\penalty0 3232--3242, 1996.
+
 \bibitem[Sharma and Dubey(2005)]{sharma2005lead}
 Pallavi Sharma and Rama~Shanker Dubey.
 \newblock Lead toxicity in plants.
 \newblock \emph{Brazilian journal of plant physiology}, 17\penalty0
   (1):\penalty0 35--52, 2005.
+
+\bibitem[Weber et~al.(1997)Weber, Dingel, Panos, and
+  Steinpreis]{weber1997alterations}
+Daniel~N Weber, Wendy~M Dingel, John~J Panos, and Rhea~E Steinpreis.
+\newblock Alterations in neurobehavioral responses in fishes exposed to lead
+  and lead-chelating agents.
+\newblock \emph{American Zoologist}, 37\penalty0 (4):\penalty0 354--362, 1997.
 
 \end{thebibliography}
