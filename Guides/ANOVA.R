@@ -20,9 +20,9 @@ summary(plantexperiment.aov)
 
 # Two treatment dataset
 set.seed(4)
-treatA <- rnorm(10,6,2)
+treatA <- rnorm(10,2,2)
 treatB <- rnorm(10,8,2)
-treatC <- rnorm(10,9,2)
+treatC <- rnorm(10,11,2)
 
 
 dataset<-data.frame(Treatment=c(rep("A", 10), rep("B", 10), 
@@ -118,6 +118,10 @@ summary(aov(Response ~ Treatment, data=dataset))
 
 par(mfrow=c(2,2))
 plot(dataset.aov)
+
+posthoc <- TukeyHSD(dataset.aov, conf.level=0.95)
+
+posthoc
 
 # Two treatment dataset
 set.seed(4)
