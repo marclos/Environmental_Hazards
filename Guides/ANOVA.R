@@ -25,7 +25,18 @@ treatB <- rnorm(10,8,2)
 treatC <- rnorm(10,9,2)
 
 
-dataset<-data.frame(Treatment=c(rep("A", 10), rep("B", 10), rep("C", 10)), Replicate=c(rep(1:10,3)), Response=c(treatA, treatB, treatC))
+dataset<-data.frame(Treatment=c(rep("A", 10), rep("B", 10), 
+                                rep("C", 10)), Replicate=c(rep(1:10,3)), 
+                    Response=c(treatA, treatB, treatC))
+
+dataset$treat.mean[dataset$Treatment =="A"] <- treat.mean["A"]
+dataset$treat.mean[dataset$Treatment =="B"] <- treat.mean["B"]
+dataset$treat.mean[dataset$Treatment =="C"] <- treat.mean["C"]
+
+
+dataset.aov <- aov(Response ~ Treatment, dataset)
+summary(dataset.aov)
+
 
 dataset$mu = mean(dataset$Response); mean(dataset$Response) #Grand mean=8.64
 SS_total = sum((dataset$Response - dataset$mu)^2); SS_total
@@ -91,3 +102,65 @@ text(F3+.8, df(F3, 20, 10)+.1, "F[20,10]", pos=3, col="orange")
 pf(MSD.among/MSD.wthn,1,27, lower.tail=F)
 
 summary(aov(Response ~ Treatment, data=dataset))
+
+# Textbook analysis using a normal distribution 
+
+#The analysis of variance can be presented in terms of a linear model, which makes the following assumptions about the probability distribution of the responses:[21][22][23][24]
+
+## Independence of observations – this is an assumption of the model that simplifies the statistical analysis.
+
+## Normality – the distributions of the residuals are normal.
+
+## Equality (or "homogeneity") of variances, called homoscedasticity — the variance of data in groups should be the same.
+
+## The separate assumptions of the textbook model imply that the errors are independently, identically, and normally distributed for fixed effects models, that is, that the errors ( {\displaystyle \varepsilon } \varepsilon ) are independent and
+{\displaystyle \varepsilon \thicksim N(0,\sigma ^{2}).\,} \varepsilon \thicksim N(0, \sigma^2).\,
+
+par(mfrow=c(2,2))
+plot(dataset.aov)
+
+# Two treatment dataset
+set.seed(4)
+treatA <- rnorm(10,6,5)
+treatB <- rnorm(10,8,2)
+treatC <- rnorm(10,9,2)
+
+
+dataset<-data.frame(Treatment=c(rep("A", 10), rep("B", 10), 
+                                rep("C", 10)), Replicate=c(rep(1:10,3)), 
+                    Response=c(treatA, treatB, treatC))
+
+dataset$treat.mean[dataset$Treatment =="A"] <- treat.mean["A"]
+dataset$treat.mean[dataset$Treatment =="B"] <- treat.mean["B"]
+dataset$treat.mean[dataset$Treatment =="C"] <- treat.mean["C"]
+
+
+dataset.aov <- aov(Response ~ Treatment, dataset)
+summary(dataset.aov)
+
+plot(dataset.aov)
+
+# Two treatment dataset
+set.seed(4)
+treatA <- rlnorm(10,6,5)
+treatB <- rlnorm(10,8,2)
+treatC <- rlnorm(10,9,2)
+
+
+dataset<-data.frame(Treatment=c(rep("A", 10), rep("B", 10), 
+                                rep("C", 10)), Replicate=c(rep(1:10,3)), 
+                    Response=c(treatA, treatB, treatC))
+
+dataset$treat.mean[dataset$Treatment =="A"] <- treat.mean["A"]
+dataset$treat.mean[dataset$Treatment =="B"] <- treat.mean["B"]
+dataset$treat.mean[dataset$Treatment =="C"] <- treat.mean["C"]
+
+
+dataset.aov <- aov(Response ~ Treatment, dataset)
+summary(dataset.aov)
+
+plot(dataset.aov)
+
+dataset.aov <- aov(log(Response) ~ Treatment, dataset)
+summary(dataset.aov)
+plot(dataset.aov)
