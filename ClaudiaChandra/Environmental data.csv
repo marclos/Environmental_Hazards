@@ -1,0 +1,46 @@
+SampleID,Location ,Replicate ,Concentration
+Calib Blank,NA ,NA,NA
+1 ppm,NA ,NA,NA
+10 ppm,NA ,NA,NA
+100 ppm,NA ,NA,NA
+1 (Griffith 5),Griffith ,5,32.77039432
+2 (Griffith 1),Griffith ,1,55.44755457
+3 (Griffith 4),Griffith ,4,37.70787353
+4 (Jumpa 1),Jumpa ,1,11.1133583
+5 (CUC 5),CUC,5,10.31747258
+6 (Marston 5),Marston ,5,55.37431179
+7 (Cahuilla 1),Cahuilla ,1,27.3162444
+8 (Griffith 3),Griffith ,3,45.79263508
+9 (CUC 4),CUC,4,18.81228729
+10 (Blaisdell 2),Blaisdell ,2,37.29439593
+11 (Bryant 2),Bryant ,2,19.69174385
+12 (Blaisdell 4),Blaisdell ,4,59.15349948
+13 (Cahuilla 3),Cahuilla ,3,44.96134393
+14 (Bryant 5),Bryant ,5,70.39950741
+15 (CUC 1),CUC,1,3.442617626
+16 (Griffith 2),Griffith ,2,51.27000894
+17 (Bryant 1),Bryant ,1,32.30508679
+18 (Blaisdell 3),Blaisdell ,3,46.65599991
+19 (Blaisdell 5),Blaisdell ,5,35.49391405
+20 (Cahuilla 4),Cahuilla ,4,57.52426465
+21 (Cahuilla 2),Cahuilla ,2,15.73928719
+22 (Mystery Sample),Mystery Sample,0,32.36149079
+23 (Marston 1),Marston ,1,43.95971453
+24 (Marston 2),Marston ,2,37.73441203
+25 (Jumpa 5),Jumpa ,5,10.84833708
+26 (Clayton 1),Clayton ,1,57.87803164
+27 (Blaisdell 1),Blaisdell ,1,36.58108462
+28 (Clayton 3),Clayton ,3,31.42351454
+29 (Wheeler 4),Wheeler ,4,34.37879632
+30 (Marston 4),Marston ,4,39.8719866
+31 (Marston 3),Marston ,3,34.70930466
+32 (Jumpa 3),Jumpa ,3,15.78258726
+33 (Cahuilla 5),Cahuilla ,5,36.9445658
+34 (Wheeler 5),Wheeler ,5,37.3225176
+35 (Clayton 5),Clayton ,5,22.52818794
+36 (Wheeler 1),Wheeler ,1,33.65073091
+37 (Wheeler 3),Wheeler ,3,41.32053378
+blank,NA ,NA,0.138801033
+10 ppm,NA ,NA,25.25680934
+50 ppm,NA ,NA,1194.72615
+100 ppm,NA ,NA,2537.305089
