@@ -1,15 +1,70 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[FAA(2017)]{FAA}
+Aviation gasoline.
+\newblock \emph{Federal Aviation Administration}, Mar 2017.
+\newblock URL \url{https://www.faa.gov/about/initiatives/avgas/}.
+
+\bibitem[Fei()]{Feigenbaum2016}
+Lead exposure and violent crime in the early twentieth century.
+\newblock 62.
+
+\bibitem[Hou()]{Hou2013}
+A clinical study of the effects of lead poisoning on the intelligence and
+  neurobehavioral abilities of children.
+\newblock 10.
+
 \bibitem[ame()]{american2016ethyl}
 Ethyl anti-knock gas.
 \newblock \url{http://aoghs.org}, journal={American Oil \& Gas Historical
   Society}, note={Accessed: 2017-04-10}, volume={}, number={}, pages={},
   year={2016}, publisher={}.
+
+\bibitem[ame(2016)]{americanoil}
+Ethyl anti-knock gas.
+\newblock \emph{American Oil \& Gas Historical Society}, Dec 2016.
+\newblock URL \url{http://aoghs.org/products/tetraethyl-lead-gasoline/}.
+
+\bibitem[chi()]{chiodo07}
+Blood lead levels and specific attention effects in young children.
+\newblock 29.
+
+\bibitem[exx()]{exxonmobil}
+Aviation fuel – jet a/jet a-1: Exxonmobil aviation.
+\newblock \emph{ExxonMobil AviatioN}.
+\newblock URL
+  \url{https://www.exxonmobil.com/en/aviation/products-and-services/Products/J%
+et-A-Jet-A-1}.
+
+\bibitem[mir()]{miranda2007}
+The relationship between early childhood blood lead levels and performance on
+  end-of-grade tests.
+\newblock 115.
+
+\bibitem[nev({\natexlab{a}})]{nevin_2000}
+How lead exposure relates to temporal changes in iq, violent crime, and unwed
+  pregnancy.
+\newblock 83, {\natexlab{a}}.
+
+\bibitem[nev({\natexlab{b}})]{nevin_2007}
+Understanding international crime trends: The legacy of preschool lead
+  exposure.
+\newblock 104, {\natexlab{b}}.
+
+\bibitem[rey()]{reyes_2007}
+Environmental policy as social policy? the impact of childhood lead exposure on
+  crime.
+
+\bibitem[she()]{shellglobal}
+Avgas.
+\newblock URL
+  \url{http://www.shell.com/business-customers/aviation/aviation-fuel/avgas.ht%
+ml}.
 
 \bibitem[Alexander(1999)]{alexander_bioaccumulation_1999}
 David~E. Alexander.
@@ -81,9 +136,6 @@ Celia~Y. Chen, Richard~S. Stemberger, Bjorn Klaue, Joel~D. Blum, Paul~C.
 \newblock \emph{Limnology and Oceanography}, 45\penalty0 (7):\penalty0
   1525--1536, November 2000.
 \newblock ISSN 1939-5590.
-\newblock \doi{10.4319/lo.2000.45.7.1525}.
-\newblock URL
-  \url{http://onlinelibrary.wiley.com/doi/10.4319/lo.2000.45.7.1525/abstract}.
 
 \bibitem[Cohan(2010)]{cohan2010potential}
 Alexander Cohan.
@@ -119,6 +171,13 @@ J.P.F. D'Mello.
 \newblock URL
   \url{http://site.ebrary.com/lib/alltitles/docDetail.action?docID=10060533}.
 
+\bibitem[Duzgoren-Aydin(2007)]{duzgoren2007sources}
+Nurdan~S Duzgoren-Aydin.
+\newblock Sources and characteristics of lead pollution in the urban
+  environment of guangzhou.
+\newblock \emph{Science of the Total Environment}, 385\penalty0 (1):\penalty0
+  182--195, 2007.
+
 \bibitem[Echegoyen et~al.(2014)Echegoyen, Boyle, Lee, Gamo, Obata, and
   Norisuye]{echegoyen2014recent}
 Yolanda Echegoyen, Edward~A Boyle, Jong-Mi Lee, Toshitaka Gamo, Hajime Obata,
@@ -133,8 +192,6 @@ Claire~B. Ernhart.
 \newblock Effects of lead exposure.
 \newblock \emph{Science}, 293\penalty0 (5529):\penalty0 426--428, 2001.
 \newblock ISSN 0036-8075.
-\newblock \doi{10.1126/science.293.5529.426b}.
-\newblock URL \url{http://science.sciencemag.org/content/293/5529/426.2}.
 
 \bibitem[Fisher et~al.(1996)Fisher, Teyssi{\'e}, Fowler, and
   Wang]{fisher1996accumulation}
@@ -143,6 +200,13 @@ Nicholas~S Fisher, Jean-Louis Teyssi{\'e}, Scott~W Fowler, and Wen-Xiong Wang.
   a comparison under field and laboratory conditions.
 \newblock \emph{Environmental science \& technology}, 30\penalty0
   (11):\penalty0 3232--3242, 1996.
+
+\bibitem[Galzigna et~al.(1973)Galzigna, Ferraro, Manani, and
+  Viola]{galzigna1973biochemical}
+L~Galzigna, MV~Ferraro, G~Manani, and A~Viola.
+\newblock Biochemical basis for the toxic effects of triethyl lead.
+\newblock \emph{British Journal of Industrial Medicine}, 30\penalty0
+  (2):\penalty0 129--133, 1973.
 
 \bibitem[Gibson et~al.(1968)Gibson, MacKenzie, and Goldberg]{Gibson1968}
 Sheila L.~M. Gibson, J.~C. MacKenzie, and A.~Goldberg.
@@ -170,6 +234,11 @@ Paul~B Hammond.
 \newblock Exposure of humans to lead.
 \newblock \emph{Annual review of pharmacology and toxicology}, 17\penalty0
   (1):\penalty0 197--214, 1977.
+
+\bibitem[Harrison(2012)]{harrison2012lead}
+Roger Harrison.
+\newblock \emph{Lead pollution: causes and control}.
+\newblock Springer Science \& Business Media, 2012.
 
 \bibitem[Hem and Durum(1973)]{hem1973solubility}
 JD~Hem and WH~Durum.
@@ -200,8 +269,6 @@ Ejaz~ul Islam, Xiao-e Yang, Zhen-li He, and Qaisar Mahmood.
 \newblock \emph{Journal of Zhejiang University SCIENCE B}, 8\penalty0
   (1):\penalty0 1--13, January 2007.
 \newblock ISSN 1673-1581, 1862-1783.
-\newblock \doi{10.1631/jzus.2007.B0001}.
-\newblock URL \url{https://link.springer.com/article/10.1631/jzus.2007.B0001}.
 
 \bibitem[Juberg et~al.(1997)Juberg, Kleiman, and Kwon]{juberg1997position}
 Daland~R Juberg, Cindy~F Kleiman, and Simona~C Kwon.
@@ -222,8 +289,6 @@ Bruce~P. Lanphear.
 \newblock The paradox of lead poisoning prevention.
 \newblock \emph{Science}, 281\penalty0 (5383):\penalty0 1617--1618, 1998.
 \newblock ISSN 0036-8075.
-\newblock \doi{10.1126/science.281.5383.1617}.
-\newblock URL \url{http://science.sciencemag.org/content/281/5383/1617}.
 
 \bibitem[Laskowski(1991)]{laskowski_are_1991}
 Ryszard Laskowski.
@@ -231,14 +296,26 @@ Ryszard Laskowski.
   {Biomagnification}?
 \newblock \emph{Oikos}, 60\penalty0 (3):\penalty0 387--390, 1991.
 \newblock ISSN 0030-1299.
-\newblock \doi{10.2307/3545083}.
-\newblock URL \url{http://www.jstor.org/stable/3545083}.
+
+\bibitem[Miranda et~al.(2011)Miranda, Anthopolos, and
+  Hastings]{miranda2011geospatial}
+Marie~Lynn Miranda, Rebecca Anthopolos, and Douglas Hastings.
+\newblock A geospatial analysis of the effects of aviation gasoline on
+  childhood blood lead levels.
+\newblock \emph{Environmental health perspectives}, 119\penalty0 (10):\penalty0
+  1513, 2011.
 
 \bibitem[Needleman and Bellinger(1991)]{needleman1991health}
 Herbert~L Needleman and David Bellinger.
 \newblock The health effects of low level exposure to lead.
 \newblock \emph{Annual Review of Public Health}, 12\penalty0 (1):\penalty0
   111--140, 1991.
+
+\bibitem[Needleman(1984)]{needleman_1984}
+MD~Herbert~L. Needleman.
+\newblock The relationship between prenatal exposure to lead and congenital
+  anomalies, Jun 1984.
+\newblock URL \url{http://jamanetwork.com/journals/jama/fullarticle/393107}.
 
 \bibitem[Nozaki et~al.(1976)Nozaki, Thomson, and
   Turekian]{nozaki1976distribution}
@@ -248,11 +325,33 @@ Y~Nozaki, J~Thomson, and KK~Turekian.
 \newblock \emph{Earth and Planetary Science Letters}, 32\penalty0 (2):\penalty0
   304--312, 1976.
 
+\bibitem[Nriagu(1996)]{nriagu1996history}
+Jerome~O Nriagu.
+\newblock A history of global metal pollution.
+\newblock \emph{Science}, 272\penalty0 (5259):\penalty0 223, 1996.
+
+\bibitem[Olympio et~al.(2010)Olympio, Oliveira, Naozuka, Cardoso, Marques,
+  G{\"u}nther, and Bechara]{olympio2010surface}
+Kelly~PK Olympio, Pedro~V Oliveira, Juliana Naozuka, Maria~RA Cardoso,
+  Antonio~F Marques, Wanda~MR G{\"u}nther, and Etelvino~JH Bechara.
+\newblock Surface dental enamel lead levels and antisocial behavior in
+  brazilian adolescents.
+\newblock \emph{Neurotoxicology and Teratology}, 32\penalty0 (2):\penalty0
+  273--279, 2010.
+
 \bibitem[Organization(2016)]{WHO2016lead}
 World~Health Organization.
 \newblock Lead poisoning and health.
 \newblock 2016.
 \newblock URL \url{http://www.who.int/mediacentre/factsheets/fs379/en/}.
+
+\bibitem[Penrose(2003)]{Beris2003}
+Beris Penrose.
+\newblock Occupational lead poisoning in battery workers: The failure to apply
+  the precautionary principle.
+\newblock \emph{Labour History}, \penalty0 (84):\penalty0 1--19, 2003.
+\newblock ISSN 00236942.
+\newblock URL \url{http://www.jstor.org/stable/27515898}.
 
 \bibitem[Pinto et~al.(2003)Pinto, Sigaud-kutner, Leit?o, Okamoto, Morse, and
   Colepicolo]{pinto_heavy_2003}
@@ -262,10 +361,27 @@ Ernani Pinto, Teresa C.~S. Sigaud-kutner, Maria A.~S. Leit?o, Oswaldo~K.
 \newblock \emph{Journal of Phycology}, 39\penalty0 (6):\penalty0 1008--1018,
   December 2003.
 \newblock ISSN 1529-8817.
-\newblock \doi{10.1111/j.0022-3646.2003.02-193.x}.
+
+\bibitem[Rieuwerts and Farago(1996)]{rieuwerts1996heavy}
+John Rieuwerts and Margaret Farago.
+\newblock Heavy metal pollution in the vicinity of a secondary lead smelter in
+  the czech republic.
+\newblock \emph{Applied Geochemistry}, 11\penalty0 (1-2):\penalty0 17--23,
+  1996.
+
+\bibitem[Rosner and Markowitz(1985)]{rosner1985gift}
+David Rosner and Gerald Markowitz.
+\newblock A'gift of god'?: The public health controversy over leaded gasoline
+  during the 1920s.
+\newblock \emph{American Journal of Public Health}, 75\penalty0 (4):\penalty0
+  344--352, 1985.
+
+\bibitem[Scheer and Moss(2012)]{scheermoss2012}
+Roddy Scheer and Doug Moss.
+\newblock Does the continued use of lead in aviation fuel endanger public
+  health and the environment?, Aug 2012.
 \newblock URL
-  \url{http://onlinelibrary.wiley.com/doi/10.1111/j.0022-3646.2003.02-193.x/ab%
-stract}.
+  \url{https://www.scientificamerican.com/article/lead-in-aviation-fuel/}.
 
 \bibitem[Schock(1980)]{schock1980response}
 Michael~R Schock.
@@ -287,6 +403,14 @@ Pallavi Sharma and Rama~Shanker Dubey.
 \newblock \emph{Brazilian journal of plant physiology}, 17\penalty0
   (1):\penalty0 35--52, 2005.
 
+\bibitem[Singh et~al.(1997)Singh, Pandey, Misra, Yunus, and
+  Ahmad]{singh1997atmospheric}
+N~Singh, V~Pandey, J~Misra, M~Yunus, and KJ~Ahmad.
+\newblock Atmospheric lead pollution from vehicular emissions--measurements in
+  plants, soil and milk samples.
+\newblock \emph{Environmental Monitoring and Assessment}, 45\penalty0
+  (1):\penalty0 9--19, 1997.
+
 \bibitem[Stansley et~al.(1992)Stansley, Widjeskog, and
   Roscoe]{stansley1992lead}
 William Stansley, Lee Widjeskog, and Douglas~E Roscoe.
@@ -301,12 +425,27 @@ Douglas~John Steding.
   cycling and fate of lead and mercury in the environment}.
 \newblock PhD thesis, University of California, Santa Cruz, 2001.
 
+\bibitem[Steinnes et~al.(1997)Steinnes, Allen, Petersen, Ramb{\ae}k, and
+  Varskog]{steinnes1997evidence}
+E~Steinnes, RO~Allen, HM~Petersen, JP~Ramb{\ae}k, and P~Varskog.
+\newblock Evidence of large scale heavy-metal contamination of natural surface
+  soils in norway from long-range atmospheric transport.
+\newblock \emph{Science of the Total Environment}, 205\penalty0 (2-3):\penalty0
+  255--266, 1997.
+
 \bibitem[Steinnes and Friedland(2006)]{steinnes2006metal}
 Eiliv Steinnes and Andrew~J Friedland.
 \newblock Metal contamination of natural surface soils from long-range
   atmospheric transport: existing and missing knowledge.
 \newblock \emph{Environmental Reviews}, 14\penalty0 (3):\penalty0 169--186,
   2006.
+
+\bibitem[Stigliani et~al.(1993)Stigliani, Anderberg, and
+  Jaffe]{stigliani1993heavy}
+William~M Stigliani, STEFAN Anderberg, and PR~Jaffe.
+\newblock Heavy metal pollution in the rhine basin.
+\newblock \emph{Environmental Science and Technology;(United States)},
+  27\penalty0 (5), 1993.
 
 \bibitem[United Nations Environment~Programme()]{UNEP}
 DTIE United Nations Environment~Programme, Chemicals~Branch.
