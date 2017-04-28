@@ -1,0 +1,390 @@
+\documentclass{article}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{bibentry}
+
+\bibliographystyle{plainnat}
+\setcitestyle{open={(},close={)}}
+
+
+
+
+\author{EA30 -- Spring 2017}
+\title{Annotated Bibliography}
+
+
+\begin{document}
+\maketitle
+\nobibliography{Pb_LiteratureCOMPLETE}
+
+
+\section{Abstract}
+
+
+
+\tableofcontents
+
+\section{Instructions}
+
+Please complete the annotated bibliography by the 17th of April.
+
+\subsection{Searching for Academic Sources}
+
+There are numerous electronic sources to evaluate and obtain academic sources of information. Usually, we consider peer reviewed articles to have the highest quality scholarship. As a rule of thumb, this is a good start, but there is also a great deal of variation between sources, even journal titles can vary in quality. Thus, it's best to evaluate a range of sources and appreciate the subtle differences in quality and prestige.
+
+First, you should search CUC databases using key words, such as Pb and lead. I admit the lead is tricky, because it's not a useful term due it a double meaning. I suggest heavy metals or trace metals with the other key words, i.e. fate and transport, toxicity, etc, depending on the topic you selected.
+
+Below are links to some useful databases:
+
+\begin{itemize}
+  \item \href{http://apps.webofknowledge.com.ccl.idm.oclc.org/}{Web of Science}
+  \item \href{http://www.jstor.org.ccl.idm.oclc.org/}{JStore}
+  \item \href{https://scholar-google-com.ccl.idm.oclc.org/}{Google Scholar}
+\end{itemize}
+
+\subsection{Writing an Annotated Bibliography}
+
+After adding your citation to the Pb\_literature.bib, using the BibTeX format, cite your reference using the syntax below. Then, write a concise annotation that summarizes the central theme and scope of the book or article. Include one or more sentences that (a) evaluate the authority or background of the author, (b) comment on the intended audience, (c) compare or contrast this work with another you have cited, or (d) explain how this work illuminates your bibliography topic.
+
+\subsection{Implementing in \LaTeX}
+
+\LaTeX is a software program used for desktop publishing. With an eye for detail, the program was developed to give the author a great deal of control. In contrast, Microsoft Word is designed to have lots of options, but these seem to get in the way of controlling the outcome. 
+
+\LaTeX is an open source program and relies on specific formatting commands that begin with a backslash. For example to start a new section heading, we use \verb!\section{section name}! and \verb!\subsection{subsection name}! to create a subsection heading.
+
+Below might be an example of what we are trying to accomplish using our Rstudio resources. The \LaTeX command for the citation is \verb!\bibentry{key}!, where key is identifies the citation based on the BibTeX citation entry as shown below.
+
+However, we also need to add the citation to the *.bib file, in this case the file is called ``Pb\_literature.bib''. Open the file. You can see each entry within the curly brackets. Also, it starts with the definition of the entry, e.g. article, book, conference proceedings. We can easily add the citation using the databases cited above. All you need to do is search for the citation manager or citation tool and select a citation format ``bibtex''. Copy and paste the bibtex format (try to put it in the correct location, i.e. alphabetic order). Note the ``key'' is the first word after the citation definition.
+
+\subsection{Peculiarities of \LaTeX}
+
+Some characters are not automatically recognized in \LaTeX. For example, the \& (ambersand) and \_ (underscore) generate errors because they are reserved for different formatting functions. To use them as text characters, they need to be preceeded by a backslash, \, i.e. \verb!\&! and \verb!\_!.  We can also put the sources as bullets to help emphasize the citation.+
+
+\subsection{Annotated Example}
+
+\bigskip
+\noindent \bibentry{Barltrop1975absorption}.  Summarizes important infomormation about Pb. This paper reviews work that span x years starting with early \ldots and noting recent information that includes \ldots. 
+
+\section{Industrial Sources (Khalil)}
+
+
+\section{Use in Industry (except gasoline) (Claudia)}
+
+%\bibentry{Beris2003}
+
+\bibentry{Hodgkins1992}
+
+\medskip
+\bibentry{Gibson1968}. A series of 100 lead workers from different industries, 91 at work and nine admitted to hospital with lead poisoning, was studied in order to define more clearly the clinical and biochemical criteria of lead poisoning in three stages: A) a presymptomatic state of lead exposure (37 men), (B) a state of mild symptoms or mild anemia (45 men), and (C) frank lead poisoning with severe symptoms and signs (18 men). The tests used were hemoglobin, reticulocyte count, and blood lead, and urinary lead, coproporphyrin, ?-aminolaevulinic acid (ALA), and porphobilinogen (PBG) estimations. Of these, the urinary lead was similar for all three groups and the blood lead estimation was of less value for determining the clinical group of the men than the hemoglobin and urinary coproporphyrin or ALA estimations, which correlated well with the clinical assessment and with each other but showed no correlation with the urinary and blood lead levels. PBG levels became raised only with the onset of symptoms of lead poisoning. A hemoglobin of 13 g./100 ml. (90\%) or less is a cautionary sign. Urinary coproporphyrin above 80 ?g./100 mg. creatinine (800 ?g./liter), ALA above 2? mg./100 mg. creatinine (2? mg\%), and PBG above 0?5 mg./100 mg. creatinine (0?5 mg.\%) were almost always associated with symptoms or signs and were therefore considered to be the upper safety limits. Although the blood lead level does not differentiate between lead toxicity and lead exposure, values above 60 ?g. lead/100 g. blood should alert the physician to carry out other tests. In addition to the above tests, blood pressure, blood urea, and serum uric acid estimations were performed on all the men in order to elucidate the possible role of lead in the production of renal damage. Blood pressure and serum uric acid levels were similar for all three groups but the blood urea level was raised in group C. The reason for this finding was not established. It was found that scrap metal burning, battery manufacturing, and ship-breaking constituted the gravest lead hazards encountered in this survey whereas wire manufacture constituted the least. Workers in the most modern factory, a car-body pressing plant, gave average values just below the danger levels for the urinary coproporphyrin and ALA estimations despite apparently efficient protective measures. This finding underlines the importance of the medical supervision of lead workers.
+
+\bibentry{Lanphear1998}.
+
+\medskip
+
+\bibentry{Ernhart426}.
+
+\medskip
+
+\bibentry{schwartz2000past}.
+
+\medskip
+
+\section{``Ethyl'' gas and airplane fuels (Viraj)}
+
+
+\bigskip
+\noindent \bibentry{galzigna1998biochemical}.
+\medskip
+
+This study by Galzigna et al. is published in the British Journal of Industrial Medicine. The paper speaks to the negative health effects that result from exposure to tetraethyl lead. The effects of tetraethyl lead are similar to general lead exposure. The primary negative health effect observed was reduced neuromuscular function.
+
+\bigskip
+
+\noindent \bibentry{american2016ethyl}.
+\medskip
+
+The American Oil and Gas Historical Society offers official history of energy fuels for increasing public knowledge. Tetraethyl Lead was added to gasoline to prevent a common problem in engines before the 1930s called “engine knock.” Engine knock occurs when the air-fuel mixture in a cylinder about the piston prematurely detonates before the piston has risen to the maximum height. This premature detonation occurs because of the gasoline not being able to withstand the pressure. In the ideal internal combustion engine operation, the air-fuel mixture should only combust because of a spark created by the spark plug, not an increase in pressure. A gas’s ability to withstand pressure is defined by its octane rating. Adding tetraethyl lead to gasoline increase the octane rating, makes the fuel more resistant to combusting under pressure, and therefore prevents engine knock. In 1921, General Motors scientists discovered the anti-knock properties of tetraethyl lead. Three years later, the first signs that leaded gasolines contributed to lead poisoning occurred when workers at a gasoline treatment plant fell ill. In 1925, after minimal non-comprehensive studies, the U.S Surgeon General stated that there is “no reason to prohibit the sale of leaded gasoline.” The leaded gasoline industry used many manipulative techniques to hide the fact that lead was present in gasoline. They labelled the higher octane fuel “ethyl” gasoline, to avoid lead in the name. The word lead was never used in any advertisements for the fuel. Ultimately, in the late 1970s lead was phased out of gasoline and in 1986 a total ban was placed on leaded automobile gasoline. The invention of the catalytic converter in 1975, which required unleaded fuel, also accelerated the phasing out of lead from gasoline. 
+
+\bigskip
+
+
+
+\section{Atmospheric transport and deposition}
+\begin{itemize}
+  \item \bibentry{cohan2010potential}
+  \item \bibentry{blais1996using}
+  \item \bibentry{cortizas2002atmospheric}
+\end{itemize}
+
+
+\section{Aquatic transport (Olivia)}
+
+\noindent \bibentry{alleman1999invasion}.
+\medskip
+
+This study analyzes stable lead isotopic composition data to reveal the advective transport of industrial lead into deep basic waters through the formation of North Atlantic Deep Water. The authors analyzed sea water samples collected during a suite of cruises in the far North Atlantic, western North Atlantic, North African basins, and equatorial North Atlantic. The samples showed that 206Pb/207Pb ratios of newly formed North Atlantic Deep Water in the far North Atlantic reflect mixing with less radiogenic western European emissions owing to the phasing out of leaded gasoline in the US. The authors predict that in future, stable lead isotopes will continue to uniquely fingerprint geographic sources of lead and associated contaminants, and trace transient fluxes of those contaminants into the abyssal North Atlantic over decadal scales.
+
+\medskip
+\noindent \bibentry{bellinger2016lead}.
+\medskip
+
+This article was published in the New England Journal of Medicine by Dr. David C. Bellinger, a Professor of Neurology at Harvard Medical School and Professor in the Department of Environment Health at Harvard T.H. Chan School of Public Health. He writes about historical and modern lead exposure, particularly through water distribution systems. He then explains the institutional inequalities surrounding Flint's water contamination and the effects on public health. 
+
+\medskip
+\noindent \bibentry{echegoyen2014recent}.
+\medskip
+
+This study of northern and central Indian Ocean found high concentrations of Pb in surface waters due to rapid regional industrialization and low concentrations in deep waters. The Antarctic sector of the Indian Ocean shows very low Pb concentrations due to limited anthropogenic emissions, high scavenging rates, and rapid vertical mixing. The article predicts an increasing presence of Pb in the ocean following the continued release of Pb from human activities. The data was collected from 11 stations in the 2009-2010 Japanese GEOTRACES transect through the Indian Ocean. The authors of this study are from either Massachusetts Institute of Technology, The University of Tokyo, and Niigata University. 
+
+\medskip
+\noindent \bibentry{gobeil2001atlantic}.
+\medskip
+
+This study published by the American Association for the Advancement of Science examines sediment cores collected from the Arctic Ocean and Greenland Sea evidence for evidence of lead. The researchers then used the Pb inventory and its isotopic composition to infer the source of the lead contamination and its pathways related to ocean currents and ice drift. The authors are affilliated with Institut Maurice-Lamontagne, Institute of Ocean Sciences, and Bedford Institute of Oceanography in Canada.
+
+\medskip
+\noindent \bibentry{hem1973solubility}.
+\bigskip
+
+This article evaluates the solubility of lead in solutions similar to natural river water to determine the general features of water chemistry, which features favor the solution of lead, and the solubility effectiveness. The data in this article also suggest methods of reducing the lead content of drinking water at water-treatment plants. 
+
+\medskip
+\noindent \bibentry{kim2000factors}.
+\medskip
+
+This study measured the atmospheric depositional fluxes of 7Be, 210Pb, and stable Pb simultaneously for one year on the upper eastern shore of the Chesapeake Bay in Maryland. The research suggests that a constant Pb flux has been reached since the mandatory use of unleaded gasoline was instituted. This study concludes that precipitation appears to be an important factor controlling the fluxes of 7Be and stable Pb in the upper troposphere. However, 210Pb in the lower troposphere is highly scavenged from the atmosphere from small amounts of precipitation such as snowfall. 
+
+\medskip
+\noindent \bibentry{nozaki1976distribution}.
+\medskip
+
+This study determines residence times relative to particulate removal or 210Pb and 210Po in surface waters of the Pacific Ocean in order to examine the transportation of trace metals in the ocean column. The authors collected surface water samples with two 2-liter plastic sample bottles enclosed in a net attached to a ship moving at low speed. The study found that the residence times for Po and Pb in the center of the North Pacific gyre are 0.6 years and 1.7 years, respectively. The fact that surface ocean residence time for Pb is about two orders of magnitude smaller than for deep ocean Pb implies that adsorptive quality of particles changes sharply during descent through the water column.
+
+\medskip
+\noindent \bibentry{schock1980response}.
+\medskip
+
+Michael Schock works with the United States Environmental Protection Agency and has written extensively on lead corrosion and drinking water contamination. His paper presents a revised model showing the response of theoretical lead solubility curves to changes in dissolved inorganic carbonate concentrate and pH of water at 25 degrees Celsius. The author acknowledges that his model cannot be directly applied to accurately predict concentrations of lead in tap water in many situations because of the complex chemical and physical concentration control mechanisms happening in the water distribution system. However, the model improves upon earlier models that did not take into account hydrocerussite and lead carbonate complexes. The revised model had good correlation with experimental data and can therefore be employed with some confidence to measure lead solubility.
+
+\medskip
+\noindent \bibentry{stansley1992lead}.
+\medskip
+
+This paper reports lead contamination at shooting ranges where shots have been deposited in open water or wetland areas and the impacts on a nearby lake. The authors found a significant concentration of filterable lead in the slightly acidic marsh, which suggests that lead could be mobilized at a lower pH. There were elevated lead levels in a  water sample collected near a public swimming area adjacent to a parking lot, possibly as a result of parking lot runoff. The report found elevated total lead concentrations in surface water in the shot fall zones at six trap and skeet ranges, but found no lead contamination in water, sediments, or fish from a lake adjacent to the range with the greatest amount of shot deposition. However, no measurements of particle size or organic content were performed, both of which have a strong influence on sediment lead concentrations. The sample size of fish studied for uptake of lead was also small. This study was conducted by three researchers from the New Jersey Divsion of Fish, Game and Wildlife. 
+
+\medskip
+\noindent \bibentry{windom1985geochemistry}.
+\medskip
+
+This study was conducted in order to establish baseline levels of lead in coastal and estuarine waters of the southeastern United States and evaluate the relative importance of inputs from rivers, the atmosphere, and oceanic exchange. It was published in 1985 by a researcher from the Skidaway Institute of Oceanography and a researcher from Tokyo Universit of Fisheries.
+
+\medskip
+\noindent \bibentry{wu1997lead}.
+\medskip
+
+This article investigates the significant decrease of lead concentrations in the western North Atlantic Ocean over a 16-year period from the 1980s to the 1990s. The authors attribute the rapid decline in the 1980s to the phasing out of leaded gasoline in the United States. They propose the slower decrease in the 1990s is due to emissions from high-temperature industrial activities rather than residual leaded gasoline emissions. They predict minimal decreases in surface water lead concentrations in coming decades, and continued propogation and evolution of lead distribution in deeper waters. The two authors of this paper are both scientists with the Department of Earth, Atmospheric, and Planetary Sciences at the Massachusetts Institute of Technology.
+
+
+\section{Sinks (Katie)}
+
+\noindent \bibentry{agency1990toxicological}.
+\medskip
+
+This toxicological profile created by the Agency for Toxic Substances \& Disease Registry and the Environmental Protection Agency details the human health effects of lead exposure. It also provides information on the behavior of lead in soil and sediment and the factors that influence what areas become sinks. For example, temperature, pH, and the presence of humic materials are highly important in determining the mobility of lead in soil. The intended audience for this document are public health professionals, interested private organizations, and the general public. 
+
+\medskip
+
+\noindent \bibentry{bazzano2016long}.
+
+\medskip
+
+This article, featured in the peer-reviewed scientific journal, Atmospheric Environment, discusses the long-range transport of lead particulates to the Norwegian Arctic. The intended audience for this journal are scientists whose work is related to atmospheric science. The article also notes that there is a seasonal trend in lead concentrations. For instance, lead concentrations are higher in the spring and the summer. The lead accumulating in the Norwegian Arctic during the summer is a result of North American industrial emissions. 
+\medskip
+
+\noindent \bibentry{amodio2014atmospheric}.
+
+\medskip
+
+This article is featured in Advances in Meteorology, a peer-reviewed, Open Access journal whose primary audience are scientists in the field of meteorology. The article details the mechanisms of atmospheric deposition of heavy metals, such as lead. In addition, the location of deposition is strongly dependent on the climate and the amount of rainfall the area receives. 
+
+\medskip
+
+\noindent \bibentry{coulibaly2015seasonal}.
+
+\medskip
+
+This study, supported by the Japanese Ministry of the Environment, focuses on the effects of long-range transport of lead and other pollutants on Dazaifu, a small Japanese city located downwind of mainland East Asia. The author suggests that the observed increase in atmospheric lead concentrations in Japan are a result of long-distance transport from mainland East Asia. In addition, seasonal variation in concentrations of atmospheric lead particles was observed, with spring having the highest mean levels. This study was featured in the peer-reviewed medical journal, Biological and Pharmaceutical Bulletin, whose intended audience includes pharmaceutical scientists, pharmacologists, and regulatory professionals. 
+
+\medskip
+
+\noindent \bibentry{hutchinson1987lead}.
+
+\medskip
+
+This book compiles the findings of various researchers on the topic of lead in the environment. It provides extensive detail on the behavior and pathways of lead once emitted. In addition, the book provides estimates for the length of time that passes before lead is deposited and immobilized. There are also a number of graphics and tables in "Chapter 1 Group Report: Lead" that illustrate how and in what forms lead is deposited in our environment. The author also notes that there has been evidence of a growing number of lead sinks in Europe, Asia, South America, and North America. This has been explained by the long-distance airborne transport of lead.
+
+\medskip
+
+\noindent \bibentry{steding2001three}.
+
+\medskip
+
+This dissertation published by the University of California, Santa Cruz examines how a reduction in lead emissions has affected lead reservoirs located in the San Francisco Bay. The author’s research has shown that the phase-out of leaded gas two decades ago has had little effect on dissolved lead levels in surface waters. According to the author, unlike most environments, the reduction in lead concentrations in the San Francisco Bay has been very slow due to the complex aquatic environment.
+
+\medskip
+
+\noindent \bibentry{steinnes2006metal}.
+
+\medskip
+
+This review, published in the journal, Environmental Reviews, details the long-range atmospheric transport of lead to soils in various regions of North America and Europe. It also considers the challenge of distinguishing between naturally-caused sinks and anthropogenically-caused sinks. In addition, according to the review, anthropogenic activity has dramatically increased the atmospheric deposition of lead in Antarctica and Greenland. Lastly, it discusses the knowledge gaps that remain on the behavior of lead and other heavy metals in both the atmosphere and at the Earth’s surface.
+
+\medskip
+
+\noindent \bibentry{UNEP}.
+
+\medskip
+
+This report, created and published by the United Nations Environment Programme, provides an overview of key scientific findings for lead. I found ``Chapter 7 - Long-range transport in the environment''
+ to be especially helpful for my research on lead sinks. According to this chapter, several factors influence the distance traveled before deposition occurs including particle size, stack height, and meteorology. The report also has sections on regional-scale transboundary pollution, as well as intercontinental atmospheric transport.
+
+\medskip
+
+\noindent \bibentry{watmough2007lead}.
+
+\medskip
+
+This article, published in the international journal, Biogeochemistry, details the transport and mobility of lead in watersheds. The study concludes that deposited lead is retained well in organic soils and lake sediments. However, lead concentrations have decreased since 1989-1991, given the decrease in lead emissions. This coincides with the findings of many other studies done on the changes in lead concentrations over time. 
+
+\medskip
+
+\noindent \bibentry{zhang2012effect}.
+
+\medskip
+
+This article, featured in the 2012 International Conference on Biomedical Engineering and Biotechnology, was primarily made to inform researchers in the fields of biomedical engineering and biotechnology. The article discusses how temperature, salinity, and pH affect lead’s adsorption on sediment. The author backs up the case study’s findings by referencing the findings of various past studies. Both temperature and salinity are positively correlated with lead adsorption. As pH increased from 1 to 4, lead adsorption increased. But, as pH increased from 4 to 7, lead adsorption decreased. The results of other studies vary with this result, but on average for other studies, maximum adsorption takes place at a pH of 6. 
+
+\medskip
+
+\section{Food web dynamics (Mireya)}
+
+\bibentry{cardwell_cd_2013}.
+
+\bigskip
+
+This study used empirical laboratory data, modeling, and field studies to determine whether lead is biomagnified in aquatic ecosystems. Cardwell et al. concluded that lead does not biomagnify through food chains consisting of primary producers, macroinvertebrates, and fish higher than trophic-level three. This study offers information contrary to that of Alexander et al., and furthers the debate regarding lead’s biomagnification potential. 
+
+\bibentry{laskowski_are_1991}.
+
+\bigskip
+
+Laskowski’s paper, published in Oikos on behalf of the Department of Ecosystem Studies at Jagiellonian University, argues that biomagnification is not a shared property of all terrestrial ecosystems but rather something that varies dramatically based on an organism’s ability to process the substance.  The paper dismisses the role of biomagnification in poisoning larger mammals, claiming that more than three or four trophic levels are needed to accumulate a dangerous amount. I thought the article’s points on the subjectivity of biomagnfication was interesting, although I felt some of the larger conclusions were not grounded in enough evidence and were made hastily at the end. 
+
+\bibentry{pinto_heavy_2003}.
+
+\bigskip
+
+Published in the Journal of Phycology, this paper finds that high levels of metal pollutants attack the chloroplast antioxidants in algae cells, eventually leading to their death. Algae are primary producers in the aquatic food chain and produce most the ocean’s oxygen; if algae are unable to perform their functions properly, a trophic cascade could wreak havoc on the entire food web.  
+
+\bigskip
+
+\bibentry{chen_accumulation_2000}.
+
+\bigskip
+
+This study, published in The Journal of Limnology and Oceanography, measured heavy metal concentrations in water, plankton, and fish from 20 lakes in watersheds across the United States. The study evaluates various factors that affect lead concentration in bodies of water, such as type of land use, water temperature, pH, etc. Notably, it stresses the need to evaluate higher and lower trophic levels separately, rather than attempt to understand them as the same metabolic mechanisms. The paper found that lead biodiminshed with trophic level, meaning bioaccumulation decreased with each energy transfer. 
+
+\bibentry{dmello_food_2003}.
+
+\bigskip
+
+Chapter 9 in the book is title Heavy Metals and has a subsection on lead. The book offers some useful statistics, like how adults uptake 10\% of Pb from food, and children 50\% (p. 211). It also touches upon the success of source-related lead phase-outs in food within the past decades. It will prove useful when evaluating how lead is ingested and absorbed by humans. 
+
+\bigskip
+
+\bibentry{islam_assessing_2007}.
+
+\bigskip
+Published in the Journal of Zhejiang University, this study evaluates the concentration of lead in agricultural crops. The study identifies multiple factors that may affect bioavailability of heavy metals in crops, such as fertilizer and crop rotation, while also highlighting the influence of root microbes on heavy metal uptake. The paper will be a useful in analyzing how lead enters human food systems and how agricultural practices can improve to prevent lead uptake. 
+\bigskip
+
+\bibentry{alexander_bioaccumulation_1999}.
+Published in the Encyclopedia of Earth Science, this paper provides essential definitions for bioaccumulation, bioconcentration, and biomagnification. The paper is written for a scientific journal and employs a lot of biological terminology that may be inaccessible to some. The paper explains that heavy metals, such as lead, tend to bioaccumulate and then biomagnify because they pass through the lipid bilayer and cannot be easily dispelled by the body. 
+
+
+\section{Toxicity (non-human) (Kelli)}
+
+\bibentry{sharma2005lead}. 
+\bigskip
+
+Pallavi Sharma is a biochemistry and molecular biology professor at the Central University of Jharkhand. She holds both a Master's and PhD in biochemistry, and she has published 28 articles relating to heavy metal toxicity in plants. The article cited here in particular was published in 2005, and has been cited by 887 articles since then. 
+This article discusses the science of Pb uptake in plants as well as Pb's potential effects on plant growth and health. The article appears to be geared towards academics—but its points are still generally accessible to readers such as college students. 
+
+\bigskip 
+
+\bibentry{fisher1996accumulation}.
+\bigskip
+
+Nicholas S. Fisher is a Distinguished Professor at Stony Brook University, specializing in topics such as marine pollution and the biogeochemical cycling of metals in marine environments. He has published over 200 articles on these topics, and the cited here in particular has been cited 159 times since it was published in 1996. The article is written very technically for an audience that has a strong scientific background. This article explained the author's findings that metals such as Pb tend to accumulate in shells of mussels rather than in their soft tissue, as well as the presence of Pb in mussel fecal matter that could contribute to its biogeocycling in the environment.  
+
+\bigskip 
+
+\bibentry{weber1997alterations}.
+\bigskip
+
+Daniel N. Weber is a professor at the University of Wisconsin in Milwaukee, whose research is centered around the effects of metal contaminants such as lead on fish behavior. He has written 43 articles on the topic, and the particular article cited above has been cited 58 times since it was published in 1997. The article is extremely scientific and clearly written for a scientific audience. The article discusses the behavioral dysfunction that occurs in fish as a result of constant exposure to Pb, often interfering with their ability to react to stimuli. 
+
+\bigskip 
+
+\bibentry{burger1995risk}.
+
+Joanna Burger is a professor at Rutgers University whose research often concerns environmental pollution and behavioral ecology, with special focus on anthropogenic sources of metals and their effects on birds. She has written 84 articles on these topics, with the one cited above cited 81 times since it was published in 1995. While other articles were definitely written with technical scientific terminology, this article is more accessible to a wider audience as it discusses the effects of Pb bioaccumulating in birds. According to Burger, as in fish discussed in Weber's article, Pb in birds also leads to hindered reactions or responses to stimuli. It also leads to developmental defects in clutches and eggs. 
+
+\bigskip
+
+\bibentry{mautino1997lead}.
+
+\bigskip
+
+Michele Mautino is a doctor of veterinary medicine in working at the zoo in Jacksonville, Florida. She once worked as a vet at Disney World and even helped to design their Animal Kingdom zoo hospital. Her research focuses on metal intoxication in zoological medicine. Her article cited above has been cited 18 times since 1997. The article is written for a scientific audience. It explains how lead in mammals is known to disrupt genetic processes as well as neurological functions—an effect similarly discussed in previous articles.
+
+\section{Human health effects (physiological, toxicity) (Thea)}
+\bigskip
+
+\bibentry{goyer1990environmental}. 
+\bigskip
+
+This article, published in 1990, provides its readers with an objective overview of the human health effects of lead with a focus on occupational lead exposure. The article focuses on identifying and communicating the methods for toxicologists and epidemiologists to determine the lowest level of lead exposure that is toxic and may result in an array of harmful health effects. In discussing the various health effects of lead exposure, Goyer cites multiple studies, involving both samples of lead workers and the general public, that have shown a relationship between lead exposure and an increase in blood pressure, an increase in hypertension, a number of minor congenital malformations, the hinderance of skeletal growth, impairment to the kidney, and impairment to vitamin D metabolism. This article contains specific scientific vocabulary when describing the different ways in which lead affects a variety of organ systems, which suggests that this article is intended for an audience with a strong understanding of human biological processes. Therefore, without the help of outside research, this article is harder to fully comprehend when compared to my other citations. Unfortunately, the author, Goyer, passed away. He has written over 150 research papers on the toxicity of lead and other metals that have been cited hundreds of times. Additionally, Goyer served on committees for US and International Health Agencies including the National Institutes of Health, the Environmental Protection Agency, and The World Health Organization International Program for Chemical Safety and was recognized by the National Academy of Sciences in 2001 for his service as an advisor in matters of science, engineering and health. I therefore believe Goyer is a trustworthy source and authority on this topic. This article was published in the journal Environmental Health Perspectives, a collection of scientific articles and discussion focused on research concerned with toxicity and approaches to detecting and mitigating environmental damage. 
+\bigskip
+
+
+\bibentry{hammond1977annual}. 
+\bigskip
+Paul Hammond’s article, “Exposure of humans to lead” provides a comprehensive overview of the various human health effects to lead. Specifically, Hammond’s breaks up his article into multiple sections that focus on the uptake of lead by environmental sources, the absorption and distribution of lead into the body, and the effects on different organ systems.  While many of my other sources primarily focus on the various human health effects of lead, this article is especially useful for its explanations on how lead is able to enter and spread through the body through its descriptions of lead uptake and absorption by the skin and gastrointestinal tract. Still, Hammond provides comprehensive details on the effects of lead exposure on the body through his focus on the reactions of heme and hemoproteins and the kidney to lead exposure.  This article was published in Annual Reviews, a large nonprofit publisher of scientific research that is meant for both scientists and students alike. This article has been cited 70 times and Paul Hammond has done research at the Department of Environmental Health at the University of Cincinnati Medical Center, and is therefore a relatively trustworthy and authoritative source.
+
+\bigskip
+\bibentry{juberg1997position}. 
+
+\bigskip
+This article, provided by the American Council on Science and Health, details various components on human exposure to lead and the proceeding effects. This article is divided into eight highly informative sections on the course of lead exposure, its consequences, and possible strategies for mitigating such effects. These sections include lead in the environment, human exposure, the toxicology of lead, lead in consumer products, regulatory initiatives for limiting exposure to lead, what is a safe level of lead, and lead abatement, and a conclusion that includes recommendations that consist of both personal and public strategies for minimizing lead exposure.  The authors, while nonetheless providing comprehensive descriptions on the complex relationship between human health and lead exposure, use more accessible language that allows for a wider audience to understand this issue. This article describes the effect of lead-exposure on various organ system and thus details lead’s links to kidney failure, bone development, vitamin D metabolism, the reproductive system, blood pressure, child development, and the possibility of links to cancer.  Additionally, this article includes helpful charts and figures to guide the reader’s understanding these relationships. The American Council on Science and Health, a science education nonprofit with the mission of supporting evidence-based science and medicine, published this article in the journal “Ecotoxicology and Environmental Safety”. Due to its long list of accredited peer reviewers, the credentials of its authors, and its publisher, I find this article to be authoritative and trustworthy. 
+\bigskip
+
+\bibentry{WHO2016lead}. 
+\bigskip
+This website summarizes the key takeaways on the relationship between lead exposure and human health. Although not the most comprehensive source, the site both provides important background information for those who are new to the subject and uses very accessible language resulting in digestible information for the general public. This website focuses on the sources of lead exposure, its effects on children, the burden of disease from lead exposure, and the response of the World Health Organization (WHO). WHO, an agency of the United Nations that is focused on international public health, has identified lead as 1 of 10 chemicals of major public health concern. This site is my only source that gives more broad details on the global impact of health risks due to lead exposure. For example, this site explains that the Institute for Health Metrics and Evaluation (IHME) has estimated that in 2013 lead exposure accounted for 853 000 deaths due to long-term effects on health. WHO is doing work on the prevention and management of lead exposure by drafting guidelines to provide policymakers, public health authorities, and health professionals with evidence-based guidance on measures that they can take to protect the health of children and adults from lead exposure. I therefore believe WHO to be a credible and authoritative source. 
+
+
+\bibentry{agency2016lead}. 
+\bigskip
+This website was published by the Agency for Toxic Substances and Medicine Exposure, a federal public health agency of the U.S. Department of Health and Human Services that works to provide information on harmful exposure and disease related to toxic substances. This particular section on their website is part of a larger educational course on lead toxicity meant for people working in the health sector who may work with patients exposed to lead. The page that I have cited focuses on answering the question, what are the physiologic effects of lead exposure? The learning objectives for this page include being able to describe how lead affects adults and children, describe the major physiologic effects of chronic low-level lead exposure, and describe the major physiologic effects of acute high-level lead exposure. The page begins by describing how the effects of lead exposure differ between children and adults and then is broken down into multiple sections that focus on the effect of lead on different organs and systems. Because this site is meant for those working within the health sector, there is more use of challenging medical and biological language than in my other sources. Nonetheless, this source is very helpful in its concise and in depth descriptions on how lead exposure may affect different organ systems. 
+
+\bigskip
+\bibentry{needleman1991health}. 
+\bigskip
+This article focuses on the health effects of low level lead exposure for children. Through in-depth analysis of various studies, the authors, Needleman and Bellinger, describe the neurological effects of lead exposure on infants and children. These effects include lower IQs and behavioral changes, such as the reduction of attention span. Additionally this article discusses the effects of lead exposure on infant and child development, siting correlations between malformations, organ impairment, and hinderance of physical growth to lead blood levels. Throughout the article, the authors provide multiple graphs and figures that demonstrate these findings and help to synthesize the information. Herbert Needleman is well-known for his research on neurodevelopmental damage caused by lead-poisoning and David Bellinger is currently a professor of neurology at Harvard Medical School and a professor in the department of Environmental Health at the Harvard School of Public Health. Due to the authors’ credentials and their article being cited over 500 times I believe the authors to be authoritative on this subject and for this article to be a trustworthy source. 
+
+\section{Public health effects (crime, IQ, etc) (Marissa)}
+
+
+\end{document}
+

@@ -102,17 +102,65 @@ The American Oil and Gas Historical Society offers official history of energy fu
 
 \section{Aquatic transport (Olivia)}
 
-\section{Sinks (Katie)}\section{Food web dynamics (Mireya)}
+\section{Sinks (Katie)}
+
+\section{Food web dynamics (Mireya)}
 
 \section{Toxicity (non-human) (Kelli)}
 
-\bibentry{carlson1975effect}. 
+\bibentry{tangahu2011review}. 
 
 
 \section{Human health effects (physiological, toxicity) (Thea)}
 
-\section{Public health effects (crime, IQ, etc) (Marissa)}
+<<<<<<< HEAD
+\section{Public health effects (crime, IQ, etc)
+=======
+\bibentry{hammond1977annual}
 
+
+\section{Public health effects (crime, IQ, etc) (Marissa)}
+>>>>>>> 3c1a854ad5e28c12750c27a0b8132521c355b774
+
+\noindent \bibentry{hou_yuan_jin_ding_qin_li_liu_wu_zhao_deng_et al._2013}. 
+
+In this study, \cite{hou_yuan_jin_ding_qin_li_liu_wu_zhao_deng_et al._2013} investigated the relationship between lead poisoning and the intellectual and neurobehavioral capabilities of children. The background characteristics of the research subjects were collected by questionnaire survey. Intelligence was assessed using the Gesell Developmental Scale. The Achenbach Child Behavior Checklist was used to evaluate each child’s behavior. In result, blood lead levels were significantly negatively correlated with the developmental quotients of adaptive behavior, gross motor performance, fine motor performance, language development, and individual social behavior (P < 0.01). Compared with healthy children, more children with lead poisoning had abnormal behaviors, especially social withdrawal, depression, and atypical body movements, aggressions and destruction. This is consistent with other studies’ findings for adverse effects on intellectual development in children. Connecting the neurobehavioral capabilities of children with intellect sets the groundwork for the issues of public health caused by lead poisoning. 
+
+\noindent \bibentry{miranda_kim_galeano_paul_hull_morgan_2007}. 
+
+This study by \cite{miranda_kim_galeano_paul_hull_morgan_2007} implies that blood lead levels of 20–50μg/L can impair the reading and math abilities of children. This was found through testing performance on end-of-grade testing for 4th-grade students from 2000-2004 North Carolina Education Research Data Center. Ultimately, the discernible impact of blood lead levels on end-of-grade testing is demonstrated for early childhood blood lead levels as low as 2 μg/dL. A blood lead level of 5 μg/dL was associated with a decline in end-of-grade reading and mathematics scores that is roughly equal to 15 percent (14 percent) of the interquartile range. This impact is very significant in comparison with the effects of covariates typically considered profoundly influential on educational outcomes. Specifically, early childhood lead exposures appear to have more impact on performance on the reading than on the mathematics portions of the tests. These results suggest that the relationship between blood lead levels and cognitive outcomes are robust across outcome measures and at low levels of lead exposure. This study holds importance for public health because it specifies the types of intellectual limitations being created by environmental injustice. 
+
+\noindent \bibentry{needleman_1984}. 
+
+This study by \cite{needleman_1984} tested umbilical cord blood from 5,183 consecutive deliveries of at least 20 weeks' gestation and analyzed them for lead concentration. Demographic and socioeconomic variables, such as lead, which were shown on univariate analysis to be associated with increased risk for congenital anomalies were evaluated and controlled by entering them into a stepwise logistic-regression model with malformation as the outcome. Coffee, alcohol, tobacco, and marijuana use, which were associated with lead level, but not risk of malformation, were also controlled. Lead was found to be associated, in a dose-related fashion, with an increased risk for minor anomalies. This study is widely used and heavily cited. This paper successfully frames the intersection of lead poisoning and public health by speaking to readers of diverse backgrounds through accessible language.
+
+\noindent \bibentry{nevin_2000}.
+
+Rick Nevins was one of the first to dive into the correlation between crime and lead. This study concludes that lead emissions from automobiles explain 90 percent of the variation in violent crime in America. Also, toddlers who ingested high levels of lead in the '40s and '50s really were more likely to become violent criminals in the '60s, '70s, and '80s. \cite{nevin_2000} compares changes in children’s blood lead levels in the United States with subsequent changes in IQ, based on norm comparisons for the Cognitive Abilities Test (CogAT) given to representative national samples of children in 1984 and 1992. The CogAT norm comparisons indicate shifts in IQ levels consistent with the blood lead to IQ relationship reported by an earlier study and population shifts in average blood lead for children under age 6 between 1976 and 1991. Furthermore, long-term trends in population exposure to gasoline lead were found to be remarkably consistent with subsequent changes in violent crime and unwed pregnancy. Long-term trends in paint and gasoline lead exposure are also strongly associated with subsequent trends in murder rates going back to 1900. The findings on violent crime and unwed pregnancy are consistent with published data describing the relationship between IQ and social behavior. The findings with respect to violent crime are also consistent with studies indicating that children with higher bone lead tend to display more aggressive and delinquent behavior. This analysis demonstrates that widespread exposure to lead is likely to have profound implications for a wide array of socially undesirable outcomes. Connecting deliquency to lead poisoning through indivudal studies helps to support the work of Nevins, that goes bigger picture in terms of leaded gasoline's effects. 
+
+\noindent \bibentry{nevin_2007}
+
+\cite{nevin_2007} continues with his theory of linkage between Lead poisoning and crime. However, this study from 2007 expands through the United States and into Britain, Canada, France, Australia, Finland, Italiy, West Germany, and New Zealand, with consistent confirmation with the linkage between Lead poisoning and crime, specifically index crime, burglary, and violent crime. The impact of blood lead is also evident in age-specific arrest and incarceration trends. Murder rates across USA cities also suggested that murder could be especially associated with more severe cases of childhood lead poisoning.
+
+\noindent \bibentry{reyes_2007}
+\cite{reyes_2007} notes that exposure to lead in childhood can lead to psychological traits strongly associated with aggressive and criminal behavior. In the late 1970s in the United States, lead was removed from gasoline under the Clean Air Act. She uses the state-specific reductions in lead exposure that resulted from this removal to identify the effect of childhood lead exposure on crime rates. Mixed evidence supports an effect of lead exposure on murder rates, and little evidence indicates an effect of lead on property crime. She finds that the reduction in childhood lead exposure in the late 1970s and early 1980s was responsible for significant declines in violent crime in the 1990s and may cause further declines in the future. Moreover, she argues that the social value of the reductions in violent crime far exceeds the cost of the removal of lead from gasoline. The graphs of Reye’s data help to illustrate her argument through showing consistent patterns of crime in different states and by removing the 22-year lag in between lead exposure and crime commitment. 
+
+
+\noindent \bibentry{chiodo_covington_sokol_hannigan_jannise_ager_greenwald_delaney-black_2007}
+
+The results of this 2007 study show a relation between blood lead level and neurobehavioral outcome in 7-year-old children (with 506 subjects  in the study). This specific age of investigation complicates the assumption of a 22-year lag found by Nevins and the 23-year found by Reyes in terms of criminality. Higher lead levels were associated significantly with decreased scores on measures of intelligence (i.e., overall, performance and verbal IQ), lengthened reaction time, hyperactivity, and social and delinquent behavior problems. While other studies touch upon this, the hyperactivity and lengthened reaction time are further investigated than in others. This article brings in the question of what a society becomes when poisoned by lead. This clearly instigates lower performance in schools in the area. In addition, I question the impact of slower reaction times. I question how this comes into play in terms of criminality and getting caught, as well as how this simply affects traffic safety in the area. This study also enforced that because of neurobehavioral outcomes assessed, there is no threshold above zero lead levels that appear to be “safe”. 
+
+\noindent \bibentry{hou_yuan_jin_ding_qin_li_liu_wu_zhao_deng_et al._2013,}
+
+In this study, Hou et al. investigated the relationship between lead poisoning and the intellectual and neurobehavioral capabilities of children. The background characteristics of the research subjects were collected by questionnaire survey. Intelligence was assessed using the Gesell Developmental Scale. The Achenbach Child Behavior Checklist was used to evaluate each child’s behavior. In result, blood lead levels were significantly negatively correlated with the developmental quotients of adaptive behavior, gross motor performance, fine motor performance, language development, and individual social behavior (P < 0.01). Compared with healthy children, more children with lead poisoning had abnormal behaviors, especially social withdrawal, depression, and atypical body movements, aggressions and destruction. This is consistent with other studies’ findings for adverse effects on intellectual development in children.
+
+
+\noindent \bibentry{olympio2010surface}
+This study from 2010 complicates the connection between criminality and lead poisoning by focusing on antisocial behavior in connection to lead in Brazil. The focus on lead’s causing of antisocial behavior is likely connected to committing crimes. In the study, the connection is referred to as “antisocial/delinquency” as if they are one in the same. However, there is not a direct causation. This highlights antisocial behavior as another public health issue with lead, along with IQ level, math and reading skills, attention disorders, and criminality. 
+
+\noindent \bibentry{feigenbaum_muller_2016}
+
+This paper studies the effect of cities’ use of lead pipes on homicide between 1921 and 1936. Lead water pipes exposed entire city populations to much higher doses of lead than have previously been studied in relation to crime. The estimates suggest that cities’ use of lead service pipes considerably increased city-level homicide rates. Not only does this enforce the connection of Lead poisoning and crime, but it also explains the background of how Lead poisoning is able to have such a presence in our history. Acknowledging pipes as a major factor in this connection helps to get a clear picture of this phenomenon. 
 
 
 \end{document}

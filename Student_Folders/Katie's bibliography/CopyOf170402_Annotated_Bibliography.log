@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  17 APR 2017 14:42
-=======
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  22 APR 2017 18:34
->>>>>>> 8073d2ea812c6ba08aff9e7512060f3cbce65d2a
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  17 APR 2017 16:47
 entering extended mode
  %&-line parsing enabled.
-**170402_Annotated_Bibliography.tex
-(./170402_Annotated_Bibliography.tex
+**CopyOf170402_Annotated_Bibliography.tex
+(./CopyOf170402_Annotated_Bibliography.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
@@ -202,8 +198,8 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 ))
-(./170402_Annotated_Bibliography.aux)
-\openout1 = `170402_Annotated_Bibliography.aux'.
+(./CopyOf170402_Annotated_Bibliography.aux)
+\openout1 = `CopyOf170402_Annotated_Bibliography.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
@@ -239,9 +235,10 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 LaTeX Info: Redefining \ref on input line 62.
 LaTeX Info: Redefining \pageref on input line 62.
 
-(./170402_Annotated_Bibliography.out) (./170402_Annotated_Bibliography.out)
+(./CopyOf170402_Annotated_Bibliography.out)
+(./CopyOf170402_Annotated_Bibliography.out)
 \@outlinefile=\write3
-\openout3 = `170402_Annotated_Bibliography.out'.
+\openout3 = `CopyOf170402_Annotated_Bibliography.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 64.
@@ -250,46 +247,75 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 64.
 
-(./170402_Annotated_Bibliography.bbl
-<<<<<<< HEAD
-Overfull \hbox (15.83197pt too wide) in paragraph at lines 1--11
-[]\OT1/cmr/m/n/10 <<<<<<< HEAD  =======  >>>>>>> 6527a24f10198b3fc9ee291ed8d1d4
-5075874461
+(./CopyOf170402_Annotated_Bibliography.bbl)
+(./CopyOf170402_Annotated_Bibliography.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `CopyOf170402_Annotated_Bibliography.toc'.
+
+ [1
+
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (3.83054pt too wide) in paragraph at lines 113--114
+[]\OT1/cmtt/m/n/10 \subsection{subsection name} \OT1/cmr/m/n/10 and []\OT1/cmtt
+/m/n/10 \subsubsection{subsubsection name}\OT1/cmr/m/n/10 . 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--11
-
-=======
-Overfull \hbox (128.05225pt too wide) in paragraph at lines 1--15
-[]\OT1/cmr/m/n/10 <<<<<<< HEAD  ======= <<<<<<< HEAD  =======  >>>>>>> 6527a24f
-10198b3fc9ee291ed8d1d45075874461
->>>>>>> 8073d2ea812c6ba08aff9e7512060f3cbce65d2a
+[3]
+Overfull \hbox (10.8063pt too wide) in paragraph at lines 154--155
+\OT1/cmr/m/n/10 Sera, Shigekazu Ya-mamoto, Ku-ni-hiro Fu-nasaka, Daichi Asakawa
+, Masa-nari Watan-
  []
 
-! TeX capacity exceeded, sorry [parameter stack size=6000].
-\@testopt #1#2->
-                \kernel@ifnextchar [{#1}{#1[{#2}]}
-<<<<<<< HEAD
-l.12 \bibitem[ame(2016)]{american2016ethyl}
-=======
-l.20 \bibitem[ame(2016)]{american2016ethyl}
->>>>>>> 8073d2ea812c6ba08aff9e7512060f3cbce65d2a
-                                           
-If you really absolutely need more capacity,
-you can ask a wizard to enlarge me.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+[4]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [5]
+Overfull \hbox (10.32967pt too wide) in paragraph at lines 216--216
+[]\OT1/cmr/bx/n/14.4 Public health ef-fects (crime, IQ, etc) (Marissa) 
+ []
 
- 
+[6] (./CopyOf170402_Annotated_Bibliography.aux) ) 
 Here is how much of TeX's memory you used:
- 3228 strings out of 256214
- 45153 string characters out of 1917000
-<<<<<<< HEAD
- 164166 words of memory out of 1500000
-=======
- 164388 words of memory out of 1500000
->>>>>>> 8073d2ea812c6ba08aff9e7512060f3cbce65d2a
- 6506 multiletter control sequences out of 10000+200000
- 6675 words of font info for 24 fonts, out of 1200000 for 2000
+ 3334 strings out of 256214
+ 46884 string characters out of 1917000
+ 100087 words of memory out of 1500000
+ 6567 multiletter control sequences out of 10000+200000
+ 9053 words of font info for 32 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 3005i,6n,6001p,272b,189s stack positions out of 5000i,500n,6000p,200000b,15000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 25i,6n,36p,770b,335s stack positions out of 5000i,500n,6000p,200000b,15000s
+ </home/CAMPUS/kygj2015/.texli
+ve2007/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf/f
+onts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx1
+2.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/font
+s/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb
+></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/typ
+e1/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></us
+r/share/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
+Output written on CopyOf170402_Annotated_Bibliography.pdf (6 pages, 100613 byte
+s).
+PDF statistics:
+ 172 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 131072)
+ 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+
