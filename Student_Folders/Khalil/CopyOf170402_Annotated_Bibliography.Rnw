@@ -66,7 +66,19 @@ To help the readers, you might create subsection and even subsubsections, using 
 
 \section{Industrial Sources (Khalil)}
 
-\bibentry{duzgoren2007sources}. kahlail
+\bibentry{sun2006characteristics}
+
+\bibentry{singh1997atmospheric}
+
+\bibentry{harrison2012lead}.
+
+\bibentry{stigliani1993heavy}.
+
+\bibentry{nriagu1996history}.
+
+\bibentry{rieuwerts1996heavy}. 
+
+\bibentry{duzgoren2007sources}. 
 
 \section{Use in Industry (except gasoline) (Caudia)}
 
