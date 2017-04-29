@@ -9,9 +9,9 @@
 \contentsline {section}{\numberline {4}Use in Industry (except gasoline) (Claudia)}{4}{section.4}
 \contentsline {section}{\numberline {5}``Ethyl'' gas and airplane fuels (Viraj)}{5}{section.5}
 \contentsline {section}{\numberline {6}Atmospheric transport and deposition}{8}{section.6}
-\contentsline {section}{\numberline {7}Aquatic transport (Olivia)}{9}{section.7}
-\contentsline {section}{\numberline {8}Sinks (Katie)}{12}{section.8}
+\contentsline {section}{\numberline {7}Aquatic transport (Olivia)}{8}{section.7}
+\contentsline {section}{\numberline {8}Sinks (Katie)}{11}{section.8}
 \contentsline {section}{\numberline {9}Food web dynamics (Mireya)}{14}{section.9}
 \contentsline {section}{\numberline {10}Toxicity (non-human) (Kelli)}{16}{section.10}
-\contentsline {section}{\numberline {11}Human health effects (physiological, toxicity) (Thea)}{18}{section.11}
-\contentsline {section}{\numberline {12}Public health effects (crime, IQ, etc) (Marissa)}{21}{section.12}
+\contentsline {section}{\numberline {11}Human health effects (physiological, toxicity) (Thea)}{17}{section.11}
+\contentsline {section}{\numberline {12}Public health effects (crime, IQ, etc) (Marissa)}{20}{section.12}
