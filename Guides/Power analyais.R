@@ -2,19 +2,21 @@
 
 # Create Data
 
-set.seed(4)
-treatA <- rnorm(10,6,2)
+set.seed(4) # selects the same psuedo random numbers each time.
+treatA <- rnorm(10,6,2) # creates 10 random numbers, mu = 6, sd=2...
 treatB <- rnorm(10,8,2)
 treatC <- rnorm(10,9,2)
 
+# creates a data frame! :-)
 dataset<-data.frame(Treatment=c(rep("A", 10), 
                                 rep("B", 10), 
                                 rep("C", 10)), 
                     Replicate=c(rep(1:10,3)), 
           Response=c(treatA, treatB, treatC))
 
-boxplot(Response ~ Treatment, data=dataset)
+boxplot(Response ~ Treatment, data=dataset) # plots dep ~ inde, box and whisker
 
+# analysis of variance.
 dataset.aov = aov(Response ~ Treatment, data=dataset)
 
 summary(dataset.aov)
@@ -53,7 +55,7 @@ k = 3 # number of groups
 n = 10 # replicates
 power = .8
 
-pwr.anova.test(k=k, n=n, f=null, power=power)
+pwr.anova.test(k=k, n=n, f=NULL, power=power)
 
 # Cohen suggests that f values of 
 # 0.1 = small
@@ -62,12 +64,14 @@ pwr.anova.test(k=k, n=n, f=null, power=power)
 
 pwr.anova.test(k=k, n=n, f=.5, power=NULL)
 
-effectsize = pwr.anova.test(k=k, n=n, f=seq(.1, .8, .1), power=NULL)
+effectsize = pwr.anova.test(k=k, n=n, 
+            f=seq(.1, .8, .1), power=NULL)
 
 par(mfrow=c(1,3))
 plot(effectsize$power ~ effectsize$f, ylab="power", xlab="f", main="Power vs. Effect Size", las=1, ty="b")
 
-samplesize = pwr.anova.test(k=k, n=2:50, f=.5 , power=NULL)
+samplesize = pwr.anova.test(k=k, n=2:50, f=.5 , 
+                            power=NULL)
 plot(samplesize$power ~ samplesize$n, ylab="power", xlab="n", main="Power vs. Sample Size", las=1, ty="b", )
 
 
