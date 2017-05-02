@@ -1,0 +1,6 @@
+PbSoilOther <- read.csv("/home/CAMPUS/kak22013/Environmental_Hazards/Student_Folders/Kelli/soil analysis .csv")
+str(PbSoilOther)
+PbSoilOtherEdit <- na.omit(PbSoilOther)
+ls()
+head(PbSoilOtherEdit)
+plot(~pH, )
