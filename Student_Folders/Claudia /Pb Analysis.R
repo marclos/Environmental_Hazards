@@ -40,13 +40,14 @@ data3.aov=aov(Concentration ~ Location, data=data3)
 
 summary(data3.aov)
 
-NOT SIGNIFICANT - No difference between the parks 
+NOT (insignificant) SIGNIFICANT - No difference between the parks. cannot reject the null hypothesis 
 
 plot(data3.aov)
 
 Cant reject null hypothesis 
 
 boxplot(Concentration ~ Location, data=data3)
+
 
 One of the samples broke, this could be an outlier? 
 Mystery sample? we omitted this but what is it 
@@ -56,5 +57,20 @@ TukeyHSD(data3.aov, conf.level = .95)
 none of the parks are different from the other 
 * parts per million (y axis)
 parks - x axis 
+
+
+Class notes 1st may 2017: 
+  - 30 total observations (6 parks x 5 samples)w
+  
+ 
+FINDING MEAN + GRAPHING 
+
+means<- round(tapply(data3$Concentration, data3$Location, mean), digits=2)  # note that I I round values to just 2 decimal places
+
+means
+
+> library(gplots)  #I load the "gplots" package to plot means
+
+plot(data3$Concentration~data3$Location, digits=2, col= "red", mean.labels=T, main= "Average PB level")
 
 
