@@ -1,20 +1,16 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  28 APR 2017 17:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2017.8.9)  12 AUG 2017 17:33
 entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **Pb_Annotate_Bibliography.tex
 (./Pb_Annotate_Bibliography.tex
-LaTeX2e <2005/12/01>
-Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
-erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
- french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
-us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
-tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
-turkish, ukenglish, ukrainian, loaded.
-(/usr/share/texmf/tex/latex/base/article.cls
-Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
-(/usr/share/texmf/tex/latex/base/size10.clo
-File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, uk
+rainian, russian, bulgarian, loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -28,291 +24,137 @@ File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf/tex/latex/natbib/natbib.sty
-Package: natbib 2007/02/05 8.0 (PWD)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
-LaTeX Info: Redefining \cite on input line 602.
+LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count87
 )
-(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2007/02/07 v6.75r Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/share/texmf/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count88
 \Hy@pagecounter=\count89
 
-(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2007/02/07 v6.75r Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-(/usr/share/texmf/tex/latex/config/hyperref.cfg
+\Hy@SavedSpaceFactor=\count90
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2006/08/22 v2.4 Connects package keyval with LaTeX options (
-HO)
-)
-Package hyperref Info: Hyper figures OFF on input line 2288.
-Package hyperref Info: Link nesting OFF on input line 2293.
-Package hyperref Info: Hyper index ON on input line 2296.
-Package hyperref Info: Plain pages OFF on input line 2303.
-Package hyperref Info: Backreferencing OFF on input line 2308.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count91
 
-Implicit mode ON; LaTeX internals redefined
-Package hyperref Info: Bookmarks ON on input line 2444.
-(/usr/share/texmf/tex/latex/ltxmisc/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
-Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 2599.
-\Fld@menulength=\count90
-\Field@Width=\dimen104
-\Fld@charsize=\dimen105
-\Choice@toks=\toks15
-\Field@toks=\toks16
-Package hyperref Info: Hyper figures OFF on input line 3102.
-Package hyperref Info: Link nesting OFF on input line 3107.
-Package hyperref Info: Hyper index ON on input line 3110.
-Package hyperref Info: backreferencing OFF on input line 3117.
-Package hyperref Info: Link coloring OFF on input line 3122.
-\Hy@abspage=\count91
-\c@Item=\count92
-\c@Hfootnote=\count93
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen104
+\Fld@menulength=\count92
+\Field@Width=\dimen105
+\Fld@charsize=\dimen106
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count93
+\c@Item=\count94
+\c@Hfootnote=\count95
 )
-*hyperref using default driver hpdftex*
-(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
-\Fld@listcount=\count94
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count96
+\c@bookmark@seq@number=\count97
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
-(/usr/share/texmf/tex/latex/natbib/bibentry.sty
-Package: bibentry 2000/06/20 1.4 (PWD)
+\Hy@SectionHShift=\skip45
 )
-(./Pb_Annotate_Bibliography.bbl) (./Pb_Annotate_Bibliography.aux
-
-Package natbib Warning: Citation `FAA' multiply defined.
-
-
-Package natbib Warning: Citation `Feigenbaum2016' multiply defined.
-
-
-Package natbib Warning: Citation `Hou2013' multiply defined.
-
-
-Package natbib Warning: Citation `americanoil' multiply defined.
-
-
-Package natbib Warning: Citation `chiodo07' multiply defined.
-
-
-Package natbib Warning: Citation `exxonmobil' multiply defined.
-
-
-Package natbib Warning: Citation `miranda2007' multiply defined.
-
-
-Package natbib Warning: Citation `shellglobal' multiply defined.
-
-
-Package natbib Warning: Citation `alexander_bioaccumulation_1999' multiply defi
-ned.
-
-
-Package natbib Warning: Citation `alleman1999invasion' multiply defined.
-
-
-Package natbib Warning: Citation `amodio2014atmospheric' multiply defined.
-
-
-Package natbib Warning: Citation `Barltrop1975absorption' multiply defined.
-
-
-Package natbib Warning: Citation `bazzano2016long' multiply defined.
-
-
-Package natbib Warning: Citation `bellinger2016lead' multiply defined.
-
-
-Package natbib Warning: Citation `blais1996using' multiply defined.
-
-
-Package natbib Warning: Citation `burger1995risk' multiply defined.
-
-
-Package natbib Warning: Citation `cardwell_cd_2013' multiply defined.
-
-
-Package natbib Warning: Citation `chen_accumulation_2000' multiply defined.
-
-
-Package natbib Warning: Citation `cohan2010potential' multiply defined.
-
-
-Package natbib Warning: Citation `cortizas2002atmospheric' multiply defined.
-
-
-Package natbib Warning: Citation `coulibaly2015seasonal' multiply defined.
-
-
-Package natbib Warning: Citation `dmello_food_2003' multiply defined.
-
-
-Package natbib Warning: Citation `duzgoren2007sources' multiply defined.
-
-
-Package natbib Warning: Citation `echegoyen2014recent' multiply defined.
-
-
-Package natbib Warning: Citation `Ernhart426' multiply defined.
-
-
-Package natbib Warning: Citation `fisher1996accumulation' multiply defined.
-
-
-Package natbib Warning: Citation `agency1990toxicological' multiply defined.
-
-
-Package natbib Warning: Citation `agency2016lead' multiply defined.
-
-
-Package natbib Warning: Citation `galzigna1973biochemical' multiply defined.
-
-
-Package natbib Warning: Citation `Gibson1968' multiply defined.
-
-
-Package natbib Warning: Citation `gobeil2001atlantic' multiply defined.
-
-
-Package natbib Warning: Citation `goyer1990environmental' multiply defined.
-
-
-Package natbib Warning: Citation `hammond1977annual' multiply defined.
-
-
-Package natbib Warning: Citation `harrison2012lead' multiply defined.
-
-
-Package natbib Warning: Citation `hem1973solubility' multiply defined.
-
-
-Package natbib Warning: Citation `Hodgkins1992' multiply defined.
-
-
-Package natbib Warning: Citation `hutchinson1987lead' multiply defined.
-
-
-Package natbib Warning: Citation `islam_assessing_2007' multiply defined.
-
-
-Package natbib Warning: Citation `juberg1997position' multiply defined.
-
-
-Package natbib Warning: Citation `kim2000factors' multiply defined.
-
-
-Package natbib Warning: Citation `Lanphear1998' multiply defined.
-
-
-Package natbib Warning: Citation `laskowski_are_1991' multiply defined.
-
-
-Package natbib Warning: Citation `mautino1997lead' multiply defined.
-
-
-Package natbib Warning: Citation `miranda2011geospatial' multiply defined.
-
-
-Package natbib Warning: Citation `needleman1991health' multiply defined.
-
-
-Package natbib Warning: Citation `needleman_1984' multiply defined.
-
-
-Package natbib Warning: Citation `nevin2000lead' multiply defined.
-
-
-Package natbib Warning: Citation `nevin2007understanding' multiply defined.
-
-
-Package natbib Warning: Citation `nozaki1976distribution' multiply defined.
-
-
-Package natbib Warning: Citation `nriagu1996history' multiply defined.
-
-
-Package natbib Warning: Citation `olympio2010surface' multiply defined.
-
-
-Package natbib Warning: Citation `WHO2016lead' multiply defined.
-
-
-Package natbib Warning: Citation `Beris2003' multiply defined.
-
-
-Package natbib Warning: Citation `pinto_heavy_2003' multiply defined.
-
-
-Package natbib Warning: Citation `rieuwerts1996heavy' multiply defined.
-
-
-Package natbib Warning: Citation `rosner1985gift' multiply defined.
-
-
-Package natbib Warning: Citation `scheermoss2012' multiply defined.
-
-
-Package natbib Warning: Citation `schock1980response' multiply defined.
-
-
-Package natbib Warning: Citation `schwartz2000past' multiply defined.
-
-
-Package natbib Warning: Citation `sharma2005lead' multiply defined.
-
-
-Package natbib Warning: Citation `singh1997atmospheric' multiply defined.
-
-
-Package natbib Warning: Citation `stansley1992lead' multiply defined.
-
-
-Package natbib Warning: Citation `steding2001three' multiply defined.
-
-
-Package natbib Warning: Citation `steinnes1997evidence' multiply defined.
-
-
-Package natbib Warning: Citation `steinnes2006metal' multiply defined.
-
-
-Package natbib Warning: Citation `stigliani1993heavy' multiply defined.
-
-
-Package natbib Warning: Citation `UNEP' multiply defined.
-
-
-Package natbib Warning: Citation `watmough2007lead' multiply defined.
-
-
-Package natbib Warning: Citation `weber1997alterations' multiply defined.
-
-
-Package natbib Warning: Citation `windom1985geochemistry' multiply defined.
-
-
-Package natbib Warning: Citation `wolpaw2007environmental' multiply defined.
-
-
-Package natbib Warning: Citation `wu1997lead' multiply defined.
-
-
-Package natbib Warning: Citation `zhang2012effect' multiply defined.
-
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/bibentry.sty
+Package: bibentry 2007/10/30 1.5 (PWD)
 )
+No file Pb_Annotate_Bibliography.bbl.
+(./Pb_Annotate_Bibliography.aux)
 \openout1 = `Pb_Annotate_Bibliography.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -329,17 +171,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
+\AtBeginShipoutBox=\box26
 Package hyperref Info: Link coloring OFF on input line 14.
- (/usr/share/texmf/tex/latex/hyperref/nameref.sty
-Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
-(/usr/share/texmf/tex/latex/oberdiek/refcount.sty
-Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count95
+\c@section@level=\count98
 )
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \nameref on input line 14.
 
 (./Pb_Annotate_Bibliography.out) (./Pb_Annotate_Bibliography.out)
 \@outlinefile=\write3
@@ -352,7 +197,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 16.
 
-(./Pb_Annotate_Bibliography.bbl) (./Pb_Annotate_Bibliography.toc
+No file Pb_Annotate_Bibliography.bbl.
+(./Pb_Annotate_Bibliography.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -363,15 +209,70 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [1
 
-{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/share/texlive/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
-
-(/usr/share/texmf/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
- [2] [3] [4]
+
+[2]
+
+Package natbib Warning: Citation `Barltrop1975absorption' undefined on input li
+ne 65.
+
+
+Package natbib Warning: Citation `Barltrop1975absorption' on page 3 undefined o
+n input line 65.
+
+
+Package natbib Warning: Citation `singh1997atmospheric' undefined on input line
+ 69.
+
+
+Package natbib Warning: Citation `harrison2012lead' undefined on input line 71.
+
+
+
+Package natbib Warning: Citation `stigliani1993heavy' undefined on input line 7
+3.
+
+
+Package natbib Warning: Citation `nriagu1996history' undefined on input line 75
+.
+
+
+Package natbib Warning: Citation `rieuwerts1996heavy' undefined on input line 7
+7.
+
+
+Package natbib Warning: Citation `duzgoren2007sources' undefined on input line 
+79.
+
+
+Package natbib Warning: Citation `Beris2003' undefined on input line 83.
+
+
+Package natbib Warning: Citation `Hodgkins1992' undefined on input line 85.
+
+
+Package natbib Warning: Citation `Gibson1968' undefined on input line 88.
+
+[3]
+
+Package natbib Warning: Citation `Lanphear1998' undefined on input line 90.
+
+
+Package natbib Warning: Citation `Ernhart426' undefined on input line 94.
+
+
+Package natbib Warning: Citation `schwartz2000past' undefined on input line 98.
+
+
+
+Package natbib Warning: Citation `americanoil' undefined on input line 104.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -393,14 +294,9 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ì in font cmr10!
+[4]
 
-Overfull \hbox (23.4968pt too wide) in paragraph at lines 111--112
-[]$\OT1/cmtt/m/n/10 https : / / www . exxonmobil . com / en / aviation / produc
-ts-[]and-[]services / Products /
- []
+Package natbib Warning: Citation `exxonmobil' undefined on input line 111.
 
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -412,84 +308,247 @@ Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ∫ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ∫ in font cmr10!
+
+Package natbib Warning: Citation `FAA' undefined on input line 117.
+
+
+Package natbib Warning: Citation `galzigna1973biochemical' undefined on input l
+ine 123.
+
 [5]
+
+Package natbib Warning: Citation `miranda2011geospatial' undefined on input lin
+e 130.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [6]
+
+Package natbib Warning: Citation `rosner1985gift' undefined on input line 136.
+
+
+Package natbib Warning: Citation `scheermoss2012' undefined on input line 142.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no î in font cmr10!
 
-Overfull \hbox (42.2016pt too wide) in paragraph at lines 149--150
-[]\OT1/cmr/m/n/10 Avgas.  URL []$\OT1/cmtt/m/n/10 http : / / www . shell . com 
-/ business-[]customers / aviation / aviation-[]fuel /
- []
+Package natbib Warning: Citation `shellglobal' undefined on input line 149.
+
+
+Package natbib Warning: Citation `galzigna1973biochemical' undefined on input l
+ine 158.
 
 pdfTeX warning (ext4): destination with the same identifier (name{cite.galzigna
 1973biochemical}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.158 \noindent \bibentry{galzigna1973biochemical}
-                                                  . [7] [8] [9] [10] [11]
-Overfull \hbox (10.8063pt too wide) in paragraph at lines 266--267
-\OT1/cmr/m/n/10 Sera, Shigekazu Ya-mamoto, Ku-ni-hiro Fu-nasaka, Daichi Asakawa
-, Masa-nari Watan-
- []
+                                                  . [6]
+
+Package natbib Warning: Citation `steinnes1997evidence' undefined on input line
+ 167.
+
+
+Package natbib Warning: Citation `steinnes1997evidence' on page 7 undefined on 
+input line 167.
+
+
+Package natbib Warning: Citation `cohan2010potential' undefined on input line 1
+68.
+
+
+Package natbib Warning: Citation `blais1996using' undefined on input line 169.
+
+
+Package natbib Warning: Citation `cortizas2002atmospheric' undefined on input l
+ine 170.
+
+
+Package natbib Warning: Citation `alleman1999invasion' undefined on input line 
+176.
+
+
+Package natbib Warning: Citation `bellinger2016lead' undefined on input line 18
+2.
+
+
+Package natbib Warning: Citation `echegoyen2014recent' undefined on input line 
+188.
+
+[7]
+
+Package natbib Warning: Citation `gobeil2001atlantic' undefined on input line 1
+94.
+
+
+Package natbib Warning: Citation `hem1973solubility' undefined on input line 20
+0.
+
+
+Package natbib Warning: Citation `kim2000factors' undefined on input line 206.
+
+
+Package natbib Warning: Citation `nozaki1976distribution' undefined on input li
+ne 212.
+
+
+Package natbib Warning: Citation `schock1980response' undefined on input line 2
+18.
+
+[8]
+
+Package natbib Warning: Citation `stansley1992lead' undefined on input line 224
+.
+
+
+Package natbib Warning: Citation `windom1985geochemistry' undefined on input li
+ne 230.
+
+
+Package natbib Warning: Citation `wu1997lead' undefined on input line 236.
+
+
+Package natbib Warning: Citation `agency1990toxicological' undefined on input l
+ine 244.
+
+[9]
+
+Package natbib Warning: Citation `bazzano2016long' undefined on input line 251.
+
+
+
+Package natbib Warning: Citation `amodio2014atmospheric' undefined on input lin
+e 258.
+
+
+Package natbib Warning: Citation `coulibaly2015seasonal' undefined on input lin
+e 266.
+
+
+Package natbib Warning: Citation `hutchinson1987lead' undefined on input line 2
+74.
+
+[10]
+
+Package natbib Warning: Citation `steding2001three' undefined on input line 282
+.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Package natbib Warning: Citation `steinnes2006metal' undefined on input line 29
+0.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Package natbib Warning: Citation `UNEP' undefined on input line 298.
+
+
+Package natbib Warning: Citation `watmough2007lead' undefined on input line 307
+.
+
+
+Package natbib Warning: Citation `zhang2012effect' undefined on input line 315.
+
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+[11]
+
+Package natbib Warning: Citation `cardwell_cd_2013' undefined on input line 325
+.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Package natbib Warning: Citation `laskowski_are_1991' undefined on input line 3
+31.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Package natbib Warning: Citation `pinto_heavy_2003' undefined on input line 337
+.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Package natbib Warning: Citation `chen_accumulation_2000' undefined on input li
+ne 345.
+
+
+Package natbib Warning: Citation `dmello_food_2003' undefined on input line 351
+.
 
 [12]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
- [13]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
- [14]
-Overfull \hbox (3.95274pt too wide) in paragraph at lines 365--367
-\OT1/cmtt/m/n/10 link . springer . com / referenceworkentry / 10 . 1007 / 1-[]4
-020-[]4494-[]1 _ 31$[]\OT1/cmr/m/n/10 .  DOI:
- []
 
-[15]
+Package natbib Warning: Citation `islam_assessing_2007' undefined on input line
+ 359.
+
+
+Package natbib Warning: Citation `alexander_bioaccumulation_1999' undefined on 
+input line 365.
+
+
+Package natbib Warning: Citation `sharma2005lead' undefined on input line 371.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no î in font cmr10!
- [16]
+
+Package natbib Warning: Citation `fisher1996accumulation' undefined on input li
+ne 379.
+
+[13]
+
+Package natbib Warning: Citation `weber1997alterations' undefined on input line
+ 386.
+
+
+Package natbib Warning: Citation `burger1995risk' undefined on input line 393.
+
+
+Package natbib Warning: Citation `mautino1997lead' undefined on input line 399.
+
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no î in font cmr10!
+
+Package natbib Warning: Citation `goyer1990environmental' undefined on input li
+ne 409.
+
 
 Overfull \hbox (2.25053pt too wide) in paragraph at lines 413--414
 []\OT1/cmr/m/n/10 This ar-ti-cle, pub-lished in 1990, pro-vides its read-ers wi
 th an ob-jec-tive overview
  []
 
-[17]
+[14]
+
+Package natbib Warning: Citation `hammond1977annual' undefined on input line 41
+8.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -502,6 +561,10 @@ Missing character: There is no ù in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
+
+Package natbib Warning: Citation `juberg1997position' undefined on input line 4
+24.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -514,7 +577,18 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [18] [19]
+[15]
+
+Package natbib Warning: Citation `WHO2016lead' undefined on input line 431.
+
+
+Package natbib Warning: Citation `agency2016lead' undefined on input line 438.
+
+[16]
+
+Package natbib Warning: Citation `needleman1991health' undefined on input line 
+445.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -523,13 +597,27 @@ Overfull \hbox (10.32967pt too wide) in paragraph at lines 451--451
 []\OT1/cmr/bx/n/14.4 Public health ef-fects (crime, IQ, etc) (Marissa) 
  []
 
+
+Package natbib Warning: Citation `Hou2013' undefined on input line 453.
+
+
+Package natbib Warning: Citation `Hou2013' on page 17 undefined on input line 4
+57.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-[20]
+[17]
+
+Package natbib Warning: Citation `miranda2007' undefined on input line 461.
+
+
+Package natbib Warning: Citation `miranda2007' on page 18 undefined on input li
+ne 465.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
@@ -539,15 +627,52 @@ Missing character: There is no Œ in font cmr10!
 Missing character: There is no º in font cmr10!
 Missing character: There is no Œ in font cmr10!
 Missing character: There is no º in font cmr10!
+
+Package natbib Warning: Citation `needleman_1984' undefined on input line 469.
+
+
+Package natbib Warning: Citation `needleman_1984' on page 18 undefined on input
+ line 473.
+
+
+Package natbib Warning: Citation `nevin2000lead' undefined on input line 477.
+
+
+Package natbib Warning: Citation `nevin2000lead' on page 18 undefined on input 
+line 481.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [21]
+[18]
+
+Package natbib Warning: Citation `nevin2007understanding' undefined on input li
+ne 485.
+
+
+Package natbib Warning: Citation `nevin2007understanding' on page 19 undefined 
+on input line 489.
+
+
+Package natbib Warning: Citation `wolpaw2007environmental' undefined on input l
+ine 493.
+
+
+Package natbib Warning: Citation `wolpaw2007environmental' on page 19 undefined
+ on input line 497.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [22]pdfTeX warning (ext4): destination with the same identifier (name{cite.Hou
-2013}) has been already used, duplicate ignored
+
+Package natbib Warning: Citation `chiodo07' undefined on input line 501.
+
+[19]
+
+Package natbib Warning: Citation `Hou2013' undefined on input line 509.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Hou2013}
+) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.509 \noindent \bibentry{Hou2013}
@@ -561,6 +686,11 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no â in font cmr10!
+
+
+Package natbib Warning: Citation `olympio2010surface' undefined on input line 5
+17.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -570,491 +700,48 @@ Overfull \hbox (5.24135pt too wide) in paragraph at lines 521--522
 ``an-ti-so-cial/delinquency''
  []
 
-[23]
+
+Package natbib Warning: Citation `Feigenbaum2016' undefined on input line 525.
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- (./Pb_Annotate_Bibliography.bblpdfTeX warning (ext4): destination with the sam
-e identifier (name{cite.FAA}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.8 \bibitem[FAA(2017)]{FAA}
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{cite.Hou2013}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.17 \bibitem[Hou()]{Hou2013}
-                             pdfTeX warning (ext4): destination with the same i
-dentifier (name{cite.americanoil}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.22 \bibitem[ame(2016)]{americanoil}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.chiodo07}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.27 \bibitem[chi()]{chiodo07}
-                              pdfTeX warning (ext4): destination with the same 
-identifier (name{cite.exxonmobil}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.31 \bibitem[exx()]{exxonmobil}
-                                
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ì in font cmr10!
+No file Pb_Annotate_Bibliography.bbl.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
-[]$\OT1/cmtt/m/n/10 https : / / www . exxonmobil . com / en / aviation / produc
-ts-[]and-[]services /
- []
+Package natbib Warning: There were undefined citations.
 
-pdfTeX warning (ext4): destination with the same identifier (name{cite.miranda2
-007}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.38 \bibitem[mir()]{miranda2007}
-                                 pdfTeX warning (ext4): destination with the sa
-me identifier (name{cite.shellglobal}) has been already used, duplicate ignored
-
-<to be read again> 
-                   \relax 
-l.43 \bibitem[she()]{shellglobal}
-                                 
-Underfull \hbox (badness 10000) in paragraph at lines 44--48
-[]\OT1/cmr/m/n/10 Avgas.  URL []$\OT1/cmtt/m/n/10 http : / / www . shell . com 
-/ business-[]customers / aviation /
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.alexande
-r_bioaccumulation_1999}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.49 ...der(1999)]{alexander_bioaccumulation_1999}
-                                                  
-Underfull \hbox (badness 1442) in paragraph at lines 50--58
-\OT1/cmr/m/n/10 In \OT1/cmr/m/it/10 En-vi-ron-men-tal Ge-ol-ogy\OT1/cmr/m/n/10 
-, En-cy-clo-pe-dia of Earth Sci-ence, pages 43--
- []
-
-
-Underfull \hbox (badness 1546) in paragraph at lines 50--58
-\OT1/cmr/m/n/10 44. Springer Nether-lands, 1999.  ISBN 978-0-412-74050-3 978-1-
-4020-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.alleman1
-999invasion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.60   Hamelin]{alleman1999invasion}
-                                    pdfTeX warning (ext4): destination with the
- same identifier (name{cite.amodio2014atmospheric}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.67 ...e, Sardaro, et~al.]{amodio2014atmospheric}
-                                                   [24pdfTeX warning (ext4): de
-stination with the same identifier (name{cite.Feigenbaum2016}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.73 
-     ]pdfTeX warning (ext4): destination with the same identifier (name{cite.Ba
-rltrop1975absorption}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.75   Webb]{Barltrop1975absorption}
-                                    pdfTeX warning (ext4): destination with the
- same identifier (name{cite.bazzano2016long}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.82   Grotti]{bazzano2016long}
-                               pdfTeX warning (ext4): destination with the same
- identifier (name{cite.bellinger2016lead}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.88 \bibitem[Bellinger(2016)]{bellinger2016lead}
-                                                 pdfTeX warning (ext4): destina
-tion with the same identifier (name{cite.blais1996using}) has been already used
-, duplicate ignored
-<to be read again> 
-                   \relax 
-l.95 \bibitem[Blais(1996)]{blais1996using}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.burger1995risk}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.102 \bibitem[Burger(1995)]{burger1995risk}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.cardwell_cd_2013}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.109   Adams]{cardwell_cd_2013}
-                                pdfTeX warning (ext4): destination with the sam
-e identifier (name{cite.chen_accumulation_2000}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.117   Folt]{chen_accumulation_2000}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.cohan2010potential}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.126 \bibitem[Cohan(2010)]{cohan2010potential}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.cortizas2002atmospheric}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.133 ..., and Cheburkin]{cortizas2002atmospheric}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.coulibaly2015seasonal}) has been alre
-ady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.143 ...be, Honda, et~al.]{coulibaly2015seasonal}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.dmello_food_2003}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.152 \bibitem[D'Mello(2003)]{dmello_food_2003}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.duzgoren2007sources}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.160 ...uzgoren-Aydin(2007)]{duzgoren2007sources}
-                                                   [25]pdfTeX warning (ext4): d
-estination with the same identifier (name{cite.echegoyen2014recent}) has been a
-lready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.168   Norisuye]{echegoyen2014recent}
-                                      pdfTeX warning (ext4): destination with t
-he same identifier (name{cite.Ernhart426}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.176 \bibitem[Ernhart(2001)]{Ernhart426}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.fisher1996accumulation}) has been already used
-, duplicate ignored
-<to be read again> 
-                   \relax 
-l.183   Wang]{fisher1996accumulation}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.agency1990toxicological}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.190 ...rporation(1990)]{agency1990toxicological}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.agency2016lead}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.197 ...ances and Exposure(2016)]{agency2016lead}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.galzigna1973biochemical}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.204   Viola]{galzigna1973biochemical}
-                                       pdfTeX warning (ext4): destination with 
-the same identifier (name{cite.Gibson1968}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.210 ...son, MacKenzie, and Goldberg]{Gibson1968}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.gobeil2001atlantic}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.219   Beaudin]{gobeil2001atlantic}
-                                    pdfTeX warning (ext4): destination with the
- same identifier (name{cite.goyer1990environmental}) has been already used, dup
-licate ignored
-<to be read again> 
-                   \relax 
-l.225 ...item[Goyer(1990)]{goyer1990environmental}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.hammond1977annual}) has been already 
-used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.231 \bibitem[Hammond(1977)]{hammond1977annual}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.harrison2012lead}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.237 \bibitem[Harrison(2012)]{harrison2012lead}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.hem1973solubility}) has been already us
-ed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.242 ...m[Hem and Durum(1973)]{hem1973solubility}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.Hodgkins1992}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.249   Krebs]{Hodgkins1992}
-                             [26]pdfTeX warning (ext4): destination with the sa
-me identifier (name{cite.hutchinson1987lead}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.259 ...nson and Meema(1987)]{hutchinson1987lead}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.islam_assessing_2007}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.264 ...g, He, and Mahmood]{islam_assessing_2007}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.juberg1997position}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.272 ...g, Kleiman, and Kwon]{juberg1997position}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.kim2000factors}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.279 ...in, Scudlark, and Church]{kim2000factors}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.Lanphear1998}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.286 \bibitem[Lanphear(1998)]{Lanphear1998}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.laskowski_are_1991}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.292 ...item[Laskowski(1991)]{laskowski_are_1991}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.mautino1997lead}) has been already us
-ed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.299 \bibitem[Mautino(1997)]{mautino1997lead}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.miranda2011geospatial}) has been already 
-used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.306   Hastings]{miranda2011geospatial}
-                                        pdfTeX warning (ext4): destination with
- the same identifier (name{cite.needleman1991health}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.313 ...and Bellinger(1991)]{needleman1991health}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.needleman_1984}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.319 \bibitem[Needleman(1984)]{needleman_1984}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.nevin2000lead}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.325 \bibitem[Nevin(2000)]{nevin2000lead}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.nevin2007understanding}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.331 ...item[Nevin(2007)]{nevin2007understanding}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.nozaki1976distribution}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.339   Turekian]{nozaki1976distribution}
-                                          [27]pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.nriagu1996history}) has been already used
-, duplicate ignored
-<to be read again> 
-                   \relax 
-l.346 \bibitem[Nriagu(1996)]{nriagu1996history}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.olympio2010surface}) has been already us
-ed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.352 ...u}nther, and Bechara]{olympio2010surface}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.WHO2016lead}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.360 \bibitem[Organization(2016)]{WHO2016lead}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.Beris2003}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.366 \bibitem[Penrose(2003)]{Beris2003}
-                                        pdfTeX warning (ext4): destination with
- the same identifier (name{cite.pinto_heavy_2003}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.375   Colepicolo]{pinto_heavy_2003}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.rieuwerts1996heavy}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.383 ...rts and Farago(1996)]{rieuwerts1996heavy}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.rosner1985gift}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.390 ...sner and Markowitz(1985)]{rosner1985gift}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.scheermoss2012}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.397 ...em[Scheer and Moss(2012)]{scheermoss2012}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.schock1980response}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.404 \bibitem[Schock(1980)]{schock1980response}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.schwartz2000past}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.411   Gordon, Links, and Todd]{schwartz2000past}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.sharma2005lead}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.418 ...m[Sharma and Dubey(2005)]{sharma2005lead}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.singh1997atmospheric}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.425   Ahmad]{singh1997atmospheric}
-                                    pdfTeX warning (ext4): destination with the
- same identifier (name{cite.stansley1992lead}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.433   Roscoe]{stansley1992lead}
-                                  [28]pdfTeX warning (ext4): destination with t
-he same identifier (name{cite.steding2001three}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.440 \bibitem[Steding(2001)]{steding2001three}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.steinnes1997evidence}) has been already 
-used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.447   Varskog]{steinnes1997evidence}
-                                      pdfTeX warning (ext4): destination with t
-he same identifier (name{cite.steinnes2006metal}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.454 ...s and Friedland(2006)]{steinnes2006metal}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.stigliani1993heavy}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.462   Jaffe]{stigliani1993heavy}
-                                  pdfTeX warning (ext4): destination with the s
-ame identifier (name{cite.UNEP}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.468 ...ed Nations Environment~Programme()]{UNEP}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.watmough2007lead}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.472 ...mough and Dillon(2007)]{watmough2007lead}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.weber1997alterations}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.478   Steinpreis]{weber1997alterations}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.windom1985geochemistry}) has been already used
-, duplicate ignored
-<to be read again> 
-                   \relax 
-l.484 ...Smith, and Maeda]{windom1985geochemistry}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.wolpaw2007environmental}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.490 ...em[Wolpaw(2007)]{wolpaw2007environmental}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.wu1997lead}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.497 \bibitem[Wu and Boyle(1997)]{wu1997lead}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.zhang2012effect}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.504 ...hang, Jin, Xu, and Ding]{zhang2012effect}
-                                                  )
-
-Package natbib Warning: There were multiply defined citations.
-
-[29] (./Pb_Annotate_Bibliography.aux) ) 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 538.
+[20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 538.
+ (./Pb_Annotate_Bibliography.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 538.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 538.
+Package rerunfilecheck Info: File `Pb_Annotate_Bibliography.out' has not change
+d.
+(rerunfilecheck)             Checksum: FB48DBF5D76C58A73DB8CDDF9ED27C45;1185.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 538.
+ ) 
 Here is how much of TeX's memory you used:
- 2717 strings out of 256214
- 39011 string characters out of 1917000
- 108434 words of memory out of 1500000
- 5895 multiletter control sequences out of 10000+200000
- 8718 words of font info for 31 fonts, out of 1200000 for 2000
- 645 hyphenation exceptions out of 8191
- 25i,6n,36p,2493b,518s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/share/texmf/fonts/type1/bluesky/cm
-/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/tex
-mf/fonts/type1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cm
-r10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fo
-nts/type1/bluesky/cm/cmr17.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr7.pf
-b></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/t
-ype1/bluesky/cm/cmti10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt10.pfb>
-
-Output written on Pb_Annotate_Bibliography.pdf (29 pages, 213405 bytes).
+ 4872 strings out of 494820
+ 73265 string characters out of 3178050
+ 149260 words of memory out of 3000000
+ 7957 multiletter control sequences out of 15000+200000
+ 8372 words of font info for 30 fonts, out of 3000000 for 9000
+ 198 hyphenation exceptions out of 8191
+ 29i,6n,28p,2492b,319s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt10.pfb>
+Output written on Pb_Annotate_Bibliography.pdf (20 pages, 174732 bytes).
 PDF statistics:
- 422 PDF objects out of 1000 (max. 8388607)
- 122 named destinations out of 1000 (max. 131072)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 137 words of extra memory for PDF output out of 10000 (max. 10000000)
 

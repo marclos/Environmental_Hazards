@@ -5,11 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[FAA(2017)]{FAA}
-Aviation gasoline.
-\newblock \emph{Federal Aviation Administration}, Mar 2017.
-\newblock URL \url{https://www.faa.gov/about/initiatives/avgas/}.
-
 \bibitem[Fei()]{Feigenbaum2016}
 Lead exposure and violent crime in the early twentieth century.
 \newblock 62.
@@ -19,11 +14,6 @@ A clinical study of the effects of lead poisoning on the intelligence and
   neurobehavioral abilities of children.
 \newblock 10.
 
-\bibitem[ame(2016)]{americanoil}
-Ethyl anti-knock gas.
-\newblock \emph{American Oil \& Gas Historical Society}, Dec 2016.
-\newblock URL \url{http://aoghs.org/products/tetraethyl-lead-gasoline/}.
-
 \bibitem[chi()]{chiodo07}
 Blood lead levels and specific attention effects in young children.
 \newblock 29.
@@ -32,8 +22,7 @@ Blood lead levels and specific attention effects in young children.
 Aviation fuel – jet a/jet a-1: Exxonmobil aviation.
 \newblock \emph{ExxonMobil AviatioN}.
 \newblock URL
-  \url{https://www.exxonmobil.com/en/aviation/products-and-services/Products/J%
-et-A-Jet-A-1}.
+  \url{https://www.exxonmobil.com/en/aviation/products-and-services/Products/Jet-A-Jet-A-1}.
 
 \bibitem[mir()]{miranda2007}
 The relationship between early childhood blood lead levels and performance on
@@ -43,8 +32,17 @@ The relationship between early childhood blood lead levels and performance on
 \bibitem[she()]{shellglobal}
 Avgas.
 \newblock URL
-  \url{http://www.shell.com/business-customers/aviation/aviation-fuel/avgas.ht%
-ml}.
+  \url{http://www.shell.com/business-customers/aviation/aviation-fuel/avgas.html}.
+
+\bibitem[ame(2016)]{americanoil}
+Ethyl anti-knock gas.
+\newblock \emph{American Oil \& Gas Historical Society}, Dec 2016.
+\newblock URL \url{http://aoghs.org/products/tetraethyl-lead-gasoline/}.
+
+\bibitem[FAA(2017)]{FAA}
+Aviation gasoline.
+\newblock \emph{Federal Aviation Administration}, Mar 2017.
+\newblock URL \url{https://www.faa.gov/about/initiatives/avgas/}.
 
 \bibitem[Alexander(1999)]{alexander_bioaccumulation_1999}
 David~E. Alexander.

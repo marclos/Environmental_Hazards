@@ -1,0 +1,41 @@
+Sample ID,Location,Replication ,Sample Location,Result
+Calib Blank,NA,,1,
+1 ppm,NA,,2,
+10 ppm,NA,,3,
+100 ppm,NA,,141,
+1 (Griffith 5),Griffith,5,101,6.72
+2 (Griffith 1),Griffith,1,102,6.84
+3 (Griffith 4),Griffith,4,103,6.62
+4 (Jumpa 1),Jumpa,1,104,NA
+5 (CUC 5),CUC,5,105,6.69
+6 (Marston 5),Marston,5,106,6.47
+7 (Cahuilla 1),Cahuilla,1,107,6.92
+8 (Griffith 3),Griffith,3,108,6.43
+9 (CUC 4),CUC,4,109,6.68
+10 (Blaisdell 2),Blaisdell,2,110,6.41
+11 (Bryant 2),Bryant,2,111,NA
+12 (Blaisdell 4),Blaisdell,4,112,6.47
+13 (Cahuilla 3),Cahuilla,3,113,6.33
+14 (Bryant 5),Bryant,5,114,NA
+15 (CUC 1),CUC,1,115,6.86
+16 (Griffith 2),Griffith,2,116,6.63
+17 (Bryant 1),Bryant,1,117,NA
+18 (Blaisdell 3),Blaisdell,3,118,6.81
+19 (Blaisdell 5),Blaisdell,5,119,6.7
+20 (Cahuilla 4),Cahuilla,4,120,6.2
+21 (Cahuilla 2),Cahuilla,2,121,6.23
+23 (Marston 1),Marston,1,122,6.64
+24 (Marston 2),Marston,2,123,6.77
+25 (Jumpa 5),Jumpa,5,124,NA
+26 (Clayton 1),Clayton,1,125,NA
+27 (Blaisdell 1),Blaisdell,1,126,6.45
+28 (Clayton 3),Clayton,3,127,NA
+29 (Wheeler 4),Wheeler,4,128,6.56
+30 (Marston 4),Marston,4,129,6.7
+31 (Marston 3),Marston,3,130,6.34
+32 (Jumpa 3),Jumpa,3,131,NA
+33 (Cahuilla 5),Cahuilla,5,132,6.74
+34 (Wheeler 5),Wheeler,5,133,6.49
+35 (Clayton 5),Clayton,5,134,NA
+36 (Wheeler 1),Wheeler,1,135,6.77
+37 (Wheeler 3),Wheeler,1,136,6.55

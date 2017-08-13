@@ -1,0 +1,51 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Barltrop et~al.(1975)Barltrop, Thornton, Strehlow, and
+  Webb]{barltrop1975absorption}
+D~Barltrop, I~Thornton, CD~Strehlow, and JS~Webb.
+\newblock Absorption of lead from dust and soil.
+\newblock \emph{Postgraduate medical journal}, 51\penalty0 (601):\penalty0
+  801--804, 1975.
+
+\bibitem[Lanphear et~al.(1998)Lanphear, Matte, Rogers, Clickner, Dietz,
+  Bornschein, Succop, Mahaffey, Dixon, Galke, et~al.]{lanphear1998contribution}
+Bruce~P Lanphear, Thomas~D Matte, John Rogers, Robert~P Clickner, Brian Dietz,
+  Robert~L Bornschein, Paul Succop, Kathryn~R Mahaffey, Sherry Dixon, Warren
+  Galke, et~al.
+\newblock The contribution of lead-contaminated house dust and residential soil
+  to children's blood lead levels: a pooled analysis of 12 epidemiologic
+  studies.
+\newblock \emph{Environmental research}, 79\penalty0 (1):\penalty0 51--68,
+  1998.
+
+\bibitem[Stru{\.z}y{\'n}ska et~al.(2005)Stru{\.z}y{\'n}ska, Chalimoniuk, and
+  Sulkowski]{struzynska2005role}
+Lidia Stru{\.z}y{\'n}ska, Ma{\l}gorzata Chalimoniuk, and Grzegorz Sulkowski.
+\newblock The role of astroglia in pb-exposed adult rat brain with respect to
+  glutamate toxicity.
+\newblock \emph{Toxicology}, 212\penalty0 (2):\penalty0 185--194, 2005.
+
+\bibitem[Tidball(1976)]{tidball1976lead}
+RR~Tidball.
+\newblock Lead in soils.
+\newblock \emph{Lead in the Environment}, 957:\penalty0 43, 1976.
+
+\bibitem[Wang et~al.(2006)Wang, Su, Chen, Lin, Luo, and Gao]{wang2006transfer}
+Guo Wang, Miao-Yu Su, Yan-Hui Chen, Fen-Fang Lin, Dan Luo, and Shu-Fang Gao.
+\newblock Transfer characteristics of cadmium and lead from soil to the edible
+  parts of six vegetable species in southeastern china.
+\newblock \emph{Environmental Pollution}, 144\penalty0 (1):\penalty0 127--135,
+  2006.
+
+\bibitem[Zimdahl and Skogerboe(1977)]{zimdahl1977behavior}
+Robert~L Zimdahl and Rodney~K Skogerboe.
+\newblock Behavior of lead in soil.
+\newblock \emph{Environmental Science \& Technology}, 11\penalty0
+  (13):\penalty0 1202--1207, 1977.
+
+\end{thebibliography}

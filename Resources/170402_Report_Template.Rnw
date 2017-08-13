@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{natbib}
+\usepackage{hyperref}
+\bibliographystyle{plainnat}
+\setcitestyle{open={(},close={)}}
+
+\renewcommand\bibname{Literature Cited}
+
+
+\author{Author}
+\title{Title of Report}
+
+
+\begin{document}
+\maketitle
+
+\section{Abstract}
+
+
+
+\section{Introduction}
+
+\subsection{Problem Statement}
+
+\subsection{Background}
+
+\cite{lanphear1998contribution} evaluated Pb in soils...
+
+There have been many reveiws \citep{tidball1976lead}.
+
+Here's a list of them: \cite{zimdahl1977behavior, barltrop1975absorption, wang2006transfer}.
+
+\subsection{Objectives}
+
+
+
+\section{Methods}
+
+\subsection{Site Description}
+
+\subsection{Materials and Methods}
+
+\subsection{Procedures}
+
+\subsection{Statistical Analysis}
+
+
+
+
+
+\section{Results}
+
+R code blocks in Sweave/LaTeX is a bit different:
+
+<<tidy=TRUE>>=
+fakedata = data.frame(Location = c(rep("A", 3), rep("B", 3), rep("C", 3)), Pb = rlnorm(9, 3, 1))
+@
+
+<<results='asis'>>=
+library(xtable)
+xtable(fakedata)
+@
+
+We should always describe the figure before the figures appears in the text. Sometimes, floating figures don't copperate (Figure \ref{fig.boxplot}).
+
+
+\begin{figure}
+<<boxplot, fig=TRUE>>=
+plot(Pb ~ Location, data=fakedata, las=1, cex=2, col='grey')
+@
+\caption{Figure Caption...}
+\label{fig.boxplot}
+\end{figure}
+<<>>=
+fakedata.aov = aov(Pb ~ Location, data=fakedata)
+summary(fakedata.aov)
+@
+\section{Discussion}
+
+This is the context and interpreations section that relies on some articles, e.g. \cite{struzynska2005role}.
+\section{Conclusion}
+
+\bibliography{Report}
+
+\end{document}
+

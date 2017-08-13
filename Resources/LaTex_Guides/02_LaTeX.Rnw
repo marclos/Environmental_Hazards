@@ -1,0 +1,12 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{First Section}
+
+This is my article text\ldots
+
+\section{Second section}
+
+
+\end{document}

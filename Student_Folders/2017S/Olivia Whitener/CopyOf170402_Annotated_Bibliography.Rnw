@@ -1,0 +1,190 @@
+\documentclass{article}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{bibentry}
+
+\bibliographystyle{plainnat}
+\setcitestyle{open={(},close={)}}
+
+\author{EA30 -- Spring 2017}
+\title{Annotated Bibliography}
+
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\maketitle
+\nobibliography{Pb_literature}
+
+\section{Abstract}
+
+
+
+\tableofcontents
+
+\section{Instructions}
+
+Please complete the annotated bibliography by the 17th of April.
+
+\subsection{Searching for Academic Sources}
+
+There are numerous electronic sources to evaluate and obtain academic sources of information. Usually, we consider peer reviewed articles to have the highest quality scholarship. As a rule of thumb, this is a good start, but there is also a great deal of variation between sources, even journal titles can vary in quality. Thus, it's best to evaluate a range of sources and appreciate the subtle differences in quality and prestige.
+
+First, you should search CUC databases using key words, such as Pb and lead. I admit the lead is tricky, because it's not a useful term due it a double meaning. I suggest heavy metals or trace metals with the other key words, i.e. fate and transport, toxicity, etc, depending on the topic you selected.
+
+Below are links to some useful databases:
+
+\begin{itemize}
+  \item \href{http://apps.webofknowledge.com.ccl.idm.oclc.org/}{Web of Science}
+  \item \href{http://www.jstor.org.ccl.idm.oclc.org/}{JStore}
+  \item \href{https://scholar-google-com.ccl.idm.oclc.org/}{Google Scholar}
+\end{itemize}
+
+
+\subsection{Writing an Annotated Bibliography}
+
+After adding your citation to the Pb\_literature.bib, using the BibTeX format, cite your reference using the syntax below. Then, write a concise annotation that summarizes the central theme and scope of the book or article. Include one or more sentences that (a) evaluate the authority or background of the author, (b) comment on the intended audience, (c) compare or contrast this work with another you have cited, or (d) explain how this work illuminates your bibliography topic.
+
+\subsection{Implementing in \LaTeX}
+
+\LaTeX is a software program used for desktop publishing. With an eye for detail, the program was developed to give the author a great deal of control. In contrast, Microsoft Word is designed to have lots of options, but these seem to get in the way of controlling the outcome. 
+
+\LaTeX is an open source program and relies on specific formatting commands that begin with a backslash. For example to start a new section heading, we use \verb!\section{section name}! and \verb!\subsection{subsection name}! to create a subsection heading.
+
+Below might be an example of what we are trying to accomplish using our Rstudio resources. The \LaTeX command for the citation is \verb!\bibentry{key}!, where key is identifies the citation based on the BibTeX citation entry as shown below.
+
+However, we also need to add the citation to the *.bib file, in this case the file is called ``Pb\_literature.bib''. Open the file. You can see each entry within the curly brackets. Also, it starts with the definition of the entry, e.g. article, book, conference proceedings. We can easily add the citation using the databases cited above. All you need to do is search for the citation manager or citation tool and select a citation format ``bibtex''. Copy and paste the bibtex format (try to put it in the correct location, i.e. alphabetic order). Note the ``key'' is the first word after the citation definition. 
+
+\subsection{Annotated Example}
+
+\bigskip
+\noindent %\bibentry{barltrop1975absorption} . Summarizes important infomormation about Pb. This paper reviews work that span x years starting with early \ldots and noting recent information that includes \ldots. \cite{barltrop1975absorption} first describe xyz and how these issues have been largely \ldots.
+
+\bigskip
+
+
+To help the readers, you might create subsection and even subsubsections, using \verb!\subsection{subsection name}! and \verb!\subsubsection{subsubsection name}!. 
+
+
+\section{Industrial Sources (Khalil)}
+
+
+\section{Use in Industry (except gasoline) (Claudia)}
+
+\section{``Ethyl'' gas and airplane fuels (Viraj)}
+
+
+\bigskip
+%\noindent \bibentry{galzigna1998biochemical} .
+
+This study by Galzigna et al. is published in the British Journal of Industrial Medicine. The paper speaks to the negative health effects that result from exposure to tetraethyl lead. The effects of tetraethyl lead are similar to general lead exposure. The primary negative health effect observed was reduced neuromuscular function.
+
+\bigskip
+
+%\noindent \bibentry{american2016ethyl} .
+
+The American Oil and Gas Historical Society offers official history of energy fuels for increasing public knowledge. Tetraethyl Lead was added to gasoline to prevent a common problem in engines before the 1930s called “engine knock.” Engine knock occurs when the air-fuel mixture in a cylinder about the piston prematurely detonates before the piston has risen to the maximum height. This premature detonation occurs because of the gasoline not being able to withstand the pressure. In the ideal internal combustion engine operation, the air-fuel mixture should only combust because of a spark created by the spark plug, not an increase in pressure. A gas’s ability to withstand pressure is defined by its octane rating. Adding tetraethyl lead to gasoline increase the octane rating, makes the fuel more resistant to combusting under pressure, and therefore prevents engine knock. In 1921, General Motors scientists discovered the anti-knock properties of tetraethyl lead. Three years later, the first signs that leaded gasolines contributed to lead poisoning occurred when workers at a gasoline treatment plant fell ill. In 1925, after minimal non-comprehensive studies, the U.S Surgeon General stated that there is “no reason to prohibit the sale of leaded gasoline.” The leaded gasoline industry used many manipulative techniques to hide the fact that lead was present in gasoline. They labelled the higher octane fuel “ethyl” gasoline, to avoid lead in the name. The word lead was never used in any advertisements for the fuel. Ultimately, in the late 1970s lead was phased out of gasoline and in 1986 a total ban was placed on leaded automobile gasoline. The invention of the catalytic converter in 1975, which required unleaded fuel, also accelerated the phasing out of lead from gasoline. 
+
+\bigskip
+
+
+
+\section{Atmospheric transport and deposition}
+%\begin{itemize}
+  %\item \bibentry{cohan2010potential}
+  %\item \bibentry{blais1996using}
+  %\item \bibentry{cortizas2002atmospheric}
+%\end{itemize}
+
+
+
+
+
+
+
+\section{Lead in water (Olivia)}
+
+
+\noindent \bibentry{alleman1999invasion} .
+
+
+This study analyzes stable lead isotopic composition data to reveal the advective transport of industrial lead into deep basic waters through the formation of North Atlantic Deep Water. The authors analyzed sea water samples collected during a suite of cruises in the far North Atlantic, western North Atlantic, North African basins, and equatorial North Atlantic. The samples showed that 206Pb/207Pb ratios of newly formed North Atlantic Deep Water in the far North Atlantic reflect mixing with less radiogenic western European emissions owing to the phasing out of leaded gasoline in the US. The authors predict that in future, stable lead isotopes will continue to uniquely fingerprint geographic sources of lead and associated contaminants, and trace transient fluxes of those contaminants into the abyssal North Atlantic over decadal scales.
+
+
+\noindent \bibentry{bellinger2016lead} .
+
+
+This article was published in the New England Journal of Medicine by Dr. David C. Bellinger, a Professor of Neurology at Harvard Medical School and Professor in the Department of Environment Health at Harvard T.H. Chan School of Public Health. He writes about historical and modern lead exposure, particularly through water distribution systems. He then explains the institutional inequalities surrounding Flint's water contamination and the effects on public health. 
+
+
+\noindent \bibentry{echegoyen2014recent} .
+
+
+This study of northern and central Indian Ocean found high concentrations of Pb in surface waters due to rapid regional industrialization and low concentrations in deep waters. The Antarctic sector of the Indian Ocean shows very low Pb concentrations due to limited anthropogenic emissions, high scavenging rates, and rapid vertical mixing. The article predicts an increasing presence of Pb in the ocean following the continued release of Pb from human activities. The data was collected from 11 stations in the 2009-2010 Japanese GEOTRACES transect through the Indian Ocean. The authors of this study are from either Massachusetts Institute of Technology, The University of Tokyo, and Niigata University. 
+
+
+\noindent \bibentry{gobeil2001atlantic} .
+
+
+This study published by the American Association for the Advancement of Science examines sediment cores collected from the Arctic Ocean and Greenland Sea evidence for evidence of lead. The researchers then used the Pb inventory and its isotopic composition to infer the source of the lead contamination and its pathways related to ocean currents and ice drift. The authors are affilliated with Institut Maurice-Lamontagne, Institute of Ocean Sciences, and Bedford Institute of Oceanography in Canada.
+
+
+\noindent \bibentry{hem1973solubility} .
+
+
+This article evaluates the solubility of lead in solutions similar to natural river water to determine the general features of water chemistry, which features favor the solution of lead, and the solubility effectiveness. The data in this article also suggest methods of reducing the lead content of drinking water at water-treatment plants. 
+
+
+\noindent \bibentry{kim2000factors} .
+
+
+This study measured the atmospheric depositional fluxes of 7Be, 210Pb, and stable Pb simultaneously for one year on the upper eastern shore of the Chesapeake Bay in Maryland. The research suggests that a constant Pb flux has been reached since the mandatory use of unleaded gasoline was instituted. This study concludes that precipitation appears to be an important factor controlling the fluxes of 7Be and stable Pb in the upper troposphere. However, 210Pb in the lower troposphere is highly scavenged from the atmosphere from small amounts of precipitation such as snowfall. 
+
+
+\noindent \bibentry{nozaki1976distribution} .
+
+
+This study determines residence times relative to particulate removal or 210Pb and 210Po in surface waters of the Pacific Ocean in order to examine the transportation of trace metals in the ocean column. The authors collected surface water samples with two 2-liter plastic sample bottles enclosed in a net attached to a ship moving at low speed. The study found that the residence times for Po and Pb in the center of the North Pacific gyre are 0.6 years and 1.7 years, respectively. The fact that surface ocean residence time for Pb is about two orders of magnitude smaller than for deep ocean Pb implies that adsorptive quality of particles changes sharply during descent through the water column.
+
+
+\noindent \bibentry{schock1980response} .
+
+
+Michael Schock works with the United States Environmental Protection Agency and has written extensively on lead corrosion and drinking water contamination. His paper presents a revised model showing the response of theoretical lead solubility curves to changes in dissolved inorganic carbonate concentrate and pH of water at 25 degrees Celsius. The author acknowledges that his model cannot be directly applied to accurately predict concentrations of lead in tap water in many situations because of the complex chemical and physical concentration control mechanisms happening in the water distribution system. However, the model improves upon earlier models that did not take into account hydrocerussite and lead carbonate complexes. The revised model had good correlation with experimental data and can therefore be employed with some confidence to measure lead solubility.
+
+
+\noindent \bibentry{stansley1992lead} .
+
+
+This paper reports lead contamination at shooting ranges where shots have been deposited in open water or wetland areas and the impacts on a nearby lake. The authors found a significant concentration of filterable lead in the slightly acidic marsh, which suggests that lead could be mobilized at a lower pH. There were elevated lead levels in a  water sample collected near a public swimming area adjacent to a parking lot, possibly as a result of parking lot runoff. The report found elevated total lead concentrations in surface water in the shot fall zones at six trap and skeet ranges, but found no lead contamination in water, sediments, or fish from a lake adjacent to the range with the greatest amount of shot deposition. However, no measurements of particle size or organic content were performed, both of which have a strong influence on sediment lead concentrations. The sample size of fish studied for uptake of lead was also small. This study was conducted by three researchers from the New Jersey Divsion of Fish, Game and Wildlife. 
+
+
+\noindent \bibentry{windom1985geochemistry} .
+
+
+This study was conducted in order to establish baseline levels of lead in coastal and estuarine waters of the southeastern United States and evaluate the relative importance of inputs from rivers, the atmosphere, and oceanic exchange. It was published in 1985 by a researcher from the Skidaway Institute of Oceanography and a researcher from Tokyo Universit of Fisheries.
+
+
+\noindent \bibentry{wu1997lead} .
+
+
+This article investigates the significant decrease of lead concentrations in the western North Atlantic Ocean over a 16-year period from the 1980s to the 1990s. The authors attribute the rapid decline in the 1980s to the phasing out of leaded gasoline in the United States. They propose the slower decrease in the 1990s is due to emissions from high-temperature industrial activities rather than residual leaded gasoline emissions. They predict minimal decreases in surface water lead concentrations in coming decades, and continued propogation and evolution of lead distribution in deeper waters. The two authors of this paper are both scientists with the Department of Earth, Atmospheric, and Planetary Sciences at the Massachusetts Institute of Technology.
+
+
+
+\section{Sinks (Katie)}
+
+\section{Food web dynamics (Mireya)}
+
+\section{Toxicity (non-human) (Kelli)}
+
+%\bibentry{carlson1975effect}. 
+
+
+\section{Human health effects (physiological, toxicity) (Thea)}
+
+%\section{Public health effects (crime, IQ, etc) (Marissa)}
+
+
+
+\end{document}
+

@@ -1,0 +1,300 @@
+---
+title: "Obtaining TRI Data"
+author: "Marc Los Huertos"
+date: "8/8/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## TRI Data
+
+What is TRI? According to the EPA, "TRI is a resource for learning about toxic chemical releases and pollution prevention activities reported by industrial and federal facilities. TRI data support informed decision-making by communities, government agencies, companies, and others." 
+
+Before doing too much on TRI, you will find reading this is very helpful ["Factors to Consider"](https://www.epa.gov/toxics-release-inventory-tri-program/factors-consider-when-using-toxics-release-inventory-data), which you can find in English or Spanish. 
+
+## Numerous Ways to Get Data
+
+The TRI database is in a structured query database or SQL, which means data tables are linked by key words. Unfortunately, SQL has complex syntax and learning it is well beyond the scope of this course. So, we have to use the TRI interface, which allows users to obtain data from the database. Unfortunately, there are several ways to get the data and each of the methods have their own challenges. 
+
+I have a few suggestions below, but if you find a better way, please share them with us, using this document.
+
+### Suggestions: TRI Explorer
+
+I suggest we use the [TRI Explorer[(https://iaspub.epa.gov/triexplorer/tri_release.chemical interface). 
+
+
+### Using TRI Explorer
+
+1. Check out fact sheet page: 
+
+<https://iaspub.epa.gov/triexplorer/tri_factsheet_search.searchfactsheet>
+
+This page gives you a sampling of what has been reported. I suggest you check out a range of zip codes or even some particular chemicals.
+
+For example, we might check out [Aniline in the USA](https://iaspub.epa.gov/triexplorer/chemical.html?pYear=2015&pLoc=000062533&pParent=TRI&pDataSet=TRIQ1). Aniline, of course, is famous because of it's role as a dye and use at the Toms River Chemical Company, Cinnicinati Chemical Company, and even Basal, Switzerland. 
+
+Another approach is to evaluate various sites in a region. EPA has devided the country (and territories) into regions. We happend to be in Region 9. Thus, we might select facilities [region 9](https://iaspub.epa.gov/triexplorer/region.html?pYear=2015&pLoc=9&pParent=TRI&pDataSet=TRIQ1)), where the 5Cs are located. 
+
+2. Evaluate Release Reports
+
+Before you select a Facility, it might be useful to determine if the toxics released pose a potential risk. 
+
+-We might evaluate what [chemicals](https://iaspub.epa.gov/triexplorer/tri_release.chemical) might be released. This is useful if you have a specific interest in a chemical that you think is a particular risk. 
+
+
+-Alternatively, we might explore [facilities](https://iaspub.epa.gov/triexplorer/tri_getcounties.getcounties?report=tri_release.facility&scriptname=facility&state=06&c_year=2015&c_industry=ALL&c_chemical=_ALL_&c_chemlist=&c_coreyear=&c_indlist=&c_usrState=&c_fips=00000&c_tabrpt=1&c_zip=&c_chk0=false&c_chk1=false&c_chk2=false&c_chk3=false&c_chk4=true&c_chk5=false&c_chk6=false&c_chk7=true&c_chk8=false&c_chk9=false&c_chk10=) that might be releasing chemicals. This might be preferrable because we can narrow our search to areas or communities that might be particularly vulnerable. 
+
+Below is a screen shot of this facilities interface. If you decide to make use of this site, be sure to include the longitude and latitude, so we can map the site later on in the project.
+
+![screen](/home/CAMPUS/mwl04747/github/Environmental_Hazards/Graphics/TRI_Facilities.png)
+ 
+3. Selecting a Facility
+
+Begin by looking over all the data for a county or zip code. Evaluate the chemicals released by using a search engine to determine a site may be a signficiant risk. Of course, you'll need to decided which release type is most compelling to you. Most students focus on "Fugitive Air" releases. But stake maybe more important. 
+
+I found a facility (Gallade Chemical Inc) in Orange County that had a wide range of chemicals released as "Fugitative Air". 
+
+4. Download the Facilities records. 
+
+Following my [selection](https://iaspub.epa.gov/triexplorer/release_fac_profile?TRI=92707GLLDC1230E&TRILIB=TRIQ1&FLD=&FLD=LNGLAT&FLD=AIRLBY&FLD=E1&FLD=E2&FLD=E3&FLD=E4&FLD=E5&FLD=E52&FLD=E53&FLD=E54&FLD=E51&FLD=TSFDSP&FLD=TSFDSP&FLD=m10&FLD=m41&FLD=m62&FLD=potwmetl&FLD=m71&FLD=m72&FLD=m73&FLD=m79&FLD=m90&FLD=m94&FLD=m99&FLD=RELLBY&FLD=on&OFFDISPD=&OTHDISPD=&ONDISPD=&OTHOFFD=&YEAR=1990), I double check to see if this the site I am really interested. 
+
+To download all the data, navigate to the bottom of the page, and notice a tiny button that says "Download all data", which will create a csv file. Save this file in some locations on your computer that you can find again!
+
+5. Preprocessing Data
+
+To read this into R, we have to pre-process the data abit. For example, the first two rows need to be removed or R won't create the headers correctly. NOTE: I found that I had to fix another issue in some files, you can see what I had to do below and check your file now, or follow along and hope that you don't have the same problem I had.
+
+Once you have done this, upload the csv file into R, using the "upload" button" in R (The "Upload" button is located on the "Files" table in the lower right window of Rstudio. I suggest you nativgate to your own directory and then upload, so you know exactly where you have saved it. 
+
+### Importing the Facility Data into R
+
+There are three steps to download data into R:
+
+1. Identify the path and file name (We can use 'file.choose()')
+2. Read the file into R ('read.csv()').
+3. Create an object (dataframe) in R to be analyzed ( '<-').
+
+Here's an example:
+
+first, I use file.choose() to find my file and copy the path/file name into the clipboard.
+
+> file.choose()
+
+[1] "/home/CAMPUS/mwl04747/github/Environmental_Hazards/GALLADE CHEMICAL INC.csv"
+
+We can then create a short cut to the long file name and then read the file into a data frame, called import.
+
+```{r importing}
+file = "/home/CAMPUS/mwl04747/github/Environmental_Hazards/GALLADE CHEMICAL INC.csv"
+import <- read.csv(file)
+```
+
+I always check the data to see that the file was read correctly, by looking at the structure ('str()') and first six observations or header ('head()'). 
+```{r checking}
+str(import)
+head(import)
+```
+
+In this case, R did not import the file correctly. The amounts of releases have been imported as factors, thus not continuous variables. Bummer... so, now I need to sort out what went wrong. 
+
+As I looked at "import" I noticed some entries that were just '.'. R didn't know how to import these (their not numbers!), so it defaulted to make all the variables as text strings, which are then seen as factors in the dataframe. 
+
+So, in excel, I did a search and replace to find all the '.' (be sure to select matching for entire cells) and then replaced with 'NA', which R understands as missing data. I guess you could also put in zero, which would be more accurate, but I didn't think of that until now.
+
+Now, I re-read the new, uploaded csv file. 
+
+```{r}
+file = "/home/CAMPUS/mwl04747/github/Environmental_Hazards/GALLADE CHEMICAL INC (1).csv"
+import <- read.csv(file)
+str(import)
+```
+
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+remote: error: Trace: 6373cd166ffb1f7ddfe7dea66685e0a1        
+remote: error: See http://git.io/iEPt8g for more information.        
+remote: error: File packages/UScensus2010tract_1.00.tar.gz is 181.65 MB; this exceeds GitHub's file size limit of 100.00 MB 
+
+git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch packages/UScensus2010tract_1.00.tar.gz' HEAD
+Now the releases are integers, yes!
+
+## Analyzing Data
+
+As we begin the analysis program, I often have to refer back to the file to remember the names of the variables, which in this case are hard to remember. I can also elect to change the names to make them simpilar, which I will do in an updated version if it's useful. 
+
+```{r }
+names(import)
+
+```
+
+
+### Creating a Time Series
+
+So, making plots is easy in R. In this case, I'll see what fugitive air releases have changed with time. 
+
+```{r }
+plot(Fugitive.Air  ~ Year, data=import)
+
+```
+
+Obviously, something interesting has happend here. I had low numbers and then a break and now really high numbers. But this graph is showing all the chemicals, so now I need to subset the data for various chemicals.
+
+### Subsetting Data
+
+First, I need a list of chemicals so I can sort through each of them. I know the variable name is 'Chemical', but how can I create a vector of the unique types, let's use the function 'unique()', where we specifie the dataframe and the variable name:
+
+```{r listingchemicals}
+unique(import$Chemical)
+```
+
+Notice they are all upper case and in some cases quite long, thus easy to mispell. I like to copy and paste each name so I can create a figure without too much consternation based on my typing ability.
+
+First, let's see how to subset a dataframe, using the function 'subset()'
+```{r subsetting}
+xylene <- subset(import, Chemical=="XYLENE (MIXED ISOMERS)")
+```
+NOTE: The double '==' is a bizarre syntax!
+
+Now, we can plot xylene, and make it look better...
+
+```{r }
+plot(Fugitive.Air  ~ Year, data=xylene, las=1, pch=19, ylab="Fugitive Air Emissions (lbs)", xlim=c(1985, 2014))
+
+```
+
+Super uneven releases, this might be worth investigating. But for now, let's turn to the census data for the area around the facility.
+
+### Creating a loop to get all the chemicals
+```{r loop, fig=TRUE}
+chemicals <- unique(import$Chemical)
+
+for (i in 1:length(chemicals)){
+temp <- subset(import, Chemical==import$Chemical[i])
+
+plot(Fugitive.Air  ~ Year, data=temp, las=1, pch=19, ylab="Fugitive Air Emissions (lbs)", xlim=c(1985, 2014), main=paste(import$Chemical[i]))
+}
+```
+
+
+## Combining with Census Data
+
+The census data are organized in a [hierarchy](http://www2.census.gov/geo/pdfs/reference/geodiagram.pdf). This should be a place that you recognize the problems of analyzing spatial data: what is the appropriate scale, what do you gain and loss when you aggregate spatial scales?
+
+```{r}
+library(UScensus2010)
+library(UScensus2010tract)
+```
+
+Let's first look a bit at the data. For example, what are the counties in California that might be available?
+
+First, we need to learn something about how the federal government sorts out county and state codes. They do this using FIPS. The FIPS county code is a five-digit Federal Information Processing Standard (FIPS) code (FIPS 6-4) which uniquely identifies counties and county equivalents in the United States, certain U.S. possessions, and certain freely associated states. The first two digits are the FIPS state code and the last three are the county code within the state or possession. 
+
+we can query the county codes for California with the following:
+
+```{r countyfips}
+data(countyfips)
+# Just doing the first six with the 'head()' function
+head(countyfips[countyfips$statename=="california",])
+```
+
+Since, my site is in Orange county, I'm going to start there, which has a FIPS code of 06059.
+
+The address of the facility is 1230 E SAINT GERTRUDE PL, SANTA ANA, CALIFORNIA 92707, now I'd like to find out what census block, track and ...
+
+https://www.census.gov/geo/maps-data/maps/2010tract.html
+
+DC10CT_C06059
+Santa Ana 69000
+
+http://www2.census.gov/geo/maps/dc10map/tract/st06_ca/c06059_orange/DC10CT_C06059_001.pdf
+
+744.03
+743
+745.02
+## Income
+http://www.census.gov/did/www/saipe/data/interactive/saipe.html#view=Mapping
+
+
+```{r countyplot}
+#countyfips[countyfips$statename=="california",]
+
+### The county fips code is the last three characters
+county.f<-"002" # Not sure what this is for!
+county.n<-c("orange county", "los angeles county")
+
+## Pull out these counties
+c1<-county(fips=county.f,state="ca",level="tract")
+c2<-county(name=county.n,state="ca",level="tract")
+```
+
+
+##Plot counties
+```{r}
+california.counties<-countyfips[countyfips$statename=="california",]
+col<-cbind(c("red","blue"),c("059","037"))
+plot(c2,col=col[match(c2$county,col[,2]),1],border="gray")
+title("Los Angeles and Orange counties, CA 2010")
+coord<-coordinates(c2)
+text(coord[c(1,4),],california.counties$countyname[california.counties$countyname%in%county.n],cex=2)
+```
+
+## Demographics
+
+I found the tract nearest the facility to be 743 via google, and that it is 85% Latino!
+
+I am working on how to get the R GIS data to cooperate to create a map, but for now, this is a great start.
+
+
+data("california.tract10")
+
+names(california.tract10)
+orange.county <- county(name = "orange", state = "ca", level = "tract")
+
+data(california.tract10)
+demographics(dem = c("pop2000", "white", "black"), "CA", level = "msa", msaname = "Los Angeles")
+
+head(demographics(dem=c("P0010001"), state="ca",level="tract"))
+
+# Alternative Approach Importing the data (Use at your own Risk!)
+
+- Data has some problems. First, there are multiple entries per site. As R make some guesses about how to read the data, this creates several problems.
+```{r}
+LA2015 <- read.csv("/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/fac_release2015_2.csv"); 
+
+str(LA2015)
+
+#with(LA2015, plot(Longitude, Latitude))
+```
+
+
+## Facility Data
+
+I have downloaded data using, <https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-2014> and selecting 2014 data. 
+```{r cars}
+TRI14CAsource <- "/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/TRI_2014_CA.csv"
+TRI14CA <- read.csv(TRI14CAsource); str(TRI14CA)
+```
+
+Let's evaluate the variable names and see what we have:
+
+```{r names}
+names(TRI14CA)
+```
+
+
+## Filter for LA County
+```{r filterLA}
+library(dplyr)
+TRI14LA <-  TRI14CA %>% filter(COUNTY == "LOS ANGELES")
+```
+
+## Map Sites
+
+```{r maplocations, echo=TRUE}
+plot(TRI14LA$LATITUDE, TRI14LA$LONGITUDE)
+```
+
+## Group by Chemical Type 
+

@@ -1,0 +1,1532 @@
+\documentclass{tufte-handout}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{natbib}
+\bibfont{\small} % Doesn't see to work...
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+% \graphicspath{{graphics/}}
+
+\title{One-way ANOVA: From Calculations to Diagnostics %\thanks{}
+}
+\author[Marc Los Huertos]{Marc Los Huertos}
+\date{}  % if the \date{} command is left out, the current date will be used
+
+
+% \SweaveOpts{prefix.string=graphics/plot} % Created a "graphics" subdirectory to 
+
+\setsidenotefont{\color{blue}}
+% \setcaptionfont{hfont commandsi}
+% \setmarginnotefont{\color{blue}}
+% \setcitationfont{\color{gray}}
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% These commands are used to pretty-print LaTeX commands
+% command name -- adds backslash automatically
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+
+\begin{document}
+
+\maketitle% this prints the handout title, author, and date
+\begin{abstract}
+\noindent Analysis of Variance has been the dominant method to analyze treatment effects for nearly 70 years. In this handout, you will learn to do an analysis of variance by hand, then use R to do it with as a calculator, and finally using R to do the whole thing automatically. In this handout, we focus on how we partition the deviation between signal and noise and model valuation as a key step to ensure assumptions for the ANOVA models are met: Independent, Identically Distributed (or homogeneity of variance), and errors are normally distributed. We will also explore the different between planned-comparisons and post-hoc tests. Finally, we will try to understand the "expectations" in the ANOVA framework.  
+\end{abstract}
+
+%\printclassoptions
+
+% Setting up the margins, etc for R
+<<echo = false, results = hide>>=
+options(width=60)
+rm(list = ls())
+library(RODBC)
+library(xtable)
+@
+
+\section{Outcomes}
+\sidenote{I still haven't aligned the outcomes properly... any suggestions?}
+
+\begin{itemize}
+	\item Apply the general linear model to categorical predictors (factors) to complete an ANOVA with R.
+	\item Be able to describe the logic of ANOVA graphically and in words.
+	\item Understand the use of the F statistics.
+	\item Manually solve sum of squares to replicate R's ANOVA table.
+	\item Apply the corrected expectations and null hypothesis.
+	\item Explain how Likelihood and Sum of Squares are used in ANOVA.
+\end{itemize}
+
+\section{Overview}
+
+Similar to the regression analysis that we have already worked in, the ANOVA uses a linear model structure. The predictors on the right side of the equation are referred to as factors. These factors will have some finite number of levels, usually more than two.  
+
+Using the linear model, the Analysis of Variance can be described symbolically as 
+
+\begin{equation}
+Y_{ij} =  \mu + \alpha_i + \epsilon_{ij}
+\end{equation}
+
+where $\mu$ is the mean and $\alpha$ is the treatment effect. Since there are more than one treatment, each treatment effect is different, thus the subscript for alpha is used to represent each treatment where i is 1 to j. j in this case represents the total number of treatments.
+
+\subsection{A Plant Fitness Example}
+
+Testing the effect of climate change on plant fitness helps policy makers decide the importance and climate change on the economy. Researchers put heaters in the foothills of the Sierra Nevada Mountains to test the role of warming on plant fitness. Measuring fitness is tricky, so in this case, seed weight is used as a proxy to plant fitness and generated the following results. 
+
+<<echo=false, results=hide>>=
+ctl <- c(4.17,5.58,5.18,6.11,4.50,4.61,5.17,4.53,5.33,5.14)
+low <- c(5.81,4.17,6.41,3.59,5.87,3.83,6.03,4.89,4.32,4.69)
+medium <- c(4.41,4.17,4.61,3.59,5.81,6.83,6.03,1.89,3.32,4.69)
+high <- c(1.81,2.17,3.41,3.59,3.87,6.83,3.03,3.89,2.32,2.69)
+
+group <- gl(4,10,40, labels=c("Control","Low", "Medium", "High"))
+weight <- c(ctl, low, medium, high)
+PlantExperiment <- data.frame(Treatment=group, SeedWeight=weight)
+summary(PlantExperiment)
+@
+
+\begin{marginfigure}
+\label{fig:boxplot}
+\caption{Seed Weight as a Function of Temperature}
+\begin{center}
+% \setkeys{Gin}{width=0.75\textwidth} % LaTeX code to read the graphic file in at 75% of its original size
+
+% R code chunk that produces a graphic
+<<echo = false, fig = true>>=
+boxplot(SeedWeight~Treatment, data=PlantExperiment)
+box("figure") # Adds box around figure
+@
+
+\end{center}
+\end{marginfigure}
+
+The results of the are shown below in a standard ANOVA table format. In general, each of the columns reported in the table have meaning that you should understand at the end of this handout. First, there are the sources of variation. In this case, there is the source due the treatment and the remaining variation, which is called the residual. The next column is the degrees of freedom. This is used to estimate the variance--effectively normalize it by the number of treatments or replicates as appropriate. Determine the the degrees of freedom, and you should understand it conceptually after going through this process\sidenote{I have not yet developed a section to explain degrees of freedom, so you will have to do this on your own for now.}.  The next column is the sum of squared deviates--often referred to as the sum of squares. We will calculate these using R, so their calculation will become abundantly clear. Dividing the sum of squares by the degrees of freedom is how the mean sum of squares is calculated. These are estimates of the variances--the variance due to the treatments and the residual variance. I like to think of the former as the signal and the later as the noise. The $F_s$ is the ratio of the signal over the noise or the mean sum of squares due the treatment effect over the mean sum of squares of the residual. Using the degrees of freedom (of the numerator and the dominator) and the $F_s$ follow the F-distribution and a p-value can be derived and is shown next. The p-value suggest that we can reject the null hypothesis, which in this case is that there is not treatment effect on the seed weights. 
+
+<<label=ANOVAplant, echo=false, results=tex>>=
+print(xtable(aov(SeedWeight~Treatment, data=PlantExperiment), 
+caption = "ANOVA Table of Plant Heating Experiment", label = "tab:ANOVAplant",
+digits = c(0, 0, 2, 2, 2, 4)), hline.after=c(-1,0,0,2),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+So, now we need to figure out how we get this data!  
+
+section{One Formulations of the ANOVA Hypothesis} 
+\begin{equation}
+H_o: \mu_1 = \mu_2= \ldots = \mu_i = \mu_a (=\mu)
+\end{equation}
+
+\section{What are sum of squared deviations and how are they used?}
+
+The sum of squared deviations is popularly known as the sum of squares. Sum of squares is a method to generated estimates with that happen to have the lowest deviation and is related to likelihood. This concept permeates of inferential statistics that we really need to explore it with some detail. 
+
+Conceptually, we calculate the variation as a total sum of squares. 
+\begin{equation}
+SS_{Total} = \sum_{i=1}^a \sum_{j=1}^n (X_{ij}-\overline{X})^2
+\end{equation}
+
+With the addition and subtraction (thus no net difference) of the $X_i$ term, we can write
+
+\begin{equation}
+SS_{Total} = \sum_{i=1}^a \sum_{j=1}^n [(X_{ij}- \overline{X}_i) + (\overline{X}_i + \overline{X})]^2
+\end{equation}
+
+With the use of the following expansion method, where $(r+s)^2 = 2r^2 + rs + s^2$, we obtain
+
+\begin{equation}
+SS_{Total} = \sum_{i=1}^a 
+\sum_{j=1}^n (X_{ij}- \overline{X}_i)^2 + \sum_{j=1}^n (\overline{X}_i - \overline{X})^2 + 2 \sum_{j=1}^n (X_{ij}- \overline{X}_i)(\overline{X}_i - \overline{X})
+\end{equation}
+
+The first term is with variation within the treatments. The second term is the variation among the treatments. Before we get too far ahead of ourselves, let's do some calculations of these based on the following dataset. 
+
+
+\section{Calculating Sum Squared Deviations Manually}
+
+To get a better sense of how to calculate the sum of squares, we'll use R to create a data frame that can be used to calculate the sum of squares.
+
+First, let's create dataset with three treatments, called "A", "B", and "C" from a random normal distribution. For each treatment, there are 10 samples with a mean of 6, 8, 9, respectively. The dependent data we'll call the "response". The set.seed() function guarantees that you get the same set of random numbers that I used. Finally, we create a column "Replicate" to keep track of how many samples were collected from each treatment, which becomes important later on in our work.tees that you get the same set of random numbers that I used. Finally, we create a column "Replicate" to keep track of how many samples were collected from each treatment, which becomes important later on in our work.
+
+<<label=createdata, echo=true, results=hide>>=
+# Two treatment dataset
+set.seed(4)
+treatA <- rnorm(10,6,2)
+treatB <- rnorm(10,8,2)
+treatC <- rnorm(10,9,2)
+
+dataset<-data.frame(Treatment=c(rep("A", 10), rep("B", 10), rep("C", 10)), Replicate=c(rep(1:10,3)), Response=c(treatA, treatB, treatC))
+@
+
+To begin the analysis, we need to partition the variation. What does this mean? Variance can be estimated using the sum of squared deviations. 
+
+In a table format, the data make an easy format to view.
+
+<<label=dataset.tab, echo=false, results=tex>>=
+dataset.tab <- reshape(data=dataset, v.names=NULL, idvar="Replicate", direction="wide", timevar="Treatment")
+print(xtable(dataset.tab, 
+caption = "Mock Dataset", label = "tab:dataset",
+digits = c(0, 0, 2, 2, 2)), hline.after=c(-1,0,0,10),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+\subsection{Calculating Total Sum of Squares}
+
+First, we can calculate the total sum of squared deviates (i.e. sum of squares)
+ 
+<<label=partitioning, echo=false, results=tex>>=
+dataset$mu = mean(dataset$Response); mean(dataset$Response) #Grand mean=8.64
+SS_total = sum((dataset$Response - dataset$mu)^2); SS_total
+@
+
+\subsection{Partitioning the Sum of Squares -- Within Treatments}
+
+Next let's partition the total sum of squares. We need to separate the deviation due to the treatments and due to the deviation from each observation. Next we calculate the deviates between the observations and the treatment means, which is called the within group deviation, where we subset the data for each treatment calculation. \sidenote{Different statisticians have different symbols of representing these values, for our purposes, we'll use $\overline{X}$ to symbolize the grand mean and $\overline{X}_i$ as each treatment mean where $i$ represents which treatment level}. First, we'll calculate the for the first term, the sum of squares within treatments.
+
+\begin{equation}
+SS_{within} = \sum_{i=1}^a \sum_{j=1}^n (X_{ij}- \overline{X}_i)^2 
+\end{equation}
+
+In words, for each treatment, we subtract grand mean from the treatment mean. In R, we need to calculate the treatment means, which can be done fairly easy with a "recursive loop". Recursive loops are tough to get used to, but R geeks say they are the greatest thing since computer loops, superior because they require less processing time. 
+
+We use the \texttt{tapply()}, with the following syntax\sidenote{Did you look at the help for tapply?  Every time you see a new function, you should 1) Look at the help file so you can begin to learn how these functions are described and 2)copy and paste the examples at the bottom so you can see what the function does, especially if you find the help file baffling, which is often the case.}
+
+\texttt{tapply()} allows us to apply a function to separate groups of data, in this case the treatments. To view the arguments \texttt{tapply()} expects, we can use the arg() function. 
+
+<<label=mean.treat, echo=true, results=hide>>=
+args(tapply)
+@
+
+To create an object of means, a mean for each treatment use the following command
+<<echo=true, results=hide>>=
+treat.mean <- tapply(dataset$Response,dataset$Treatment, mean)
+@
+
+Finally, we can then parse out each of the three mean and create a new variable in the dataset with each treatment mean. 
+
+<<label=adding_treat.mean, echo=true, results=hide>>=
+dataset$treat.mean[dataset$Treatment=="A"] <- treat.mean["A"]
+dataset$treat.mean[dataset$Treatment=="B"] <- treat.mean["B"]
+dataset$treat.mean[dataset$Treatment=="C"] <- treat.mean["C"]
+@
+
+To calculate the deviates we subtract the grand mean from the treatment mean, again creating a new column in the data frame. This is often call the deviation among treatments. 
+
+<<label=dev.within, echo=true, results=hide>>=
+dataset$dev.within <- dataset$Response - dataset$treat.mean
+@
+
+<<label=SS.among, echo=true, results=hide>>=
+SS_within = sum((dataset$dev.within)^2)
+@
+
+And the result for sum of squares among treatment is \Sexpr{round(SS_within, 2)}.
+
+\subsection{Partitioning Sum of Squares -- Among Treatments}
+
+Next, we can calculate the sum of squared deviates among treatments, i.e. sum of squares within. First, we calculate deviation between the treatment mean ($\bar{X_{i}}$) and the grand mean ($\bar{X}$).
+
+\begin{equation}
+SS_{among} = \sum_{j=1}^n (\overline{X}_i - \overline{X})^2)
+\end{equation}
+
+We then square and sum these values to calculate the sum of squares among 
+
+<<label=dev.among, echo=true, results=hide>>=
+dataset$dev.among <- dataset$treat.mean-dataset$mu
+@
+
+<<label=SS.among2, echo=true, results=hide>>=
+SS_among = sum((dataset$dev.among)^2)
+@
+
+And the result for sum of squares among treatment is \Sexpr{round(SS_among, 2)}.
+
+Before we go any further, let's talk about what partitioning variation means by looking at the data frame. Let's add all the deviations up in our data frame and see what we get.\sidenote{I created a random sample to query a part of the data frame that happened to include all of the treatments to see if the answers are reliable.}
+
+<<label=recomposed, echo=true, results=hide>>=
+dataset$sum<-dataset$mu+dataset$dev.among+dataset$dev.within
+set.seed(123)
+subset<- sort(sample(1:30, 6))
+dataset[subset,c(1,3, 5:8)]
+@
+
+<<label=recomposed.table, echo=false, results=tex>>=
+print(xtable(dataset[subset,c(1,3, 5:8)], 
+caption = "Recomposed Response from Deviates", label = "tab:Recomposed.table",
+digits = c(0, 0, 2, 2, 2, 2, 2)), hline.after=c(-1,0,0,6),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+
+\subsection{Partitioning Sum of Squares -- The Element that Cancels Out}
+
+We have identified two partitioned elements with the total sum of squares. The last term actually cancels out, but let's do the math and prove it to ourselves.
+
+\begin{equation}
+SS_{third_term} = 2 \sum_{j=1}^n (X_{ij}- \overline{X}_i)(\overline{X}_i - \overline{X})
+\end{equation}
+
+<<label=dev.thirdterm, echo=true, results=tex>>=
+dataset$dev.thirdterm <- dataset$dev.within * dataset$dev.among
+2*sum(round(dataset$dev.thirdterm,1))
+@
+
+Yip \ldots The term cancels out -- so we only need the two terms: Sum of Squares within ($SS_{within}$) and Sum of Squares among ($SS_{among}$) treatments. So, now let's confirm that these add up to the Total Sum of Squares.
+
+<< label=SS.table2, echo=true, results=tex >>=
+## Demonstrate data.frame
+SS_table <- xtable(cbind(SS_among, SS_within, SS_total))
+digits(SS_table)[c(1,2)] <- 2
+print(SS_table)
+@
+
+\subsection{The Linear Model and Sum of Squares}
+
+For the linear model, we create a model that links the observations to their average and the the error.
+
+\begin{equation}
+X_{ij} =  \mu_i + \epsilon_{ij}
+\end{equation}
+
+We can expand the linear equation adding the treatment effect, $A_i$ into the linear model.
+
+\begin{equation}\label{eq:linear1}
+X_{ij} =  \mu + A_i + \epsilon_{ij}
+\end{equation}
+
+Using the equations above, we can then define the null hypothesis as 
+\begin{equation}
+H_o: A_1 = A_2= \ldots = A_i = A_a = 0
+\end{equation}
+
+To calculate each treatment effect ($A_i$), we might use the following the equation 
+
+\begin{equation}\label{eq:linear2}
+\bar{X_{i}} = \sum_{i=1}^{n_i}X_{ij}/n_i = \mu + A_i + \overline{\epsilon_i}
+\end{equation}
+
+Following the logic, we can calculate the overall mean using,
+
+\begin{equation}
+\bar{X} = \sum_{i=1}^{a} \sum_{j=1}^{n_i}X_{ij}/\sum_{i=1}^{a}n_{i}= \mu + \overline{A} + \overline{\epsilon}
+\end{equation}
+
+Now using these two equations, we can return to our Sum of Squares within treatments and substitute equation \ref{eq:linear1} and \ref{eq:linear2} and let's see what happens...
+
+\begin{equation}
+SS_{within} = \sum_{i=1}^a \sum_{j=1}^n (X_{ij}- \bar{X}_i)^2 = \sum_{i=1}^a \sum_{j=1}^n ((\mu + A_i + \epsilon_{ij})+(\mu + A_i + \overline{\epsilon}_i))^2 = \sum_{i=1}^a \sum_{j=1}^n(\epsilon_{ij} - \overline{\epsilon}_i)^2
+\end{equation}
+
+Using this equation, we can then estimate $\sigma^2_i$, with $s^2_i$ for each treatment
+
+\begin{equation}
+s_i^2 = \frac{\sum_{j=1}^n (X_{ij} - \overline{X}_i)^2}{(n-1)} = \frac{\sum_{j=1}^n (\epsilon_{ij} - \overline{\epsilon}_i)^2}{(n-1)}
+\end{equation}
+
+so, now
+
+\begin{equation}
+\sum_{j=1}^n \epsilon_{ij} - \overline{\epsilon}_i)^2 = (n-1)s^2_i
+\end{equation}
+
+So, within treatments we can estimate 
+
+\begin{equation}
+\sum_{i=1}^a (n-1)\sigma^2_i
+\end{equation}
+
+with 
+
+\begin{equation}
+\sum_{i=1}^a (n-1)s^2_i
+\end{equation}
+
+\paragraph{Calculating the among samples} is a bit more complicated. It might take a few readings, besides this one to get it. But in the end, thankfully, try to get the concept even if the math baffles you. 
+
+We'll start with a similar approach as before
+
+\begin{equation}
+\sum_{i=1}^a \sum_{j=1}^n (\overline{X}_{i} - \overline{X})^2 = \sum_{i=1}^a \sum_{j=1}^n ((\mu + A_i + \overline{\epsilon}_{i})+(\mu + \overline{A} + \overline{\epsilon}))^2 
+= \sum_{i=1}^a \sum_{j=1}^n (A_i - \overline{A}_i)(\overline{\epsilon_{i}} - \overline{\epsilon})^2
+\end{equation}
+
+We can expand this to
+
+\begin{equation}
+\sum_{i=1}^a \sum_{j=1}^n(A_{i}- \overline{A})^2 + \sum_{i=1}^a \sum_{j=1}^n (\overline{\epsilon}_i - \overline{\epsilon})^2 + 2\sum_{i=1}^a \sum_{j=1}^n (A_{i}- \overline{A})(\overline{\epsilon}_i - \overline{\epsilon})
+\end{equation}
+
+Just as before the third term cancels, with an important caveat. The samples must be independent, thus uncorrelated, then the term equals zero and we are left with
+
+\begin{equation}
+\sum_{i=1}^a \sum_{j=1}^n (A_{i}- \overline{A})^2 + \sum_{i=1}^a \sum_{j=1}^n (\overline{\epsilon}_i - \overline{\epsilon})^2
+\end{equation}
+
+Next we can use the second term to calculate variance of a set of means of sample is
+
+\begin{equation}
+\sum_{i=1}^a (\overline{X}_i - \overline{X})^2/(a-1)
+\end{equation}
+
+as an estimate of $\sigma^2/n$.
+
+And from we can estimate $\sigma^2$ with 
+
+\begin{equation}
+n \sum_{i=1}^a (\overline{X}_i - \overline{X})^2/(a-1)
+\end{equation}
+
+which is the same
+
+\begin{equation}
+\sum_{i=1}^a \sum_{j=1}^n (\overline{X}_i - \overline{X})^2/(a-1)
+\end{equation}
+
+Provided the sample means are normally distributed and variances are equally distributed we can estimate $\sigma_{\epsilon}$ with
+
+\begin{equation}
+\sum_{i=1}^a \sum_{j=1}^n (\overline{\epsilon}_i - \overline{\epsilon})^2/(a-1)
+\end{equation}
+
+and 
+
+\begin{equation}
+\sum_{i=1}^a \sum_{j=1}^n (\overline{\epsilon}_i - \overline{\epsilon})^2
+\end{equation}
+
+estimates $(a-1)\sigma_{\epsilon}$.
+
+\subsection{Calculating the Degrees of Freedom}
+
+Using the ANOVA framework, calculating the degrees of freedom is straightforward and important. In particular, a mis-specified model will show the incorrect degrees of freedom and knowing how to identify this is important. 
+
+First the Total Sum of Squares is estimated using $\sum_{i=1}^n\sum_{j=1}^a (X_{ij} - \overline{X})^2$ we use one degree of freedom for $\underline{X}$ leaving an-1 degrees of freedom. For the Sum of Squares within, one degree of freedom is used to specify the $\overline{X}_i)$, thus the degrees of freedom are $a-1$.   
+
+
+Mathematically, it is an unscaled, or unadjusted measure of dispersion (also called variability). When scaled for the number of degrees of freedom, it estimates the variance, or spread of the observations about their mean value.
+
+The distance from any point in a collection of data, to the mean of the data, is the deviation. This can be written as $Y_i - \overline{Y}$, where $Y_i$ is the i-th data point, and $\overline{Y}$ is the estimate of the mean. If all such deviations are squared, then summed, as in $\sum_{i=1}^n\left(Y_i-\overline{Y}\,\right)^2$, we have the "sum of squares" for these data.
+
+When more data is added to the collection the sum of squares will increase, except in unlikely cases such as the new data being equal to the mean. So usually, the sum of squares will grow with the size of the data collection. That is a manifestation of the fact that it is unscaled.
+
+In many cases, the number of degrees of freedom is simply the number of data in the collection, minus one. We write this as n - 1, where n is the number of data.
+
+Scaling (also known as normalizing) means adjusting the sum of squares so that it does not grow as the size of the data collection grows. This is important when comparisons are made with different sample sizes. If the sum of squares was not normalized, its value would always be larger for the sample of 100 people than for the sample of 20 people. To scale the sum of squares, we divide it by the degrees of freedom, i.e., calculate the sum of squares per degree of freedom, or variance. Standard deviation, in turn, is the square root of the variance.
+
+\paragraph{How are Sum Squared Deviations Used?}
+
+Below is the formula to partition these two types of deviance
+
+\begin{equation}
+Y_{ij}= \overline{Y} + (\overline{Y}_i - \overline{Y}) + (\overline{Y}_{ij} - \overline{Y}_i)
+\end{equation}
+
+Let's calculate the grand mean using this formula
+
+\begin{equation}
+\overline{Y}= \sum_{i=1}^n\left(X_i)\right(n)
+\end{equation}
+
+We plug the mean into the dataset with this command
+  
+<<echo=false, results=tex>>=
+(dataset$mu = mean(dataset$Response)) #Grand mean=8.64
+@
+
+The first set of deviates describe the treatment effect. So for each treatment there will be a different value and we'll calculate these deviates using the following formula.  
+
+\begin{equation}
+\overline{Y}_i-\overline{Y}
+\end{equation}
+
+In words, for each treatment, we subtract grand mean from the treatment mean. In R, we need to calculate the treatment means, which can be done fairly easy with a "recursive loop". Recursive loops are tough to get used to, but R geeks say they are the greatest thing since computer loops, superior because they require less processing time. 
+
+We use the \texttt{tapply()}, with the following syntax\sidenote{Did you look at the help for tapply?  Every time you see a new function, you should 1) Look at the help file so you can begin to learn how these functions are described and 2)copy and paste the examples at the bottom so you can see what the function does, especially if you find the help file baffling, which is often the case.}
+
+\texttt{tapply()} allows us to apply a function to separate groups of data, in this case the treatments. To view the arguments \texttt{tapply()} expects, we can use the arg() function. 
+
+<<label=mean.treat2, echo=true, results=hide>>=
+args(tapply)
+@
+
+To create an object of means, a mean for each treatment use the following command
+<<echo=true, results=hide>>=
+mean.treat <- tapply(dataset$Response,dataset$Treatment, mean)
+@
+
+Finally, we can then parse out each of the three mean and create a new variable in the dataset with each treatment mean. 
+
+<<label=mean.treat3, echo=true, results=hide>>=
+dataset$mean.treat[dataset$Treatment=="A"] <- mean.treat["A"]
+dataset$mean.treat[dataset$Treatment=="B"] <- mean.treat["B"]
+dataset$mean.treat[dataset$Treatment=="C"] <- mean.treat["C"]
+@
+
+To calculate the deviates we subtract the grand mean from the treatment mean, again creating a new column in the data frame. This is often call the deviation among treatments. 
+
+<<label=dev.among2, echo=true, results=hide>>=
+dataset$dev.among <- dataset$mean.treat-dataset$mu
+@
+
+Next we calculate the deviates between the observations and the treatment means, which is called the within group deviation, where we subset the data for each treatment calculation.  
+
+<<label=dev.within2, echo=false, results=tex>>=
+dataset$dev.within[dataset$Treatment=="A"] <- dataset$Response[dataset$Treatment=="A"]-mean.treat["A"]
+dataset$dev.within[dataset$Treatment=="B"] <- dataset$Response[dataset$Treatment=="B"]-mean.treat["B"]
+dataset$dev.within[dataset$Treatment=="C"] <- dataset$Response[dataset$Treatment=="C"]-mean.treat["C"]
+@
+
+Before we go any further, let's talk about what partitioning variation means by looking at the data frame. Let's add all the deviations up in our data frame and see what we get.\sidenote{I created a random sample to query a part of the data frame that happened to include all of the treatments to see if the answers are reliable.}
+
+<<label=recomposed2, echo=true, results=hide>>=
+dataset$sum<-dataset$mu+dataset$dev.among+dataset$dev.within
+set.seed(123)
+subset<- sort(sample(1:30, 6))
+dataset[subset,c(1,3, 5:8)]
+@
+
+<<label=recomposed.table2, echo=false, results=tex>>=
+print(xtable(dataset[subset,c(1,3, 5:8)], 
+caption = "Recomposed Response from Deviates", label = "tab:Recomposed.table",
+digits = c(0, 0, 2, 2, 2, 2, 2)), hline.after=c(-1,0,0,6),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+Note that we have a linear model for ANOVA that partitions data by looking at how these deviations relate relative to the original linear model:
+
+\begin{equation}
+Y_{ij} =  \mu + \alpha_{i} + \epsilon_{ij}
+\end{equation}
+
+So, each observation is the result of the grand mean $\overline{Y}$ plus the treatment effect (in our case the deviation due to the treatment, aka deviation among treatments) ($\overline{Y}_i-\overline{Y}$) plus the error (or noise or deviation within treatments ($\overline{Y}_{ij}-\overline{Y}_i$). By partitioning the deviations, we can separate out the source of deviation for each observation. 
+
+There is one more important step in calculating the ANOVA. Instead of looking at the deviations, we square them. The reason is mathematically very simple--the sum of the deviations are zero\sidenote{I suggest you check this to see if it is true.}. Since the deviations are squared they are all positive, thus not zero, and this forces the values far from zero to be even farther, which turns out to be useful in developing expectations. For for the variation among groups, we can use the following formula  
+
+\begin{equation}
+\sum_{i=1}^n\left(\overline{Y}_i-\overline{Y}\,\right)^2, 
+\end{equation}
+
+and for the variation within 
+
+\Sexpr{round(1-pf(F,2,9,lower.tail=F),4)}
+
+\begin{equation}
+\sum_{i=1}^a\sum_{j=1}^n\left(Y_{ij}-\overline{Y_i}\,\right)^2
+\end{equation}
+
+In R, we can use our data frame and calculate the two squared deviations with ease
+
+<<label=squared.deviations, echo=true, results=hide>>=
+dataset$dev.within.squared <- dataset$dev.within^2
+dataset$dev.among.squared = dataset$dev.among^2
+@
+
+And finally we can sum the to vectors, which are known as the sum of squared deviates or sum of squares for short. There are the sum of squared deviates among treatments and the sum of squared deviates within treatments. 
+
+<<label=dev.squared,echo=true, results=tex>>=
+SSD.among <- sum(dataset$dev.among.squared)
+SSD.wthn <- sum(dataset$dev.within.squared)
+@
+
+<<>>=
+SSD.among
+SSD.wthn
+@ 
+
+Now, if we had more observations, we would have bigger sum of squares, so now we have to "normalize" these by dividing by the degrees of freedom. \sidenote{Kathy, would you like to figure out how to explain degrees of freedom here?} By doing this we calculate the mean of squared of the deviates. Since there are three treatments, the degrees of freedom are 3-1 = 2 and for the remainder we lose one degree by estimated the mean and we have 2 used by the treatments, so we have 30-3 = 27. Make sure you get the same numbers!
+
+<<label=meansquared, echo=false, results=tex>>=
+MSD.among <- SSD.among/(3-1)
+MSD.wthn <- SSD.wthn/(30-3)
+
+MSD.among
+MSD.wthn
+@
+
+Finally, we use these values to calculate the F ratio. But before we do, we have to understand what the F ratio signifies and what the expectations are that we are comparing as a null model.
+
+\section{Expections of ANOVA Results}
+
+The F ratio is based on a very simple concept. It is a measure of signal relative to noise. If the signal is large, then the F ratio is also large. If the noise is large then the F ratio is small. F is a ratio of signal over noise. In our case, the signal is calculated as the mean squared deviates of the treatment means from the grand mean and the noise is calculated as the mean squared treatment deviates from each response. 
+
+The "expected mean square" for the ANOVA is based on the ratio of variance associated with the signal in the numerator, or $\sigma^2 + n\sigma_{A}^2$ and the variance associated with the noise in the denominator, or $\sigma^2$. In this case, the ratio and calculations are the same, weather a fixed effects or random effects model is being test.\sidenote{Kathy, there is a section in Gotelli and Elison where this stuff is "explained" but I am pretty sure people don't get it. I'd like to flesh it out a bit....}   
+
+
+
+<<echo=true, results=tex>>=
+MSD.among/MSD.wthn
+@
+
+But what does this mean? This is a ratio of variances and as the dominator increases, the ratio approaches 1. Mathematicians have worked out this ratio as an expectation, which is called the F-distribution, in honor of R.A. Fisher. The shape of the distribution is determined by two values, the degrees of freedom of the numerator and the degrees of freedom in the dominator. As a theoretical distribution, thus various sample ratios of the variance may or may not follow the F-distribution--thus we distinguish between $F$ and $F_s$, which is the calculated statistic.
+
+\begin{figure}
+<<label=Fdistribution, echo=false, fig=true>>=	
+library(sfsmisc)
+par(las=1)
+F <- seq(0, 10, .01)
+plot(F, df(F, 1, 40), type="l", ylab="f", lwd=2, ylim=c(0,0.9))
+lines(F, df(F, 5, 25), col="brown", lwd=2)
+lines(F, df(F, 20, 10), col="orange", lwd=2)
+F1=0.22; 
+p.arrows(F1+ 0.5, df(F1, 1, 40)+ 0.1, F1+.02, df(F1, 1, 40),  size = .4, fill = 1)
+text(F1+.8,df(F1, 1, 40)+.1, "F[1,40]", pos=3)
+F2=1
+p.arrows(F2+ 0.5, df(F2, 5, 20)+ 0.1, F2+.02, df(F2, 5, 20),  size = .4, fill = "brown", col="orange")
+text(F2+.8, df(F2, 5, 20)+.1, "F[5,25]", pos=3, col="brown")
+F3=1.3
+p.arrows(F3+ 0.5, df(F3, 20, 10)+ 0.1, F3+.02, df(F3, 20, 10),  size = .4, fill = "orange", col="orange")
+text(F3+.8, df(F3, 20, 10)+.1, "F[20,10]", pos=3, col="orange")
+@
+	\caption{Various F-distributions}
+	\label{fig:VariousFDistributions}
+\end{figure}
+
+In this case, we use the pf distribution to calculate the probability associated with the area under the curve that exceeds the $F_s = MSD_{among}/MSD_{within}$
+
+<<echo=true, results=tex>>=
+pf(MSD.among/MSD.wthn,1,27, lower.tail=F)
+@
+
+So, finally, how do we do this in R? Thankfully, just like the linear model specification that we use in regression, is the same syntax we use to create an ANOVA analysis, with one minor distinction. We use the \texttt{aov()} function to build a ANOVA table in the format we expect with \texttt{summary()} or we use \texttt{lm()} and then extract the table using the \texttt{anova()} function. The differences between the results is nearly indistinguishable and in fact the \texttt{aov()} calls the \texttt{lm()} to do its calculations--the only real difference is the structure of the objects created.  For this period, we'll use \texttt{aov()}.  that we use in regression, is the same syntax we use to create an ANOVA analysis, with one minor distinction. We use the \texttt{aov()} function to build a ANOVA table in the format we expect with \texttt{summary()} or we use \texttt{lm()} and then extract the table using the \texttt{anova()} function. The differences between the results is nearly indistinquishable and in fact the \texttt{aov()} calls the \texttt{lm()} to do its calculations--the only real difference is the structure of the objects created.  For this period, we'll use \texttt{aov()}. 
+
+<<label=dataset.aov2, echo=true, results=hide>>=
+dataset.aov <- aov(Response ~ Treatment, data=dataset)
+@
+
+<<label=dataset.ANOVA, echo=false, results=tex>>=
+print(xtable(dataset.aov, 
+caption = "ANOVA Table of Mock Experiment", label = "tab:dataset.aov",
+digits = c(0, 0, 2, 2, 2, 4)), hline.after=c(-1,0,0,2),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+\section{Practice the Manual Calculation}
+
+Okay, so we have now calculated the ANOVA by hand by following this handout. Nicely done! Now, I suggest you do that same thing for the example given at the beginning of the handout, But that was for two treatments, now we want to do the same with three treatments. This time, you will do it on your own.
+
+Using the following data set, use the method we developed above to calculate the sum of squared deviates and mean sum of squared deviates and the $F_s$ and match the ANOVA table. 
+
+<<label=plantexp.tab, echo=false, results=tex>>=
+plant.mat <- matrix(PlantExperiment[,2],nrow=10,ncol=4, 
+dimnames = list(c("Rep 1", "Rep 2", "Rep 3", 
+"Rep 4", "Rep 5", "Rep 6", "Rep 7", "Rep 8", "Rep 9", "Rep 10"),
+c("Control", "Low", "Medium", "High")))
+print(xtable(plant.mat, 
+caption = "Plant Experiment Data", label = "tab:plantexperiment",
+digits = c(0, 2, 2, 2, 2)), hline.after=c(-1,0,0,10),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+
+Good luck!
+
+\section{Manual Calculation in Class}
+
+Here's the code that I used for lecture. See if you can follow along
+
+<<echo=false, results=hide >>=
+# ANOVA Introduction
+# Nov. 18, 2008, mlh
+
+# Create G & E Dataset, Table 10.1
+flowering <- data.frame(Treatment=c(rep("Unman",4), rep("Control",4),
+rep("Treat",4)), Replicate=c(rep(1:4,3)), Period=c(10,12,12,13,9,11,11,12,12,13,15,16))
+
+# help(dotplot)
+# dotchart(flowering$Period, groups=Treat)
+@
+
+The data were collected with three different types of conservation techniques to improve the flowering of a rare plant. These includes a control where nothing was done, which included the practice maintaining fire suppression. An unmanaged treatment, where fires were allowed to burn and a treatment that included intentional fires. The response was a count of the number of flowers.
+
+<<label=flowering.tab, echo=false, results=tex>>=
+flowering.tab <- reshape(data=flowering, v.names=NULL, idvar="Replicate", direction="wide", timevar="Treatment")
+print(xtable(flowering.tab, 
+caption = "Flowering Dataset (I am still trying to get the treatment labels to cooperate... another day perhaps...", label = "tab:flowering",
+digits = c(0, 0, 0, 0, 0)), hline.after=c(-1,0,0,4),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+When plotted in a boxplot, the treatments appear to influence the flowering response. 
+
+\begin{marginfigure}
+	\caption{Flowering Data Set (Gotelli and Elilison)}
+	\label{fig:FloweringDataSet}
+<<echo=false, fig=true>>=
+plot(Period~Treatment, data=flowering)
+@	
+\end{marginfigure}
+
+<<label=SSD.MSDcalcs, echo=false, results=hide>>=
+mean.grand <- mean(flowering$Period) #Grand mean
+
+# Caculate Treatment Means
+means.treat <- tapply(flowering$Period,flowering$Treatment,mean)
+
+# Among Treatment Deviates
+flowering$dev.among[flowering$Treatment=="Unman"] <- mean.grand - means.treat["Unman"]
+flowering$dev.among[flowering$Treatment=="Treat"] <- mean.grand - means.treat["Treat"]
+flowering$dev.among[flowering$Treatment=="Control"] <- mean.grand - means.treat["Control"]
+
+flowering$dev.among.squared <- flowering$dev.among^2
+
+SS_among <- sum(flowering$dev.among.squared)
+
+# Sum of Squared Deviates Within Treatments
+flowering$dev.wthn[flowering$Treatment=="Unman"] <- flowering$Period[flowering$Treatment=="Unman"]-means.treat["Unman"]
+flowering$dev.wthn[flowering$Treatment=="Control"] <- flowering$Period[flowering$Treatment=="Control"]-means.treat["Control"]
+flowering$dev.wthn[flowering$Treatment=="Treat"] <- flowering$Period[flowering$Treatment=="Treat"]-means.treat["Treat"]
+
+flowering$dev.wthn.squared <- flowering$dev.wthn^2
+
+SS_wthn <- sum(flowering$dev.wthn.squared)
+
+summary(aov(Period~Treatment, data=flowering))
+# treat$residuals
+@
+
+Here are some figures created along the way that you might check your against...
+
+\begin{marginfigure}
+<<echo=false, fig=true>>=
+par(mfrow=c(3,1), mar=c(3,3,3,1))
+stripchart(Period ~ Treatment, data=flowering, vertical=T, main="Flower Period Response")
+stripchart(dev.among ~ Treatment, data=flowering, vertical=T, main="Deviates Among the Treatments")
+stripchart(dev.wthn ~ Treatment, data=flowering, vertical=T, main="Deviates Within the Treatments")
+@
+	\caption{Flowering Data and Deviates}
+	\label{fig:FloweringDataAndDeviates}
+\end{marginfigure}
+
+
+<<echo=false, results=hide>>=
+#plot(c(1:10),pf(c(1:10),2,11, lower.tail=F), ty="l")
+# lines(c(5.11,0,5.11,2), col="red")
+@
+
+The caculated F and p-value should be as follows, \Sexpr{round(F<- (SS_among/2)/(SS_wthn/9),2)} and \Sexpr{round(1-pf(F,2,9,lower.tail=F),4)}, respectively. 
+
+These values should exactly match the ANOVA table generated by R.
+
+<<label=flowering.aov2, echo=false, results=tex>>=
+print(xtable(aov(Period~Treatment,data=flowering), 
+caption = "Flowering Dataset", label = "tab:flowering",
+digits = c(0, 0, 2, 2, 2, 4)), hline.after=c(-1,0,0,2),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+\section{ANOVA Model}
+
+Specifying the factor in R requires that the data frame recognize the value as a factor. You can check to make sure this is the case by using str(). You should see the variable associated with the factor labeled, "factor". If not, you will get incorrect results. For example, if you have integers to distinguish each factor, R would consider these continuous variables and run the model as a regression instead of an ANOVA. You should be able to tell by the degrees of freedom--with should be the number of $levels - 1$. If there are only two levels, then the degrees of freedom column will not tell you what you need to know. 
+
+For example, in the Dalgaard textbook, insulin-like growth factor (igf1) is measured relative to developmental stage (tanner). When the model is misspecified as 
+ 
+<<label=juuldata, echo=true, results=hide>>=
+# Dalgaard Example from page ??
+library(ISwR)
+anova(lm(igf1~tanner, data=juul)) #wrong!
+@
+
+<<label=flowering.aov3, echo=false, results=tex>>=
+print(xtable(anova(lm(igf1~tanner, data=juul)), 
+caption = "Flowering Dataset", label = "tab:flowering",
+digits = c(0, 0, 2, 2, 2, 4)), hline.after=c(-1,0,0,2),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+We can determine the number of levels using the \texttt{levels()} function on the appropriate vector
+
+<<label=showlevels, echo=false, results=tex>>=
+levels(juul$tanner)
+@
+
+We see there are actually 5 levels, but there is only one degrees of freedom in the ANOVA table. There are a number of ways to correct the problem. One is to create a factor in the data frame, using \texttt{factor()} function. Or a more nuanced way is to create labels with the \texttt{factor()} function, following Dalgaard.
+
+<<label=createlabels, echo=true, results=hide>>=
+juul$tanner <- factor(juul$tanner, labels=c("I","II","III","IV","V"))
+@
+
+<<label=flowering.aov, echo=false, results=tex>>=
+print(xtable(anova(lm(igf1~tanner, data=juul)), 
+caption = "Flowering Dataset", label = "tab:flowering",
+digits = c(0, 0, 2, 2, 2, 4)), hline.after=c(-1,0,0,2),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+
+\begin{verbatim}
+leaf <- read.csv(file.choose())
+names(leaf)
+anova(lm(MassLoss~Species, data=leaf))
+\end{verbatim}
+
+
+To be developed...
+
+\begin{verbatim}
+seeds <- read.csv(file.choose())
+names(seeds)
+anova(lm(Density~Treat, data=seeds))
+
+mortality <- read.csv(file.choose())
+names(mortality)
+
+fish <- data.frame(location=c(rep("A",6),rep("B",6),rep(...
+
+anova(lm(Density~Treat, data=fish))
+\end{verbatim}
+
+
+\section{Diagnostics}
+
+I am not sure if this is worth including there or creating a new handout just for diagnostics... very important... should be done before anyone thinks about p-values!
+
+\begin{figure}
+\begin{center}
+<<echo=false, fig=true>>=
+par(mfrow=c(2,2))
+plot(lm(SeedWeight~Treatment, data=PlantExperiment))
+@
+\end{center}
+\end{figure}
+
+\section{Planned Comparisons v. Post-hoc Tests}
+
+The ANOVA is designed to test whether or not the mean response is different based on the treatments. For example, if we are testing three different treatments, we test the following null hypothesis:
+
+\begin{equation}
+H_{null}: \mu_1 = \mu_2 = \mu_3
+\end{equation}
+
+Note, however, that once we reject the null hypothesis, the alternative hypothesis is quite ambiguous and can include
+
+\begin{equation}
+H_{alt1}: \mu_1 \neq \mu_2 = \mu_3
+\end{equation}
+\begin{equation}
+H_{alt2}: \mu_1 \neq \mu_2 \neq \mu_3
+\end{equation}
+\begin{equation}
+H_{alt3}: \mu_1 = \mu_2 \neq \mu_3
+\end{equation}
+
+To determine which alternative hypothesis is accepted, or better said not rejected, we need to develop a more sophisticated approach to doing an ANOVA. Specifically, we need develop different $H_{null}$ that can be tested right from the beginning. These are called planned comparisons. However, if the researcher does not know what possible outcome might be, there is another way to test the which treatments differ from each other using a post-hoc test. We will learn both. 
+
+\subsection{Planned Comparisons with a Procedural Control}
+
+The following data were collected from a stream, testing whether behavioral invertebrate drift (intentional dispersal behavior in streams) is influenced by the presence of fish. The question being asked, "Does macro invertebrate drift behavior change with fish presence?" So, to test this researchers erected exclosure cages in several different streams to test if drift would change when fish were excluded from their habitat. However, in many cases, the mer presence of a cage can influence invertebrate behavior--so researchers erected a cage that had holes large enough for fish to move in and out of them. Doing a experiment that includes a non-functional cage is called a procedural control, in drug tests there are well established rules requiring the use of placebos because it turns out that humans respond to placebos about 20-50\% of the time, depending on the drug and ailment. 
+
+So, the researchers wanted to see if there was an effect of the procedural control compared to the controls. The response variable was the mass of invertebrates captured in a drift net. This the null hypothesis to test is
+
+\begin{equation}
+H_{null 1}: \mu_{procedure control} = \mu_{control}
+\end{equation}
+
+and the alternative is
+
+\begin{equation}
+H_{alt 1}: \mu_{procedure control} \neq \mu_{control}
+\end{equation}
+
+In other words, the researchers are trying to ensure is no confounding effect of the cage on the invertebrate behavior. 
+
+Of course, the hypothesis in question is about the cages versus the controls. Given that there was a limited number of streams to sample (and get permits for), the researchers wanted to be able to combine the procedure control and control treatments (if the results were not significantly different) and test them relative to the exclosure areas. Thus their null hypothesis would be
+
+\begin{equation}
+H_{null 2}: \mu_{procedural control \& control} =  \mu_{caged}
+\end{equation}
+
+and the alternative
+
+\begin{equation}
+H_{alt 2}: \mu_{procedural control \& control} \neq  \mu_{caged}
+\end{equation}
+
+Below is a table of the results
+
+<<echo=false, results=hide>>=
+treatment=c(rep("Control",5),rep("PControl", 5), rep("Caged", 5))
+control = c(42.7,54.5,30.2,29.2,34.9)
+pcontrol = c(45.3, 49.7, 49.6, 47.3, 47.4)
+caged = c(88.1, 90.0, 69.7, 59.6, 75.9)
+
+inverts <- data.frame(Treatment=treatment,mass=c(control,pcontrol,caged))
+
+<<label=inverts.tab, echo=false, results=tex>>=
+inverts.mat <- matrix(inverts[,2],nrow=5,ncol=3, 
+dimnames = list(c("Rep 1", "Rep 2", "Rep 3", 
+"Rep 4", "Rep 5"),
+c("Control", "Procedural Control", "Caged")))
+print(xtable(inverts.mat, 
+caption = "Behavioral Drift Experiment", label = "tab:inverts",
+digits = c(0, 2, 2, 2)), hline.after=c(-1,0,0,5),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+The means appear substantially different, but it all depends on the variance--if the variance within the treatments is too high, then there will be a low F value and a non-significant result. Before we do the planned comparisons, we need to develop a design matrix or contrast matrix that will reflect our hypotheses. 
+
+<<label=default.matrix, echo=true, results=tex>>=
+contrasts(inverts$Treatment)
+@
+
+The default contrast matrix in R is called the ?? matrix and tests the first level relative to the other two. Admittedly, there is nothing obvious about the output above that tells you that this is what is being tested. \sidenote{Someday, I will flesh out the matrix notation so this can become obvious, but at this point, we haven't had time to investigate this aspect of the linear model.} One thing to note is that the order is alphabetical, which we need to follow as we define a new contrast matrix. There is a way to order the levels, but this won't help us there. First, we create a contrast between the control and procedure control with coefficients of 1 and -1. Since we are not interested in the caged level at this time, it will get a zero. For the other hypothesis, comparing the two controls and the caged, we specify the cages as 1 and procedural control and control as -0.5. The R command is a bit bit tricky, but below, we effectively replace the existing matrix. 
+
+<<label=newmatrix, echo=true, results=hide>>=
+contrasts(inverts$Treatment) <-
+cbind(C.vs.PC=c(0,1,-1),C.vs.T=c(1,-0.5,-.5))  # Correct order
+contrasts(inverts$Treatment)
+@
+
+So, now let's see what our matrix looks like to ensure we did it right. Yes, looks correct!
+
+<<label=matrix.tab, echo=false, results=tex>>=
+print(xtable(contrasts(inverts$Treatment), 
+caption = "Behavioral Drift Experiment", label = "tab:inverts",
+digits = c(0, 2, 2)), hline.after=c(-1,0,0,3),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+Now, create a linear model and extract the ANOVA table
+
+<<label=invert.aov2, echo=false, results=tex>>=
+print(xtable(summary(aov(mass ~ Treatment, data=inverts)), 
+caption = "ANOVA Behavioral Drift Experiment w/o Contrasts", label = "tab:inverts.aov",
+digits = c(0, 2, 2, 2, 2, 4)), hline.after=c(-1,0,0,2),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+Okay, but we still haven't tested our planned comparisons. All we know is that the treatments are different. It turns out that we have to use some complicated code to extract the p-values associated with our design matrix. We use a split argument, which requires a list. So, we pull out out design matrix and put it into a list and then we have a new ANOVA table.
+
+<<label=invert.aov, echo=true, results=tex>>=
+print(xtable(summary(aov(mass ~ treatment, data=inverts), split=list(treatment=list(C.vs.PC=1, C.vs.T=2))), 
+caption = "ANOVA Behavioral Drift Experiment w/o Contrasts", label = "tab:inverts.aov",
+digits = c(0, 2, 2, 2, 2, 4)), hline.after=c(-1,0,0,4),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+
+\subsection{Post-hoc Comparisons}
+
+This is often referred to as unplanned comparisons, in part because this analysis is on the exploratory side of the continuum, but there are some specific methods to penalize the researcher for exploring too much!\sidenote{I don't have the time to work on this this year! Bummer... sorry Kathy...}
+
+There are multiple types of tests.. each one has different assumptions or appropriate uses... 
+
+There are two main methods used in R, pairwise.t.test() and using the multcomp package. 
+
+<<echo=true, results=hide>>=                    
+# Unplanned Comparisons
+require(multcomp)
+
+# microcysin accumulation in Clams form different toxins
+toxin <- c(rep("CR",5),rep("RR", 5), rep("LR", 5))
+cr = c(11.8,12,10.7,9.1,12.1)
+rr = c(13.6,14.4,12.8,13,13.4)
+lr = c(9.2,9.6,8.6,8.5,9.8)
+
+clams <- data.frame(toxin=toxin,conc=c(cr,rr,lr))
+
+names(clams)
+plot.design(clams)
+
+clams.aov <- aov(conc~toxin,data=clams)
+summary(clams.aov)
+summary(lm(conc~toxin,data=clams))
+
+pairwise.t.test(clams$conc,clams$toxin, p.adjust.method = "bonf")
+
+# help(glht)
+clams.glht.dunnett <-glht(clams.aov, linfct = mcp(toxin = "Dunnett"))
+summary(clams.glht.dunnett) 
+clams.glht.tukey <-glht(clams.aov, linfct = mcp(toxin = "Tukey"))
+summary(clams.glht.tukey)
+
+
+
+par(mfrow=c(2,2))
+plot(clams.glht.dunnett)
+plot(clams.glht.tukey)
+
+# pairwise.t.test(reef$richness,reef$treatment , p.adj = "bonf")
+
+#multcompBoxplot(conc~toxin,data=clams)
+@
+
+
+\section{Power Analysis}
+
+Determine the power of an experiment is the probability associate with avoiding the type II error. \sidenote{In progress, should be written for 2011.}
+
+<<echo=true, results=hide>>=
+# Testing that a procedural control is not a confounding affect
+# Macroinvertebrate Drift and Fish Predation
+# Does macroinvertebrate drift behavior change with fish presence?
+
+treatment=c(rep("Control",5),rep("PControl", 5), rep("Caged", 5))
+control = c(42.7,54.5,30.2,29.2,34.9)
+pcontrol = c(45.3, 49.7, 49.6, 47.3, 47.4)
+caged = c(88.1, 90.0, 69.7, 59.6, 75.9)
+
+inverts <- data.frame(treatment=treatment,mass=c(control,pcontrol,caged))
+inverts
+
+plot.design(inverts)
+by(inverts$mass,treatment,mean)  # Nice alternative to aggreagate
+boxplot(mass~treatment,data=inverts)
+
+inverts.aov <- aov(mass~treatment, data=inverts)
+par(mfrow=c(2,2))
+summary(inverts.aov)
+
+length(inverts$mass)
+var(inverts$mass)
+var(by(inverts$mass,treatment,mean))
+
+# power.anova.test(groups = NULL, n = NULL, between.var = NULL, within.var = NULL, sig.level = 0.05, power = NULL)
+@
+
+\section{Conclusion}
+
+Something here...
+
+
+
+\section{Assessment}
+
+\subsection{Rotifer Consumpting Rates}
+
+Zooplankton, more specifically Rotifers, can vary in their ability to graze phytoplankton. The following  \href{http://sep.csumb.edu/class/ENVS550/s/assigns/A07_ANOVA/ZooplanktonGrazing.xls}{data} set compared three different Rotifer grazing rates. One Rotifer was place in a jar with several replicates for each species tested. The graduate student measured the density of phytoplankton after 1 day (no units reported).
+
+\begin{enumerate}
+	\item Calculate the mean and range for each treatment and create a box plot for the treatments.
+
+<<echo=false, results=hide>>=
+# filename=file.choose()
+filename="C:\\www\\ENVS 550\\s\\assigns\\A06_ANOVA\\ZooplanktonGrazing.xls"
+odbc_zoo <- odbcConnectExcel(filename)
+
+sqlTables(odbc_zoo)
+zoo <- sqlFetch(odbc_zoo, "Rotifers")
+close(odbc_zoo)
+@
+
+To generate the summary statistics, one could use summary(), but this doesn't won't give values by their treatment. Using tapply() and by() would be obvious alternatives, but I was unable to get it to work because of uneven number observations for each treatment. Bummer!
+
+So, we can do the simple way of using the mean(), min(), and max() functions. Of course combining them to create a nice table would be cool, but not required.
+
+\begin{comment}
+<<echo=true, results=tex>>=
+means <- cbind(mean(zoo$Phytoplankton[zoo$Consumer=="Filnia"]), 
+mean(zoo$Phytoplankton[zoo$Consumer=="Keratella"]),
+mean(zoo$Phytoplankton[zoo$Consumer=="Polyartbra"]))
+means
+@
+\end{comment}
+
+I admit, I prefer something that does everything at once, so I used \texttt{aggregate()}, but it is tough to figure out at first.
+
+\begin{comment}
+<<echo=true, results=tex>>=
+names(zoo)
+means <- aggregate(zoo$Phytoplankton, list(zoo$Consumer), FUN="mean"); names(means)=c("Species", "Mean")
+mins  <- aggregate(zoo$Phytoplankton, list(zoo$Consumer), FUN="min"); names(mins)=c("Speciesa", "Min")
+maxs <- aggregate(zoo$Phytoplankton, list(zoo$Consumer), FUN="max"); names(maxs)=c("Speciesb", "Max")
+
+summarystat <- cbind(means, mins, maxs); summarystat <- summarystat[,c(1,2,4,6)]
+@
+
+<<label=zoo.summary, echo=false, results=tex>>=
+print(xtable(summarystat, caption = "Summary of Rotifer Consumption Rates", label = "tab:one",
+digits = c(0, 2, 2, 2, 2)), hline.after=c(-1,0,0,3),
+table.placement = "ht", 
+caption.placement = "top")
+@
+
+
+Creating a high quality boxplot is not difficult, but it does require some effort. For example, getting the labels right in R, takes some patience and dedication in trying lots of different options. As you can see, this still has some issues.
+
+
+% Additional LaTeX code to add caption to figure
+\begin{marginfigure}
+\label{fig:boxplot.zoo}
+\caption{Attempting a publishable quality boxplot}
+%\setkeys{Gin}{width=0.75\textwidth} % LaTeX code to read the graphic file in at 75% of its original size
+% R code chunk that produces a graphic
+<<echo = false, fig = true>>=
+par(mfrow=c(1,1))
+par(las=1, mar=c(5, 4, 4, 0) + 0.1)
+boxplot(Phytoplankton~Consumer,data=zoo, ylab=expression(paste("Phytoplankton Density (cells cc-1)")), xlab="Rotifer Species", border="black", outpch=NA, col="grey", boxwex=0.5)
+@
+\end{marginfigure}
+\end{comment}
+
+\item Create a linear model and discuss if there are assumption violations by evaluating the model diagnostics. Transform the data to meet the assumption if needed.
+
+\begin{comment}
+In this exercise, we test the assumptions by looking at the diagnostic plots. Based on Figure \ref{fig:diagnostic.zoo}, there doesn't appear to be any dramatic assumption violations. We could log transform the data, and which does improve the Q-Q norm plot (both un-transformed and transformed shown), but I doubt the results will change much. But I recommend doing both analyses and I report the log transformed results below. 
+
+\begin{marginfigure}
+\label{fig:diagnostics.zoo}
+\caption{Normal QQ Diagnostic Plots for Rotifer Consumption Rates}
+<<echo=F, fig = true>>=
+zoo.aov<-aov(Phytoplankton~Consumer,data=zoo)
+par(mfrow=c(2,1))
+plot(zoo.aov, which=2)
+zoo.aov<-aov(log(Phytoplankton)~Consumer,data=zoo)
+plot(zoo.aov, which=2)
+@
+\end{marginfigure}
+\end{comment}
+
+\item Using a one-way ANOVA, determine if there is a significant difference between the means.
+
+\begin{comment}
+The one-way ANOVA calculate a p-value of 
+<<echo=F, results=tex>>=
+summary(zoo.aov)[[1]][["Pr(>F)"]][1]
+@
+where by we reject the null hypothesis there there is no difference between the means and we accept the alternate hypothesis that there is a difference between the means. 
+\end{comment}
+
+\item Create a publishable quality ANOVA table and write a one sentence summary of the results.
+
+See Table 1 \ref{tab1} to the results in an almost perfect publication table! I still need to get the units right. I had them right last week, but messed something up while editing and can't remember how I had it!
+
+<<label=tab1, echo=FALSE, results=tex>>=
+print(xtable(summary(zoo.aov), caption = "ANOVA Table of Rotifer Consumption Rates of Various Phytoplankton (log transformed concentrations)", label = "tab:one",
+digits = c(0, 0, 2, 2, 3, 4)), hline.after=c(-1,0,0,2),
+table.placement = "ht",
+caption.placement = "top")
+@
+
+\end{enumerate}
+
+\subsection{Sampling Device Bias}
+Sampling devices can vary dramatically. In particular, it is difficult to sample the organisms on the sea floor, so we can better map and manage these resources. There are a number of sampling methods and techniques. The following  \href{http://sep.csumb.edu/class/ENVS550/s/assigns/A07_ANOVA/seafloorsampling.csv}{data} were collected to develop protocols for sea floor mapping. Because different taxa might have different sampling success, separate columns were generated for each species. Thus, you should analyze each taxa separately and determine if the sampling methods could bias sea floor species richness measures.
+
+\begin{enumerate}
+\item Create a linear model and discuss if there are assumption violations by evaluating the model diagnostics. Transform the data to meet the assumption if needed.
+
+\begin{comment}
+<<echo=false, results=hide>>=
+# seafloor sampling
+# seafloor <- read.csv(file.choose())
+seafloor=read.csv("C:\\www\\ENVS 550\\s\\assigns\\A06_ANOVA\\seafloorsampling.csv")
+@
+
+Here's the top part of the imported data,
+<<echo=false, results=tex>>=
+head(seafloor)
+boxplot(worms~method, data=seafloor)
+boxplot(clams~method, data=seafloor)
+boxplot(sponge~method, data=seafloor)
+@
+
+We want to test whether or not there is a sampling bias between the methods, for each taxon. First, we created linear models and examine the diagnostic plots.
+
+<<echo=true, results=hide>>=
+worms.aov <- aov(worms~method,data=seafloor)
+worms2.aov <- aov(log(worms+.1)~method, data=seafloor)
+clams.aov <- aov(clams~method,data=seafloor)
+sponge.aov <- aov(sponge~method,data=seafloor)
+@ 
+
+The following code is used to generate the diagnostic plots.
+
+<<echo=true, results=hide>>=
+par(mfrow=c(2,2))
+plot(worms.aov)
+plot(worms2.aov) # log transformed response
+plot(clams.aov)
+plot(sponge.aov)
+@
+
+From the diagnostics (not shown), there appears to be some departure from normality and some issues with heterogeneity, but it seems to be limited to the worm data. If fact, there does not appear to be a transformation process that really solves the problem. Thus, we are left with the use of a non-parametric test, as demonstrated in class, Kruskal-Wallis test, kruskul.test()
+
+<<>>=
+worms.kruskal <- kruskal.test(worms~method, data=seafloor)
+@
+
+\end{comment}
+
+\item Using a one-way ANOVA, determine if there is a significant difference between the means.
+
+The sampling was designed to test if different benthic sampling methods would yield different population estimates. The null hypothesis is that the population densities are no different based on sampling method and the alternative is that they are different. Based on the results not shown, there was no difference the populations densities for clams based on sampling method, but there were differences for worms and sponge.
+
+\item Create a publishable quality ANOVA table, box plot (with proper labels, etc), and write a one sentence summary of the results.
+
+\begin{comment}
+There was no significant difference in the clam densities as a result of different sampling methods (Table \ref{clams}). However, population differences for worms ($\chi^{2}$ = 20.0356, df = 3, p-value = 0.00017) and sponge (Table \ref{tab:sponge}). 
+
+<<label=clams, echo=FALSE, results=tex>>=
+print(xtable(summary(clams.aov), caption = "Clam ANOVA Table", label = "tab:clam",
+digits = c(0, 0, 2, 2, 3, 4)), 
+table.placement = "ht", hline.after=c(-1,0,0,2),
+caption.placement = "top")
+@
+
+<<label=sponge, echo=FALSE, results=tex>>=
+print(xtable(summary(sponge.aov), caption = "Sponge ANOVA Table", label = "tab:sponge",
+digits = c(0, 0, 2, 2, 3, 4)), 
+table.placement = "ht", hline.after=c(-1,0,0,2),
+caption.placement = "top")
+@
+\end{comment}
+
+\item Assuming the each method varies in its amount that is destroys (i.e. under samples) organisms, which method appears to be the most representative of the sea floor.
+
+\begin{comment}
+The SCUBA method appears to be the most representative sampling method because because there is not destructive sampling. 
+\end{comment}
+
+\item Using a post hoc test, determine which method(s) might be the most accurate for all the taxa, for this question use pairwise.t.test() and the "bonf" method.
+
+\begin{comment}
+Based on the results below, there SCUBA method seems to be significantly different than most of the other methods, when there is a significant result (i.e. sponges). It is NOT appropriate to do a post-hoc test on the clam data because there was a non-significant result. I did the worm post-hoc below, however, I suspect one would need to do a non-parametric post hoc test. I have read about some boot strapping methods to do that, but I have never needed to go there. So for now, we'll stick with the t.test method with an eye towards something more specific for non-parametic example in some other eon!
+
+<<>>=
+pairwise.t.test(seafloor$worms,seafloor$method, p.adjust.method = "bonf")
+pairwise.t.test(seafloor$sponge,seafloor$method, p.adjust.method = "bonf")
+# Not appropriate to do clams, since the ANOVA generated a non-significant result.
+# pairwise.t.test(seafloor$clams,seafloor$method, p.adjust.method = "bonf")
+@
+\end{comment}
+
+\begin{figure}
+<<echo=false, fig=true>>=
+boxplot(sponge ~ method, data=seafloor, ylim=c(0,10))
+text(1:3, 4.5, "a")
+text(4, 9.5, "b")
+@
+	\caption{Sponge density as a function of Sampling method. Differing letters are significantly different ($\alpha$ = 0.05).}
+	\label{fig:Posthocfigure}
+\end{figure}
+
+\end{enumerate}
+\section{Planned Comparisons (a priori contrasts)}
+
+\subsection{Butterfly Feeding Experiment}
+
+The goal of many cage experiments with insects is to determine how growth and diet interact. In an experiment determine the role of diet on the growth of an endangered butterfly, six caterpillars were randomly assigned to each of 5 diets and fed for the same length of time. The structure of the experiment allowed for a systematic set of planned comparisons among the means, which is called an orthogonal contrast analysis. In this case, we can test specific portions of the experiment separately: where C1 = control; L1 = control plus 1 gram of ground lupine leaves; L2 = control + 2 grams of ground lupine leaves; P1 = control plus 1 gram of ground plantain leaves; and P2 = control + 2 grams of plantain leaves. Here are the types of contrasts to test: Control.vs.treatment, L versus P, feeding rates, L versus P and by feeding rate.
+
+\begin{enumerate}
+\item Import the butterfly \href{http://sep.csumb.edu/class/ENVS550/s/assigns/A07_ANOVA/butterfly.dat}{data set} 
+into R, and assign labels to each treatment, where 1 = control, 2 = L1, 3 = L2, 4 = P1, 5 = P2).
+
+\begin{comment}
+<<echo=false, results=hide>>=
+# file.choose()
+filename = "C:\\www\\ENVS 550\\s\\assigns\\A06_ANOVA\\butterfly.dat"
+import <- read.table(filename)
+@
+
+<<echo=true, results=tex>>=
+butterfly <- data.frame(diet=factor(import$V1, labels=c("control", "L1", "L2", "P1", "P2")), wt.gain=import$V2)
+names(butterfly)
+str(butterfly)
+@
+
+\end{comment}
+
+Making a publishable boxplot is very satisfying, for now, I'll just add labels--but adding gray to the boxes and putting in the points themselves can add a great deal to the plot. Perhaps, I'll write the code for that later.
+
+\begin{marginfigure}
+\caption{Butterfly growth rates as a function of dietary treatments}
+<<echo=false, fig=true>>=
+boxplot(wt.gain ~ diet, data=butterfly, xlab="Dietary Treatment", ylab="Mass Change g/time", col="gray")
+@
+\end{marginfigure}
+
+
+\item State an overall null and alternative hypothesis.
+
+\begin{comment}
+The hypothesis is that is the means are not different and the alternative hypothesis is that the means are different. 
+
+\end{comment}
+
+\item Using both the lm() function and aov() function, create linear model objects. How do the objects differ?
+
+<<echo=false, results=hide>>=
+butterfly.aov <- aov(wt.gain ~ diet, data=butterfly)
+butterfly.lm <- lm(wt.gain ~ diet, data=butterfly)
+@
+
+\begin{comment}
+The lm() function creates a linear model appropriate to regression analysis or analysis of variance to compare to a single stratum, while aov() does the same thing, but reports the results in a different way. The lm() reports parameter estimates and test the hypotheses if the parameter are significant, while the aov() reports the sum of squares and F statistics to determine if the overall model is significant in a compact ANOVA table.
+
+<<echo=true, results=tex>>=
+summary(butterfly.aov)
+summary(butterfly.lm)
+model.tables(butterfly.aov, type="means", se=T) # wow, this is cool... just found this...
+@
+
+\end{comment}                    
+
+\item Run diagnostics on the model. Are there any assumption violations that might cause concern; if so, describe them.
+
+\begin{comment}
+The data appear to meet model assumptions quite well. 
+
+\begin{figure*}
+\caption{Diagnostic Plots of Butterfly Data}
+\label{fig:diagnostics.butterfly}
+<<echo=false, fig=true >>=
+par(mfrow=c(2,2))
+plot(butterfly.aov)
+@
+\end{figure*}
+
+\end{comment}
+
+\item Create a ANOVA table and describe the results.
+
+\begin{comment}
+
+Table \ref{tab:butterfly.aov} demonstrates that the means are significantly different.
+
+<<label=butterfly.aov, echo=FALSE, results=tex>>=
+print(xtable(summary(butterfly.aov), caption = "ANOVA Table of Bufferfly Feeding Experiment", label = "tab:butterfly.aov",
+digits = c(0, 0, 2, 2, 3, 4)), 
+table.placement = "ht", hline.after=c(-1,0,0,2),
+caption.placement = "top")
+@
+
+\end{comment}
+
+\item Using the structure of the experiment, we can generate several null hypotheses, e.g. treatment versus control, diet L versus diet P, diet amount (grams of leaves), diet L versus P by amount. This last one is tricky. Your a coefficient structure should look like this: 0, 1,- 1, -1, 1. This forces the lumping of L1 and P2 against L2 and P1. Not very satisfying! Why am I making you do this? Because this should beg the question, ``why are we not doing a two-way ANOVA?''
+
+A two-way ANOVA would be an appropriate way of analyzing these data and probably simpler. It might be more powerful too. To determine this, one could run a simulation of the data to develop a this analysis. Nevertheless, the planned contrast provide a straightforward way to test hypotheses in a very simple experimental design.
+
+\item Use the contrast() function to inquire as the default contrasts.
+
+\begin{comment}
+This is the default "design matrix" in R, the so-called treatment contrast.
+
+<<echo=true, results=tex>>=
+contrasts(butterfly$diet)
+@
+
+\end{comment}
+
+\item Generate a set of new contrasts to test the various hypotheses.
+
+Below are two methods to develop contrasts. One subtly that is not clear from the literature is that the magnitude of each row should be similar, since these are effectively "weighing" the effect size. I have seen no explicit directions on the size requirement between contrasts, but I have seen when I don't make then on the same magnitude the results change, which I find quite disconcerting. I will continue to read about these methods and see if I can find a more cogent explanation.
+
+\begin{comment}
+<<echo=true, results=hide>>=
+contrasts(butterfly$diet) <-
+  cbind(control.vs.treatment=c(-4,1,1,1,1),
+        L.vs.P              =c(0,1,1,-1,-1),
+        amount              =c(0,1,-1,1,-1),
+        A.vs.B.by.amount    =c(0,1,-1,-1,1))
+contrasts(butterfly$diet)
+
+tapply(butterfly$wt.gain, butterfly$diet, mean) %*% contrasts(butterfly$diet)
+                     
+# what if you change the size of the contrasts?
+contrasts(butterfly$diet) <-
+  cbind(control.vs.treatment=c(-1, 0.25, 0.25, 0.25, 0.25),
+        L.vs.P              =c(0, 0.5, 0.5, -0.5, -0.5),
+        amount              =c(0, 0.5, -0.5, 0.5, -0.5),
+        A.vs.B.by.amount    =c(0, 0.5, -0.5, -0.5, 0.5))
+contrasts(butterfly$diet)
+
+tapply(butterfly$wt.gain, butterfly$diet, mean) %*% contrasts(butterfly$diet)
+@
+
+\end{comment}                    
+
+\item Compare the contrast matrix to the more diverse set of hypotheses. Describe how the hypotheses relate to the matrix. (I suggest you do some work to figure out what contrasts mean in the ANOVA format). In particular, the last contrast statement is difficult to interpret based on the matrix coefficients.
+
+\begin{comment}
+<<echo=true, results=hide>>=
+butterfly.contrasts <-contrasts(butterfly$diet)
+@
+
+<<label=butterfly.contrasts, echo=FALSE, results=tex>>=
+print(xtable(butterfly.contrasts, caption = "Bufferfly Contrast Matrix", label = "tab:butterfly.contrasts",
+digits = c(0, 2, 2, 2, 2)), 
+table.placement = "ht", hline.after=c(-1,0,0,5),
+caption.placement = "top")
+@
+
+\end{comment}
+
+\item Use the str() function and describe how the butterfly data set has changed with the contrast changes.
+
+\begin{comment}
+<<echo=true, results=hide>>=
+str(butterfly)
+@
+
+Some new category of attributes, lists of 2, with names of the contrasts, with contrasts too. Getting at the so-called attributes is tricky. But luckily there is a function! It is the \texttt{attr()} function. The syntax is pretty straightforward...Try it!
+
+<<echo=true, results=hide>>=
+attr(butterfly$diet, "contrasts")
+@
+
+\item Using the aov() function, create an analysis of variance model with the new data frame using the same ANOVA syntax to test the overall treatment means; have the results changed?
+
+No, the results are exactly the same.
+
+<<echo=true, results=hide>>=
+butterfly2.aov <- aov(wt.gain ~ diet, data=butterfly)
+summary(butterfly2.aov)
+@
+
+\end{comment}
+
+\item Using the split() function, define the contrasts in the summary statement to test each of the sub-hypotheses.
+
+\begin{comment}
+<<echo=true, results=hide>>=
+summary(butterfly2.aov,
+        split=list(diet=list(
+                     control.vs.treatment=1,
+                     L.vs.P=2,
+                     amount=3,
+                     L.vs.P.by.amount=4)))
+@                     
+ 
+\end{comment}
+                    
+\item Create a new publishable quality ANOVA table and describe the results.
+
+<<label=butterfly2.aov, echo=FALSE, results=tex>>=
+print(xtable(summary(butterfly2.aov, 
+        split=list(diet=list(
+                     control.vs.treatment=1,
+                     L.vs.P=2,
+                     amount=3,
+                     L.vs.P.by.amount=4))), caption = "ANOVA Table of Bufferfly Feeding Experiment with Planned Comparisons", label = "tab:one",
+digits = c(0, 0, 2, 2, 3, 4)), 
+table.placement = "ht", hline.after=c(-1,0,0,6),
+caption.placement = "top")
+@
+
+\subsection{Nitrogen Removal in Wetlands}
+Nitrogen removal in wetlands can depend on numerous factors. One important factor is the amount of available sugar to supply a carbon source for heterotrophic bacteria that convert nitrate to nitrogen gas. In this experiment, we tested various sugars amendments to microcosms and measured nitrogen concentrations after one day.\sidenote{Kathy, in this section, I left all the answer in here, now we need to explain the answer to the class in a coherent way... The force is with you, should  you chose to use it!}
+
+
+The 
+<<echo=false, results=hide>>=
+library(RODBC)
+# file.choose()
+filename="C:\\www\\ENVS 550\\s\\assigns\\A06_ANOVA\\Sugars.xls"
+odbc_sugar <- odbcConnectExcel(filename)
+
+sqlTables(odbc_sugar)
+sugar <- sqlFetch(odbc_sugar, "sugars", max=10)
+names(sugar)<-c("obs","control","glucose","fructose","mix","sucrose")
+close(odbc_sugar)
+head(sugar)
+# str(sugar)
+# transpose the data...always a drag!
+# help(reshape)
+sugar2 <- reshape(sugar,idvar="obs", varying=c("control","glucose","fructose","mix","sucrose"), times=c("control","glucose","fructose","mix","sucrose"), v.names="growth", direction="long")
+
+sugar3<-data.frame(obs=sugar2$obs,treat=factor(sugar2$time),growth=sugar2$growth)
+sugar3[1:13,] # Why 13?
+@
+
+\begin{enumerate}
+\item Based on these \href{http://sep.csumb.edu/class/ENVS550/s/assigns/A06_ANOVA/Sugars.xls}{data} , determine create a linear model and test the validity of the assumptions. Transform if necessary.
+
+<<echo=true, results=tex>>=
+sugar.aov <- aov(growth~treat,data=sugar3)
+par(mfrow=c(2,2))
+plot(sugar.aov)
+sugar.aov
+model.tables(sugar.aov)
+@
+
+\item Develop three planned comparison and the associated matrix to test the following:
+
+\begin{itemize}
+	\item Compare the control with the four sugar treatments
+	\item Compare the mixed sugar with the pure sugar treatments
+	\item Compare among the three pure sugars (This last one is tricky, it will take you some time to figure this out; good luck!).
+\end{itemize}
+ 
+<<echo=true, results=hide>>=
+contrasts(sugar3$treat)
+
+contrasts(sugar3$treat) <-
+cbind(C.vs.sugars=c(4,-1,-1,-1,-1),
+Mix.vs.Pure=c(0,1,1,-3,1),
+sugars1=c(0,1,-1,0,0),
+sugars2=c(0,1,1,0,-2))
+sugar3.contrasts<-contrasts(sugar3$treat)
+
+tapply(sugar3$growth, sugar3$treat, mean) %*% contrasts(sugar3$treat)
+@
+
+Let's see what the matrix looks like now...
+
+<<echo=false, results=tex>>=
+print(xtable(sugar3.contrasts, caption = "Nitrogen Removal Contrast Matrix", label = "tab:nitrogen.contrasts",
+digits = c(0, 2, 2, 2, 2)), 
+table.placement = "ht", hline.after=c(-1,0,0,5),
+caption.placement = "top")
+@
+
+\item Determine if which of the comparisons were significantly different.
+
+Now the ANOVA statement looks pretty much the same until you get to the last statement. Then suddenly you use two columns of the matrix simultaneously. It took me several hours to figure this out and the best I can come up with is that you are creating a matrix the compares several treatments simultaneously that allows for each combination for the analysis. 
+
+<<echo=true, results=hide>>=
+sugar2.aov <- aov(growth ~ treat, data=sugar3)
+# str(sugar2.aov)
+summary(sugar2.aov)
+summary(sugar2.aov, split=list(treat=list(C.vs.sugars=1, Mix.vs.Pure=2, Among.pure.sugars=3:4)))
+
+@
+
+\item Create a new publishable quality ANOVA table and describe the results.
+
+<<label=sugar2.aov, echo=FALSE, results=tex>>=
+print(xtable(summary(sugar2.aov, split=list(treat=list(C.vs.sugars=1, Mix.vs.Pure=2, Among.pure.sugars=3:4))), caption = "ANOVA Table of Nitrogen Removal Treatments", label = "tab:one",
+digits = c(0, 0, 2, 2, 3, 4)), 
+table.placement = "ht", hline.after=c(-1,0,0,5),
+caption.placement = "top")
+@
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+
+\FloatBarrier 
+\begin{fullwidth}
+% \renewcommand{\bibfont}{\small}
+\bibliography{LosHuertos_Complete_100420}
+\bibliographystyle{cbe}
+\end{fullwidth}
+
+\end{document}
+
+
+

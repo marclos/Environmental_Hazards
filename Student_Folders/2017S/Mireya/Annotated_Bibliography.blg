@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: Annotated_Bibliography.aux
+The style file: plainnat.bst
+Database file #1: Pb_literature.bib
+You've used 7 entries,
+            2774 wiz_defined-function locations,
+            663 strings with 6885 characters,
+and the built_in function-call counts, 3826 in all, are:
+= -- 374
+> -- 222
+< -- 4
++ -- 76
+- -- 69
+* -- 331
+:= -- 619
+add.period$ -- 40
+call.type$ -- 7
+change.case$ -- 36
+chr.to.int$ -- 7
+cite$ -- 14
+duplicate$ -- 148
+empty$ -- 280
+format.name$ -- 76
+if$ -- 795
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 8
+newline$ -- 61
+num.names$ -- 28
+pop$ -- 66
+preamble$ -- 1
+purify$ -- 30
+quote$ -- 0
+skip$ -- 106
+stack$ -- 0
+substring$ -- 166
+swap$ -- 17
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 0
+while$ -- 34
+width$ -- 0
+write$ -- 136

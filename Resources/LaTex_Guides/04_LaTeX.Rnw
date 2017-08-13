@@ -1,0 +1,21 @@
+\documentclass{article}
+
+\author{my name}
+\title{my title}
+
+\begin{document}
+
+\maketitle
+
+\section{First Section}
+
+This is my article text\ldots
+
+\subsection{First Subsection}
+
+\subsection{Second Subsection}
+
+\section{section}
+
+
+\end{document}

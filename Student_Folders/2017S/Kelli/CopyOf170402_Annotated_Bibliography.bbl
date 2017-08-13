@@ -1,0 +1,52 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Blais(1996)]{blais1996using}
+Jules~M Blais.
+\newblock Using isotopic tracers in lake sediments to assess atmospheric
+  transport of lead in eastern canada.
+\newblock \emph{Water, Air, \& Soil Pollution}, 92\penalty0 (3):\penalty0
+  329--342, 1996.
+
+\bibitem[Cohan(2010)]{cohan2010potential}
+Alexander Cohan.
+\newblock \emph{Potential for atmospheric driven lead paint degradation in the
+  South Coast Air Basin of California}.
+\newblock University of California, Irvine, 2010.
+
+\bibitem[Cortizas et~al.(2002)Cortizas, Garc{\i}a-Rodeja, Pombal, Mu{\~n}oz,
+  Weiss, and Cheburkin]{cortizas2002atmospheric}
+A~Mart{\i}nez Cortizas, E~Garc{\i}a-Rodeja, X~Pontevedra Pombal, JC~N{\'o}voa
+  Mu{\~n}oz, Dominik Weiss, and Andriy Cheburkin.
+\newblock Atmospheric pb deposition in spain during the last 4600 years
+  recorded by two ombrotrophic peat bogs and implications for the use of peat
+  as archive.
+\newblock \emph{Science of the Total Environment}, 292\penalty0 (1):\penalty0
+  33--44, 2002.
+
+\bibitem[Fisher et~al.(1996)Fisher, Teyssi{\'e}, Fowler, and
+  Wang]{fisher1996accumulation}
+Nicholas~S Fisher, Jean-Louis Teyssi{\'e}, Scott~W Fowler, and Wen-Xiong Wang.
+\newblock Accumulation and retention of metals in mussels from food and water:
+  a comparison under field and laboratory conditions.
+\newblock \emph{Environmental science \& technology}, 30\penalty0
+  (11):\penalty0 3232--3242, 1996.
+
+\bibitem[Sharma and Dubey(2005)]{sharma2005lead}
+Pallavi Sharma and Rama~Shanker Dubey.
+\newblock Lead toxicity in plants.
+\newblock \emph{Brazilian journal of plant physiology}, 17\penalty0
+  (1):\penalty0 35--52, 2005.
+
+\bibitem[Weber et~al.(1997)Weber, Dingel, Panos, and
+  Steinpreis]{weber1997alterations}
+Daniel~N Weber, Wendy~M Dingel, John~J Panos, and Rhea~E Steinpreis.
+\newblock Alterations in neurobehavioral responses in fishes exposed to lead
+  and lead-chelating agents.
+\newblock \emph{American Zoologist}, 37\penalty0 (4):\penalty0 354--362, 1997.
+
+\end{thebibliography}

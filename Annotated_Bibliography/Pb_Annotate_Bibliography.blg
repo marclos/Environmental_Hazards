@@ -1,0 +1,145 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Pb_Annotate_Bibliography.aux
+The style file: plainnat.bst
+Illegal, another \bibdata command---line 121 of file Pb_Annotate_Bibliography.aux
+ : \bibdata
+ :         {Pb_LiteratureCOMPLETE}
+I'm skipping whatever remains of this command
+Database file #1: Pb_LiteratureCOMPLETE.bib
+I was expecting a `,' or a `}'---line 16 of file Pb_LiteratureCOMPLETE.bib
+ : 
+ : @Article{amodio2014atmospheric,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 170 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %doi      = {10.4319/lo.2000.45.7.1525},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 202 of file Pb_LiteratureCOMPLETE.bib
+ : 
+ : %DOI={10.1016/j.ntt.2007.04.001},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 290 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %doi       = {10.1126/science.293.5529.426b},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 326 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %doi      = {10.1016/j.chemosphere.2007.11.065},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 348 of file Pb_LiteratureCOMPLETE.bib
+ : 
+ : %DOI={10.1016/j.eeh.2016.03.002},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 451 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %DOI={10.1186/1742-4682-10-13},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 488 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %doi      = {10.1631/jzus.2007.B0001},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 559 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %doi       = {10.1126/science.281.5383.1617},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 574 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %doi     = {10.2307/3545083},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 599 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %DOI={10.1289/ehp.9994},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 736 of file Pb_LiteratureCOMPLETE.bib
+ :   
+ :   %doi      = {10.1111/j.0022-3646.2003.02-193.x},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in americanoil
+Warning--to sort, need author or key in exxonmobil
+Warning--to sort, need author or key in FAA
+Warning--to sort, need author or key in shellglobal
+Warning--to sort, need author or key in Hou2013
+Warning--to sort, need author or key in miranda2007
+Warning--to sort, need author or key in chiodo07
+Warning--to sort, need author or key in Feigenbaum2016
+Warning--empty author in Feigenbaum2016
+Warning--empty journal in Feigenbaum2016
+Warning--empty year in Feigenbaum2016
+Warning--empty year in Feigenbaum2016
+Warning--empty author in Hou2013
+Warning--empty journal in Hou2013
+Warning--empty year in Hou2013
+Warning--empty year in Hou2013
+Warning--empty author in chiodo07
+Warning--empty journal in chiodo07
+Warning--empty year in chiodo07
+Warning--empty year in chiodo07
+Warning--empty author in exxonmobil
+Warning--empty year in exxonmobil
+Warning--empty year in exxonmobil
+Warning--empty author in miranda2007
+Warning--empty journal in miranda2007
+Warning--empty year in miranda2007
+Warning--empty year in miranda2007
+Warning--empty year in shellglobal
+Warning--empty author in americanoil
+Warning--empty author in FAA
+Warning--empty journal in hutchinson1987lead
+Warning--empty journal in WHO2016lead
+Warning--there's a number but no volume in Beris2003
+Warning--empty year in UNEP
+You've used 73 entries,
+            2773 wiz_defined-function locations,
+            1071 strings with 19150 characters,
+and the built_in function-call counts, 33598 in all, are:
+= -- 3042
+> -- 1855
+< -- 40
++ -- 643
+- -- 570
+* -- 2864
+:= -- 5078
+add.period$ -- 234
+call.type$ -- 73
+change.case$ -- 402
+chr.to.int$ -- 73
+cite$ -- 188
+duplicate$ -- 1492
+empty$ -- 2795
+format.name$ -- 659
+if$ -- 6996
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 71
+newline$ -- 386
+num.names$ -- 260
+pop$ -- 803
+preamble$ -- 1
+purify$ -- 334
+quote$ -- 0
+skip$ -- 1128
+stack$ -- 0
+substring$ -- 1420
+swap$ -- 111
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 783
+warning$ -- 34
+while$ -- 298
+width$ -- 0
+write$ -- 959
+(There were 13 error messages)
