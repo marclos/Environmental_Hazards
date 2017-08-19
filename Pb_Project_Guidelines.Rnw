@@ -1,0 +1,66 @@
+\documentclass{article}
+%\usepackage{hypperef}
+\title{Regional Soil Pb Analysis Guidelines}
+\author{marc and isaac}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection{Background}
+
+Lead Resources and Soils:
+
+%\url{https://www.atsdr.cdc.gov/csem/csem.asp?csem=7&po=8}
+
+(look under soil heading) 
+
+\section{Practices Sessions}
+
+\begin{description}
+
+\item[Session 1]: Tutorial on Field Methods and Random Sampling
+
+
+gis: Mapping Park Data -- 
+
+%\url{https://goo.gl/hwBZQm}
+
+\item[Session 2]: Soil Sampling (google doc)
+
+\item[Session 3]: Pb Extraction (google doc), pH, texture
+
+\item[Session 4]: Analysis (data entry form)
+
+\item[Session 5]: Literature Review
+
+\item[Session 6]: Expert Teams
+
+
+\begin{itemize}
+
+
+  \item Industrial Sources
+  \item Use in Industry (except gasoline) 
+  \item ``Ethyl'' gas and airplane fuels 
+  \item Atmospheric transport and deposition
+  \item Aquatic fate \& transport 
+  \item Sinks 
+  \item Food web dynamics 
+  \item Toxicity (non-human) 
+  \item Human health effects (physiological, toxicity) Thea
+  \item Public health effects (crime, IQ, etc) Marissa
+\end{itemize}
+
+  \item[Session X]: Data Analysis (Results)
+
+%\url{http://claremont.maps.arcgis.com/apps/GeoForm/viewer.html?appid=31f6fe27f5ef464bb6f58aa5a03baeab}
+
+\item[Session XI]: Final Report
+
+\end{description}
+
+
+\end{document}
