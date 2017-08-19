@@ -1,5 +1,6 @@
 \documentclass{article}
-%\usepackage{hypperef}
+\usepackage{hyperref}
+
 \title{Regional Soil Pb Analysis Guidelines}
 \author{marc and isaac}
 
@@ -13,7 +14,7 @@
 
 Lead Resources and Soils:
 
-%\url{https://www.atsdr.cdc.gov/csem/csem.asp?csem=7&po=8}
+\url{https://www.atsdr.cdc.gov/csem/csem.asp?csem=7&po=8}
 
 (look under soil heading) 
 
@@ -26,7 +27,7 @@ Lead Resources and Soils:
 
 gis: Mapping Park Data -- 
 
-%\url{https://goo.gl/hwBZQm}
+\url{https://goo.gl/hwBZQm}
 
 \item[Session 2]: Soil Sampling (google doc)
 
@@ -56,7 +57,7 @@ gis: Mapping Park Data --
 
   \item[Session X]: Data Analysis (Results)
 
-%\url{http://claremont.maps.arcgis.com/apps/GeoForm/viewer.html?appid=31f6fe27f5ef464bb6f58aa5a03baeab}
+\url{http://claremont.maps.arcgis.com/apps/GeoForm/viewer.html?appid=31f6fe27f5ef464bb6f58aa5a03baeab}
 
 \item[Session XI]: Final Report
 
