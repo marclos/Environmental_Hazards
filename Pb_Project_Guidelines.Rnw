@@ -10,7 +10,32 @@
 
 \section{Introduction}
 
+Developing methods to analyze harzards, such as contaminated soils and waters requires adhearance to strict field, laboratory, and documentation protocols for three reasons. 
+
+First, as enviroronmental scientists, our aim is to collect valid data. In the cases of analytic chemistry, generating spurious data because of flawed methods is not only frustrating, but can lead to the wrong conclusion.
+
+Second, in the case of contaminents, there may be legal implications, thus, if the hope to that the data might be used to make a legal case -- following reliable and tested methods is key. 
+
+Finally, our stakeholders deserve the best. Regional or local residents invest (even emotionally) on the results of scientific studies. When the methods are not well develop, implemented or poorly documents, the study can re-enforce injustices. 
+
 \subsection{Background}
+
+Heavy metals in soils are a well known issue...
+
+<<label='expertteams', echo=FALSE>>=
+library(xtable)
+roster <- read.csv("/home/CAMPUS/mwl04747/github/Climate_Change_Narratives/Admin/EA30F17_Roster.csv")
+topics = c("Use in Industry (except gasoline)", "Ethyl gas and airplane fuels", "Atmospheric transport & deposition", "Aquatic fate & transport", "Sinks", "Food web dynamics", "Toxicity (non-human)", "Human health effects (physiological, toxicity)", "Public health effects (crime, IQ, etc)", "Los Angeles Pb History", "California Pb Regulatory History", "US Pb Regulatory History")
+n = length(roster$First)
+topics2 <- topics[1:n]
+
+randomized <- as.vector(roster$First[sample(roster$First)])
+n2 = round(n/2,0)
+
+dates = c(rep("10/10/2017", n2), rep("10/17/2017", n-n2))
+assigned = data.frame(Student = randomized, 'Presentation Date' = dates, Topic = topics2)
+@
+
 
 Lead Resources and Soils:
 
@@ -39,21 +64,24 @@ gis: Mapping Park Data --
 
 \item[Session 6]: Expert Teams
 
+\begin{description}
+  \item[Industrial Sources]
+  \item[Use in Industry (except gasoline)]
+  \item[``Ethyl'' gas and airplane fuels] 
+  \item[Atmospheric transport and deposition]
+  \item[Aquatic fate \& transport] 
+  \item[Sinks] 
+  \item[Food web dynamics] 
+  \item[Toxicity (non-human)] 
+  \item[Human health effects (physiological, toxicity)] 
+  \item[Public health effects (crime, IQ, etc)]
+\end{description}
 
-\begin{itemize}
 
+<<results='asis', echo=FALSE>>=
+print(xtable(assigned))
+@
 
-  \item Industrial Sources
-  \item Use in Industry (except gasoline) 
-  \item ``Ethyl'' gas and airplane fuels 
-  \item Atmospheric transport and deposition
-  \item Aquatic fate \& transport 
-  \item Sinks 
-  \item Food web dynamics 
-  \item Toxicity (non-human) 
-  \item Human health effects (physiological, toxicity) Thea
-  \item Public health effects (crime, IQ, etc) Marissa
-\end{itemize}
 
   \item[Session 7]: Data Analysis (Results)
 
