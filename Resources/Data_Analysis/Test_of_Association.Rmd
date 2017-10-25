@@ -1,0 +1,79 @@
+---
+title: "Tests for Association"
+author: "Marc Los Huertos"
+date: "10/25/2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Test of Association
+
+### What is a test of Assocication?
+
+- Is one variable related to another
+- Based on count data (frequency data)
+
+## Define Matrix Example
+
+```{r cars, echo = TRUE}
+frequencies = c(450, 6560, 132, 2534)
+asthma = matrix(frequencies, nrow=2, byrow=T,
+dimnames = list(c("City A", "City B"), c("Asthmatic", "Non-Asthmatic")))
+```
+
+## View of the data
+
+```{r data}
+asthma
+
+```
+## Percentages...signficance is unclear!
+
+If you live in city A, what is the probability you'll be asthmatic?
+
+`r round(100*asthma[1,1]/sum(asthma[1,]), 1)`%
+or not...
+`r round(100*asthma[1,2]/sum(asthma[1,]), 1)`%
+
+If you live in city B, what is the probability you'll be asthmatic?
+
+`r round(100*asthma[2,1]/sum(asthma[2,]), 1)`%
+ or not...
+`r round(100*asthma[2,2]/sum(asthma[2,]), 1)`%
+
+
+
+## Stastistical Analysis
+
+```{r fisher}
+fisher.test(asthma)
+```
+
+
+## What do the numbers mean?
+
+### `r round(100*asthma[1,1]/sum(asthma), 1)`%  City A Asthmatic
+
+### `r round(100*asthma[2,1]/sum(asthma), 1)`%  City B Asthmatic
+
+###`r round(100*asthma[1,2]/sum(asthma), 1)`%  City A Non-Asthmatic
+
+### `r round(100*asthma[2,2]/sum(asthma), 1)`%  City B Non-Asthmatic
+
+## Define Matrix Example
+
+```{r Smoking, echo = TRUE}
+frequencies = c(20, 20, 20, 20)
+smoking = matrix(frequencies, nrow=2, byrow=T,
+dimnames = list(c("Cancer", "No Cancer"), c("Smoking", "Non-Smoking")))
+smoking
+```
+
+## Smoking -- Fisher Test
+
+```{r, echo = TRUE}
+fisher.test(smoking)
+```
