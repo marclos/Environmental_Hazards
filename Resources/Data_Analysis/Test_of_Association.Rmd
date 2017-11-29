@@ -53,22 +53,21 @@ fisher.test(asthma)
 ```
 
 
-## What do the numbers mean?
+## What does the odds ratio mean?
 
-### `r round(100*asthma[1,1]/sum(asthma), 1)`%  City A Asthmatic
+### `r round(asthma[1,1]/asthma[1,2], 2)`  Odds Ratio City A
 
-### `r round(100*asthma[2,1]/sum(asthma), 1)`%  City B Asthmatic
+### `r round(asthma[2,1]/asthma[2, 2], 2)`  Odd Ratio City B
 
-###`r round(100*asthma[1,2]/sum(asthma), 1)`%  City A Non-Asthmatic
+###`r round(asthma[1,1]/asthma[1,2]/(asthma[2,1]/asthma[2, 2]), 2)`  City A Non-Asthmatic
 
-### `r round(100*asthma[2,2]/sum(asthma), 1)`%  City B Non-Asthmatic
 
 ## Define Matrix Example
 
 ```{r Smoking, echo = TRUE}
-frequencies = c(20, 20, 20, 20)
+frequencies = c(645, 637, 2,10)
 smoking = matrix(frequencies, nrow=2, byrow=T,
-dimnames = list(c("Cancer", "No Cancer"), c("Smoking", "Non-Smoking")))
+dimnames = list(c("Smoking", "Non-Smoking"), c("Cancer", "No Cancer")))
 smoking
 ```
 
