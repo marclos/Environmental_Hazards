@@ -32,4 +32,4 @@ boxplot(Total ~ ParkID, data=Pb)
 summary(Pb.aov)
  
 boxplot(Pb67 ~ ParkID, data=Pb)
-
+summary(aov(Pb67 ~ ParkID, data=Pb))
