@@ -1,0 +1,194 @@
+---
+title: "Importing and Analyzing Pb Data"
+author: "Marc Los Huertos"
+date: "12/3/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Finding the File
+
+
+```{r findfilepath}
+#file.choose()
+```
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Importing Data into R
+
+First, we need to convert the excel file into comma separated values, which we can do by saving the file as a csv. This will give a few warnings, but don't worry about that.
+
+Now we need to figure out where this file is on the computer. We can do that using an R function (**file.choose()**).
+
+```{r}
+# file.choose()
+```
+
+R will give the path and file names in R-speak: 
+
+"C:\\workspace\\1. Teaching\\EA30\\Activities\\Projects\\Lead project\\Lab 06 Soil data results.csv"
+
+## Importing to R (Part II)
+
+This file (name and path) be used to read the file into R, using **read.csv()**
+
+```{r}
+
+import <- read.csv ("C:\\workspace\\1. Teaching\\EA30\\Activities\\Projects\\Lead project\\Lab 06 Soil data results.csv")
+```
+
+## Checking the file
+
+1. What are the variable names?
+
+```{r}
+names(import)
+```
+
+## What is the structure
+
+2. What is the structure of the object?
+```{r}
+str(import)
+```
+
+
+## Are the park Pb concentratins different?
+```{r}
+boxplot(Lead ~ Location, data = import, xlab="Park", ylab="[Pb] (mg/L)")
+
+```
+
+##  Testing the Hypothsis
+
+Null Hypothesis: There is no difference in Pb concentrations between parks.
+
+```{r}
+summary(aov(Lead ~ Location, data = import))
+
+```
+## Is there a relationship between Pb and Distance
+
+```{r}
+plot(Lead ~ Distance10Bogus, data=import)
+```
+
+
+## Hypotheses Testing
+1. Is Pb Correlated to Distance?
+
+Null Hypothesis: There is no relationship between Distance and Pb concentrations.
+
+```{r}
+Pb.lm <- lm(Lead ~ Distance10Bogus, data=import)
+summary(Pb.lm)
+```
+
+## Hypothesis Testing
+2. Is Nitrate and Salinity Correlated?
+
+Null Hypothesis: There is no relationship between Nitrate and Salinity.
+```{r}
+pH.lm <- lm(pH ~ Salinity, data=import)
+summary(pH.lm)
+```
+
+## Ploting Best Fit Line
+
+What is r-squared?  It tells us how much of the variation in the response is explained by the predictor. See the variation around the line?  Only 48.6% of the data is explained by thes data, while some 51% is unexplained. 
+```{r}
+plot(Lead ~ Distance10Bogus, data=import)
+abline(coef(Pb.lm))
+```
+
+```{r readcsv}
+file = "/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/Pb_Data/171116_EA30_MLH4_revised.csv"
+
+import = read.csv(file)
+```
+
+## Check File
+
+```{r}
+head(import)
+```
+
+## Subset Pb Analytes
+```{r}
+Pb_data = import[import$Analyte=="Pb",]
+head(Pb_data)
+```
+
+## Tranform data mg/kg of soil
+```{r}
+Pb_data$Soil_Pb = 25/5*Pb_data$Concentration
+drops <- c("Concentration")
+Pb_data = Pb_data[ , !(names(Pb_data) %in% drops)]
+```
+
+## Remove Blank
+
+```{r}
+Pb_data = Pb_data[!Pb_data$Park=="Blank", ]
+droplevels(Pb_data$Park)
+levels(Pb_data$Park)
+library(gdata)
+drop.levels(Pb_data$Park)
+```
+
+## Wrangle Data Format
+```{r}
+library(tidyr)
+
+Pb = Pb_data %>% spread(Mass, Soil_Pb)
+
+Pb$Pb67 = round(Pb$'206'/Pb$'207',3)
+Pb$Pb68 = round(Pb$'206'/Pb$'208',3)
+Pb$Total = Pb$'206'+ Pb$'207'+ Pb$'208'
+Pb
+```
+
+## Analyze Data relative to "anthropogenic sources"
+```{r}
+exceed = sum(Pb$Pb67 > 1.14); exceed
+prop.test(exceed, length(Pb$Pb67))
+```
+
+## Analyze Basic Hypothesis
+
+Are the park Pb different?
+
+```{r}
+Pb.aov = aov(Total ~ Park, data=Pb)
+
+boxplot(Total ~ Park, data=Pb)
+
+summary(Pb.aov)
+ 
+boxplot(Pb67 ~ Park, data=Pb)
+summary(aov(Pb67 ~ Park, data=Pb))
+
+```
+
+## Distance to Park from I10
+
+Need to create a value for each park...
+
+```{r}
+Pb$Distance = NA
+Pb$Distance[Pb$Park=="C"] <- 3.2
+head(Pb)
+```
