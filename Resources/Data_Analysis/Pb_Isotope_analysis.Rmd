@@ -168,61 +168,51 @@ prop.test(exceed, length(Pb$Pb67))
 
 ## Distance to Park from I10
 
-Need to create a value for each park...
+1. Is Pb Correlated to Distance?
+
+Null Hypothesis: There is no relationship between Distance and Pb concentrations. 
+
+To determine the answer, you'll need to create Distances for each park. First we create a new variable: 
+
 
 ```{r}
 Pb$Distance = NA
+```
+
+Then we start adding distances. I created a fake one below, but you'll need to create a distance for each park following my example:
+
+```{r creatingdistances}
 Pb$Distance[Pb$Park=="C"] <- 3.2
 head(Pb)
 ```
 
-
-## Hypotheses Testing
-1. Is Pb Correlated to Distance?
-
-Null Hypothesis: There is no relationship between Distance and Pb concentrations.
+To analyze the data, we need to rely on a regression (using *lm()* or a linear model in R). Remember, in a linear model y = f(x) or y~x, where y is dependent and x is independent. In our case, Pb is the response or dependent variable and distance is the predictor or indepenedent variable. 
 
 ```{r}
-#Pb.lm <- lm(Lead ~ Distance10Bogus, data=import)
-#summary(Pb.lm)
+Pb.lm <- lm(TotalPb ~ Distance, data=Pb)
+summary(Pb.lm)
 ```
 
-## Hypothesis Testing
+## pH and Pb -- To Be Developed if anyone asks
 
-
-Null Hypothesis: There is no relationship between Nitrate and Salinity.
+Null Hypothesis: There is no relationship between pH:
 ```{r}
-#pH.lm <- lm(pH ~ Salinity, data=import)
+#pH.lm <- lm(Pb ~ pH, data=import)
 #summary(pH.lm)
 ```
 
-## Ploting Best Fit Line
+## Ploting Best Fit Line -- To Be Developed if requested
 
-What is r-squared?  It tells us how much of the variation in the response is explained by the predictor. See the variation around the line?  Only 48.6% of the data is explained by thes data, while some 51% is unexplained. 
+What is r-squared?  It tells us how much of the variation in the response is explained by the predictor. 
+
+Let's create a plot and evaluate the best fit line:
+
 ```{r}
 #plot(Lead ~ Distance10Bogus, data=import)
 #abline(coef(Pb.lm))
 ```
 
+See the variation around the line? 
 
-## Are the park Pb concentratins different?
-```{r}
-#boxplot(Lead ~ Location, data = import, xlab="Park", ylab="[Pb] (mg/L)")
-
-```
-
-##  Testing the Hypothsis
-
-Null Hypothesis: There is no difference in Pb concentrations between parks.
-
-```{r}
-#summary(aov(Lead ~ Location, data = import))
-
-```
-## Is there a relationship between Pb and Distance
-
-```{r}
-#plot(Lead ~ Distance10Bogus, data=import)
-```
-
+Only 48.6% of the data is explained by thes data, while some 51% is unexplained.
 
