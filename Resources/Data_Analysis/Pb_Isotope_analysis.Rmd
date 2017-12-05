@@ -1,56 +1,57 @@
 ---
-title: "Importing and Analyzing Pb Data"
+title: "Importing and Analyzing Pb Isotope and Concentration Data"
 author: "Marc Los Huertos"
 date: "12/3/2017"
-output: html_document
+output:
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Finding the File
+## Purpose of Document
 
+I have written this to help you read csv file and manipulate Pb data into R. Then provide some tools in the analysis. Please do not just copy and paste commands, or you will be terribly frustrated, becuase this was not designed for that purpose. 
 
-```{r findfilepath}
-#file.choose()
-```
-## R Markdown
+However, if you use this document as a "basis" for your lab report, customizing the headers, r code, and text as you go, you will have the word document that you can use as a template for your lab. 
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Work Flow suggestions
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+I suggest using the following work flow:
 
-## Slide with Bullets
+- Create a new Rmd File
+- Read each section in order and adjust the text and code as you go. 
+- Revise the Rmd to create a nice word document with figures while removing the R code that the reader does not need to see in the final report.
+- Create a word document and edit the document to create a lab report using the report guidelines on Sakai.
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Importing Data into R
+## Finding the Data
 
 First, we need to convert the excel file into comma separated values, which we can do by saving the file as a csv. This will give a few warnings, but don't worry about that.
 
-Now we need to figure out where this file is on the computer. We can do that using an R function (**file.choose()**).
+Now you'll need to upload the data into Rstudio.
 
-```{r}
-# file.choose()
+Next we need is to find the data -- the name and the directory path. With this, we can then tell R where the data reside and create an "object" that refers to the path and filename. 
+
+I like using the **file.choose()** function, because it provides a popup window that we can use to search for the file. Use this function in the console and copy the path and file name to insert into your Rmd and create an object that references the path and filename. I have done this below for **my** file and path, yours will be different!!
+
+```{r filename}
+file = "/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/Pb_Data/171116_EA30_MLH4_revised.csv"
 ```
 
-R will give the path and file names in R-speak: 
+Notice that in the Rblock above the the r block as a label "filename". This helps me figure out where I am when I find a knitting problem. You can leave that blank or put in a label. If you do put in a label, they need to be unique -- repeated ones will give an error. 
 
-"C:\\workspace\\1. Teaching\\EA30\\Activities\\Projects\\Lead project\\Lab 06 Soil data results.csv"
+## Reading Data into R
 
-## Importing to R (Part II)
+To read data into R we use **read.csv()** function
 
-This file (name and path) be used to read the file into R, using **read.csv()**
-
-```{r}
-
-import <- read.csv ("C:\\workspace\\1. Teaching\\EA30\\Activities\\Projects\\Lead project\\Lab 06 Soil data results.csv")
+```{r readcsv}
+import = read.csv(file)
 ```
 
-## Checking the file
+Whenever I read data, I check to make sure the object I created is what I had expected and intended. 
+
+### Checking the file
 
 1. What are the variable names?
 
@@ -58,102 +59,66 @@ import <- read.csv ("C:\\workspace\\1. Teaching\\EA30\\Activities\\Projects\\Lea
 names(import)
 ```
 
-## What is the structure
+What is the structure?
 
 2. What is the structure of the object?
 ```{r}
 str(import)
 ```
 
+A dataframe is the most common data structure in R. Notice the dollar signs -- these can be used to select specific variables within the dataframe. 
 
-## Are the park Pb concentratins different?
-```{r}
-boxplot(Lead ~ Location, data = import, xlab="Park", ylab="[Pb] (mg/L)")
 
+## Preparing Data for Analysis
+
+### Tranform data mg/kg of soil
+
+The concentration from the ICP-MS was based on the extraction concentration, so we need to divide by the soil weight and multipy by the amount of dilution solution (water and nitric acid). I have created a new variable name, "Result", so I don't get mixed up and remove the old variable name. 
+
+```{r transform}
+import$Result = 25/5*import$Concentration
+drops <- c("Concentration")
+import = import[ , !(names(import) %in% drops)]
 ```
 
-##  Testing the Hypothsis
+Again, it's a good idea to check the data:
 
-Null Hypothesis: There is no difference in Pb concentrations between parks.
-
-```{r}
-summary(aov(Lead ~ Location, data = import))
-
-```
-## Is there a relationship between Pb and Distance
-
-```{r}
-plot(Lead ~ Distance10Bogus, data=import)
-```
-
-
-## Hypotheses Testing
-1. Is Pb Correlated to Distance?
-
-Null Hypothesis: There is no relationship between Distance and Pb concentrations.
-
-```{r}
-Pb.lm <- lm(Lead ~ Distance10Bogus, data=import)
-summary(Pb.lm)
-```
-
-## Hypothesis Testing
-2. Is Nitrate and Salinity Correlated?
-
-Null Hypothesis: There is no relationship between Nitrate and Salinity.
-```{r}
-pH.lm <- lm(pH ~ Salinity, data=import)
-summary(pH.lm)
-```
-
-## Ploting Best Fit Line
-
-What is r-squared?  It tells us how much of the variation in the response is explained by the predictor. See the variation around the line?  Only 48.6% of the data is explained by thes data, while some 51% is unexplained. 
-```{r}
-plot(Lead ~ Distance10Bogus, data=import)
-abline(coef(Pb.lm))
-```
-
-```{r readcsv}
-file = "/home/CAMPUS/mwl04747/github/Environmental_Hazards/Data/Pb_Data/171116_EA30_MLH4_revised.csv"
-
-import = read.csv(file)
-```
-
-## Check File
-
-```{r}
+```{r checkdata}
 head(import)
 ```
 
-## Subset Pb Analytes
+### Subset Pb Analytes
+
+Let's subset the data -- for now, we will only look at Pb. NOTE: Lab reports that also analyze other analytes will be awarded more points.
+
+We can subset the rows where the Analyte = Pb. Unfortunately, R's method to do this is a bit obtuse:  
 ```{r}
 Pb_data = import[import$Analyte=="Pb",]
 head(Pb_data)
 ```
 
-## Tranform data mg/kg of soil
-```{r}
-Pb_data$Soil_Pb = 25/5*Pb_data$Concentration
-drops <- c("Concentration")
-Pb_data = Pb_data[ , !(names(Pb_data) %in% drops)]
-```
+### Remove Blank 
 
-## Remove Blank
+It turns out removing our blank is trickier than I had anticipated. we need to "Install" a library or package call *gdata*. NOTE: A report discussion about the role of the Blank and our results will be given more points.
 
 ```{r}
 Pb_data = Pb_data[!Pb_data$Park=="Blank", ]
-droplevels(Pb_data$Park)
 levels(Pb_data$Park)
 library(gdata)
 drop.levels(Pb_data$Park)
+levels(Pb_data$Park)
 ```
 
 ## Wrangle Data Format
+
+Wrangling data is reformats the data -- moving columns into rows based on a 'key'. In our case, we need to separate the 3 isotopes so we can add them together and make a new variable, TotalPb!
+
+To do this, I'll create a new file name. The *spread()* function is a bit complicated, so I can't go into it, but check to see how the data change!
+
 ```{r}
 library(tidyr)
 
-Pb = Pb_data %>% spread(Mass, Soil_Pb)
+Pb = Pb_data %>% spread(Mass, Result)
 
 Pb$Pb67 = round(Pb$'206'/Pb$'207',3)
 Pb$Pb68 = round(Pb$'206'/Pb$'208',3)
@@ -161,27 +126,45 @@ Pb$Total = Pb$'206'+ Pb$'207'+ Pb$'208'
 Pb
 ```
 
+## Creating Hypotheses to Test
+
+There are numerous hyptheses that one can test:
+
+- Are [Pb] elevated?
+- Is [Pb] above an USEPA threshold?
+- What is the source of the Pb?
+- Do the parks have different [Pb]?
+- If the parks differ, does the distance from a source explain the differences?
+- If the parks differ, does some other mechanism explain the differences (pH, moisture, etc.)?
+
+I will give you two examples and some ideas of how to set up the other hypotheses.
+
+## Analyze Basic Hypothesis
+
+Are the park [Pb] different? Our null hypothesis is that the means of each park are the same, or $\mu_1 = \mu_2$ = \mu_{...} = \mu_n$.
+
+We can analyze this with a ANOVA (in R using *aov()*): 
+```{r}
+Pb.aov = aov(Total ~ Park, data=Pb)
+summary(Pb.aov)
+
+```
+
+To visualize this we might use a boxplot:
+
+```{r boxplot}
+boxplot(Total ~ Park, data=Pb)
+```
+
+
+
 ## Analyze Data relative to "anthropogenic sources"
 ```{r}
 exceed = sum(Pb$Pb67 > 1.14); exceed
 prop.test(exceed, length(Pb$Pb67))
 ```
 
-## Analyze Basic Hypothesis
 
-Are the park Pb different?
-
-```{r}
-Pb.aov = aov(Total ~ Park, data=Pb)
-
-boxplot(Total ~ Park, data=Pb)
-
-summary(Pb.aov)
- 
-boxplot(Pb67 ~ Park, data=Pb)
-summary(aov(Pb67 ~ Park, data=Pb))
-
-```
 
 ## Distance to Park from I10
 
@@ -192,3 +175,54 @@ Pb$Distance = NA
 Pb$Distance[Pb$Park=="C"] <- 3.2
 head(Pb)
 ```
+
+
+## Hypotheses Testing
+1. Is Pb Correlated to Distance?
+
+Null Hypothesis: There is no relationship between Distance and Pb concentrations.
+
+```{r}
+#Pb.lm <- lm(Lead ~ Distance10Bogus, data=import)
+#summary(Pb.lm)
+```
+
+## Hypothesis Testing
+
+
+Null Hypothesis: There is no relationship between Nitrate and Salinity.
+```{r}
+#pH.lm <- lm(pH ~ Salinity, data=import)
+#summary(pH.lm)
+```
+
+## Ploting Best Fit Line
+
+What is r-squared?  It tells us how much of the variation in the response is explained by the predictor. See the variation around the line?  Only 48.6% of the data is explained by thes data, while some 51% is unexplained. 
+```{r}
+#plot(Lead ~ Distance10Bogus, data=import)
+#abline(coef(Pb.lm))
+```
+
+
+## Are the park Pb concentratins different?
+```{r}
+#boxplot(Lead ~ Location, data = import, xlab="Park", ylab="[Pb] (mg/L)")
+
+```
+
+##  Testing the Hypothsis
+
+Null Hypothesis: There is no difference in Pb concentrations between parks.
+
+```{r}
+#summary(aov(Lead ~ Location, data = import))
+
+```
+## Is there a relationship between Pb and Distance
+
+```{r}
+#plot(Lead ~ Distance10Bogus, data=import)
+```
+
+
