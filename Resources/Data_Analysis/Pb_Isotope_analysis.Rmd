@@ -189,7 +189,7 @@ head(Pb)
 To analyze the data, we need to rely on a regression (using *lm()* or a linear model in R). Remember, in a linear model y = f(x) or y~x, where y is dependent and x is independent. In our case, Pb is the response or dependent variable and distance is the predictor or indepenedent variable. 
 
 ```{r}
-Pb.lm <- lm(TotalPb ~ Distance, data=Pb)
+Pb.lm <- lm(Total ~ Distance, data=Pb)
 summary(Pb.lm)
 ```
 
@@ -214,5 +214,23 @@ Let's create a plot and evaluate the best fit line:
 
 See the variation around the line? 
 
-Only 48.6% of the data is explained by thes data, while some 51% is unexplained.
+The $r^2$ can be interpreted as a percentage of the variation explained. In other words, if the value is 0.33, then 33% of the variation in y is explained by x. In environmental science, it's rare to have over 50% because there are some many confounding factors!
+
+## Soil Moiture and Pb
+
+Soil moisture is highly variable -- depending on rainfall and irrigation. However, if soils are constantly wet, then we might expect Pb do behave differently than when (or where) soils are wet. 
+
+After weighing the wet soil in the tin mass (wet_soil) and dry soil in the tin mass (dry_soil) and the tin mass (tin) we can easily calculate the soil moisture content: 
+
+$$Moisture~\% = (wet\_soil - dry\_soil)/(dry\_soil - tin)*100$$
+
+Now if you put these numbers into your csv file and import the new file into the Rstudio directory you can see if Pb is a function of moisture, i.e. Pb = f(moisture). Since moisture is continuous variable, then we can use a linear model: *lm()*
+
+```{r, eval=FALSE}
+moisture.lm <- lm(Pb ~ Moisture, data=Pb)
+summary(moisture.lm)
+```
+
+Of course, if you want to graph the data, you should *plot* the data and fit a best fit line if the trend is significant. 
+
 
