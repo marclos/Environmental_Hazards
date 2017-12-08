@@ -101,12 +101,11 @@ head(Pb_data)
 
 It turns out removing our blank is trickier than I had anticipated. we need to "Install" a library or package call *gdata*. NOTE: A report discussion about the role of the Blank and our results will be given more points.
 
+NOTE: 12/7, I found a more robust approach to delete the blank in the levels() so that it won't show up in the boxplot!
 ```{r}
 Pb_data = Pb_data[!Pb_data$Park=="Blank", ]
-levels(Pb_data$Park)
-library(gdata)
-drop.levels(Pb_data$Park)
-levels(Pb_data$Park)
+library(dplyr)
+Pb_data <- Pb_data %>% filter(!Park =="Blank") %>% droplevels()
 ```
 
 ## Wrangle Data Format
@@ -134,7 +133,7 @@ For example, we might ask, "are lead concentrations high?"  This is a good quest
 
 There are numerous questions that one can ask:
 
-Are [Pb] elevated in Claremont Parks?
+Is [Pb] elevated in Claremont Parks?
 
 - Null Hypothesis: [Pb] is not above the EPA Threshold.
 
@@ -146,14 +145,23 @@ Are the sources of Pb different at each park? Since the isotope ratio tells us s
 
 - The ratio between 206/207 do not differ by park
 
+Another question worth asking is if the parks are different: Is the [Pb] different between Claremont Parks? Where the null hypothesis could be 
 
-More below soon...
+- [Pb] is the same for sampled parks in Claremont
 
-- Do the parks have different [Pb]?
-- If the parks differ, does the distance from a source explain the differences?
-- If the parks differ, does some other mechanism explain the differences (pH, moisture, etc.)?
+Asking these questions is a good step, but just like the residents of Toms River, the "why" is just as important as the "what". Do, we need to ask some questions about why are the concentrations different? 
 
-I will give you two examples and some ideas of how to set up the other hypotheses.
+For example, does the distance, age of the park or management if the park influence the outcome of the result?  pH, irrigation, and age of parks might all contribute to the differences. Which hypothesis do you think is worth testing?
+
+- Distance from freeway does not correlate with Pb
+
+- pH does not correlate with Pb
+
+- Soil moisture does not correlate with Pb
+
+- Age of park does not correlate with Pb
+
+Now your job is to capture the appropriate data and then analyze it with R. :-)
 
 ## Analyze Basic Hypothesis
 
@@ -178,14 +186,18 @@ We now can make these prettier! For example,
 boxplot(Total ~ Park, data=Pb, main="Some Title", xlab="x label", ylab="y label", las=1)
 ```
 
+NOTE: The Park names would be better than letters! Who wants to try to remember the park names? Besides, the City or it's residents are going to be clueless on these letters!
 
 ## Analyze Data relative to "anthropogenic sources"
+
+I found an value of 1.14 of a 206Pb/207Pb to suggest a gasoline source versus a coal source, but this was for Europe. Their coal probably has a different signature that US coal, so I suspect you'll need to find a better source than what I found.
+
+The *prop.test()* is useful to evaluate if the number of "positives" exceed what might be expected by chance. So... I tried that with the value that I found in the literature for Pb isotope ratios of 1.14.
+
 ```{r}
 exceed = sum(Pb$Pb67 > 1.14); exceed
 prop.test(exceed, length(Pb$Pb67))
 ```
-
-
 
 ## Distance to Park from I10
 
