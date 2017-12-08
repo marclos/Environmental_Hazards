@@ -126,13 +126,29 @@ Pb$Total = Pb$'206'+ Pb$'207'+ Pb$'208'
 Pb
 ```
 
-## Creating Hypotheses to Test
+## Creating Hypotheses to Test (Modified after talking to Bebe...)
 
-There are numerous hyptheses that one can test:
+In reality, we begin with asking questions and then generating hypotheses that are actually "testable statements" that *might* answer our question. 
 
-- Are [Pb] elevated?
-- Is [Pb] above an USEPA threshold?
-- What is the source of the Pb?
+For example, we might ask, "are lead concentrations high?"  This is a good question, but not testable --- because we don't know what the definition of high is.  So, to operationalize this question we can ask, are the Pb concentrations above an EPA limit?  This can be turned into a testable statement (or null hypothesis): Pb concentations below XX mg/kg. I don't know what the EPA limit is for soils, but you could substitute it here.
+
+There are numerous questions that one can ask:
+
+Are [Pb] elevated in Claremont Parks?
+
+- Null Hypothesis: [Pb] is not above the EPA Threshold.
+
+Another question might be, Do the parks have different [Pb]?
+
+- Null Hypothesis: Six Claremon Parks have the same soil [Pb].
+
+Are the sources of Pb different at each park? Since the isotope ratio tells us something about the geological sources, we might have a testable null hypothesis: 
+
+- The ratio between 206/207 do not differ by park
+
+
+More below soon...
+
 - Do the parks have different [Pb]?
 - If the parks differ, does the distance from a source explain the differences?
 - If the parks differ, does some other mechanism explain the differences (pH, moisture, etc.)?
@@ -156,6 +172,11 @@ To visualize this we might use a boxplot:
 boxplot(Total ~ Park, data=Pb)
 ```
 
+We now can make these prettier! For example, 
+
+```{r improved}
+boxplot(Total ~ Park, data=Pb, main="Some Title", xlab="x label", ylab="y label", las=1)
+```
 
 
 ## Analyze Data relative to "anthropogenic sources"
