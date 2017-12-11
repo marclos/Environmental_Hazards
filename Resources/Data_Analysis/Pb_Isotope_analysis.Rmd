@@ -128,9 +128,15 @@ Pb
 
 ## Renaming Parks: Letters to Names! (After meeting with Ally)
 
+Although the letters are convenient for data entry and labelling vials, they aren't that useful for your readers!  So, below I started to develop code to rename the park levels to names that are reconizable. You'll need to rename the rest of the parks, since I only did two!  :-)
+
+First, we'll need to install the *plyr* package/library. To accomplish this, find the *Packages* tab and click on "Install" and search for *plyr* to download.
+
 ```{r }
 library(plyr)
 Pb$Park <- revalue(Pb$Park, c("B"="Blaisdell", "C"="Chaparral"))
+
+levels(Pb$Park)
 ```
 
 
@@ -244,13 +250,13 @@ Pb$Distance = NA
 Then we start adding distances. I created a fake one below, but you'll need to create a distance for each park following my example:
 
 ```{r creatingdistances}
-Pb$Distance[Pb$Park=="C"] <- 3.2
+Pb$Distance[Pb$Park=="Chaparral"] <- 3.2
 head(Pb)
 ```
 
 To analyze the data, we need to rely on a regression (using *lm()* or a linear model in R). Remember, in a linear model y = f(x) or y~x, where y is dependent and x is independent. In our case, Pb is the response or dependent variable and distance is the predictor or indepenedent variable. 
 
-```{r}
+```{r distancelm}
 Pb.lm <- lm(Total ~ Distance, data=Pb)
 summary(Pb.lm)
 ```
