@@ -126,7 +126,7 @@ Pb
 ```
 
 
-## Renaming Parks: Letters to Names!
+## Renaming Parks: Letters to Names! (After meeting with Ally)
 
 ```{r }
 library(plyr)
