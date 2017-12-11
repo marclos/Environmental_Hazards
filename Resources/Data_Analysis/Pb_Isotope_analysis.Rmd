@@ -125,6 +125,15 @@ Pb$Total = Pb$'206'+ Pb$'207'+ Pb$'208'
 Pb
 ```
 
+
+## Renaming Parks: Letters to Names!
+
+```{r }
+library(plyr)
+Pb$Park <- revalue(Pb$Park, c("B"="Blaisdell", "C"="Chaparral"))
+```
+
+
 ## Creating Hypotheses to Test (Modified after talking to Bebe...)
 
 In reality, we begin with asking questions and then generating hypotheses that are actually "testable statements" that *might* answer our question. 
@@ -188,6 +197,25 @@ boxplot(Total ~ Park, data=Pb, main="Some Title", xlab="x label", ylab="y label"
 
 NOTE: The Park names would be better than letters! Who wants to try to remember the park names? Besides, the City or it's residents are going to be clueless on these letters!
 
+## Do Isotope Ratios Differ by Park?
+
+First, we need to decide what our question is. In this case, we'll ask do the sources, based on their isotope ratio differ by park. As a null hypothesis, we then need to test:
+
+There is no difference in 206Pb/207Pb isotope ratio between parks.
+
+Of course, it will be up to you to justify the "value" of this hypothesis based on the literature. 
+
+```{r isotoperatiotest}
+boxplot(Pb67 ~ Park, data=Pb)
+
+Pb67.aov <- aov(Pb67 ~ Park, data=Pb)
+
+summary(Pb67.aov)
+
+
+```
+
+
 ## Analyze Data relative to "anthropogenic sources"
 
 I found an value of 1.14 of a 206Pb/207Pb to suggest a gasoline source versus a coal source, but this was for Europe. Their coal probably has a different signature that US coal, so I suspect you'll need to find a better source than what I found.
@@ -198,6 +226,7 @@ The *prop.test()* is useful to evaluate if the number of "positives" exceed what
 exceed = sum(Pb$Pb67 > 1.14); exceed
 prop.test(exceed, length(Pb$Pb67))
 ```
+
 
 ## Distance to Park from I10
 
@@ -257,6 +286,7 @@ After weighing the wet soil in the tin mass (wet_soil) and dry soil in the tin m
 
 $$Moisture~\% = (wet\_soil - dry\_soil)/(dry\_soil - tin)*100$$
 
+In R that might look like $Pb\$Moisture~ <-~ (Pb\$wet\_soil - Pb\$dry\_soil)/(Pb\$dry\_soil - tin)*100$
 Now if you put these numbers into your csv file and import the new file into the Rstudio directory you can see if Pb is a function of moisture, i.e. Pb = f(moisture). Since moisture is continuous variable, then we can use a linear model: *lm()*
 
 ```{r, eval=FALSE}
