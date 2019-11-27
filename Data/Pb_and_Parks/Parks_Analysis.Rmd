@@ -91,7 +91,7 @@ boxplot(SoilPb ~ PARK, data=parkdata, xlab="", xaxt="n")
 axis(1, 1:10, parkdata$PARK, labels=F)
 
 text(x = 1:10+.25,
-     y = par("usr")[3] - 25,
+     y = par("usr")[3] - 20,
      labels = unique(levels(parkdata$PARK)),
      xpd = NA,
      ## Rotate the labels by 35 degrees.
@@ -120,7 +120,7 @@ summary(pb.lm)
 par(mfrow=c(2,2))
 plot(pb.lm)
 par(mfrow=c(1,1), las=1)
-plot(SoilPb ~ DISTANCE66, data=parkdata)
+plot(SoilPb ~ DISTANCE66, data=parkdata, ylab="Soil Pb (mg/kg)", xlab="Distance from Route 66 (meters)")
 plot(SoilPb ~ DISTANCE10, data=parkdata)
 ```
 
