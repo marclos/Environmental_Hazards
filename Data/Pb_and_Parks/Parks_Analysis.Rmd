@@ -3,7 +3,6 @@ title: "Pb and Parks"
 author: "Marc Los Huertos"
 date: "11/25/2019"
 output:
-  word_document: default
   html_document: default
 ---
 
@@ -80,21 +79,23 @@ boxplot(SoilPb ~ PARK, data=parkdata)
 Let's fix the names of the parks and then adjust the size to fit on the boxplot.
 
 ```{r fixnames}
-droplevels(parkdata$PARK)
-levels(parkdata$PARK) <- c("Unknown", "Blaisdell", "CPark", "Jaeger", "La Puerta", "Larkin", "Marston", "Memorial", "R. Torrez", "Walker", "Wheeler")
+#droplevels(parkdata$PARK)
+levels(parkdata$PARK) <- c("Blaisdell", "Chapparal", "Jaeger", "La Puerta", "Larkin", "Marston", "Memorial", "R. Torrez", "Walker", "Wheeler")
+unique(levels(parkdata$PARK))
+aggregate(parkdata$SoilPb, list(parkdata$PARK), length)
 ```
 
 ```{r boxplot2}
 par(las=1)
 boxplot(SoilPb ~ PARK, data=parkdata, xlab="", xaxt="n")
-axis(1, 1:11, parkdata$PARK, labels=F)
+axis(1, 1:10, parkdata$PARK, labels=F)
 
-text(x = 1:length(parkdata$PARK),
-     y = par("usr")[3] - 40,
+text(x = 1:10+.25,
+     y = par("usr")[3] - 25,
      labels = unique(levels(parkdata$PARK)),
      xpd = NA,
      ## Rotate the labels by 35 degrees.
-     srt = 35,
+     srt = 35, pos=2,
      cex = 1.2)
 ```
 
